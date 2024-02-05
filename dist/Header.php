@@ -9,7 +9,6 @@
     <script src="../src/tailwind.min.js"></script>
     <script src="../src/Js/code.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.3.2/cdn.js'></script>
-
 </head>
 
 <body>
@@ -22,7 +21,7 @@
 
     ?>
 
-    <section>
+    <section class="sticky top-0 z-50">
         <nav class="bg-white border-gray-200 dark:bg-white">
             <div class=" flex flex-wrap md:items-center justify-between mx-auto p-3">
                 <a href="Home.php" class="flex md:items-center space-x-2 rtl:space-x-reverse sm:w-fit md:ml-10">
@@ -66,16 +65,16 @@
                                                                                                                                                 echo "border-b-2 border-black text-black";
                                                                                                                                             } ?> ">Weather</a>
                         </li>
-                        <li>
-                            <a href="../dist/Crop.php" class="mr-3 hover:text-gray-900 text-lg font-bold hover:border-b-2 border-black  <?php if ($path == 'Crop.php') {
-                                                                                                                                            echo "border-b-2 border-black text-black";
-                                                                                                                                        } ?> ">Crop</a>
-                        </li>
-                        <li>
-                            <a href="../dist/Soil.php" class="mr-3 hover:text-gray-900 text-lg font-bold hover:border-b-2 border-black  <?php if ($path == 'Soil.php') {
-                                                                                                                                            echo "border-b-2 border-black text-black";
-                                                                                                                                        } ?> ">Soil</a>
-                        </li>
+                        <!-- <li>
+                            <a href="../dist/Crop.php" class="mr-3 hover:text-gray-900 text-lg font-bold hover:border-b-2 border-black  <?php //if ($path == 'Crop.php') {
+                                                                                                                                            //echo "border-b-2 border-black text-black";
+                                                                                                                                        //} ?> ">Crop</a>
+                        </li> -->
+                        <!-- <li>
+                            <a href="../dist/Soil.php" class="mr-3 hover:text-gray-900 text-lg font-bold hover:border-b-2 border-black  <?php //if ($path == 'Soil.php') {
+                                                                                                                                           // echo "border-b-2 border-black text-black";
+                                                                                                                                       // } ?> ">Soil</a>
+                        </li> -->
                         <li>
                             <a href="../dist/Services.php" class="mr-3 hover:text-gray-900 text-lg font-bold hover:border-b-2 border-black  <?php if ($path == 'Services.php') {
                                                                                                                                                 echo "border-b-2 border-black text-black";

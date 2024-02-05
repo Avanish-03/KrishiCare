@@ -135,8 +135,8 @@ function validateUser() {
         var status = getvalue('status');
         if (status == 1) {
             alert("Logged Successfully!");
-            resetFormdata('loginForm');
-            window.location.href = "/client/clientdashbord.php";
+            resetFormdata('loginForm'); 
+            window.location.href = "clientdashboard.php";
         } else {
             alert(status);
         }
