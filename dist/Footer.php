@@ -1,10 +1,7 @@
-<!--NEED HEIP -->
-      
-
 <footer class="text-white bg-gray-800 body-font overflow-hidden">
 
-  <div class="w-full lg:mx-10 px-5 pt-4">
-    <div class="my-2 px-5 inline-flex bg-green-600 md:py-8 py-2 rounded-lg items-center focus:outline-none">
+  <!-- <div class="w-full lg:flex lg:justify-around lg:items-center  pt-4">
+    <div class="my-2 px-5 inline-flex bg-green-600 md:py-8 py-2 rounded-lg items-center focus:outline-none w-96 h-48">
       <div>
         <img src="https://cdn-icons-png.freepik.com/256/684/684908.png?uid=R129996386&ga=GA1.1.1933265658.1701935286&semt=ais" class="md:h-14 h-10 bg-white rounded-full p-2 mr-4" alt="">
       </div>
@@ -16,7 +13,7 @@
         <p class="md:text-xl"> Udhna, Surat, Gujarat 394210.</p>
       </div>
     </div>
-    <div class="my-2 px-5 inline-flex bg-green-600 md:py-8 py-2 rounded-lg items-center focus:outline-none">
+    <div class="my-2 px-5 inline-flex bg-green-600 md:py-8 py-2 rounded-lg items-center focus:outline-none w-96 h-48">
       <div>
         <img src="https://cdn-icons-png.freepik.com/256/10264/10264022.png?uid=R129996386&ga=GA1.1.1933265658.1701935286&semt=ais" class="md:h-14 h-10 bg-white rounded-full p-2 mr-4" alt="">
       </div>
@@ -25,7 +22,7 @@
         <p class="md:text-xl">Phone: 0261-2277739 <br> Mobile No:8980277739</p>
       </div>
     </div>
-    <div class="my-2 px-5 inline-flex bg-green-600 md:py-8 py-2 rounded-lg items-center focus:outline-none">
+    <div class="my-2 px-5 inline-flex bg-green-600 md:py-8 py-2 rounded-lg items-center focus:outline-none w-96 h-48">
       <div>
         <img src="https://cdn-icons-png.freepik.com/256/9973/9973490.png?uid=R129996386&ga=GA1.1.1933265658.1701935286&semt=ais" class="md:h-14 h-10 bg-white rounded-full p-2 mr-4" alt="">
       </div>
@@ -36,7 +33,7 @@
           uaccait@gmail.com</p>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="container px-5 py-16 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
     <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
