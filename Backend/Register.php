@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('config.php');
 
 // Registeration of both farmer and laboratorys too ------------------------
@@ -61,6 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $result = mysqli_query($con, "SELECT * FROM `farmer_detail` WHERE email= '$email' and password = '$pwd';");
         if (mysqli_num_rows($result) > 0) {
+            $_SESSION["loggedin"] = "loggedin";
             echo "1";
         } else {
             echo "not valid";

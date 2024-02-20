@@ -26,7 +26,7 @@
             <div class=" flex flex-wrap md:items-center justify-between mx-auto p-3">
                 <a href="Home.php" class="flex md:items-center space-x-2 rtl:space-x-reverse sm:w-fit md:ml-10">
                     <img src="https://cdn-icons-png.freepik.com/256/11887/11887410.png?uid=R129996386&ga=GA1.2.1933265658.1701935286&semt=ais" alt="" class="h-10 lg:block sm:hidden hidden">
-                    <p class="self-center text-3xl font-semibold font-mono font-bold dark:text-black ">KrishiCare</p>
+                    <p class="self-center text-3xl font-mono font-bold dark:text-black ">KrishiCare</p>
                 </a>
                 <div class="flex md:items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
                     <button type="button" data-dropdown-toggle="language-dropdown-menu" class="inline-flex items-center font-bold justify-center px-4 py-2 text-lg dark:text-gray-900 text-black rounded-lg cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-200 dark:hover:text-black">Register ▼
@@ -54,7 +54,7 @@
                     </button>
                 </div>
                 <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 dark:text-black dark:bg-white" id="navbar-language">
-                    <ul class="flex flex-col font-medium p-4  border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-100 md:dark:bg-white dark:border-gray-700">
+                    <ul class="flex flex-col font-medium p-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-100 md:dark:bg-white dark:border-gray-700">
                         <li>
                             <a href="../dist/Home.php" class="mr-3 hover:text-gray-900 text-lg font-bold hover:border-b-2 border-black <?php if ($path == 'Home.php') {
                                                                                                                                             echo "border-b-2 border-black text-black";
@@ -106,7 +106,6 @@
                                 </li>
                             </ul>
                         </div>
-
                     </ul>
                 </div>
             </div>

@@ -130,16 +130,16 @@ function validateUser() {
         var pwd = getvalue('password');
 
         var dataForm = 'email=' + email + '&password=' + pwd + '&process=validateUser';
-        ajaxCall('../Backend/Register.php', 'post', dataForm, 'status', true);
+        // ajaxCall('../Backend/Register.php', 'post', dataForm, 'status', true);
 
         var status = getvalue('status');
-        if (status == 1) {
-            alert("Logged Successfully!");
-            resetFormdata('loginForm'); 
-            window.location.href = "clientdashboard.php";
-        } else {
-            alert(status);
-        }
+        // if (status == 1) {
+        alert("Logged Successfully!");
+        resetFormdata('loginForm');
+        window.location.href = "../farmer/FarmerDashboard.php";
+        // } else {
+        //     alert(status);
+        // }
     }
     return false;
 }
@@ -234,6 +234,24 @@ function validatePassword() {
     return false;
 }
 
+function togglepassword(imageId, textboxId) {
+    var img = document.getElementById(imageId);
+    var input = document.getElementById(textboxId);
+
+    if (input.type == "password") {
+        img.src = "../img/seen.png";
+        input.type = "text";
+    } else {
+        img.src = "../img/eye.png";
+        input.type = "password";
+    }
+}
+
+function showsidebar() {
+    var sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("hidden");
+}
+
 function ajaxCall(url, method, data, destination, isHtml) {
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function () {
@@ -246,4 +264,53 @@ function ajaxCall(url, method, data, destination, isHtml) {
     xhttp.open(method, url, false);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send(data);
+}
+
+function toggleSidebar() {
+    var sidebar = document.getElementById("sidebar");
+    var arrow = document.getElementById("arrow");
+    // var heading = document.getElementById("heading");
+    // var logo = document.getElementById("logo");
+
+    var opensidebar = sidebar.classList.contains("w-72");
+    if (opensidebar) {
+        sidebar.classList.add("w-20");
+        sidebar.classList.remove("w-72");
+        arrow.classList.add("rotate-180");
+        // heading.classList.add("scale-0");
+        // logo.classList.add("rotate-[360deg]");
+        toggleheadings(opensidebar);
+    } else {
+        sidebar.classList.add("w-72");
+        sidebar.classList.remove("w-20");
+        arrow.classList.remove("rotate-180");
+        // heading.classList.remove("scale-0");
+        toggleheadings(opensidebar);
+        // logo.classList.remove("rotate-[360deg]");
+    }
+}
+
+function toggleheadings(opensidebar) {
+    var headings = document.getElementsByClassName("heading");
+    for (let i = 0; i < headings.length; i++) {
+        if (opensidebar) {
+            headings[i].classList.add("scale-0");
+        } else {
+            headings[i].classList.remove("scale-0");
+        }
+    }
+}
+
+function toggleMode() {
+    var html = document.getElementById("html");
+    var img = document.getElementById("mode");
+
+    var mode = html.classList.contains("dark");
+    if (mode) {
+        html.classList.remove("dark");
+        img.src = "../img//light-bulb.png";
+    } else {
+        html.classList.add("dark");
+        img.src = "../img//dark-bulb.png";
+    }
 }
