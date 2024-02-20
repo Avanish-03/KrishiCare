@@ -1,4 +1,4 @@
-<?php include("Header.php");?>
+<?php include("Header.php"); ?>
 
 <!-- lab registre page -->
 <div class="min-h-screen p-6 bg-gray-100 flex items-center justify-center bg-fixed bg-cover" style="background-image: url('../img/dron-img.jpg');">
@@ -19,46 +19,56 @@
                             <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-4">
                                 <div class="md:col-span-4">
                                     <label for="fullname">Laboratory Name</label>
-                                    <input type="text" name="fullname" id="fullname" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  />
+                                    <input type="text" name="fullname" id="fullname" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
                                 </div>
 
                                 <div class="md:col-span-2">
                                     <label for="email">Email Address</label>
+<<<<<<< HEAD
                                     <input type="email" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  placeholder="name321@gmail.com" />
+=======
+                                    <input type="email" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="email@domain.com" />
+>>>>>>> 0960c1fd377da8b3d9fe41572c19eb19dedb0e06
                                 </div>
 
                                 <div class="md:col-span-2">
                                     <label for="contact">Contact</label>
-                                    <input type="number" name="contact" id="contact" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  placeholder="" />
+                                    <input type="number" name="contact" id="contact" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
                                 </div>
 
                                 <div class="md:col-span-4">
                                     <label for="address">Address / Street</label>
-                                    <input type="text" name="address" id="address" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  placeholder="" />
+                                    <input type="text" name="address" id="address" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
                                 </div>
 
                                 <div class="md:col-span-2">
                                     <label for="city">City</label>
-                                    <input type="text" name="city" id="city" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  placeholder="" />
+                                    <input type="text" name="city" id="city" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
                                 </div>
 
                                 <div class="md:col-span-2">
                                     <label for="state">State</label>
-                                    <input type="text" name="state" id="state" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  placeholder="" />
+                                    <input type="text" name="state" id="state" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
                                 </div>
                                 <div class="md:col-span-4">
-                                    <label for="ownership">OwnerShip</label>
-                                    <input type="text" name="ownership" id="ownership" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  placeholder="" />
+                                    <label for="ownership">Ownership</label>
+                                    <input type="text" name="ownership" id="ownership" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
                                 </div>
 
                                 <div class="md:col-span-2">
                                     <label for="pwd">Password</label>
-                                    <input type="password" name="pwd" id="pwd" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  placeholder="" />
+                                    <div class="relative flex justify-end items-center">
+                                        <img id="imgpwd" src="../img/eye.png" alt="" class="absolute h-5 w-5 z-10 cursor-pointer mr-3" onclick="togglepassword('imgpwd','pwd')">
+                                        <input type="password" name="pwd" id="pwd" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
+                                    </div>
                                 </div>
 
                                 <div class="md:col-span-2">
                                     <label for="cpwd">Confirm Password</label>
-                                    <input type="password" name="cpwd" id="cpwd" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  placeholder="" />
+                                    <div class="relative flex justify-end items-center">
+                                        <img id="imgcpwd" src="../img/eye.png" alt="" class="absolute h-5 w-5 z-10 cursor-pointer mr-3" onclick="togglepassword('imgcpwd','cpwd')">
+                                        <input type="password" name="cpwd" id="cpwd" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
+                                    </div>
                                 </div>
 
                                 <div class="md:col-span-5 text-left">
@@ -69,7 +79,11 @@
                                 </div>
                             </div>
                         </form>
+<<<<<<< HEAD
                         <input type="hidden" name="" id="status" class="bg-black text-white">
+=======
+                        <input type="text" name="" id="status" class="hidden">
+>>>>>>> 0960c1fd377da8b3d9fe41572c19eb19dedb0e06
                     </div>
                 </div>
             </div>
