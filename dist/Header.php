@@ -26,7 +26,7 @@
         <nav class="bg-white border-gray-200 dark:bg-white">
             <div class=" flex flex-wrap md:items-center justify-between mx-auto p-3">
                 <a href="Home.php" class="flex md:items-center space-x-2 rtl:space-x-reverse sm:w-fit md:ml-10">
-                    <img src="https://cdn-icons-png.freepik.com/256/11887/11887410.png?uid=R129996386&ga=GA1.2.1933265658.1701935286&semt=ais" alt="" class="h-10 lg:block sm:hidden hidden">
+                    <img src="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais" alt="" class="h-10 lg:block sm:hidden hidden">
                     <p class="self-center text-3xl font-mono font-bold dark:text-black ">KrishiCare</p>
                 </a>
                 <div class="flex md:items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
