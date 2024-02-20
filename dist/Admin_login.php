@@ -1,21 +1,21 @@
-<?php include('Header.php'); ?>
+<?php require('Header.php'); ?>
 
 <section class="text-gray-600 body-font">
     <div class="container px-96 py-24 mx-auto flex flex-wrap items-center bg-fixed bg-cover" style="background-image: url('../img/9RA-img1.jpg');">
         <div class="flex justify-center items-center px-44">
             <div class="w-full max-w-xs border-2 bg-white shadow-xl rounded pb-4">
                 <div class="text-center font-bold bg-green-800 p-2 text-white text-2xl">ADMIN LOGIN PANEL</div>
-                <form method="post" action="admindashbord.html" class="px-8 pt-6 mb-4">
+                <form method="post" action="../Backend/Login.php" class="px-8 pt-6 mb-4">
                     <div class="mb-4 flex justify-center items-center">
                         <img class="h-10 bg-gray-200 rounded border p-3 mr-1" src="https://cdn-icons-png.freepik.com/256/12000/12000759.png?uid=R129996386&ga=GA1.2.1933265658.1701935286&semt=ais" alt="">
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 foucs:outline-none focus:shadow-outline" id="uname" type="text" placeholder="Username">
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 foucs:outline-none focus:shadow-outline" id="admin" name="admin" type="text" placeholder="Username">
                     </div>
                     <div class="mb-4 flex justify-center items-center">
                         <img class="h-10 bg-gray-200 rounded border p-3 mr-1" src="https://cdn-icons-png.freepik.com/256/1828/1828471.png?uid=R129996386&ga=GA1.2.1933265658.1701935286&semt=ais" alt="">
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700  foucs:outline-none foucs:shadow-outline" id="pwd" type="password">
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700  foucs:outline-none foucs:shadow-outline" id="pwd" name="pwd" type="password">
                     </div>
                     <div class="flex items-center justify-center pb-2">
-                        <button class="bg-green-800 hover:bg-green-900 text-white font-bold py-1 px-4 rounded focus:outline-none" type="submit">
+                        <button class="bg-green-800 hover:bg-green-900 text-white font-bold py-1 px-4 rounded focus:outline-none" name="adminlogin" type="submit">
                             LogIn
                         </button>
                     </div>

@@ -24,7 +24,7 @@
 
                                 <div class="md:col-span-2">
                                     <label for="email">Email Address</label>
-                                    <input type="email" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  placeholder="email@domain.com" />
+                                    <input type="email" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  placeholder="name321@gmail.com" />
                                 </div>
 
                                 <div class="md:col-span-2">
@@ -69,7 +69,7 @@
                                 </div>
                             </div>
                         </form>
-                        <input type="text" name="" id="status" class="bg-black text-white">
+                        <input type="hidden" name="" id="status" class="bg-black text-white">
                     </div>
                 </div>
             </div>
