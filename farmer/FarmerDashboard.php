@@ -99,7 +99,7 @@
                         </svg>
                     </a>
                 </div>
-                <div class="h-full flex justify-center items-center duration-1000" id="section-1">Home</div>
+                <div class="h-full flex justify-center items-center" id="section-1">Home</div>
                 <div class="h-full flex justify-center items-center" id="section-2">Dashboard</div>
                 <div class="h-full flex justify-center items-center" id="section-3">about</div>
                 <div class="h-full flex justify-center items-center" id="section-4">Contact</div>
