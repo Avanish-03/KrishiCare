@@ -21,7 +21,7 @@
                     <span class="text-xs font-bold">avanishyadav123@gmail.com</span>
                 </h3>
             </div>
-            <ul class="">
+            <ul class="mb-72">
                 <li class="py-4 text-black cursor-pointer hover:bg-gray-300">
                     <button id="am1" class="flex jus px-10" onclick="showContent('ao1', 'am1')">
                         <img class="h-5 pr-2" src="https://cdn-icons-png.freepik.com/256/747/747327.png?ga=GA1.1.1583059735.1708077775&semt=ais" alt="">
@@ -62,21 +62,20 @@
                 </li>
             </ul>
 
-            <button class="border-2 border-black px-2 rounded mx-10 mt-72 text-white bg-black font-mono">Logout</button>
+            <a href="../Backend/logout.php" class="border-2 border-black px-2 py-1 rounded mx-10 text-white bg-black font-mono">Logout</a>
 
         </div>
 
         <div class="h-full md:w-[82%] w-full md:ml-[18%]">
             <div class="sticky top-0">
-                <nav class="bg-white md:h-20 h-10 text-lg shadow-md">
-                    <ul class="md:flex md:justify-between md:mx-4 md:py-5">
+                <nav class="bg-white md:h-20 h-10 text-md shadow-md">
+                    <ul class="flex justify-around mx-1 px-1 md:py-5">
                         <li>
-                            <h1 class="md:text-2xl md:ml-44 font-bold">WELLCOME TO ADMIN PANEL - ADMIN</h1>
+                            <h1 class="md:text-2xl md:ml-44 text-lg font-bold mt-2">WELLCOME TO ADMIN PANEL - ADMIN</h1>
                         </li>
-                        <!-- <li>
-                            <button
-                                class="border-2 border-black px-2 rounded bg-black text-white hover:bg-white hover:text-black">Logout</button>
-                        </li> -->
+                        <li class="md:hidden block" >
+                            <button><img src="https://cdn-icons-png.freepik.com/256/3889/3889524.png?ga=GA1.1.253096211.1707907143&semt=ais" alt="" class="h-6 mt-2"></button>
+                        </li>
                     </ul>
                 </nav>
 
@@ -86,10 +85,10 @@
 
                 <!-- page 1 -->
                 <div id="ao1" class="content">
-                    <div class="mt-14">
-                        <div class="flex justify-between">
+                    <div class="md:mt-20 my-5 md:mx-10 mx-24">
+                        <div class="md:flex md:flex-row md:justify-between flex-col flex ">
 
-                            <div class="flex justify-around items-center border-2 py-4 w-48 rounded-2xl cursor-pointer bg-gray-100 hover:scale-105 duration-700">
+                            <div class="flex  justify-around items-center md:my-0 my-4 border-2 md:py-4 md:w-48 py-8 w-52 rounded-2xl cursor-pointer bg-gray-100 hover:scale-105 duration-700">
                                 <div class=" px-4">
                                     <h2 class="text-2xl font-bold">60.5k</h2>
                                     <h2 class="text-lg">Views</h2>
@@ -98,7 +97,7 @@
                                 <img class="h-10" src="https://cdn-icons-png.freepik.com/256/65/65000.png?ga=GA1.1.1583059735.1708077775&semt=ais" alt="Views">
                             </div>
 
-                            <div class="flex justify-around items-center border-2 py-4 w-48 rounded-2xl bg-gray-100 cursor-pointer hover:scale-105 duration-700">
+                            <div class="flex justify-around items-center md:my-0 my-4 border-2 md:py-4 md:w-48 py-8 w-52 rounded-2xl bg-gray-100 cursor-pointer hover:scale-105 duration-700">
                                 <div class=" px-4">
                                     <h2 class="text-2xl font-bold">150</h2>
                                     <h2 class="text-lg">Likes</h2>
@@ -107,7 +106,7 @@
                                 <img class="h-10" src="https://cdn-icons-png.freepik.com/256/739/739282.png?ga=GA1.1.1583059735.1708077775&semt=ais" alt="likes">
                             </div>
 
-                            <div class="flex justify-around items-center border-2 py-4 w-48 rounded-2xl bg-gray-100 cursor-pointer hover:scale-105 duration-700">
+                            <div class="flex justify-around items-center md:my-0 my-4 border-2 md:py-4 md:w-48 py-8 w-52 rounded-2xl bg-gray-100 cursor-pointer hover:scale-105 duration-700">
                                 <div class=" px-4">
                                     <h2 class="text-2xl font-bold">320</h2>
                                     <h2 class="text-lg">Comments</h2>
@@ -116,7 +115,7 @@
                                 <img class="h-10" src="https://cdn-icons-png.freepik.com/256/2961/2961490.png?ga=GA1.1.1583059735.1708077775&semt=ais" alt="comments">
                             </div>
 
-                            <div class="flex justify-around items-center border-2 py-4 w-48 rounded-2xl bg-gray-100 cursor-pointer hover:scale-105 duration-700">
+                            <div class="flex justify-around items-center md:my-0 my-4 border-2 md:py-4 md:w-48 py-8 w-52 rounded-2xl bg-gray-100 cursor-pointer hover:scale-105 duration-700">
                                 <div class=" px-4">
                                     <h2 class="text-2xl font-bold">70</h2>
                                     <h2 class="text-lg">Published</h2>

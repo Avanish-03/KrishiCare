@@ -9,7 +9,7 @@ if (isset($_POST['adminlogin'])) {
     if (mysqli_num_rows($login) > 0) {
         if ($password == $row["password"]) {
             $_SESSION['adminlogin'] = true;
-            // $_SESSION["id"] = $row["id"];
+            $_SESSION["admin"] = $row["name"];
             header("location:../dist/Admindashboard.php");
         } else {
             echo "Invalid !";
