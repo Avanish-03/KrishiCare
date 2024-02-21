@@ -9,6 +9,7 @@
     <script src="../src/flowbite.min.js"></script>
     <link rel="stylesheet" href="./output.css">
     <script src="../src/Js/code.js"></script>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.3.2/cdn.js'></script>
 </head>
 
