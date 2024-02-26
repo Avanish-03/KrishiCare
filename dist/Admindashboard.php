@@ -34,7 +34,7 @@
 
                     <button id="am2" class="flex px-10" onclick="showContent('ao2', 'am2')">
                         <img class="h-6 pr-2" src="https://cdn-icons-png.freepik.com/256/10320/10320461.png?ga=GA1.1.1933265658.1701935286&semt=ais" alt="">
-                        page 2
+                        Farmer
                     </button>
                 </li>
 
@@ -42,7 +42,7 @@
 
                     <button id="am3" class="flex px-10" onclick="showContent('ao3', 'am3')">
                         <img class="h-6 pr-2" src="https://cdn-icons-png.freepik.com/256/10320/10320461.png?ga=GA1.1.1933265658.1701935286&semt=ais" alt="">
-                        page 3
+                        Laboratory
                     </button>
                 </li>
 
@@ -50,7 +50,7 @@
 
                     <button id="am4" class="flex px-10" onclick="showContent('ao4', 'am4')">
                         <img class="h-6 pr-2" src="https://cdn-icons-png.freepik.com/256/10320/10320461.png?ga=GA1.1.1933265658.1701935286&semt=ais" alt="">
-                        page 4
+                        Report
                     </button>
                 </li>
 
@@ -58,7 +58,7 @@
 
                     <button id="am5" class="flex px-10" onclick="showContent('ao5', 'am5')">
                         <img class="h-6 pr-2" src="https://cdn-icons-png.freepik.com/256/10320/10320461.png?ga=GA1.1.1933265658.1701935286&semt=ais" alt="">
-                        page 5
+                        Setting
                     </button>
                 </li>
             </ul>
@@ -132,7 +132,7 @@
 
                 <!-- page 2 -->
                 <div id="ao2" class="content hidden">
-                    <h2 class=" text-center font-bold">page 2</h2>
+                    <h2 class=" text-center font-bold">Farmer</h2>
                     <div class="text-gray-600 body-font">
                         <div class="container px-5 py-24 mx-auto">
                             <div class="flex flex-wrap -m-4">
@@ -221,7 +221,7 @@
 
                 <!-- page 3 -->
                 <div id="ao3" class="content hidden">
-                    <h2 class=" text-center font-bold">page 3</h2>
+                    <h2 class=" text-center font-bold">Laboratory</h2>
                     <div class="text-gray-600 body-font">
                         <div class="container px-5 py-24 mx-auto">
                             <div class="flex flex-col text-center w-full mb-20">
@@ -274,7 +274,7 @@
 
                 <!-- page 4 -->
                 <div id="ao4" class="content hidden">
-                    <h2 class=" text-center font-bold">page 4</h2>
+                    <h2 class=" text-center font-bold">Report</h2>
                     <div class="text-gray-600 body-font">
                         <div class="container px-5 py-24 mx-auto">
                             <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
@@ -359,7 +359,7 @@
 
                 <!-- page 5 -->
                 <div id="ao5" class="content hidden">
-                    <h2 class=" text-center font-bold">page 5</h2>
+                    <h2 class=" text-center font-bold">Setting</h2>
                     <div class="text-gray-600 body-font overflow-hidden">
                         <div class="container px-5 py-24 mx-auto">
                             <div class="lg:w-4/5 mx-auto flex flex-wrap">
