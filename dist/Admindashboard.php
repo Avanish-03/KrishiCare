@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Admin</title>
     <link rel="stylesheet" href="./output.css">
+    <link rel="icon" href="https://cdn-icons-png.freepik.com/256/4140/4140048.png?ga=GA1.1.253096211.1707907143&">
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></script>
 
@@ -17,15 +18,15 @@
         <!-- side navbar -->
         <div class="w-[18%] md:block hidden h-screen fixed bg-white md:text-xl text-gray-500 list pt-6 shadow-md">
             <div class="flex items-center mb-4 -mt-4">
-                <img src="https://cdn-icons-png.freepik.com/256/552/552721.png?ga=GA1.1.1933265658.1701935286&semt=ais" alt="" class="h-10 px-4">
+                <img src="https://cdn-icons-png.freepik.com/256/4140/4140048.png?ga=GA1.1.253096211.1707907143&" alt="" class="h-10 px-4">
                 <h3 class="text-black font-mono text-xl">Avanish Yadav
                     <span class="text-xs font-bold">avanishyadav123@gmail.com</span>
                 </h3>
             </div>
             <ul class="mb-72">
-                <li class="py-4 text-black cursor-pointer hover:bg-gray-300">
-                    <button id="am1" class="flex jus px-10" onclick="showContent('ao1', 'am1')">
-                        <img class="h-5 pr-2" src="https://cdn-icons-png.freepik.com/256/747/747327.png?ga=GA1.1.1583059735.1708077775&semt=ais" alt="">
+                <li class="py-4 flex text-black cursor-pointer hover:bg-gray-300">
+                    <button id="am1" class="flex px-10" onclick="showContent('ao1', 'am1')">
+                        <img class="h-6 pr-2" src="https://cdn-icons-png.freepik.com/256/747/747327.png?ga=GA1.1.1583059735.1708077775&semt=ais" alt="">
                         Dashboard
                     </button>
                 </li>
@@ -33,7 +34,7 @@
                 <li class="py-4 flex text-black cursor-pointer hover:bg-gray-300">
 
                     <button id="am2" class="flex px-10" onclick="showContent('ao2', 'am2')">
-                        <img class="h-6 pr-2" src="https://cdn-icons-png.freepik.com/256/10320/10320461.png?ga=GA1.1.1933265658.1701935286&semt=ais" alt="">
+                        <img class="h-6 pr-2" src="https://cdn-icons-png.freepik.com/256/652/652076.png?ga=GA1.1.253096211.1707907143&" alt="">
                         Farmer
                     </button>
                 </li>
@@ -41,7 +42,7 @@
                 <li class="py-4 flex text-black cursor-pointer hover:bg-gray-300">
 
                     <button id="am3" class="flex px-10" onclick="showContent('ao3', 'am3')">
-                        <img class="h-6 pr-2" src="https://cdn-icons-png.freepik.com/256/10320/10320461.png?ga=GA1.1.1933265658.1701935286&semt=ais" alt="">
+                        <img class="h-6 pr-2" src="https://cdn-icons-png.freepik.com/256/2022/2022301.png?ga=GA1.1.253096211.1707907143&" alt="">
                         Laboratory
                     </button>
                 </li>
@@ -49,20 +50,20 @@
                 <li class="py-4 flex text-black cursor-pointer hover:bg-gray-300">
 
                     <button id="am4" class="flex px-10" onclick="showContent('ao4', 'am4')">
-                        <img class="h-6 pr-2" src="https://cdn-icons-png.freepik.com/256/10320/10320461.png?ga=GA1.1.1933265658.1701935286&semt=ais" alt="">
+                        <img class="h-6 pr-2" src="https://cdn-icons-png.freepik.com/256/944/944053.png?ga=GA1.1.253096211.1707907143&" alt="">
                         Report
                     </button>
                 </li>
 
-                <li class="py-4 flex text-black cursor-pointer hover:bg-gray-300">
-
-                    <button id="am5" class="flex px-10" onclick="showContent('ao5', 'am5')">
-                        <img class="h-6 pr-2" src="https://cdn-icons-png.freepik.com/256/10320/10320461.png?ga=GA1.1.1933265658.1701935286&semt=ais" alt="">
-                        Setting
-                    </button>
-                </li>
             </ul>
+            
+            <li class="py-4 flex text-black cursor-pointer hover:bg-gray-300">
 
+                <button id="am5" class="flex px-10" onclick="showContent('ao5', 'am5')">
+                    <img class="h-6 pr-2" src="https://cdn-icons-png.freepik.com/256/2040/2040504.png?ga=GA1.1.253096211.1707907143&" alt="">
+                    Setting
+                </button>
+            </li>
             <a href="../Backend/logout.php" class="border-2 border-black px-2 py-1 rounded mx-10 text-white bg-black font-mono">Logout</a>
 
         </div>
