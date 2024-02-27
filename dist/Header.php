@@ -9,7 +9,7 @@
     <script src="../src/flowbite.min.js"></script>
     <link rel="stylesheet" href="./output.css">
     <script src="../src/Js/code.js"></script>
-    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.3.2/cdn.js'></script>
 </head>
 
@@ -69,13 +69,15 @@
                         </li>
                         <!-- <li>
                             <a href="../dist/Crop.php" class="mr-3 hover:text-gray-900 text-lg font-bold hover:border-b-2 border-black  <?php //if ($path == 'Crop.php') {
-                                                                                                                                            //echo "border-b-2 border-black text-black";
-                                                                                                                                        //} ?> ">Crop</a>
+                                                                                                                                        //echo "border-b-2 border-black text-black";
+                                                                                                                                        //} 
+                                                                                                                                        ?> ">Crop</a>
                         </li> -->
                         <!-- <li>
                             <a href="../dist/Soil.php" class="mr-3 hover:text-gray-900 text-lg font-bold hover:border-b-2 border-black  <?php //if ($path == 'Soil.php') {
-                                                                                                                                           // echo "border-b-2 border-black text-black";
-                                                                                                                                       // } ?> ">Soil</a>
+                                                                                                                                        // echo "border-b-2 border-black text-black";
+                                                                                                                                        // } 
+                                                                                                                                        ?> ">Soil</a>
                         </li> -->
                         <li>
                             <a href="../dist/Services.php" class="mr-3 hover:text-gray-900 text-lg font-bold hover:border-b-2 border-black  <?php if ($path == 'Services.php') {
