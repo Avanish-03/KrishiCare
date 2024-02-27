@@ -1,7 +1,7 @@
 <?php require('Header.php'); ?>
 
-<section class="text-gray-600 body-font">
-    <div class="container px-96 py-24 mx-auto flex flex-wrap items-center bg-fixed bg-cover" style="background-image: url('../img/9RA-img1.jpg');">
+<section class="text-gray-600 h-screen body-font">
+    <div class="container h-3/4 mx-auto flex flex-wrap items-center justify-center bg-fixed bg-cover" style="background-image: url('../img/9RA-img1.jpg');">
         <div class="flex justify-center items-center px-44">
             <div class="w-full max-w-xs border-2 bg-white shadow-xl rounded pb-4">
                 <div class="text-center font-bold bg-green-800 p-2 text-white text-2xl">ADMIN LOGIN PANEL</div>
@@ -26,9 +26,9 @@
             </div>
         </div>
     </div>
+    <?php include('Footer.php'); ?>
 </section>
 
-<?php include('Footer.php'); ?>
 <!-- <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:mx-auto w-full mt-10 md:mt-0">
     <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Login</h2>
     <form action="#" method="post" id="loginForm">

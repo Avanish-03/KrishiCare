@@ -6,9 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farmer Dashboard</title>
     <link rel="stylesheet" href="../dist/output.css">
+    <script src="../src/Js/code.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script> -->
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+          }
+        }
+      },
+      darkMode : "class",
+    }
+  </script>
 </head>
 
 <body>
@@ -102,58 +114,6 @@
             </div>
         </div>
     </div>
-    <script>
-        function toggleSidebar() {
-            var sidebar = document.getElementById("sidebar");
-            var arrow = document.getElementById("arrow");
-            // var heading = document.getElementById("heading");
-            // var logo = document.getElementById("logo");
-
-            var opensidebar = sidebar.classList.contains("w-72");
-            if (opensidebar) {
-                sidebar.classList.add("w-20");
-                sidebar.classList.remove("w-72");
-                arrow.classList.add("rotate-180");
-                // heading.classList.add("scale-0");
-                // logo.classList.add("rotate-[360deg]");
-                toggleheadings(opensidebar);
-            } else {
-                sidebar.classList.add("w-72");
-                sidebar.classList.remove("w-20");
-                arrow.classList.remove("rotate-180");
-                // heading.classList.remove("scale-0");
-                toggleheadings(opensidebar);
-                // logo.classList.remove("rotate-[360deg]");
-            }
-        }
-
-        function toggleheadings(opensidebar) {
-            var headings = document.getElementsByClassName("heading");
-            for (let i = 0; i < headings.length; i++) {
-                if (opensidebar) {
-                    headings[i].classList.add("scale-0");
-                } else {
-                    headings[i].classList.remove("scale-0");
-                }
-            }
-        }
-
-        function toggleMode() {
-            var html = document.getElementById("html");
-            var img = document.getElementById("mode");
-
-            var mode = html.classList.contains("dark");
-            if (mode) {
-                console.log(mode);
-                html.classList.remove("dark");
-                img.src = "../img/light-bulb.png";
-            } else {
-                console.log(mode);
-                html.classList.add("dark");
-                img.src = "../img/dark-bulb.png";
-            }
-        }
-    </script>
 </body>
 
 </html>

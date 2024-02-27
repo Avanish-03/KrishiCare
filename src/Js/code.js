@@ -307,10 +307,12 @@ function toggleMode() {
 
     var mode = html.classList.contains("dark");
     if (mode) {
+        console.log(mode);
         html.classList.remove("dark");
-        img.src = "../img//light-bulb.png";
+        img.src = "../img/light-bulb.png";
     } else {
+        console.log(mode);
         html.classList.add("dark");
-        img.src = "../img//dark-bulb.png";
+        img.src = "../img/dark-bulb.png";
     }
 }
