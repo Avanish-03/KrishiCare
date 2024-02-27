@@ -7,7 +7,7 @@
             <h1 class="text-black lg:text-7xl md:text-5xl text-3xl text-center sm:font-bold md:font-thin lg:font-semibold">"FARMING IS A PEOFESSION <br> OF HOPE" <br>
                 <span class="text-black lg:text-3xl md:text-xl text-lg font-bold">TAKING AGRICULTURE TO THE NEXT LEVEL</span>
                 <div class="w-full h-full text-center mt-5 ">
-                    <a class="w-fit border-2 border-white bg-white font-bold rounded-md md:py-2 py-1 px-2 md:px-5 text-black text-lg md:text-2xl" href="Admin_login.php">Get Started</a>
+                    <a class="w-fit border-2 border-white bg-white font-bold rounded-md md:py-2 py-1 px-2 md:px-5 text-black text-lg md:text-2xl" href="Login.php">Get Started</a>
                 </div>
             </h1>
         </div>

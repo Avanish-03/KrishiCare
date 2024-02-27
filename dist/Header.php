@@ -34,7 +34,7 @@
                 <div class="flex items-center md:items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
                     <button type="button" data-dropdown-toggle="language-dropdown-menu" class="px-2 inline-flex items-center font-bold justify-center py-2 text-lg dark:text-gray-900 text-black rounded-lg cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-200 dark:hover:text-black">Register 
                     </button> <span class="text-lg font-bold">|</span>
-                    <a role="button" href="Login.php" class="px-2 inline-flex items-center font-bold justify-center py-2 text-lg dark:text-gray-900 text-black rounded-lg cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-200 dark:hover:text-black">Login</a>
+                    <a role="button" href="Admin_login.php" class="px-2 inline-flex items-center font-bold justify-center py-2 text-lg dark:text-gray-900 text-black rounded-lg cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-200 dark:hover:text-black">Login</a>
                     <!-- Dropdown -->
                     <div class="z-50 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-white" id="language-dropdown-menu">
                         <ul class="font-medium" role="none">

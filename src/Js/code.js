@@ -120,26 +120,67 @@ function validateContactForm() {
     return false;
 }
 
+function validateAdmin() {
+    var result = ValidateEmail('email', 'Email') &&
+        validateEmpty('pwd', 'Password');
+    if (result) {
+        console.log(result);
+        var email = getvalue('email');
+        var pwd = getvalue('pwd');
+
+        var dataForm = 'email=' + email + '&password=' + pwd + '&process=adminLogin';
+
+        ajaxCall('../Backend/Login.php', 'post', dataForm, 'status', true);
+        var status = getvalue('status');
+        console.log(status);
+        if (status == 1) {
+            alert("Logged Successfully!");
+            resetFormdata('ValidateAdmin');
+            window.location.href = "../admin/Admindashboard.php";
+        } else {
+            alert("Invalid Username or Password");
+        }
+    }
+    return false;
+}
+
 function validateUser() {
     var result =
         ValidateEmail('email', 'Email') &&
-        validateEmpty('password', 'Password');
+        validateEmpty('pwd', 'pwd');
 
     if (result) {
         var email = getvalue('email');
-        var pwd = getvalue('password');
+        var pwd = getvalue('pwd');
 
-        var dataForm = 'email=' + email + '&password=' + pwd + '&process=validateUser';
-        // ajaxCall('../Backend/Register.php', 'post', dataForm, 'status', true);
+        var farmer = document.getElementById("farmer");
+        var laboratory = document.getElementById("laboratory");
+        let user = "";
+        let url = "";
 
+        if (farmer.checked) {
+            user = "farmer";
+            var dataForm = 'email=' + email + '&password=' + pwd + '&user=' + user + '&process=userLogin';
+            url = "../farmer/FarmerDashboard.php";
+
+        } else if (laboratory.checked) {
+            user = "laboratory";
+            var dataForm = 'email=' + email + '&password=' + pwd + '&user=' + user + '&process=userLogin';
+            url = "../laboratory/LaboratoryDashboard.php";
+
+        } else {
+            alert("invalid user");
+        }
+
+        ajaxCall('../Backend/Login.php', 'post', dataForm, 'status', true);
         var status = getvalue('status');
-        // if (status == 1) {
-        alert("Logged Successfully!");
-        resetFormdata('loginForm');
-        window.location.href = "../farmer/FarmerDashboard.php";
-        // } else {
-        //     alert(status);
-        // }
+        if (status == 1) {
+            alert("Logged Successfully!");
+            resetFormdata('ValidateUser');
+            window.location.href = url;
+        } else {
+            alert("Invalid Username or Password");
+        }
     }
     return false;
 }

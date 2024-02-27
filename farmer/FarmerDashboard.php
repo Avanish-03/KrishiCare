@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en" id="html" class="dark">
 
@@ -5,22 +6,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farmer Dashboard</title>
-    <link rel="stylesheet" href="../dist/output.css">
+    <!-- <link rel="stylesheet" href="../dist/output.css"> -->
     <script src="../src/Js/code.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script> -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-          }
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {}
+                }
+            },
+            darkMode: "class",
         }
-      },
-      darkMode : "class",
-    }
-  </script>
+    </script>
 </head>
 
 <body>
@@ -53,12 +51,12 @@
             <!-- Sidebar -->
             <div id="sidebar" class="bg-slate-200 dark:bg-slate-900 h-full p-5 w-72 relative duration-500">
                 <!-- arrow icon -->
-                <div onclick="toggleSidebar()" class="bg-white w-fit rounded-full px-0.5 absolute -right-3 top-4 cursor-pointer shadow-lg">
+                <div onclick="toggleSidebar()" class="bg-white w-fit rounded-full px-0.5 absolute -right-3 top-2 cursor-pointer shadow-lg">
                     <svg id="arrow" xmlns="http://www.w3.org/2000/svg" class="h-7 p-1 duration-500" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                         <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
                     </svg>
                 </div>
-                <div class="lg:inline-flex md:flex my-2 h-[15%] w-full gap-2">
+                <div class="lg:inline-flex md:flex my-2 h-[15%] w-full pt-4 gap-2">
                     <img id="profile" class="h-10" src="../img/profile.png" alt="">
                     <div class="w-full duration-300 heading" id="">
                         <h1 class="text-black font-bold dark:text-white">Suraj Dubey</h1>
@@ -107,7 +105,10 @@
                         </svg>
                     </a>
                 </div>
-                <div class="h-full flex justify-center items-center duration-1000" id="section-1">Home</div>
+                <div class="h-full flex justify-center items-center duration-1000" id="section-1">Home
+
+                <?php echo $_SESSION["farmer"] ?>
+                </div>
                 <div class="h-full flex justify-center items-center" id="section-2">Dashboard</div>
                 <div class="h-full flex justify-center items-center" id="section-3">about</div>
                 <div class="h-full flex justify-center items-center" id="section-4">Contact</div>

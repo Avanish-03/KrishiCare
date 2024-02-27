@@ -117,10 +117,10 @@
                     <p class="text-xl font-bold font-serif ">Labotatory</p>
                 </div>
             </div>
-    
+
         </div>
     </div>
 </section>
 
 
-    <?php include('Footer.php'); ?>
+<?php include('Footer.php'); ?>
