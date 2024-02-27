@@ -69,18 +69,6 @@
                                                                                                                                                 echo "border-b-2 border-black text-black";
                                                                                                                                             } ?> ">Weather</a>
                         </li>
-                        <!-- <li>
-                            <a href="../dist/Crop.php" class="mr-3 hover:text-gray-900 text-lg font-bold hover:border-b-2 border-black  <?php //if ($path == 'Crop.php') {
-                                                                                                                                        //echo "border-b-2 border-black text-black";
-                                                                                                                                        //} 
-                                                                                                                                        ?> ">Crop</a>
-                        </li> -->
-                        <!-- <li>
-                            <a href="../dist/Soil.php" class="mr-3 hover:text-gray-900 text-lg font-bold hover:border-b-2 border-black  <?php //if ($path == 'Soil.php') {
-                                                                                                                                        // echo "border-b-2 border-black text-black";
-                                                                                                                                        // } 
-                                                                                                                                        ?> ">Soil</a>
-                        </li> -->
                         <li>
                             <a href="../dist/Services.php" class="mr-3 hover:text-gray-900 text-lg font-bold hover:border-b-2 border-black  <?php if ($path == 'Services.php') {
                                                                                                                                                 echo "border-b-2 border-black text-black";
@@ -96,22 +84,6 @@
                                                                                                                                                 echo "border-b-2 border-black text-black";
                                                                                                                                             } ?> ">Contact</a>
                         </li>
-                        <button type="button" data-dropdown-toggle="dropdown" class="inline-flex md:items-center items-start font-bold md:justify-center text-lg dark:text-gray-900 text-black rounded-lg cursor-pointer ">More ⊽
-                        </button>
-                        <div class="z-50 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-white" id="dropdown">
-                            <ul class=" font-medium items-start" role="none">
-                                <li>
-                                    <a href="./Techno.php" class="block px-4 py-2 text-md text-gray-900 hover:bg-gray-100 dark:text-black dark:hover:bg-gray-300 dark:hover:text-gray-700" role="menuitem">
-                                        <div class="inline-flex items-start md:items-center">Technology</div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="block px-4 py-2 text-md text-gray-900 hover:bg-gray-100 dark:text-black dark:hover:bg-gray-300 dark:hover:text-gray-700" role="menuitem">
-                                        <div class="inline-flex items-start md:items-center">page</div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </ul>
                 </div>
             </div>
