@@ -3,7 +3,7 @@
 <section>
     <!-- background img on landing page -->
     <div class="w-full lg:h-screen h-96 object-cover bg-gray-100 sm:block -z-30 overflow-hidden">
-        <div class="relative flex justify-center items-center h-full z-10 bg-center bg-cover" style="background-image: url('https://images.pexels.com/photos/8323174/pexels-photo-8323174.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+        <div class="relative flex justify-center items-center h-full z-10 bg-center bg-cover" style="background-image: url('https://img.freepik.com/premium-photo/young-indian-farmer-plowing-field_75648-1082.jpg?w=996');">
             <h1 class="text-black lg:text-7xl md:text-5xl text-3xl text-center sm:font-bold md:font-thin lg:font-semibold">"FARMING IS A PEOFESSION <br> OF HOPE" <br>
                 <span class="text-black lg:text-3xl md:text-xl text-lg font-bold">TAKING AGRICULTURE TO THE NEXT LEVEL</span>
                 <div class="w-full h-full text-center mt-5 ">
