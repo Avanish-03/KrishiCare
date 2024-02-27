@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais">
     <title>KrishiCare</title>
-    <script src="../src/flowbite.min.js"></script>
+    <!-- <script src="../src/flowbite.min.js"></script> -->
     <link rel="stylesheet" href="./output.css">
     <script src="../src/Js/code.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<<<<<<< HEAD
+=======
+    <!-- <script src="../path/to/flowbite/dist/flowbite.min.js"></script> -->
+>>>>>>> d8a3e702595830e04bf79d6ec8fb2493d85bc5fd
     <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.3.2/cdn.js'></script>
 </head>
 
@@ -30,9 +34,10 @@
                     <img src="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais" alt="" class="h-10 lg:block sm:hidden hidden">
                     <p class="self-center text-3xl font-mono font-bold dark:text-black ">KrishiCare</p>
                 </a>
-                <div class="flex md:items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
-                    <button type="button" data-dropdown-toggle="language-dropdown-menu" class="inline-flex items-center font-bold justify-center px-4 py-2 text-lg dark:text-gray-900 text-black rounded-lg cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-200 dark:hover:text-black">Register ▼
-                    </button>
+                <div class="flex items-center md:items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
+                    <button type="button" data-dropdown-toggle="language-dropdown-menu" class="inline-flex items-center font-bold justify-center py-2 text-lg dark:text-gray-900 text-black rounded-lg cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-200 dark:hover:text-black">Register 
+                    </button> <span class="text-lg font-bold px-2">|</span>
+                    <button class="inline-flex items-center font-bold justify-center py-2 text-lg dark:text-gray-900 text-black rounded-lg cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-200 dark:hover:text-black">Login</button>
                     <!-- Dropdown -->
                     <div class="z-50 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-white" id="language-dropdown-menu">
                         <ul class="font-medium" role="none">

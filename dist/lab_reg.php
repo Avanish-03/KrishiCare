@@ -24,11 +24,7 @@
 
                                 <div class="md:col-span-2">
                                     <label for="email">Email Address</label>
-<<<<<<< HEAD
-                                    <input type="email" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  placeholder="name321@gmail.com" />
-=======
                                     <input type="email" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="email@domain.com" />
->>>>>>> 0960c1fd377da8b3d9fe41572c19eb19dedb0e06
                                 </div>
 
                                 <div class="md:col-span-2">
@@ -79,11 +75,7 @@
                                 </div>
                             </div>
                         </form>
-<<<<<<< HEAD
                         <input type="hidden" name="" id="status" class="bg-black text-white">
-=======
-                        <input type="text" name="" id="status" class="hidden">
->>>>>>> 0960c1fd377da8b3d9fe41572c19eb19dedb0e06
                     </div>
                 </div>
             </div>
