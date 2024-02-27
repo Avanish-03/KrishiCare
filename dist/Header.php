@@ -10,10 +10,7 @@
     <link rel="stylesheet" href="./output.css">
     <script src="../src/Js/code.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-<<<<<<< HEAD
-=======
     <!-- <script src="../path/to/flowbite/dist/flowbite.min.js"></script> -->
->>>>>>> d8a3e702595830e04bf79d6ec8fb2493d85bc5fd
     <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.3.2/cdn.js'></script>
 </head>
 
