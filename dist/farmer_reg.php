@@ -70,7 +70,7 @@
                                     <div class="inline-flex items-center">
                                         <button class="bg-green-700 text-lg text-white font-serif py-2 px-16 rounded" onclick="return registerFarmer()">Submit</button>
                                     </div>
-                                    <p class="text-sm mt-3">If you Already registered ? <a href="Login.php" class="text-blue-800 underline italic">Login</a></p>
+                                    <p class="text-sm mt-3">If you Already registered ? <a href="Farmer_login.php" class="text-blue-800 underline italic">Login</a></p>
                                 </div>
                             </div>
                         </form>
