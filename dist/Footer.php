@@ -5,7 +5,7 @@
       <img src="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais" alt="" class="h-10 lg:block sm:hidden hidden">
         <span class="ml-3 text-4xl font-serif font-bold">KrishiCare</span>
       </a>
-      <p class="mt-2 text-sm text-gray-900">An Online Platform to connect Farmers & Consumers! We work towards providing better share of product price to Farmers, Pure & Healthy Products to Consumers & making Farming Eco Friendly.</p>
+      <p class="mt-2 text-sm text-gray-900">Greening the Future, One Crop at a Time – Krishicare Commitment.</p>
     </div>
     <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
