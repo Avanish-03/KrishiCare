@@ -32,9 +32,9 @@
                     <p class="self-center text-3xl font-serif font-bold dark:text-black ">KrishiCare</p>
                 </a>
                 <div class="flex items-center md:items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
-                    <button type="button" data-dropdown-toggle="language-dropdown-menu" class="hidden px-2 sm:inline-flex items-center font-bold justify-center py-2 text-lg dark:text-gray-900 text-black rounded-lg cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-200 dark:hover:text-black">Register</button>
-                    <span class="hidden sm:flex text-lg font-bold">|</span>
-                    <a role="button" href="Admin_login.php" class="hidden px-2 sm:inline-flex items-center font-bold justify-center py-2 text-lg dark:text-gray-900 text-black rounded-lg cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-200 dark:hover:text-black">Login</a>
+                    <button type="button" data-dropdown-toggle="language-dropdown-menu" class="hidden mx-2 sm:inline-flex items-center hover:text-green-900 text-lg font-bold hover:border-b-2 border-black">Register</button>
+                    <span class="hidden sm:flex text-lg font-bold px-2">|</span>
+                    <a role="button" href="Admin_login.php" class="hidden mx-2 sm:inline-flex items-center hover:text-green-900 text-lg font-bold hover:border-b-2 border-black">Login</a>
                     <!-- Dropdown -->
                     <div class="z-50 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-white" id="language-dropdown-menu">
                         <ul class="font-medium" role="none">
@@ -83,6 +83,11 @@
                             <a href="../dist/Contact.php" class="mr-3 hover:text-green-900 text-lg font-bold hover:border-b-2 border-black <?php if ($path == 'Contact.php') {
                                                                                                                                                 echo "border-b-2 border-black text-black";
                                                                                                                                             } ?> ">Contact</a>
+                        </li>
+                        <li class="py-2 md:py-0">
+                            <a href="../dist/faq.php" class="mr-3 hover:text-green-900 text-lg font-bold hover:border-b-2 border-black <?php if ($path == 'faq.php') {
+                                                                                                                                                echo "border-b-2 border-black text-black";
+                                                                                                                                            } ?> ">FAQ</a>
                         </li>
                         <li class="sm:hidden py-2 md:py-0">
                             <a href="../dist/farmer_reg.php" class="mr-3 hover:text-green-900 text-lg font-bold hover:border-b-2 border-black <?php if ($path == 'Contact.php') {
