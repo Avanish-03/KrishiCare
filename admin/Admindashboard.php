@@ -23,44 +23,40 @@
                     <span class="text-xs font-bold">avanishyadav123@gmail.com</span>
                 </h3>
             </div>
-            <ul class="mb-72">
-                <li class="py-4 flex text-black cursor-pointer hover:bg-gray-300">
-                    <button id="am1" class="flex px-10" onclick="showContent('ao1', 'am1')">
-                        <img class="h-6 pr-2" src="https://cdn-icons-png.freepik.com/256/747/747327.png?ga=GA1.1.1583059735.1708077775&semt=ais" alt="">
+            <ul class="mb-80 px-8">
+                <li class="flex py-2 text-gray-700 cursor-pointer hover:border-l-4 hover:border-black hover:bg-green-600 hover:text-white font-bold">
+                    <button id="am1" class="flex w-full h-auto" onclick="showContent('ao1', 'am1')">
+                        <img class="h-6 px-2 hover:" src="https://cdn-icons-png.freepik.com/256/8211/8211005.png?uid=R138725432&ga=GA1.1.1583059735.1708077775&" alt="">
                         Dashboard
                     </button>
                 </li>
 
-                <li class="py-4 flex text-black cursor-pointer hover:bg-gray-300">
-
-                    <button id="am2" class="flex px-10" onclick="showContent('ao2', 'am2')">
-                        <img class="h-6 pr-2" src="https://cdn-icons-png.freepik.com/256/652/652076.png?ga=GA1.1.253096211.1707907143&" alt="">
+                <li class="flex py-2 text-gray-700 cursor-pointer hover:border-l-4 hover:border-black hover:bg-green-600 hover:text-white font-bold">
+                    <button id="am2" class="flex w-full h-auto" onclick="showContent('ao2', 'am2')">
+                        <img class="h-6 px-2" src="https://cdn-icons-png.freepik.com/256/2350/2350391.png?uid=R138725432&ga=GA1.1.1583059735.1708077775&" alt="">
                         Farmer
                     </button>
                 </li>
 
-                <li class="py-4 flex text-black cursor-pointer hover:bg-gray-300">
-
-                    <button id="am3" class="flex px-10" onclick="showContent('ao3', 'am3')">
-                        <img class="h-6 pr-2" src="https://cdn-icons-png.freepik.com/256/2022/2022301.png?ga=GA1.1.253096211.1707907143&" alt="">
+                <li class="flex py-2 text-gray-700 cursor-pointer hover:border-l-4 hover:border-black hover:bg-green-600 hover:text-white font-bold">
+                    <button id="am3" class="flex w-full h-auto" onclick="showContent('ao3', 'am3')">
+                        <img class="h-6 px-2" src="https://cdn-icons-png.freepik.com/256/11324/11324967.png?uid=R138725432&ga=GA1.1.1583059735.1708077775&" alt="">
                         Laboratory
                     </button>
                 </li>
 
-                <li class="py-4 flex text-black cursor-pointer hover:bg-gray-300">
-
-                    <button id="am4" class="flex px-10" onclick="showContent('ao4', 'am4')">
-                        <img class="h-6 pr-2" src="https://cdn-icons-png.freepik.com/256/944/944053.png?ga=GA1.1.253096211.1707907143&" alt="">
+                <li class="flex py-2 text-gray-700 cursor-pointer hover:border-l-4 hover:border-black hover:bg-green-600 hover:text-white font-bold">
+                    <button id="am4" class="flex w-full h-auto" onclick="showContent('ao4', 'am4')">
+                        <img class="h-6 px-2" src="https://cdn-icons-png.freepik.com/256/2602/2602467.png?uid=R138725432&ga=GA1.1.1583059735.1708077775&" alt="">
                         Report
                     </button>
                 </li>
 
             </ul>
 
-            <li class="py-4 flex text-black cursor-pointer hover:bg-gray-300">
-
-                <button id="am5" class="flex px-10" onclick="showContent('ao5', 'am5')">
-                    <img class="h-6 pr-2" src="https://cdn-icons-png.freepik.com/256/2040/2040504.png?ga=GA1.1.253096211.1707907143&" alt="">
+            <li class="flex py-2 mb-3 mx-8 text-gray-700 cursor-pointer hover:border-l-4 hover:border-black hover:bg-green-600 hover:text-white font-bold">
+                <button id="am5" class="flex w-full h-auto" onclick="showContent('ao5', 'am5')">
+                    <img class="h-6 px-2" src="https://cdn-icons-png.freepik.com/256/653/653237.png?uid=R138725432&ga=GA1.1.1583059735.1708077775&" alt="">
                     Setting
                 </button>
             </li>
@@ -87,26 +83,25 @@
 
                 <!-- dashboard -->
                 <div id="ao1" class="content">
-                    
-                        <?php include('dashboard.php'); ?>
-                    </div>
+                    <?php include('dashboard.php'); ?>
                 </div>
-                <!-- page 2 -->
+
+                <!-- farmer -->
                 <div id="ao2" class="content hidden">
                     <?php include('farmer.php'); ?>
                 </div>
 
-                <!-- page 3 -->
+                <!-- laboratory -->
                 <div id="ao3" class="content hidden">
                     <?php include('lab.php'); ?>
                 </div>
 
-                <!-- page 4 -->
+                <!-- report -->
                 <div id="ao4" class="content hidden">
                     <?php include('report.php'); ?>
                 </div>
 
-                <!-- page 5 -->
+                <!-- setting -->
                 <div id="ao5" class="content hidden">
                     <?php include('setting.php'); ?>
                 </div>
@@ -119,7 +114,6 @@
     <!-- java script -->
     <script>
         // button change code
-        var display = 0;
 
         function showContent(contentId, buttonId) {
             // Hide all content 
