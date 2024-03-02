@@ -35,12 +35,27 @@
                         <button><i class="hover:bg-gray-900 rounded-md text-2xl fa-solid fa-comment-dots px-2"></i></button>
                     </div>
                     <div class="flex justify-end items-center ml-16 text-right">
-                        <div>
-                            <h1 class="text-sm font-bold">Avanish Yadav</h1>
-                            <h6 class="font-mono">avanishyadav@gmail.com</h6>
-                        </div>
-                        <div>
-                            <img src="https://cdn-icons-png.freepik.com/256/4140/4140048.png?ga=GA1.1.253096211.1707907143&" class="rounded-full h-12" alt="">
+                        <div class="hs-dropdown relative inline-flex">
+                            <button id="hs-dropdown-custom-trigger" type="button" class="hs-dropdown-toggle py-1 ps-1 pe-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                                <img class="w-10 h-10 rounded-full" src="../img/avanish.jpg" alt="Maria">
+                                <span class="text-gray-600 font-medium truncate max-w-[7.5rem] dark:text-gray-400">Avanish</span>
+                                ▽
+                            </button>
+
+                            <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg p-2 mt-2 dark:bg-gray-800 dark:border dark:border-gray-700" aria-labelledby="hs-dropdown-custom-trigger">
+                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:bg-gray-700" href="#">
+                                    Newsletter
+                                </a>
+                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:bg-gray-700" href="#">
+                                    Purchases
+                                </a>
+                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:bg-gray-700" href="#">
+                                    Downloads
+                                </a>
+                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:bg-gray-700" href="#">
+                                    Team Account
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -50,36 +65,57 @@
     <main class="w-[100%]">
         <!-- side navbar -->
         <div class="w-[20%] h-[89vh] fixed bg-gray-800">
-            <ul class="mb-80 px-8">
-                <li class="flex justify-center items-center py-3 px-4 text-gray-100 cursor-pointer hover:bg-gray-700 hover:bg-opacity-50  hover:text-white font-bold">
+            <div>
+                <h1 class="font-light text-xl text-gray-500 px-8">MENU</h1>
+            </div>
+            <ul class="mb-56 px-8">
+                <li class="flex rounded-lg justify-center items-center py-3 px-4 text-gray-100 cursor-pointer hover:bg-gray-700 hover:bg-opacity-50  hover:text-white font-bold">
                     <button id="am1" class="flex w-full h-auto" onclick="showContent('ao1', 'am1')">
                         <i class="mr-2 text-xl fa-solid fa-house"></i>
                         Dashboard
                     </button>
                 </li>
 
-                <li class="flex justify-center items-center py-3 px-4 text-gray-100 cursor-pointer hover:bg-gray-700 hover:bg-opacity-50  hover:text-white font-bold">
+                <li class="flex rounded-lg justify-center items-center py-3 px-4 text-gray-100 cursor-pointer hover:bg-gray-700 hover:bg-opacity-50  hover:text-white font-bold">
                     <button id="am2" class="flex w-full h-auto" onclick="showContent('ao2', 'am2')">
                         <i class="mr-2 text-xl fa-solid fa-person-digging"></i>
                         Farmer
                     </button>
                 </li>
 
-                <li class="flex justify-center items-center py-3 px-4 text-gray-100 cursor-pointer hover:bg-gray-700 hover:bg-opacity-50  hover:text-white font-bold">
+                <li class="flex rounded-lg justify-center items-center py-3 px-4 text-gray-100 cursor-pointer hover:bg-gray-700 hover:bg-opacity-50  hover:text-white font-bold">
                     <button id="am3" class="flex w-full h-auto" onclick="showContent('ao3', 'am3')">
                         <i class="mr-2 text-xl fa-solid fa-flask-vial"></i>
                         Laboratory
                     </button>
                 </li>
 
-                <li class="flex justify-center items-center py-3 px-4 text-gray-100 cursor-pointer hover:bg-gray-700 hover:bg-opacity-50  hover:text-white font-bold">
+                <li class="flex rounded-lg justify-center items-center py-3 px-4 text-gray-100 cursor-pointer hover:bg-gray-700 hover:bg-opacity-50  hover:text-white font-bold">
                     <button id="am4" class="flex w-full h-auto" onclick="showContent('ao4', 'am4')">
                         <i class="mr-2 text-xl fa-solid fa-file-lines"></i>
                         Report
                     </button>
                 </li>
-
             </ul>
+            <div>
+                <h1 class="font-light text-xl text-gray-500 px-8">SETTING</h1>
+            </div>
+            <li class="flex rounded-lg py-3 mb-1 mx-8 px-4 text-gray-100 cursor-pointer hover:bg-gray-700 hover:bg-opacity-50 font-bold">
+                <button id="am5" class="flex justify-start items-center w-full h-auto" onclick="showContent('ao5', 'am5')">
+                    <i class="mr-2 text-xl fa-solid fa-user"></i>
+                    Profile
+                </button>
+            </li>
+            <li class="flex rounded-lg py-3 mb-3 mx-8 px-4 text-gray-100 cursor-pointer hover:bg-gray-700 hover:bg-opacity-50 font-bold">
+                <button id="am5" class="flex justify-start items-center w-full h-auto" onclick="showContent('ao5', 'am5')">
+                    <i class="mr-2 text-xl fa-solid fa-gear"></i>
+                    Setting
+                </button>
+            </li>
+            <div>
+                <a href="../Backend/logout.php" class="border-2  px-2 py-1 rounded mx-10 text-white font-mono"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+            </div>
+
         </div>
 
         <!-- main contents -->
