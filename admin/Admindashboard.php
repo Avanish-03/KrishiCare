@@ -25,20 +25,19 @@
                     <input name="search" type="text" placeholder="Search..." class="outline-none bg-gray-900 rounded-md font-light text-lg px-2 w-[80%]">
                 </div>
                 <div class="flex justify-center items-center mx-4 ">
-                    <div class="mx-2 bg-green-700 rounded-full flex justify-around items-center">
-                        <button class="rounded-full bg-white hidden"><img src="https://cdn-icons-png.freepik.com/256/900/900557.png?uid=R138725432&ga=GA1.1.1583059735.1708077775&" class="h-8" alt=""></button>
-                        <button class="rounded-full"><img src="https://cdn-icons-png.freepik.com/256/1100/1100333.png?uid=R138725432&ga=GA1.1.1583059735.1708077775&" class="h-8" alt=""></button>
+                    <div class=" rounded-full flex justify-around items-center">
+                        <button><i class="hover:bg-gray-900 text-2xl rounded-md fa-solid fa-lightbulb px-2"></i></button>
                     </div>
-                    <div class="mx-2">
-                        <button><i class="text-2xl fa-regular fa-bell px-2"></i></button>
+                    <div class="">
+                        <button><i class="hover:bg-gray-900 rounded-md text-2xl fa-regular fa-bell px-2"></i></button>
                     </div>
-                    <div class="mx-2">
-                        <button><i class="text-2xl fa-solid fa-comment-dots px-2"></i></button>
+                    <div class="">
+                        <button><i class="hover:bg-gray-900 rounded-md text-2xl fa-solid fa-comment-dots px-2"></i></button>
                     </div>
                     <div class="flex justify-end items-center ml-16 text-right">
                         <div>
                             <h1 class="text-sm font-bold">Avanish Yadav</h1>
-                            <!-- <h6 class="font-mono">Hi, Admin</h6> -->
+                            <h6 class="font-mono">avanishyadav@gmail.com</h6>
                         </div>
                         <div>
                             <img src="https://cdn-icons-png.freepik.com/256/4140/4140048.png?ga=GA1.1.253096211.1707907143&" class="rounded-full h-12" alt="">
