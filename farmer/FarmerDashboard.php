@@ -5,12 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Dashboard</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../src/Js/code.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.3.2/cdn.js'></script>
     <title>Farmer Dashboard</title>
-    <!-- <link rel="stylesheet" href="../dist/output.css"> -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.3.2/cdn.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="../src/Js/code.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -69,33 +66,33 @@
                 </div>
                 <div class="w-full h-[60%]">
                     <div class="w-full h-[15%] space-x-2 text-black dark:text-white hover:rounded flex items-center px-2 hover:bg-slate-300 dark:hover:bg-slate-700">
-                        <img class="h-5" src="../img/home.png" alt="">
+                        <i class="fa-solid fa-house"></i>
                         <div class="heading duration-300">Home</div>
                     </div>
                     <div class="w-full h-[15%] space-x-2 text-black dark:text-white hover:rounded flex items-center px-2 hover:bg-slate-300 dark:hover:bg-slate-700">
-                        <img class="h-5" src="../img/bell.png" alt="">
+                        <i class="fa-solid fa-bell"></i>
                         <div class="heading duration-300">Notification</div>
                     </div>
                     <div class="w-full h-[15%] space-x-2 text-black dark:text-white hover:rounded flex items-center px-2 hover:bg-slate-300 dark:hover:bg-slate-700">
-                        <img class="h-5" src="../img/shovel.png" alt="">
+                        <i class="rotate-180 fa-solid fa-icicles"></i>
                         <div class="heading duration-300">Soil</div>
                     </div>
                     <div class="w-full h-[15%] space-x-2 text-black dark:text-white hover:rounded flex items-center px-2 hover:bg-slate-300 dark:hover:bg-slate-700">
-                        <img class="h-5" src="../img/wheat.png" alt="">
+                        <i class="fa-solid fa-wheat-awn"></i>
                         <div class="heading duration-300">Crop</div>
                     </div>
                     <div class="w-full h-[15%] space-x-2 text-black dark:text-white hover:rounded flex items-center px-2 hover:bg-slate-300 dark:hover:bg-slate-700">
-                        <img class="h-5" src="../img/cloudy.png" alt="">
+                        <i class="fa-solid fa-cloud-bolt"></i>
                         <div class="heading duration-300">Weather</div>
                     </div>
                 </div>
                 <div class="w-full h-[25%]">
                     <div class="w-full h-[35%] space-x-2 text-black dark:text-white hover:rounded flex items-center px-2 hover:bg-slate-300 dark:hover:bg-slate-700">
-                        <img src="../img/settings.png" class="h-5" alt="">
+                        <i class="fa-solid fa-gear"></i>
                         <div class="heading duration-300">Settings</div>
                     </div>
                     <div class="w-full h-[35%] space-x-2 text-black dark:text-white hover:rounded flex items-center px-2 hover:bg-slate-300 dark:hover:bg-slate-700">
-                        <img src="../img/logout.png" class="h-5" alt="">
+                        <i class="fa-solid fa-right-from-bracket"></i>
                         <div class="heading duration-300">Logout</div>
                     </div>
                 </div>
@@ -111,7 +108,7 @@
                 </div>
                 <div class="h-full flex justify-center items-center duration-1000" id="section-1">Home
 
-                <?php echo $_SESSION["farmer"] ?>
+                    <?php echo $_SESSION["farmer"] ?>
                 </div>
                 <div class="h-full flex justify-center items-center" id="section-2">Dashboard</div>
                 <div class="h-full flex justify-center items-center" id="section-3">about</div>
