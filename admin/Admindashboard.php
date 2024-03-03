@@ -129,7 +129,7 @@
 
         <!-- main contents -->
         <div class="w-[80%] ml-[20%]">
-            <div class="h-screen">hello </div>
+            <div class="h-screen text-white">hello </div>
         </div>
     </main>
 
