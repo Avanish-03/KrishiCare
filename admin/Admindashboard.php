@@ -25,8 +25,11 @@
                     <input name="search" type="text" placeholder="Search..." class="outline-none bg-gray-900 rounded-md font-light text-lg px-2 w-[80%]">
                 </div>
                 <div class="flex justify-center items-center mx-4 ">
-                    <div class=" rounded-full flex justify-around items-center">
-                        <button><i class="hover:bg-gray-900 text-2xl rounded-md fa-solid fa-lightbulb px-2"></i></button>
+                    <div class="toggle-btn w-10 h-6 bg-gray-500 bg-opacity-50 rounded-full flex items-start">
+                        <input type="checkbox" id="checkbox" class="hidden">
+                        <label for="checkbox" class="w-6 h-6 bg-gray-100 rounded-full relative inline-block cursor-pointer">
+                            <span class="toggle-ball absolute translate-x-2"></span>
+                        </label>
                     </div>
                     <div class="">
                         <button><i class="hover:bg-gray-900 rounded-md text-2xl fa-regular fa-bell px-2"></i></button>
@@ -68,7 +71,7 @@
             <div>
                 <h1 class="font-light text-xl text-gray-500 px-8">MENU</h1>
             </div>
-            <ul class="mb-56 px-8">
+            <ul class="mb-8 px-8">
                 <li class="flex rounded-lg justify-center items-center py-3 px-4 text-gray-100 cursor-pointer hover:bg-gray-700 hover:bg-opacity-50  hover:text-white font-bold">
                     <button id="am1" class="flex w-full h-auto" onclick="showContent('ao1', 'am1')">
                         <i class="mr-2 text-xl fa-solid fa-house"></i>
@@ -96,6 +99,12 @@
                         Report
                     </button>
                 </li>
+                <li class="flex rounded-lg justify-center items-center py-3 px-4 text-gray-100 cursor-pointer hover:bg-gray-700 hover:bg-opacity-50  hover:text-white font-bold">
+                    <button id="am5" class="flex w-full h-auto" onclick="showContent('ao5', 'am5')">
+                        <i class="mr-2 text-xl fa-brands fa-facebook-messenger"></i>
+                        Messages
+                    </button>
+                </li>
             </ul>
             <div>
                 <h1 class="font-light text-xl text-gray-500 px-8">SETTING</h1>
@@ -120,7 +129,7 @@
 
         <!-- main contents -->
         <div class="w-[80%] ml-[20%]">
-
+            <div class="h-screen">hello </div>
         </div>
     </main>
 
