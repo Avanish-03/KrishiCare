@@ -9,6 +9,7 @@
     <script src="../tailwind.js"></script>
     <script src="../src/Js/code.js"></script>
     <script src="../flowbite.js"></script>
+    <script src="../alpine.js"></script>
     <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.3.2/cdn.js'></script> -->
 </head>
 
