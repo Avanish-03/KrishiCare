@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais">
     <title>KrishiCare</title>
-    <!-- <script src="../src/flowbite.min.js"></script> -->
-    <link rel="stylesheet" href="./output.css">
+    <script src="../tailwind.js"></script>
     <script src="../src/Js/code.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <!-- <script src="../path/to/flowbite/dist/flowbite.min.js"></script> -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.3.2/cdn.js'></script>
+    <script src="../flowbite.js"></script>
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.3.2/cdn.js'></script> -->
 </head>
 
 <body>
@@ -85,7 +83,7 @@
                                                                                                                                             } ?> ">Contact</a>
                         </li>
                         <li class="py-2 md:py-0">
-                            <a href="../dist/faq.php" class="mr-3 hover:text-green-900 text-lg font-bold hover:border-b-2 border-black <?php if ($path == 'faq.php') {
+                            <a href="../dist/Faq.php" class="mr-3 hover:text-green-900 text-lg font-bold hover:border-b-2 border-black <?php if ($path == 'Faq.php') {
                                                                                                                                                 echo "border-b-2 border-black text-black";
                                                                                                                                             } ?> ">FAQ</a>
                         </li>
