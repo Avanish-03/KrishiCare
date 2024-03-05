@@ -1,41 +1,43 @@
 <!-- <?php session_start(); ?> -->
 <!-- page 1 -->
-<div class="md:mt-20 my-5 md:mx-10 mx-24">
+<div class="md:mt-20 my-5 md:mx-10 mx-24 text-black">
     <div class="md:flex md:flex-row md:justify-between flex-col flex ">
+<<<<<<< HEAD
     
         <div class="flex  justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl cursor-pointer bg-gray-100 hover:scale-105 duration-700">
             <div class=" px-4">
+=======
+
+        <div class="flex  justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl cursor-pointer bg-white hover:scale-105 duration-700">
+            <div class="text- px-4">
+>>>>>>> 8632d4218f870894173fb42ade92ba49b5756ccf
                 <h2 class="text-2xl font-bold">60.5k</h2>
                 <h2 class="text-lg">Views</h2>
             </div>
-
             <img class="h-10" src="https://cdn-icons-png.freepik.com/256/65/65000.png?ga=GA1.1.1583059735.1708077775&semt=ais" alt="Views">
         </div>
 
-        <div class="flex justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl bg-gray-100 cursor-pointer hover:scale-105 duration-700">
-            <div class=" px-4">
+        <div class="flex justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl cursor-pointer bg-white hover:scale-105 duration-700">
+            <div class="text- px-4">
                 <h2 class="text-2xl font-bold">150</h2>
                 <h2 class="text-lg">Likes</h2>
             </div>
-
             <img class="h-10" src="https://cdn-icons-png.freepik.com/256/739/739282.png?ga=GA1.1.1583059735.1708077775&semt=ais" alt="likes">
         </div>
 
-        <div class="flex justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl bg-gray-100 cursor-pointer hover:scale-105 duration-700">
-            <div class=" px-4">
+        <div class="flex justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl cursor-pointer bg-white hover:scale-105 duration-700">
+            <div class="text- px-4">
                 <h2 class="text-2xl font-bold">320</h2>
                 <h2 class="text-lg">Comments</h2>
             </div>
-
             <img class="h-10" src="https://cdn-icons-png.freepik.com/256/2961/2961490.png?ga=GA1.1.1583059735.1708077775&semt=ais" alt="comments">
         </div>
 
-        <div class="flex justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl bg-gray-100 cursor-pointer hover:scale-105 duration-700">
-            <div class=" px-4">
+        <div class="flex justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl cursor-pointer bg-white hover:scale-105 duration-700">
+            <div class="text- px-4">
                 <h2 class="text-2xl font-bold">70</h2>
                 <h2 class="text-lg">Published</h2>
             </div>
-
             <img class="h-10" src="https://cdn-icons-png.freepik.com/256/1292/1292834.png?ga=GA1.1.1583059735.1708077775&semt=ais" alt="published">
         </div>
     </div>
@@ -59,7 +61,7 @@
     <div class="bg-white py-4 md:py-7 px-4 md:px-8 xl:px-10">
         <div class="sm:flex items-center justify-between">
             <div class="flex items-center">
-                <a class="rounded-full focus:outline-none focus:ring-2  focus:bg-indigo-50 focus:ring-indigo-800" href=" javascript:void(0)">
+                <a class="rounded-full " href=" javascript:void(0)">
                     <div class="py-2 px-8 bg-indigo-100 text-indigo-700 rounded-full">
                         <p>All</p>
                     </div>

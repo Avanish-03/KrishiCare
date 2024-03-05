@@ -1,0 +1,8 @@
+#adminProcess::-webkit-scrollbar {
+    display: none;
+}
+
+#adminProcess {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}   

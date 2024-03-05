@@ -163,6 +163,7 @@ function validateUser() {
     return false;
 }
 
+<<<<<<< HEAD
 function validateDropdown(elementId, elementName) {
     var element = document.getElementById(elementId);
     if (element.value == "default") {
@@ -172,6 +173,10 @@ function validateDropdown(elementId, elementName) {
         return false;
     }
     return true;
+=======
+function showContent(process) {
+    ajaxCall('../Backend/AdminProcess.php', 'post', "process=" + process, 'adminProcess', false);
+>>>>>>> 8632d4218f870894173fb42ade92ba49b5756ccf
 }
 
 function getvalue(elementId) {
@@ -406,11 +411,19 @@ function toggleMode() {
 }
 
 function logoutUser() {
+<<<<<<< HEAD
     var result = confirm("Are you sure to logout!");
     if (result) {
         ajaxCall("../Backend/logout.php", "post", "", "logoutResult");
         window.location.href = "../dist/";
     } else {
         return false;
+=======
+    alert("logout");
+    var result = confirm("Are you sure to logout!");
+    if (result) {
+        ajaxCall("../Backend/logout.php","post","","");
+        window.location.href = "../dist/";
+>>>>>>> 8632d4218f870894173fb42ade92ba49b5756ccf
     }
 }
