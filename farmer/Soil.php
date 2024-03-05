@@ -1,7 +1,5 @@
-<?php include('Header.php'); ?>
-
 <!-- Soil Information Section -->
-<section class="container mx-auto my-8 p-8 bg-white shadow-md rounded-md">
+<section class="container h-full mx-auto my-8 p-8 rounded-md">
     <h1 class="text-3xl font-bold mb-4">Soil Information</h1>
 
     <!-- Soil Content -->
@@ -59,13 +57,3 @@
         </div>
     </div>
 </section>
-
-
-
-</body>
-
-</html>
-
-
-
-<?php include('Footer.php'); ?>

@@ -1,8 +1,7 @@
-<?php include('Header.php'); ?>
 <!-- Crop page -->
 
 <!-- Crop Detail Section -->
-<section class="container mx-auto mt-8 p-4 bg-white shadow-lg rounded-lg">
+<section class="h-full container mx-auto mt-8 p-4 rounded-lg">
   <h2 class="text-3xl font-semibold mb-4">Crop Detail</h2>
 
   <!--1. wheat Crop Information -->
@@ -101,8 +100,6 @@
   </div>
 
 </section>
-
-<?php include('Footer.php'); ?>
 
 <!-- <section class="text-gray-600 body-font">
   <div class="container px-5 py-10 mx-auto flex flex-wrap">

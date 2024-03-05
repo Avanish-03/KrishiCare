@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais">
     <title>KrishiCare</title>
-    <script src="../tailwind.js"></script>
     <script src="../src/Js/code.js"></script>
+    <link rel="stylesheet" href="../dist/output.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src="../flowbite.js"></script>
-    <script src="../alpine.js"></script>
-    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.3.2/cdn.js'></script> -->
 </head>
 
 <body>
@@ -33,8 +32,8 @@
                 <div class="flex items-center md:items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
                     <button type="button" data-dropdown-toggle="language-dropdown-menu" class="hidden mx-2 sm:inline-flex items-center hover:text-green-900 text-lg font-bold hover:border-b-2 border-black">Register</button>
                     <span class="hidden sm:flex text-lg font-bold px-2">|</span>
-                    <a role="button" href="Admin_login.php" class="hidden mx-2 sm:inline-flex items-center hover:text-green-900 text-lg font-bold hover:border-b-2 border-black">Login</a>
-                    <!-- Dropdown -->
+                    <a role="button" href="Login.php" class="hidden mx-2 sm:inline-flex items-center hover:text-green-900 text-lg font-bold hover:border-b-2 border-black">Login</a>
+                    <!--Register Dropdown -->
                     <div class="z-50 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-white" id="language-dropdown-menu">
                         <ul class="font-medium" role="none">
                             <li>

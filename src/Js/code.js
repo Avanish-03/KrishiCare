@@ -6,8 +6,8 @@ function registerFarmer() {
         ValidateEmail('email', 'Email') &&
         validateContact('contact', 'Contact number') &&
         validateEmpty('address', 'Address') &&
-        validateEmpty('city', 'City') &&
-        validateEmpty('state', 'State') &&
+        validateDropdown('state', 'State') &&
+        validateDropdown('city', 'City') &&
         validatePassword();
 
     if (result) {
@@ -17,8 +17,8 @@ function registerFarmer() {
         var email = getvalue('email');
         var contact = getvalue('contact');
         var address = getvalue('address');
-        var city = getvalue('city');
         var state = getvalue('state');
+        var city = getvalue('city');
         var password = getvalue('pwd');
 
         var dataForm =
@@ -28,8 +28,8 @@ function registerFarmer() {
             '&email=' + email +
             '&contact=' + contact +
             '&address=' + address +
-            '&city=' + city +
             '&state=' + state +
+            '&city=' + city +
             '&password=' + password +
             '&process=registerFarmer';
 
@@ -52,8 +52,8 @@ function registerLaboratory() {
         ValidateEmail('email', 'Email') &&
         validateContact('contact', 'Contact number') &&
         validateEmpty('address', 'Address') &&
-        validateEmpty('city', 'City') &&
-        validateEmpty('state', 'State') &&
+        validateDropdown('state', 'State') &&
+        validateDropdown('city', 'City') &&
         validateEmpty('ownership', 'Ownership') &&
         validatePassword();
 
@@ -63,8 +63,8 @@ function registerLaboratory() {
         var email = getvalue('email');
         var contact = getvalue('contact');
         var address = getvalue('address');
-        var city = getvalue('city');
         var state = getvalue('state');
+        var city = getvalue('city');
         var password = getvalue('pwd');
         var ownership = getvalue('ownership');
 
@@ -73,8 +73,8 @@ function registerLaboratory() {
             '&email=' + email +
             '&contact=' + contact +
             '&address=' + address +
-            '&city=' + city +
             '&state=' + state +
+            '&city=' + city +
             '&password=' + password +
             '&ownership=' + ownership +
             '&process=registerlab';
@@ -120,30 +120,6 @@ function validateContactForm() {
     return false;
 }
 
-function validateAdmin() {
-    var result = ValidateEmail('email', 'Email') &&
-        validateEmpty('pwd', 'Password');
-    if (result) {
-        console.log(result);
-        var email = getvalue('email');
-        var pwd = getvalue('pwd');
-
-        var dataForm = 'email=' + email + '&password=' + pwd + '&process=adminLogin';
-
-        ajaxCall('../Backend/Login.php', 'post', dataForm, 'status', true);
-        var status = getvalue('status');
-        console.log(status);
-        if (status == 1) {
-            alert("Logged Successfully!");
-            resetFormdata('ValidateAdmin');
-            window.location.href = "../admin/Admindashboard.php";
-        } else {
-            alert("Invalid Username or Password");
-        }
-    }
-    return false;
-}
-
 function validateUser() {
     var result =
         ValidateEmail('email', 'Email') &&
@@ -169,7 +145,9 @@ function validateUser() {
             url = "../laboratory/LaboratoryDashboard.php";
 
         } else {
-            alert("invalid user");
+            user = "admin";
+            var dataForm = 'email=' + email + '&password=' + pwd + '&user=' + user + '&process=adminLogin';
+            url = "../admin/Admindashboard.php";
         }
 
         ajaxCall('../Backend/Login.php', 'post', dataForm, 'status', true);
@@ -185,8 +163,15 @@ function validateUser() {
     return false;
 }
 
-function showContent(process) {
-    ajaxCall('../Backend/AdminProcess.php', 'post', "process=" + process, 'adminProcess', false);
+function validateDropdown(elementId, elementName) {
+    var element = document.getElementById(elementId);
+    if (element.value == "default") {
+        alert(elementName + " can't be empty!");
+        document.getElementById(elementId).focus();
+        console.log(element.value);
+        return false;
+    }
+    return true;
 }
 
 function getvalue(elementId) {
@@ -311,27 +296,85 @@ function ajaxCall(url, method, data, destination, isHtml) {
     xhttp.send(data);
 }
 
+var config = {
+    cUrl: 'https://api.countrystatecity.in/v1/countries',
+    ckey: 'SDEwOWNWc1JKWXVYa0hVaWtvYThZQzZhUTFjTkJOQ3VHcVhBYVNkaQ=='
+}
+
+function loadStates() {
+    var stateSelect = document.querySelector('.state');
+    var citySelect = document.querySelector('.city');
+
+    stateSelect.disabled = false;
+    citySelect.disabled = true;
+
+    stateSelect.style.pointerEvents = 'auto';
+    citySelect.style.pointerEvents = 'none';
+
+    const selectedCountryCode = 'IN';
+
+    stateSelect.innerHTML = '<option value="default">Select State</option>';
+    citySelect.innerHTML = '<option value="default">Select City</option>';
+
+    fetch(config.cUrl + '/' + selectedCountryCode + '/states', { headers: { "X-CSCAPI-KEY": config.ckey } })
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(state => {
+                const option = document.createElement('option')
+                option.value = state.iso2
+                option.textContent = state.name
+                stateSelect.appendChild(option)
+            });
+        })
+        .catch(error => console.error('Error loading states:', error));
+}
+
+function loadCities(event) {
+    var citySelect = document.querySelector('.city');
+
+    citySelect.disabled = false
+    citySelect.style.pointerEvents = 'auto'
+
+    const selectedCountryCode = 'IN';
+    const selectedStateCode = document.querySelector('.state').value;
+
+    citySelect.innerHTML = '<option value="">Select City</option>'
+
+    fetch(config.cUrl + '/' + selectedCountryCode + '/states/' + selectedStateCode + '/cities', { headers: { "X-CSCAPI-KEY": config.ckey } })
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(city => {
+                const option = document.createElement('option')
+                option.value = city.name
+                option.textContent = city.name
+                citySelect.appendChild(option)
+            })
+
+            if (data.length > 0) {
+                citySelect.selectedIndex = 1;
+            }
+        })
+        .catch(error => console.error('Error loading cities:', error))
+}
+
+window.onload = loadStates;
+// stateSelect.addEventListener('change', loadCities);
+
 function toggleSidebar() {
     var sidebar = document.getElementById("sidebar");
     var arrow = document.getElementById("arrow");
-    // var heading = document.getElementById("heading");
-    // var logo = document.getElementById("logo");
 
     var opensidebar = sidebar.classList.contains("w-72");
     if (opensidebar) {
         sidebar.classList.add("w-20");
         sidebar.classList.remove("w-72");
         arrow.classList.add("rotate-180");
-        // heading.classList.add("scale-0");
-        // logo.classList.add("rotate-[360deg]");
         toggleheadings(opensidebar);
     } else {
         sidebar.classList.add("w-72");
         sidebar.classList.remove("w-20");
         arrow.classList.remove("rotate-180");
-        // heading.classList.remove("scale-0");
         toggleheadings(opensidebar);
-        // logo.classList.remove("rotate-[360deg]");
     }
 }
 
@@ -362,11 +405,21 @@ function toggleMode() {
     }
 }
 
+function adminMenuLoader(process) {
+    ajaxCall('../Backend/AdminProcess.php', 'post', "process=" + process, 'adminProcess', false);
+}
+
+function farmerMenuLoader(process) {
+    ajaxCall('../Backend/FarmerProcess.php', 'post', "process=" + process, 'section', false);
+}
+
 function logoutUser() {
-    alert("logout");
     var result = confirm("Are you sure to logout!");
     if (result) {
-        ajaxCall("../Backend/logout.php","post","","");
+        ajaxCall("../Backend/logout.php", "post", "", "logoutResult");
         window.location.href = "../dist/";
+        alert("Logged out!");
+    } else {
+        return false;
     }
 }

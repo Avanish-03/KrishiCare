@@ -948,10 +948,6 @@ video {
   margin-top: 10rem;
 }
 
-.ml-\[\%\] {
-  margin-left: %;
-}
-
 .block {
   display: block;
 }
@@ -1095,6 +1091,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-48 {
+  height: 12rem;
 }
 
 .min-h-fit {
@@ -1284,6 +1284,12 @@ video {
 
 .-skew-y-6 {
   --tw-skew-y: -6deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-0 {
+  --tw-scale-x: 0;
+  --tw-scale-y: 0;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 

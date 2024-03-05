@@ -1,9 +1,9 @@
+<!-- <?php session_start(); ?> -->
 <!-- page 1 -->
 <div class="md:mt-20 my-5 md:mx-10 mx-24 text-black">
     <div class="md:flex md:flex-row md:justify-between flex-col flex ">
-
-        <div class="flex  justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl cursor-pointer bg-white hover:scale-105 duration-700">
-            <div class="text- px-4">
+        <div class="flex  justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl cursor-pointer bg-gray-100 hover:scale-105 duration-700">
+            <div class=" px-4">
                 <h2 class="text-2xl font-bold">60.5k</h2>
                 <h2 class="text-lg">Views</h2>
             </div>
@@ -40,7 +40,7 @@
     <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
     <div class="px-4 md:px-10 py-4 md:py-7">
         <div class="flex items-center justify-between">
-            <p tabindex="0" class="focus:outline-none text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-normal text-gray-800">Tasks</p>
+            <p tabindex="0" class="focus:outline-none text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-normal text-gray-800">Tasks <?php echo $_SESSION["admin"]; ?> </p>
             <div class="py-3 px-4 flex items-center text-sm font-medium leading-none text-gray-600 bg-gray-200 hover:bg-gray-300 cursor-pointer rounded">
                 <p>Sort By:</p>
                 <select aria-label="select" class="focus:text-indigo-600 focus:outline-none bg-transparent ml-1">
