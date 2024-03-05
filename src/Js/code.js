@@ -185,6 +185,10 @@ function validateUser() {
     return false;
 }
 
+function showContent(process) {
+    ajaxCall('../Backend/AdminProcess.php', 'post', "process=" + process, 'adminProcess', false);
+}
+
 function getvalue(elementId) {
     var element = document.getElementById(elementId).value;
     return element;
@@ -355,5 +359,14 @@ function toggleMode() {
         console.log(mode);
         html.classList.add("dark");
         img.src = "../img/dark-bulb.png";
+    }
+}
+
+function logoutUser() {
+    alert("logout");
+    var result = confirm("Are you sure to logout!");
+    if (result) {
+        ajaxCall("../Backend/logout.php","post","","");
+        window.location.href = "../dist/";
     }
 }
