@@ -2,15 +2,8 @@
 <!-- page 1 -->
 <div class="md:mt-20 my-5 md:mx-10 mx-24 text-black">
     <div class="md:flex md:flex-row md:justify-between flex-col flex ">
-<<<<<<< HEAD
-    
         <div class="flex  justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl cursor-pointer bg-gray-100 hover:scale-105 duration-700">
             <div class=" px-4">
-=======
-
-        <div class="flex  justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl cursor-pointer bg-white hover:scale-105 duration-700">
-            <div class="text- px-4">
->>>>>>> 8632d4218f870894173fb42ade92ba49b5756ccf
                 <h2 class="text-2xl font-bold">60.5k</h2>
                 <h2 class="text-lg">Views</h2>
             </div>
