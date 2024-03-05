@@ -8,13 +8,10 @@
     <title>KrishiCare</title>
     <script src="../tailwind.js"></script>
     <script src="../src/Js/code.js"></script>
-<<<<<<< HEAD
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <!-- <script src="../path/to/flowbite/dist/flowbite.min.js"></script> -->
-=======
     <script src="../flowbite.js"></script>
     <script src="../alpine.js"></script>
->>>>>>> 8632d4218f870894173fb42ade92ba49b5756ccf
     <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.3.2/cdn.js'></script> -->
 </head>
 

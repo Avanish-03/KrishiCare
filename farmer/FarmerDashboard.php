@@ -13,6 +13,7 @@ if ($_SESSION["farmer"] == false) {
     <title>Farmer Dashboard</title>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.3.2/cdn.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../dist/output.css">
     <script src="../src/Js/code.js"></script>
 </head>
 
@@ -60,26 +61,6 @@ if ($_SESSION["farmer"] == false) {
                 </div>
                 <div class="w-full h-[60%]">
                     <div class="w-full h-[15%] space-x-2 text-black dark:text-white hover:rounded flex items-center px-2 hover:bg-slate-300 dark:hover:bg-slate-700">
-<<<<<<< HEAD
-                        <img class="h-5" src="../img/home.png" alt="">
-                        <div class="heading duration-300 cursor-pointer">Home</div>
-                    </div>
-                    <div class="w-full h-[15%] space-x-2 text-black dark:text-white hover:rounded flex items-center px-2 hover:bg-slate-300 dark:hover:bg-slate-700">
-                        <img class="h-5" src="../img/bell.png" alt="">
-                        <div class="heading duration-300 cursor-pointer">Notification</div>
-                    </div>
-                    <div class="w-full h-[15%] space-x-2 text-black dark:text-white hover:rounded flex items-center px-2 hover:bg-slate-300 dark:hover:bg-slate-700">
-                        <img class="h-5" src="../img/shovel.png" alt="">
-                        <div class="heading duration-300 cursor-pointer">Soil</div>
-                    </div>
-                    <div class="w-full h-[15%] space-x-2 text-black dark:text-white hover:rounded flex items-center px-2 hover:bg-slate-300 dark:hover:bg-slate-700">
-                        <img class="h-5" src="../img/wheat.png" alt="">
-                        <div class="heading duration-300 cursor-pointer">Crop</div>
-                    </div>
-                    <div class="w-full h-[15%] space-x-2 text-black dark:text-white hover:rounded flex items-center px-2 hover:bg-slate-300 dark:hover:bg-slate-700">
-                        <img class="h-5" src="../img/cloudy.png" alt="">
-                        <div class="heading duration-300 cursor-pointer">Weather</div>
-=======
                         <i class="fa-solid fa-house"></i>
                         <div class="heading duration-300">Home</div>
                     </div>
@@ -98,27 +79,16 @@ if ($_SESSION["farmer"] == false) {
                     <div class="w-full h-[15%] space-x-2 text-black dark:text-white hover:rounded flex items-center px-2 hover:bg-slate-300 dark:hover:bg-slate-700">
                         <i class="fa-solid fa-cloud-bolt"></i>
                         <div class="heading duration-300">Weather</div>
->>>>>>> 8632d4218f870894173fb42ade92ba49b5756ccf
                     </div>
                 </div>
                 <div class="w-full h-[25%]">
                     <div class="w-full h-[35%] space-x-2 text-black dark:text-white hover:rounded flex items-center px-2 hover:bg-slate-300 dark:hover:bg-slate-700">
-<<<<<<< HEAD
-                        <img src="../img/settings.png" class="h-5" alt="">
-                        <div class="heading duration-300 cursor-pointer">Settings</div>
-                    </div>
-                    <div class="w-full h-[35%] space-x-2 text-black dark:text-white hover:rounded flex items-center px-2 hover:bg-slate-300 dark:hover:bg-slate-700">
-                        <img src="../img/logout.png" class="h-5" alt="">
-                        <div class="heading duration-300 cursor-pointer" onclick="logoutUser()">Logout</div>
-                        <input type="hidden" name="" id="logoutResult">
-=======
                         <i class="fa-solid fa-gear"></i>
                         <div class="heading duration-300">Settings</div>
                     </div>
                     <div class="w-full h-[35%] space-x-2 text-black dark:text-white hover:rounded flex items-center px-2 hover:bg-slate-300 dark:hover:bg-slate-700">
                         <i class="fa-solid fa-right-from-bracket"></i>
                         <div class="heading duration-300">Logout</div>
->>>>>>> 8632d4218f870894173fb42ade92ba49b5756ccf
                     </div>
                 </div>
             </div>
@@ -131,20 +101,8 @@ if ($_SESSION["farmer"] == false) {
                         </svg>
                     </a>
                 </div>
-<<<<<<< HEAD
-                <div class="h-full duration-1000" id="section">
-                    <!-- Home -->
-                    <!-- <?php echo $_SESSION["farmer"] ?> -->
-                    <div class="w-full h-48 grid grid-cols-3 gap-4 p-3">
-                        <div class="bg-slate-200 border-3 border-yellow-800 rounded-lg h-full w-full"></div>
-                        <div class="bg-slate-200 border-3 border-yellow-800 rounded-lg h-full w-full"></div>
-                        <div class="bg-slate-200 border-3 border-yellow-800 rounded-lg h-full w-full"></div>
-                    </div>
-=======
                 <div class="h-full flex justify-center items-center duration-1000" id="section-1">Home
-
                     <?php echo $_SESSION["farmer"] ?>
->>>>>>> 8632d4218f870894173fb42ade92ba49b5756ccf
                 </div>
             </div>
         </div>
