@@ -18,59 +18,59 @@
                             <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-4">
                                 <div class="md:col-span-4">
                                     <label for="firstname">First Name</label>
-                                    <input type="text" name="firstname" id="firstname" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  />
+                                    <input type="text" name="firstname" id="firstname" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                 </div>
 
                                 <div class="md:col-span-4">
                                     <label for="middlename">Middle Name</label>
-                                    <input type="text" name="middlename" id="middlename" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  />
+                                    <input type="text" name="middlename" id="middlename" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                 </div>
 
                                 <div class="md:col-span-4">
                                     <label for="lastname">Last Name</label>
-                                    <input type="text" name="lastname" id="lastname" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  />
+                                    <input type="text" name="lastname" id="lastname" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                 </div>
 
                                 <div class="md:col-span-2">
                                     <label for="email">Email Address</label>
-                                    <input type="email" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  placeholder="email@domain.com" />
+                                    <input type="email" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="email@domain.com" />
                                 </div>
 
                                 <div class="md:col-span-2">
                                     <label for="contact">Contact</label>
-                                    <input type="text" name="contact" id="contact" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  placeholder="" />
+                                    <input type="text" name="contact" id="contact" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
                                 </div>
 
                                 <div class="md:col-span-4">
                                     <label for="address">Address / Street</label>
-                                    <input type="text" name="address" id="address" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  placeholder="" />
-                                </div>
-
-                                <div class="md:col-span-2">
-                                    <label for="city">City</label>
-                                    <input type="text" name="city" id="city" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  placeholder="" />
+                                    <input type="text" name="address" id="address" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
                                 </div>
 
                                 <div class="md:col-span-2">
                                     <label for="state">State</label>
-                                    <input type="text" name="state" id="state" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  placeholder="" />
+                                    <select type="text" name="state" id="state" class="state h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" onchange="loadCities()"></select>
+                                </div>
+
+                                <div class="md:col-span-2">
+                                    <label for="city">City</label>
+                                    <select type="text" name="city" id="city" class="city h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder=""></select>
                                 </div>
 
                                 <div class="md:col-span-2">
                                     <label for="pwd">Password</label>
-                                    <input type="password" name="pwd" id="pwd" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  placeholder="" />
+                                    <input type="password" name="pwd" id="pwd" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
                                 </div>
 
                                 <div class="md:col-span-2">
                                     <label for="cpwd">Confirm Password</label>
-                                    <input type="password" name="cpwd" id="cpwd" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""  placeholder="" />
+                                    <input type="password" name="cpwd" id="cpwd" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
                                 </div>
 
                                 <div class="md:col-span-5 text-left">
                                     <div class="inline-flex items-center">
                                         <button class="bg-green-700 text-lg text-white font-serif py-2 px-16 rounded" onclick="return registerFarmer()">Submit</button>
                                     </div>
-                                    <p class="text-sm mt-3">If you Already registered ? <a href="Farmer_login.php" class="text-blue-800 underline italic">Login</a></p>
+                                    <p class="text-sm mt-3">If you Already registered ? <a href="Login.php" class="text-blue-800 underline italic">Login</a></p>
                                 </div>
                             </div>
                         </form>

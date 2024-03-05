@@ -10,40 +10,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $email = $_POST['email'];
         $password = $_POST['password'];
-        // echo $email . $password;
-
+        $user = $_POST['user'];
+        // echo $user;
         $result = mysqli_query($con, "SELECT * FROM `admin` WHERE name= '$email' and password = '$password';");
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 $adminName = $row["name"];
-                // echo $adminName;
                 echo "1";
-                // $_SESSION[$user] = $id;
+                $_SESSION[$user] = $adminName;
             }
         } else {
             echo "0";
         }
-        // $login = mysqli_query($con, "SELECT * FROM `admin` WHERE name = '$admin' AND password = '$password' ");
-
-        // $row = mysqli_fetch_assoc($login);
-
-        // if (mysqli_num_rows($login) > 0) {
-        //     if ($password == $row["password"]) {
-        //         $_SESSION['adminlogin'] = true;
-        //         $_SESSION["admin"] = $row["name"];
-        //         header("location:../dist/Admindashboard.php");
-        //     } else {
-        //         echo "Invalid !";
-        //     }
-        // } else {
-        //     echo "Not Resgistered !";
-        // }
     } else if ($process == "userLogin") {
 
         $email = $_POST['email'];
         $password = $_POST['password'];
 
         $user = $_POST['user'];
+
         $tableName = "";
         $columnName = "";
         if ($user == "farmer") {
