@@ -1,7 +1,6 @@
-<?php include('Header.php');?>
 <!-- NEW TECHNOLOGIES -->
-<section>
-    <div class="m-5">
+<section class="h-full ">
+    <div class="m-5 h-fit">
         <h1 class="text-5xl text-center w-full pt-8 font-serif text-black">Current Trends in Agriculture (2024)</h1>
         <p class="text-lg m-5 text-justify"><span class="text-5xl ml-10">N</span>ew technologies in agriculture meet the growing demand for farm automation, digitalization, and sustainability. Emerging agriculture trends mark a shift towards smart farming and efficient utilization of time and resources while reducing crop losses. Smart farming is an upcoming trend that deploys technologies like the Internet of Things (IoT), computer vision, and artificial intelligence (AI) for farming. Robots and drones are accelerating farm automation by replacing manual farm operations such as picking fruits, killing weeds, or water spraying.
 
@@ -316,5 +315,3 @@
         </div>
     </div>
 </section>
-
-<?php include('Footer.php');?>

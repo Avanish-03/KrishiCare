@@ -174,10 +174,6 @@ function validateDropdown(elementId, elementName) {
     return true;
 }
 
-function showContent(process) {
-    ajaxCall('../Backend/AdminProcess.php', 'post', "process=" + process, 'adminProcess', false);
-}
-
 function getvalue(elementId) {
     var element = document.getElementById(elementId).value;
     return element;
@@ -409,11 +405,20 @@ function toggleMode() {
     }
 }
 
+function adminMenuLoader(process) {
+    ajaxCall('../Backend/AdminProcess.php', 'post', "process=" + process, 'adminProcess', false);
+}
+
+function farmerMenuLoader(process) {
+    ajaxCall('../Backend/FarmerProcess.php', 'post', "process=" + process, 'section', false);
+}
+
 function logoutUser() {
     var result = confirm("Are you sure to logout!");
     if (result) {
         ajaxCall("../Backend/logout.php", "post", "", "logoutResult");
         window.location.href = "../dist/";
+        alert("Logged out!");
     } else {
         return false;
     }

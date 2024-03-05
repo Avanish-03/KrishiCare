@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais">
     <title>KrishiCare</title>
-    <script src="../tailwind.js"></script>
     <script src="../src/Js/code.js"></script>
+    <link rel="stylesheet" href="../dist/output.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <!-- <script src="../path/to/flowbite/dist/flowbite.min.js"></script> -->
     <script src="../flowbite.js"></script>
-    <script src="../alpine.js"></script>
-    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.3.2/cdn.js'></script> -->
 </head>
 
 <body>

@@ -2,7 +2,7 @@
   <div class="container px-5 py-16 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
     <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
       <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-      <img src="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais" alt="" class="h-10 lg:block sm:hidden hidden">
+        <img src="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais" alt="" class="h-10 lg:block sm:hidden hidden">
         <span class="ml-3 text-4xl font-serif font-bold">KrishiCare</span>
       </a>
       <p class="mt-2 text-sm text-gray-900">Greening the Future, One Crop at a Time – Krishicare Commitment.</p>
@@ -93,7 +93,8 @@
     </div>
   </div>
 </footer>
-
+<script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.3.2/cdn.js'></script>
+<script src="../alpine.js"></script>
 </body>
 
 </html>
