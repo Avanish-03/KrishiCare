@@ -13,6 +13,7 @@ if ($_SESSION["farmer"] == false) {
     <title>Farmer Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="../tailwind.css">
     <script src="../src/Js/code.js"></script>
 </head>
 
