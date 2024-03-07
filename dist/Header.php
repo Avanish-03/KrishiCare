@@ -8,6 +8,7 @@
     <title>KrishiCare</title>
     <script src="../src/Js/code.js"></script>
     <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="../src/Js/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src="../flowbite.js"></script>
 </head>
@@ -22,14 +23,14 @@
 
     ?>
 
-    <section class="sticky top-0 z-50">
+    <section class="sticky top-0 z-50 min-w-96">
         <nav class="bg-white border-gray-200 dark:bg-white shadow-lg">
             <div class=" flex flex-wrap md:items-center justify-between mx-auto p-3">
                 <a href="Home.php" class="flex md:items-center space-x-2 rtl:space-x-reverse sm:w-fit md:ml-10">
                     <img src="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais" alt="" class="h-10 lg:block sm:hidden hidden">
                     <p class="self-center text-3xl font-serif font-bold dark:text-black ">KrishiCare</p>
                 </a>
-                <div class="flex items-center md:items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
+                <div class="flex items-center md:items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse lg:pr-2">
                     <button type="button" data-dropdown-toggle="language-dropdown-menu" class="hidden mx-2 sm:inline-flex items-center hover:text-green-900 text-lg font-bold hover:border-b-2 border-black">Register</button>
                     <span class="hidden sm:flex text-lg font-bold px-2">|</span>
                     <a role="button" href="Login.php" class="hidden mx-2 sm:inline-flex items-center hover:text-green-900 text-lg font-bold hover:border-b-2 border-black">Login</a>

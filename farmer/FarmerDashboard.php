@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php session_start();
 
 if ($_SESSION["farmer"] == false) {
@@ -119,3 +120,5 @@ if ($_SESSION["farmer"] == false) {
 </body>
 
 </html>
+=======
+>>>>>>> 8e0f1fc8ce2c240105adc4e2820154f4e0fb83f2
