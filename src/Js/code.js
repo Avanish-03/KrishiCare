@@ -6,8 +6,8 @@ function registerFarmer() {
         ValidateEmail('email', 'Email') &&
         validateContact('contact', 'Contact number') &&
         validateEmpty('address', 'Address') &&
-        validateDropdown('state', 'State') &&
-        validateDropdown('city', 'City') &&
+        validateEmpty('state', 'State') &&
+        validateEmpty('city', 'City') &&
         validatePassword();
 
     if (result) {
@@ -34,7 +34,7 @@ function registerFarmer() {
             '&process=registerFarmer';
 
         ajaxCall('../Backend/Register.php', 'post', dataForm, 'status', true);
-
+        
         var status = getvalue('status');
         if (status == 1) {
             alert("Registered Successfully!");
@@ -357,7 +357,7 @@ function loadCities(event) {
         .catch(error => console.error('Error loading cities:', error))
 }
 
-window.onload = loadStates;
+// window.onload = loadStates;
 // stateSelect.addEventListener('change', loadCities);
 
 function toggleSidebar() {
@@ -366,6 +366,7 @@ function toggleSidebar() {
 
     var opensidebar = sidebar.classList.contains("w-72");
     if (opensidebar) {
+        console.log(opensidebar);
         sidebar.classList.add("w-20");
         sidebar.classList.remove("w-72");
         arrow.classList.add("rotate-180");
@@ -382,9 +383,9 @@ function toggleheadings(opensidebar) {
     var headings = document.getElementsByClassName("heading");
     for (let i = 0; i < headings.length; i++) {
         if (opensidebar) {
-            headings[i].classList.add("scale-0");
+            headings[i].classList.add("hidden");
         } else {
-            headings[i].classList.remove("scale-0");
+            headings[i].classList.remove("hidden");
         }
     }
 }
@@ -407,10 +408,50 @@ function toggleMode() {
 
 function adminMenuLoader(process) {
     ajaxCall('../Backend/AdminProcess.php', 'post', "process=" + process, 'adminProcess', false);
+
 }
 
 function farmerMenuLoader(process) {
     ajaxCall('../Backend/FarmerProcess.php', 'post', "process=" + process, 'section', false);
+}
+
+function loadChart() {
+    var dataPoints = [
+        { label: "WordPress", y: 60.0 },
+        { label: "Joomla", y: 6.5 },
+        { label: "Drupal", y: 4.6 },
+        { label: "Magento", y: 2.4 },
+        { label: "Blogger", y: 1.9 },
+        { label: "Shopify", y: 1.8 },
+        { label: "Bitrix", y: 1.5 },
+        { label: "Squarespace", y: 1.5 },
+        { label: "PrestaShop", y: 1.3 },
+        { label: "Wix", y: 0.9 },
+        { label: "OpenCart", y: 0.8 }
+    ];
+
+    var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        theme: "light2",
+        title: {
+            text: "CMS Market Share - 2017"
+        },
+        axisY: {
+            suffix: "%",
+            scaleBreaks: {
+                autoCalculate: true
+            }
+        },
+        data: [{
+            type: "column",
+            yValueFormatString: "#,##0\"%\"",
+            indexLabel: "{y}",
+            indexLabelPlacement: "inside",
+            indexLabelFontColor: "white",
+            dataPoints: dataPoints
+        }]
+    });
+    chart.render();
 }
 
 function logoutUser() {
