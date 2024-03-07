@@ -1,8 +1,7 @@
 <!-- component -->
-<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
 <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
 
-<section class="profile-page">
+<section class=" profile-page">
     <div class="relative block h-500-px">
         <div class="absolute top-0 w-full h-96 bg-center bg-cover " style="background-image: url('../img/admin_img/wave-haikei.png');"></div>
     </div>
@@ -43,7 +42,7 @@
                                     warm, intimate feel with a solid groove structure. An
                                     artist of considerable range.
                                 </p>
-                                <a href="#pablo" class="font-normal text-white">Update</a>
+                                <a href="#pablo" class="font-normal text-black bg-gray-200 rounded-md px-2 py-1">Update</a>
                             </div>
                         </div>
                     </div>
