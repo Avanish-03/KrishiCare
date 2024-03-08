@@ -111,9 +111,6 @@ $forecast = $data['list'];
         </div>
     </div>
 </section>
-
-
-
 </div>
 
 

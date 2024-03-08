@@ -1,14 +1,14 @@
 <?php
 
 // print_r($data);
-$data_size = count($data);
+$data_size = count($farmerdata);
 // $id = $_SESSION["farmer"];
 // echo $id;
 
 // Looping through the array elements
 for ($i = 0; $i < $data_size; $i++) {
     // Accessing values of the nested array at index $i
-    $nested_array = $data[$i];
+    $nested_array = $farmerdata[$i];
     // echo $nested_array["farmer_id"];
     // echo $nested_array["first_name"];
     // echo $nested_array["middle_name"];
@@ -23,10 +23,15 @@ for ($i = 0; $i < $data_size; $i++) {
     <!-- Soil Information Section -->
     <section class="h-full mx-auto my-8 p-8 pb-28 rounded-md">
         <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Dashboard</h1>
-        <div class="bg-gray-200 dark:bg-gray-600 w-full h-48 rounded my-2 px-8 flex justify-center items-center relative">
-            <div class="top-24 h-5 w-[60%] blur-2xl shadow-2xl bg-fuchsia-500 absolute  "></div>
-            <h1 class="text-7xl h-full w-full select-none z-10 font-extrabold flex justify-center items-center bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
-                Welcome, <?php echo $nested_array["first_name"] . " " . $nested_array["middle_name"] . " " . $nested_array["last_name"]; ?></h1>
+        <div class="bg-gray-200 dark:bg-gray-600 w-full h-48 rounded my-2 px-8 flex items-center relative">
+            <div class="w-fit h-full flex justify-start">
+                <img class="h-full w-full" src="../img/Welcome-bro.svg" alt="">
+            </div>
+            <div>
+                <div class="top-24 h-5 w-[45%] blur-2xl shadow-2xl bg-fuchsia-500 absolute  "></div>
+                <h1 class="text-7xl h-full w-full select-none z-10 font-extrabold flex justify-center items-center bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+                    <?php echo $nested_array["first_name"] . " " . $nested_array["middle_name"] . " " . $nested_array["last_name"]; ?></h1>
+            </div>
         </div>
         <div class="h-96 w-full mt-6 flex rounded-md bg-gray-200 dark:bg-slate-700 ">
             <div class="w-[50%] h-full rounded-md flex items-center justify-center relative">

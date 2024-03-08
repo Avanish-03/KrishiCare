@@ -1,11 +1,19 @@
 <!-- Soil Information Section -->
 <section class=" h-full mx-auto my-8 p-8 rounded-md">
-<h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Soil Information</h1>
+    <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Soil Information</h1>
+    <div class="h-48 w-full bg-gray-200 rounded-lg dark:bg-slate-700 flex items-center">
+        <div class="px-8 w-fit h-full flex justify-start">
+            <img class="h-full w-full" src="../img/Next steps-amico.svg" alt="">
+        </div>
+        <div class="w-[50%] h-full flex items-center">
+            <h1 class="text-4xl font-bold">Steps To Request For Soil Testing</h1>
+        </div>
+    </div>
     <!-- information Section -->
     <div class="w-full mt-8">
         <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-x-scroll">
             <div class=" w-full">
-                <div class="rounded-xl bg-gray-200 dark:bg-gray-600 hover:shadow-2xl p-7 pb-12 relative w-full h-full">
+                <div class="rounded-xl bg-gray-200 dark:bg-slate-700 hover:shadow-2xl p-7 pb-12 relative w-full h-full">
                     <div class="text-2xl h-fit w-full flex items-center gap-4">
                         <i class="text-red-600 fa-solid fa-receipt"></i>
                         <h3 class="text-xl font-semibold mb-2">Form Designing &amp; Surveyor Tagging</h3>
@@ -23,7 +31,7 @@
             </div>
 
             <div class=" w-full">
-                <div class="rounded-xl bg-gray-200 dark:bg-gray-600 hover:shadow-2xl p-7 pb-12 relative w-full h-full">
+                <div class="rounded-xl bg-gray-200 dark:bg-slate-700 hover:shadow-2xl p-7 pb-12 relative w-full h-full">
                     <div class="text-2xl h-fit w-full flex items-center gap-4">
                         <i class="text-blue-600 fa-solid fa-table"></i>
                         <h3 class="text-xl font-semibold mb-2">Collection of Data &amp; Sample Soil</h3>
@@ -41,7 +49,7 @@
                 </div>
             </div>
             <div class=" w-full">
-                <div class="rounded-xl bg-gray-200 dark:bg-gray-600 hover:shadow-2xl p-7 pb-12 relative w-full h-full">
+                <div class="rounded-xl bg-gray-200 dark:bg-slate-700 hover:shadow-2xl p-7 pb-12 relative w-full h-full">
                     <div class="text-2xl h-fit w-full flex items-center gap-4">
                         <i class="text-yellow-500 fa-solid fa-people-roof"></i>
                         <h3 class="text-xl font-semibold mb-2">Soil Archival Management</h3>
@@ -57,7 +65,7 @@
                 </div>
             </div>
             <div class=" w-full">
-                <div class="rounded-xl bg-gray-200 dark:bg-gray-600 hover:shadow-2xl p-7 pb-12 relative w-full h-full">
+                <div class="rounded-xl bg-gray-200 dark:bg-slate-700 hover:shadow-2xl p-7 pb-12 relative w-full h-full">
                     <div class="text-2xl h-fit w-full flex items-center gap-4">
                         <i class="text-teal-600 fa-solid fa-list-check"></i>
                         <h3 class="text-xl font-semibold mb-2">Recommendation</h3>
@@ -75,7 +83,7 @@
                 </div>
             </div>
             <div class=" w-full">
-                <div class="rounded-xl bg-gray-200 dark:bg-gray-600 hover:shadow-2xl p-7 pb-12 relative w-full h-full">
+                <div class="rounded-xl bg-gray-200 dark:bg-slate-700 hover:shadow-2xl p-7 pb-12 relative w-full h-full">
                     <div class="text-2xl h-fit w-full flex items-center gap-4">
                         <i class="text-fuchsia-800 fa-solid fa-chart-simple"></i>
                         <h3 class="text-xl font-semibold mb-2">Report Analysis &amp; Simplification</h3>
@@ -92,7 +100,7 @@
                 </div>
             </div>
             <div class=" w-full">
-                <div class="rounded-xl bg-gray-200 dark:bg-gray-600 hover:shadow-2xl p-7 pb-12 relative w-full h-full">
+                <div class="rounded-xl bg-gray-200 dark:bg-slate-700 hover:shadow-2xl p-7 pb-12 relative w-full h-full">
                     <div class="text-2xl h-fit w-full flex items-center gap-4">
                         <i class="text-emerald-400 fa-solid fa-flask-vial"></i>
                         <h3 class="text-xl font-semibold mb-2">Lab Testing &amp; Analysis of Soil</h3>
@@ -111,7 +119,7 @@
             <div class="h-7 w-full"></div>
         </div>
     </div>
-    <div class="w-full h-full mb-8 rounded-lg bg-gray-200 dark:bg-gray-600">
+    <div class="w-full h-full mb-8 rounded-lg bg-gray-200 dark:bg-slate-700">
         <div class="w-full h-[20%] flex items-center rounded-t-lg">
             <h1 class="text-5xl font-bold pl-8">Request form for Soil Testing</h1>
         </div>
@@ -120,39 +128,54 @@
         </div>
         <div class="w-full h-[80%] rounded-b-lg flex justify-center items-center">
             <div class="h-[90%] w-[50%] rounded-lg shadow-lg text-gray-800 dark:text-gray-300 bg-gray-300 dark:bg-gray-900 transition-all duration-300">
+
+
                 <form class="h-full flex justify-center items-center">
                     <div class="h-fit w-[75%]">
                         <div class="p-5 w-full flex justify-center items-center gap-4">
                             <label class="w-[25%]" for="id">User id: </label>
-                            <input class="w-[75%] p-2 rounded-md bg-gray-100 dark:bg-gray-600" value="<?php echo $id;?>" disabled type="text" name="id" id="id">
+                            <input class="w-[75%] p-2 rounded-md bg-gray-100 dark:bg-gray-700" value="<?php echo $id; ?>" disabled type="text" name="id" id="id">
                         </div>
                         <div class="p-5 w-full flex justify-center items-center gap-4">
                             <label class="w-[25%]" for="requestdate">Request date: </label>
-                            <input class="w-[75%] p-2 rounded-md bg-gray-100 dark:bg-gray-600" type="date" name="requestdate" id="requestdate">
+                            <input class="w-[75%] p-2 outline-none rounded-md bg-gray-100 dark:bg-gray-700" type="date" name="requestdate" id="requestdate">
                         </div>
                         <div class="p-5 w-full flex justify-center items-center gap-4">
-                            <label class="w-[25%]" for="labid">Lab id: </label>
-                            <input class="w-[75%] p-2 rounded-md bg-gray-100 dark:bg-gray-600" type="text" namelab="id" id="labid">
+                            <label class="w-[25%]" for="labid">Lab Name: </label>
+                            <select class="w-[75%] p-2 outline-none rounded-md bg-gray-100 dark:bg-gray-700" type="text" namelab="id" id="labid">
+                                <option value="default">Select lab</option>
+                                <?php
+                                $data_size = count($labdata);
+                                // Looping through the array elements
+                                for ($i = 0; $i < $data_size; $i++) {
+                                    // Accessing values of the nested array at index $i
+                                    $nested_array = $labdata[$i];
+                                ?>
+                                    <option value="<?php echo $nested_array["lab_id"]; ?>"><?php echo $nested_array["lab_name"]; ?></option>
+                                <?php
+                                }
+                                ?>
+                            </select>
                         </div>
                         <div class="p-5 w-full flex justify-center items-center gap-4">
-                            <input type="button" onclick="submitRequest(<?php echo $id;?>)" value="Submit" class="py-2 px-4 bg-gray-200 dark:bg-gray-600 rounded-lg">
-                            <input type="button" value="Cancel" class="py-2 px-4 bg-gray-200 dark:bg-gray-600 rounded-lg">
+                            <input type="button" onclick="submitRequest(<?php echo $id; ?>)" value="Submit" class="py-2 px-4 bg-gray-200 dark:bg-gray-700 rounded-lg">
+                            <input type="button" value="Cancel" class="py-2 px-4 bg-gray-200 dark:bg-gray-700 rounded-lg">
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    <div class="w-full rounded-lg bg-gray-200 dark:bg-gray-600 flex justify-center items-center py-8">
+    <div class="w-full rounded-lg bg-gray-200 dark:bg-slate-700 flex justify-center items-center py-8">
         <img src="../img/soil-processing.webp" alt="">
     </div>
-    <div class="h-48 rounded-lg my-4 flex items-center bg-gray-200 dark:bg-gray-600 ">
+    <div class="h-48 rounded-lg my-4 flex items-center bg-gray-200 dark:bg-slate-700 ">
         <h1 class="text-7xl px-8 font-bold">Soil Types</h1>
     </div>
     <!-- Soil Content -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Soil Type 1 -->
-        <div class="bg-gray-200 dark:bg-gray-600 p-6 rounded-md hover:shadow-xl">
+        <div class="bg-gray-200 dark:bg-slate-700 p-6 rounded-md hover:shadow-xl">
             <h2 class="text-xl font-semibold mb-2">Clay Soil</h2>
             <p class="text-gray-700 dark:text-gray-300">
                 Clay Soil is a heavy soil type that benefits from high nutrients. Clay soils remain wet and cold in winter and dry out in summer.
@@ -161,7 +184,7 @@
         </div>
 
         <!-- Soil Type 2 -->
-        <div class="bg-gray-200 dark:bg-gray-600 p-6 rounded-md hover:shadow-xl">
+        <div class="bg-gray-200 dark:bg-slate-700 p-6 rounded-md hover:shadow-xl">
             <h2 class="text-xl font-semibold mb-2">Sandy Soil</h2>
             <p class="text-gray-700 dark:text-gray-300">
                 Sandy Soil is light, warm, dry and tends to be acidic and low in nutrients. Sandy soils are often known as light soils due to their high proportion of sand and little clay (clay weighs more than sand).
@@ -170,14 +193,14 @@
         </div>
 
         <!-- Soil Type 3 -->
-        <div class="bg-gray-200 dark:bg-gray-600 p-6 rounded-md hover:shadow-xl">
+        <div class="bg-gray-200 dark:bg-slate-700 p-6 rounded-md hover:shadow-xl">
             <h2 class="text-xl font-semibold mb-2">Loamy Soil</h2>
             <p class="text-gray-700 dark:text-gray-300">Loam soil is a mixture of sand, silt and clay that are combined to avoid the negative effects of each type.
                 These soils are fertile, easy to work with and provide good drainage. Depending on their predominant composition they can be either sandy or clay loam.
                 As the soils are a perfect balance of soil particles, they are considered to be a gardeners best friend, but still benefit from topping up with additional organic matter.</p>
         </div>
         <!-- Soil Type 1 -->
-        <div class="bg-gray-200 dark:bg-gray-600 p-6 rounded-md hover:shadow-xl">
+        <div class="bg-gray-200 dark:bg-slate-700 p-6 rounded-md hover:shadow-xl">
             <h2 class="text-xl font-semibold mb-2">Silt Soil</h2>
             <p class="text-gray-700 dark:text-gray-300">
                 Silt Soil is a light and moisture retentive soil type with a high fertility rating.
@@ -187,7 +210,7 @@
         </div>
 
         <!-- Soil Type 2 -->
-        <div class="bg-gray-200 dark:bg-gray-600 p-6 rounded-md hover:shadow-xl">
+        <div class="bg-gray-200 dark:bg-slate-700 p-6 rounded-md hover:shadow-xl">
             <h2 class="text-xl font-semibold mb-2">Peat Soil</h2>
             <p class="text-gray-700 dark:text-gray-300">
                 Peat soil is high in organic matter and retains a large amount of moisture.
@@ -195,7 +218,7 @@
         </div>
 
         <!-- Soil Type 3 -->
-        <div class="bg-gray-200 dark:bg-gray-600 p-6 rounded-md hover:shadow-xl">
+        <div class="bg-gray-200 dark:bg-slate-700 p-6 rounded-md hover:shadow-xl">
             <h2 class="text-xl font-semibold mb-2">Chalk Soil</h2>
             <p class="text-gray-700 dark:text-gray-300">
                 Chalk soil can be either light or heavy but always highly alkaline due to the calcium carbonate (lime) within its structure.
@@ -203,7 +226,7 @@
                 If a chalky soil shows signs of visible white lumps then they can’t be acidified and gardeners should be resigned to only choose plants that prefer an alkaline soil.</p>
         </div>
         <!-- Soil Type 1 -->
-        <div class="bg-gray-200 dark:bg-gray-600 p-6 rounded-md hover:shadow-xl">
+        <div class="bg-gray-200 dark:bg-slate-700 p-6 rounded-md hover:shadow-xl">
             <h2 class="text-xl font-semibold mb-2">Red & Yellow Soil</h2>
             <p class="text-gray-700 dark:text-gray-300">
                 Also known as the “omnibus group”.
@@ -214,7 +237,7 @@
         </div>
 
         <!-- Soil Type 2 -->
-        <div class="bg-gray-200 dark:bg-gray-600 p-6 rounded-md hover:shadow-xl">
+        <div class="bg-gray-200 dark:bg-slate-700 p-6 rounded-md hover:shadow-xl">
             <h2 class="text-xl font-semibold mb-2">Black or Regur Soil</h2>
             <p class="text-gray-700 dark:text-gray-300">
                 Black soil is also known as “Regur Soil” or the “Black Cotton Soil”.
@@ -224,7 +247,7 @@
         </div>
 
         <!-- Soil Type 3 -->
-        <div class="bg-gray-200 dark:bg-gray-600 p-6 rounded-md hover:shadow-xl">
+        <div class="bg-gray-200 dark:bg-slate-700 p-6 rounded-md hover:shadow-xl">
             <h2 class="text-xl font-semibold mb-2">Desert Soil</h2>
             <p class="text-gray-700 dark:text-gray-300">
                 Also known as arid soil, it accounts for over 4.42 % of the total land area of the country.

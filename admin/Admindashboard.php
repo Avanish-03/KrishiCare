@@ -14,6 +14,7 @@ if ($_SESSION["admin"] == null) {
     <link rel="icon" href="https://cdn-icons-png.freepik.com/256/4140/4140048.png?ga=GA1.1.253096211.1707907143&">
     <title>Admin</title>
     <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="../src/Js/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../tailwind.css">
     <script src="../src/Js/code.js"></script>
@@ -139,7 +140,7 @@ if ($_SESSION["admin"] == null) {
                 </div>
             </div>
             <!-- main contents -->
-            <div class="w-[82%] h-full">
+            <div class="w-full h-full">
                 <div id="adminProcess" class="h-full w-full bg-gray-700 text-white overflow-y-scroll">
                 </div>
             </div>
