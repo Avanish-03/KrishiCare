@@ -11,7 +11,7 @@ if ($_SESSION["farmer"] == false) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratory Dashboard</title>
+    <title>Farmer Dashboard</title>
     <link rel="stylesheet" href="../dist/output.css">
     <link rel="stylesheet" href="../src/Js/styles.css">
     <!-- <link rel="stylesheet" href="../tailwind.css"> -->

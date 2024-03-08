@@ -1,6 +1,6 @@
 <!-- farmer slide -->
-<div class="md:mt-20 my-5 md:mx-10 mx-24 text-black">
-    <div class="md:flex md:flex-row md:justify-between flex-col flex ">
+<div class="md:mt-20 my-5 mx-10 sm:mx-24 text-black">
+    <div class="md:flex md:flex-row md:justify-between flex-col flex sm:gap-8">
 
         <div class="flex  justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl cursor-pointer bg-gray-100 hover:scale-105 duration-700">
             <div class=" px-4">
