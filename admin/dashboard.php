@@ -1,43 +1,58 @@
 <!-- <?php session_start(); ?> -->
 <!-- dashboard -->
-<div class="md:mt-20 my-5 mx-10 sm:mx-24 text-black">
-    <div class="md:flex md:flex-row md:justify-between flex-col flex sm:gap-8">
-        <div class="flex  justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl cursor-pointer bg-white hover:scale-105 duration-700">
-            <div class="px-4">
-                <h2 class="text-2xl font-bold">60.5k</h2>
-                <h2 class="text-lg">Views</h2>
-            </div>
-            <img class="h-10" src="https://cdn-icons-png.freepik.com/256/65/65000.png?ga=GA1.1.1583059735.1708077775&semt=ais" alt="Views">
+<section class="text-white body-font">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Master Cleanse Reliac Heirloom</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
         </div>
-
-        <div class="flex justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl cursor-pointer bg-white hover:scale-105 duration-700">
-            <div class="text- px-4">
-                <h2 class="text-2xl font-bold">150</h2>
-                <h2 class="text-lg">Likes</h2>
+        <div class="flex flex-wrap -m-4 text-center">
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                        <path d="M8 17l4 4 4-4m-4-5v9"></path>
+                        <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path>
+                    </svg>
+                    <h2 class="title-font font-medium text-3xl text-gray-900">2.7K</h2>
+                    <p class="leading-relaxed">Downloads</p>
+                </div>
             </div>
-            <img class="h-10" src="https://cdn-icons-png.freepik.com/256/739/739282.png?ga=GA1.1.1583059735.1708077775&semt=ais" alt="likes">
-        </div>
-
-        <div class="flex justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl cursor-pointer bg-white hover:scale-105 duration-700">
-            <div class="text- px-4">
-                <h2 class="text-2xl font-bold">320</h2>
-                <h2 class="text-lg">Comments</h2>
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+                    </svg>
+                    <h2 class="title-font font-medium text-3xl text-gray-900">1.3K</h2>
+                    <p class="leading-relaxed">Users</p>
+                </div>
             </div>
-            <img class="h-10" src="https://cdn-icons-png.freepik.com/256/2961/2961490.png?ga=GA1.1.1583059735.1708077775&semt=ais" alt="comments">
-        </div>
-
-        <div class="flex justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl cursor-pointer bg-white hover:scale-105 duration-700">
-            <div class="text- px-4">
-                <h2 class="text-2xl font-bold">70</h2>
-                <h2 class="text-lg">Published</h2>
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                        <path d="M3 18v-6a9 9 0 0118 0v6"></path>
+                        <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"></path>
+                    </svg>
+                    <h2 class="title-font font-medium text-3xl text-gray-900">74</h2>
+                    <p class="leading-relaxed">Files</p>
+                </div>
             </div>
-            <img class="h-10" src="https://cdn-icons-png.freepik.com/256/1292/1292834.png?ga=GA1.1.1583059735.1708077775&semt=ais" alt="published">
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    <h2 class="title-font font-medium text-3xl text-gray-900">46</h2>
+                    <p class="leading-relaxed">Places</p>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</section>
 <!-- component -->
 <div class="sm:px-6 w-full">
-    
+
     <div class="px-4 md:px-10 py-4 md:py-7">
     </div>
     <div class="bg-white py-4 mb-4 rounded-md md:py-7 px-4 md:px-8 xl:px-10">

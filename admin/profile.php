@@ -1,8 +1,8 @@
 <!-- component -->
-<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
-<section class=" profile-page">
-    <div class="relative block h-500-px">
-        <div class="absolute top-0 w-full h-96 bg-center bg-cover " style="background-image: url('../img/admin_img/wave-haikei.png');"></div>
+<!-- <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"> -->
+<section class=" profile-page ">
+    <div class=" block h-500-px">
+        <div class="w-full h-96 bg-center bg-cover" style="background-image: url('../img/admin_img/wave-haikei.png');"></div>
     </div>
     <div class="relative py-16 ">
         <div class="container mx-auto px-4">
@@ -16,7 +16,7 @@
                                     <img alt="..." src="../img/avanish.jpg" class="shadow-xl rounded-full w-32 h-32 align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px">
                                 </button>
 
-                                <div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                                <div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0  justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
                                     <div class="relative p-4 w-full max-w-md max-h-full">
                                         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                                             <button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="popup-modal">
