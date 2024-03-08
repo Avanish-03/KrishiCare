@@ -1,43 +1,11 @@
 <!-- <?php session_start(); ?> -->
 <!-- dashboard -->
-<div class="md:mt-20 my-5 mx-10 sm:mx-24 text-black">
-    <div class="md:flex md:flex-row md:justify-between flex-col flex sm:gap-8">
-        <div class="flex  justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl cursor-pointer bg-white hover:scale-105 duration-700">
-            <div class="px-4">
-                <h2 class="text-2xl font-bold">60.5k</h2>
-                <h2 class="text-lg">Views</h2>
-            </div>
-            <img class="h-10" src="https://cdn-icons-png.freepik.com/256/65/65000.png?ga=GA1.1.1583059735.1708077775&semt=ais" alt="Views">
-        </div>
-
-        <div class="flex justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl cursor-pointer bg-white hover:scale-105 duration-700">
-            <div class="text- px-4">
-                <h2 class="text-2xl font-bold">150</h2>
-                <h2 class="text-lg">Likes</h2>
-            </div>
-            <img class="h-10" src="https://cdn-icons-png.freepik.com/256/739/739282.png?ga=GA1.1.1583059735.1708077775&semt=ais" alt="likes">
-        </div>
-
-        <div class="flex justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl cursor-pointer bg-white hover:scale-105 duration-700">
-            <div class="text- px-4">
-                <h2 class="text-2xl font-bold">320</h2>
-                <h2 class="text-lg">Comments</h2>
-            </div>
-            <img class="h-10" src="https://cdn-icons-png.freepik.com/256/2961/2961490.png?ga=GA1.1.1583059735.1708077775&semt=ais" alt="comments">
-        </div>
-
-        <div class="flex justify-around items-center md:my-0 my-4 border-2 md:py-8 md:w-64 py-8 w-52 rounded-2xl cursor-pointer bg-white hover:scale-105 duration-700">
-            <div class="text- px-4">
-                <h2 class="text-2xl font-bold">70</h2>
-                <h2 class="text-lg">Published</h2>
-            </div>
-            <img class="h-10" src="https://cdn-icons-png.freepik.com/256/1292/1292834.png?ga=GA1.1.1583059735.1708077775&semt=ais" alt="published">
-        </div>
-    </div>
-</div>
+<section>
+    
+</section>
 <!-- component -->
 <div class="sm:px-6 w-full">
-    
+
     <div class="px-4 md:px-10 py-4 md:py-7">
     </div>
     <div class="bg-white py-4 mb-4 rounded-md md:py-7 px-4 md:px-8 xl:px-10">

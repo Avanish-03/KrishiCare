@@ -61,7 +61,7 @@ if ($_SESSION["admin"] == null) {
                                     </svg>
                                 </button>
                                 <!-- Dropdown menu -->
-                                <div id="dropdownDivider" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-32 dark:bg-gray-700 dark:divide-gray-600">
+                                <div id="dropdownDivider" class="hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-32 dark:bg-gray-700 dark:divide-gray-600">
                                     <ul class="py-2 text-md text-gray-700 dark:text-gray-200 text-start" aria-labelledby="dropdownDividerButton">
                                         <li>
                                             <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -115,7 +115,7 @@ if ($_SESSION["admin"] == null) {
                             <i class="sm:mr-2 sm:text-xl fa-brands fa-facebook-messenger"></i>
                             <div class="cursor-pointer hidden sm:block"> Messages</div>
                         </li>
-                        <li onclick="adminMenuLoader('messages')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
+                        <li onclick="adminMenuLoader('notification')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
                             <i class="sm:mr-2 sm:text-xl fa-regular fa-bell"></i>
                             <div class="cursor-pointer hidden sm:block"> Notification</div>
                         </li>
