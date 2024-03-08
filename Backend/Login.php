@@ -16,8 +16,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 $adminName = $row["name"];
-                echo "1";
                 $_SESSION[$user] = $adminName;
+                echo "1";
+                // echo $_SESSION["$user"];
             }
         } else {
             echo "0";
@@ -45,8 +46,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 $id = $row[$columnName];
-                echo "1";
                 $_SESSION[$user] = $id;
+                echo "1";
+                // echo $_SESSION["$user"];
             }
         } else {
             echo "0";

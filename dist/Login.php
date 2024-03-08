@@ -27,14 +27,14 @@
                                     </div>
                                     <div class="w-full flex justify-between">
                                         <div class="flex gap-2 ">
-                                            <input type="radio" name="user" id="farmer"><label for="farmer">Farmer</label>
+                                            <input class="outline-none" type="radio" name="user" id="farmer"><label for="farmer">Farmer</label>
                                         </div>
                                         <div class="flex gap-2 ">
-                                            <input type="radio" name="user" id="laboratory"><label for="laboratory">Laboratory</label>
+                                            <input class="outline-none" type="radio" name="user" id="laboratory"><label for="laboratory">Laboratory</label>
                                         </div>
                                     </div>
                                     <div class="relative">
-                                        <input type="button" onclick="return validateUser()" class="bg-gradient-to-r cursor-pointer from-green-300 to-green-500 text-white rounded-md px-2 py-1 w-1/3" value="Submit">
+                                        <input type="button" onclick="return validateUser()" class="outline-none bg-gradient-to-r cursor-pointer from-green-300 to-green-500 text-white rounded-md px-2 py-1 w-1/3" value="Submit">
                                     </div>
                                 </div>
                             </div>

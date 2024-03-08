@@ -34,7 +34,7 @@ function registerFarmer() {
             '&process=registerFarmer';
 
         ajaxCall('../Backend/Register.php', 'post', dataForm, 'status', true);
-        
+
         var status = getvalue('status');
         if (status == 1) {
             alert("Registered Successfully!");
@@ -161,6 +161,12 @@ function validateUser() {
         }
     }
     return false;
+}
+
+function submitRequest(id) {
+    alert(id);
+    var dateInput = getvalue("requestdate");
+    alert(dateInput)
 }
 
 function validateDropdown(elementId, elementName) {
@@ -383,9 +389,9 @@ function toggleheadings(opensidebar) {
     var headings = document.getElementsByClassName("heading");
     for (let i = 0; i < headings.length; i++) {
         if (opensidebar) {
-            headings[i].classList.add("hidden");
+            headings[i].classList.add("scale-0");
         } else {
-            headings[i].classList.remove("hidden");
+            headings[i].classList.remove("scale-0");
         }
     }
 }
@@ -396,11 +402,9 @@ function toggleMode() {
 
     var mode = html.classList.contains("dark");
     if (mode) {
-        console.log(mode);
         html.classList.remove("dark");
         img.src = "../img/light-bulb.png";
     } else {
-        console.log(mode);
         html.classList.add("dark");
         img.src = "../img/dark-bulb.png";
     }
@@ -411,8 +415,8 @@ function adminMenuLoader(process) {
 
 }
 
-function farmerMenuLoader(process) {
-    ajaxCall('../Backend/FarmerProcess.php', 'post', "process=" + process, 'section', false);
+function farmerMenuLoader(process, id) {
+    ajaxCall('../Backend/FarmerProcess.php', 'post', "id=" + id + "&process=" + process, 'section', false);
 }
 
 function loadChart() {
