@@ -458,10 +458,10 @@ function loadChart() {
     chart.render();
 }
 
-function logoutUser() {
+function logoutUser(user) {
     var result = confirm("Are you sure to logout!");
     if (result) {
-        ajaxCall("../Backend/logout.php", "post", "", "logoutResult");
+        ajaxCall("../Backend/logout.php", "post", "user=" + user, "logoutResult");
         window.location.href = "../dist/";
         alert("Logged out!");
     } else {

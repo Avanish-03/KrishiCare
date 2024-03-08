@@ -133,7 +133,7 @@ if ($_SESSION["admin"] == null) {
                         <i class="sm:mr-2 sm:text-xl fa-solid fa-gear"></i>
                         <div class="cursor-pointer hidden sm:block">Setting</div>
                     </li>
-                    <li onclick="logoutUser()" class="flex rounded-lg py-3 mb-3 sm:mx-8 px-4 text-gray-100 cursor-pointer hover:bg-gray-700 hover:bg-opacity-50 font-bold">
+                    <li onclick="logoutUser('admin')" class="flex rounded-lg py-3 mb-3 sm:mx-8 px-4 text-gray-100 cursor-pointer hover:bg-gray-700 hover:bg-opacity-50 font-bold">
                         <i class="sm:mr-2 sm:text-xl fa-solid fa-right-from-bracket"></i>
                         <div class="cursor-pointer hidden sm:block">Logout</div>
                     </li>
