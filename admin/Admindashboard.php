@@ -115,7 +115,7 @@ if ($_SESSION["admin"] == null) {
                             <i class="sm:mr-2 sm:text-xl fa-brands fa-facebook-messenger"></i>
                             <div class="cursor-pointer hidden sm:block"> Messages</div>
                         </li>
-                        <li onclick="adminMenuLoader('messages')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
+                        <li onclick="adminMenuLoader('notification')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
                             <i class="sm:mr-2 sm:text-xl fa-regular fa-bell"></i>
                             <div class="cursor-pointer hidden sm:block"> Notification</div>
                         </li>
