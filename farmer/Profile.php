@@ -10,4 +10,8 @@
             <h1 class=" text-4xl font-bold">Profile Detail</h1>
         </div>
     </div>
+    <div class="h-full w-full my-8 rounded-md bg-gray-200 dark:bg-slate-700">
+        <!-- Update Form -->
+    </div>
+    <div class="h-7"></div>
 </section>
