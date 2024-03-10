@@ -12,7 +12,6 @@
                         <p class="font-medium text-lg">Farmer Details</p>
                         <p>Please fill out all the fields.</p>
                     </div>
-
                     <div class="lg:col-span-2">
                         <form id="farmForm" method="post" action="#">
                             <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-4">
@@ -48,14 +47,14 @@
 
                                 <div class="md:col-span-2">
                                     <label for="state">State</label>
-                                    <input type="text" name="state" id="state" class="state h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
-                                    <!-- <select type="text" name="state" id="state" class="state h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" onchange="loadCities()"></select> -->
+                                    <!-- <input type="text" name="state" id="state" class="state h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" /> -->
+                                    <select type="text" name="state" id="state" class="state h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" onchange="loadCities()"></select>
                                 </div>
 
                                 <div class="md:col-span-2">
                                     <label for="city">City</label>
-                                    <input type="text" name="city" id="city" class="city h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
-                                    <!-- <select type="text" name="city" id="city" class="city h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder=""></select> -->
+                                    <!-- <input type="text" name="city" id="city" class="city h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" /> -->
+                                    <select type="text" name="city" id="city" class="city h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder=""></select>
                                 </div>
 
                                 <div class="md:col-span-2">

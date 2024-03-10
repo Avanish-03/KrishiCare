@@ -11,14 +11,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = $_POST['email'];
         $password = $_POST['password'];
         $user = $_POST['user'];
-        // echo $user;
         $result = mysqli_query($con, "SELECT * FROM `admin` WHERE name= '$email' and password = '$password';");
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 $adminName = $row["name"];
                 $_SESSION[$user] = $adminName;
                 echo "1";
-                // echo $_SESSION["$user"];
             }
         } else {
             echo "0";
@@ -48,7 +46,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $id = $row[$columnName];
                 $_SESSION[$user] = $id;
                 echo "1";
-                // echo $_SESSION["$user"];
             }
         } else {
             echo "0";

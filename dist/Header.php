@@ -13,7 +13,7 @@
     <script src="../flowbite.js"></script>
 </head>
 
-<body>
+<body onload="loadStates()">
     <!-- (1)NAVBAAR! -->
     <?php
 
