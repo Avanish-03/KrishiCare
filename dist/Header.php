@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais">
     <title>KrishiCare</title>
-    <link rel="stylesheet" href="../tailwind.css">
+    <!-- <link rel="stylesheet" href="../tailwind.css"> -->
     <link rel="stylesheet" href="../dist/output.css">
     <link rel="stylesheet" href="../src/Js/styles.css">
     <script src="../src/Js/code.js"></script>
