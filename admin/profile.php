@@ -6,15 +6,15 @@
     <!-- information Section -->
     <div class=" profile-page ">
         <div class=" block h-350-px">
-            <!-- <div class="h-48 w-full bg-gray-200 rounded-lg dark:bg-slate-600 flex items-center mb-4">
+            <div class="h-48 w-full bg-gray-200 rounded-lg dark:bg-slate-600 flex items-center mb-4">
                 <div class="px-8 w-fit h-full flex justify-start">
-                    <img class="h-full w-full" src="../img/Profile data-rafiki.svg" alt="">
+                    <img class="h-full w-full" src="../img/Profile Interface-bro admin.png" alt="">
                 </div>
                 <div class="w-[50%] h-full flex items-center">
                     <h1 class="text-md sm:text-4xl font-bold">Profile Detail</h1>
                 </div>
-            </div> -->
-            <div class="w-full h-44 sm:h-96 bg-center bg-cover" style="background-image: url('../img/admin_img/wave-haikei.png');"></div>
+            </div>
+            <!-- <div class="w-full h-44 sm:h-96 bg-center bg-cover" style="background-image: url('../img/admin_img/wave-haikei.png');"></div> -->
         </div>
         <div class="relative py-16 ">
             <div class="container mx-auto px-">
@@ -23,6 +23,7 @@
                         <div class="flex flex-wrap justify-center">
                             <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
                                 <div class="relative">
+
                                     <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
                                         <img alt="..." src="../img/avanish.jpg" class="shadow-xl rounded-full w-32 h-32 align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px">
                                     </button>
