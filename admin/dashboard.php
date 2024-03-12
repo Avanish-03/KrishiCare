@@ -8,8 +8,7 @@
         </div>
         <div class="h-full">
             <div class="h-5 w-[45%] blur-2xl shadow-2xl"></div>
-            <!-- <h1 class="text-7xl h-full w-full select-none z-10 font-extrabold flex justify-center items-center bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500"> -->
-                <!-- <?php //echo $nested_array["first_name"] . " " . $nested_array["middle_name"] . " " . $nested_array["last_name"]; ?></h1> -->
+            <h1 class="text-7xl h-full w-full select-none z-10 font-extrabold flex justify-center items-center bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-white">Admin </h1>
         </div>
     </div>
     <div class="h-96 w-full mt-6 flex rounded-md bg-gray-200 dark:bg-slate-600 ">
