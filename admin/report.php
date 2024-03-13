@@ -3,7 +3,7 @@
     <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Report</h1>
     <!-- information Section -->
     <div class="h-48 w-full bg-gray-200 rounded-lg dark:bg-slate-600 flex items-center">
-        <div class="w-fit h-full flex justify-start">
+        <div class="w-fit h-full flex justify-start px-8">
             <img class="h-full w-full" src="../img/Report-illustrater.png" alt="">
         </div>
         <div class="w-[50%] h-full flex items-center">

@@ -69,11 +69,11 @@
                                                                                                                                                 echo "border-b-2 border-black text-black";
                                                                                                                                             } ?> ">Weather</a>
                         </li>
-                        <li class="py-2 md:py-0">
-                            <a href="../dist/Services.php" class="mr-3 hover:text-green-900 text-lg font-bold hover:border-b-2 border-black <?php if ($path == 'Services.php') {
-                                                                                                                                                    echo "border-b-2 border-black text-black";
-                                                                                                                                                } ?> ">Services</a>
-                        </li>
+                        <!-- <li class="py-2 md:py-0">
+                            <a href="../dist/Services.php" class="mr-3 hover:text-green-900 text-lg font-bold hover:border-b-2 border-black <?php //if ($path == 'Services.php') {
+                                                                                                                                                    //echo "border-b-2 border-black text-black";
+                                                                                                                                                //} ?> ">Services</a>
+                        </li> -->
                         <li class="py-2 md:py-0">
                             <a href="../dist/About.php" class="mr-3 hover:text-green-900 text-lg font-bold hover:border-b-2 border-black <?php if ($path == 'About.php') {
                                                                                                                                                 echo "border-b-2 border-black text-black";

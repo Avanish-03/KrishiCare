@@ -1,39 +1,37 @@
 <?php
+require('config.php');
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $process = $_POST["process"];
+    $id = $_POST["id"];
+    $data = array();
+
     switch ($process) {
         case "dashboard":
             //code block
-            include("../admin/dashboard.php");
+            // return $data;
+            include("../laboratory/Dashboard.php");
             break;
-        case "farmer":
+        case "notification":
             //code block;
-            include("../admin/farmer.php");
-            break;
-        case "laboratory":
-            //code block
-            include("../admin/lab.php");
+            include("../laboratory/Notification.php");
             break;
         case "report":
             //code block
-            include("../admin/report.php");
+            include("../laboratory/Report.php");
             break;
-        case "notification":
+        case "weather":
             //code block
-            include("../admin/Notification.php");
-            break;
-        case "messages":
-            //code block
-            include("../admin/msg.php");
+            include("../laboratory/Weather.php");
             break;
         case "profile":
             //code block
-            include("../admin/profile.php");
+            include("../laboratory/Profile.php");
             break;
         case "setting":
             //code block
-            include("../admin/setting.php");
+            include("../laboratory/Setting.php");
             break;
         default:
             //code block

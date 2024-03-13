@@ -112,7 +112,7 @@ if ($_SESSION["farmer"] == false) {
                             </div>
                             <div onclick="logoutUser('farmer')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-right-from-bracket"></i>
-                                <div class="heading duration-300 cursor-pointer" onclick="logoutUser()">Logout</div>
+                                <div class="heading duration-300 cursor-pointer">Logout</div>
                             </div>
                         </div>
                     </div>

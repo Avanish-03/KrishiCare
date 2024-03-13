@@ -1,117 +1,87 @@
-<?php include('Header.php');
-
-$apiKey = '97852380926fcca385c9165c3d2f7a2d';
-$city = 'Surat';
-$countryCode = 'IN';
-
-// API endpoint for 7-day forecast
-$apiEndpoint = "http://api.openweathermap.org/data/2.5/forecast";
-$apiUrl = "$apiEndpoint?q=$city,$countryCode&appid=$apiKey";
-
-// Make the API request
-$response = file_get_contents($apiUrl);
-
-// Check if the request was successful
-if ($response === false) {
-    die('Failed to retrieve weather data.');
-}
-
-// Decode the JSON response
-$data = json_decode($response, true);
-
-// Check if the response contains valid data
-if ($data === null || !isset($data['list'])) {
-    die('Invalid data received from the API.');
-}
-
-// Extract and display the 7-day forecast
-$forecast = $data['list'];
-?>
+<?php include('Header.php'); ?>
 
 <div class="min-h-fit bg-gray-100 p-0 sm:p-5 bg-cover bg-no-repeat bg-center" style="background-image: url('../img/weather-img-up.jpg');">
-    <?php
-
-    if (isset($_POST["weatherSearchBtn"])) {
-        $apiKey = '97852380926fcca385c9165c3d2f7a2d';
-        $city = $_POST["city"];
-        $countryCode = 'IN';
-
-        // API endpoint for 7-day forecast
-        $apiEndpoint = "http://api.openweathermap.org/data/2.5/forecast";
-        $apiUrl = "$apiEndpoint?q=$city,$countryCode&appid=$apiKey";
-
-        // Make the API request
-        $response = file_get_contents($apiUrl);
-
-        // Check if the request was successful
-        if ($response === false) {
-            die('Failed to retrieve weather data.');
-        }
-
-        // Decode the JSON response
-        $data = json_decode($response, true);
-
-        // Check if the response contains valid data
-        if ($data === null || !isset($data['list'])) {
-            die('Invalid data received from the API.');
-        }
-
-        // Extract and display the 7-day forecast
-        $forecast = $data['list'];
-    }
-    ?>
-
-    <div class="mx-auto max-w-md px-8 py-3 bg-white border-0 shadow-lg sm:rounded-3xl">
-        <h1 class="text-2xl font-bold mb-2">Enter city to get weather detail</h1>
-        <form method="post" action="">
-            <div class="relative z-0 w-full mb-1">
-                <input type="text" name="city" placeholder="Enter city" required class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                <label for="city" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500"></label>
-            </div>
-            <button id="button" name="weatherSearchBtn" type="submit" class="w-full px-6 py-3 mt-3 text-lg text-white transition-all duration-150 ease-linear rounded-lg shadow outline-none bg-blue-500 hover:bg-blue-600 hover:shadow-lg focus:outline-none">
-                Search
-            </button>
-        </form>
-    </div>
-</div>
-
-
-<section class="text-gray-600 body-font">
-    <div class="container px-5 py-10 mx-auto">
-        <div class="flex flex-wrap w-full mb-3">
-            <div class="lg:w-1/2 w-full lg:mb-0">
-                <?php echo '<h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900"> 7-Day Weather Forecast for ' . $city . ', India</h1>'; ?>
-                <div class="h-1 ml-96 w-20 bg-indigo-500 rounded"></div>
-            </div>
-        </div>
-        <div class="flex flex-wrap -m-4">
-
-            <?php
-
-            foreach ($forecast as $entry) {
-                $timestamp = $entry['dt'];
-                $date = date('d-m-y', $timestamp);
-                $time = date('H:i', $timestamp);
-                $temperature = $entry['main']['temp'];
-                $description = $entry['weather'][0]['description'];
-
-            ?>
-                <div class="xl:w-1/4 md:w-1/2 p-4">
-                    <div class="bg-gray-100 p-6 rounded-lg">
-                        <!-- <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://images.pexels.com/photos/1162251/pexels-photo-1162251.jpeg?auto=compress&cs=tinysrgb&w=600" alt="content"> -->
-                        <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Time : <?php echo $time ?></h3>
-                        <h2 class="text-lg text-gray-900 font-medium title-font">Date : <?php echo $date ?></h2>
-                        <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Temperature : <?php echo $temperature ?>°C</h2>
-                        <p class="leading-relaxed text-base"><?php echo $description ?></p>
-                    </div>
+    <div class="flex items-center justify-center">
+        <div class="bg-white p-8 rounded shadow-md max-w-md w-full">
+            <h1 class="text-2xl font-bold mb-4">Enter city and state to get weather details</h1>
+            <form action="" method="post" class="mb-4">
+                <div class="flex items-center mb-4">
+                    <label for="state" class="mr-2">State:</label>
+                    <select id="state" name="state" class="border rounded px-2 py-1 focus:outline-none focus:border-blue-500">
+                        <!-- Add options for Indian states -->
+                        <option value="">----select stat----</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="West Bengal">West Bengal</option>
+                    </select>
                 </div>
+                <div class="flex items-center mb-4">
+                    <label for="city" class="mr-2">City:</label>
+                    <input type="text" id="city" name="city" class="border rounded px-2 py-1 focus:outline-none focus:border-blue-500">
+                </div>
+                <button type="submit" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Get Weather</button>
+            </form>
             <?php
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $api_key = "97852380926fcca385c9165c3d2f7a2d";
+                $city = $_POST['city'];
+                $state = $_POST['state'];
+                $location = $city . ',' . $state . ',IN'; // Adding the state and country code
+
+                getWeather($api_key, $location);
+            }
+
+            function getWeather($api_key, $location)
+            {
+                $base_url = "http://api.openweathermap.org/data/2.5/weather";
+                $params = [
+                    'q' => $location,
+                    'appid' => $api_key,
+                    'units' => 'metric', // Change to 'imperial' for Fahrenheit
+                ];
+
+                $url = $base_url . '?' . http_build_query($params);
+                $weather_data = json_decode(file_get_contents($url), true);
+
+                if ($weather_data && isset($weather_data['main'])) {
+                    ?><b>Weather in </b> <?php echo "$location";?><br> <?php 
+                    ?><b>Temperature: </b> <?php echo "{$weather_data['main']['temp']}°C ";?><br> <?php 
+                    ?><b>Time: </b> <?php echo date("d-m-Y h:i:s", $weather_data['dt']) . "";?><br> <?php 
+                    ?><b>Description: </b> <?php echo "{$weather_data['weather'][0]['description']}" ;?><br> <?php 
+                    ?><b>Humidity: </b> <?php echo "{$weather_data['main']['humidity']}%" ;?><br> <?php 
+                    ?><b>Wind Speed: </b> <?php echo "{$weather_data['wind']['speed']} m/s" ;?><br> <?php 
+                } else {
+                    echo "Failed to retrieve weather data.";?><br> <?php 
+                }
             }
             ?>
         </div>
     </div>
-</section>
 </div>
-
 
 <?php include('Footer.php'); ?>

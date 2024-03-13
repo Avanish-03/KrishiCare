@@ -26,7 +26,7 @@ if ($_SESSION["laboratory"] == false) {
     </script>
 </head>
 
-<body onload="labMenuLoader('dashboard','<?php echo $_SESSION['laboratory'] ?>'); loadChart();">
+<body onload="labMenuLoader('dashboard','<?php echo $_SESSION['laboratory'] ?>')">
     <?php
     $id = $_SESSION["laboratory"];
     // echo $id;
@@ -88,14 +88,14 @@ if ($_SESSION["laboratory"] == false) {
                                 <i class="fa-solid fa-bell"></i>
                                 <div class="heading duration-300 cursor-pointer">Notification</div>
                             </div>
-                            <div onclick="labMenuLoader('soil','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
-                                <i class="rotate-180 fa-solid fa-icicles"></i>
-                                <div class="heading duration-300 cursor-pointer">Soil</div>
+                            <div onclick="labMenuLoader('report','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                                <i class="rotate-180 fa-solid fa-file-lines"></i>
+                                <div class="heading duration-300 cursor-pointer">Report</div>
                             </div>
-                            <div onclick="labMenuLoader('crop','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <!-- <div onclick="labMenuLoader('crop','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-wheat-awn"></i>
                                 <div class="heading duration-300 cursor-pointer">Crop</div>
-                            </div>
+                            </div> -->
                             <div onclick="labMenuLoader('weather','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-cloud-bolt"></i>
                                 <div class="heading duration-300 cursor-pointer">Weather</div>
@@ -112,7 +112,7 @@ if ($_SESSION["laboratory"] == false) {
                             </div>
                             <div onclick="logoutUser('laboratory')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-right-from-bracket"></i>
-                                <div class="heading duration-300 cursor-pointer" onclick="logoutUser()">Logout</div>
+                                <div class="heading duration-300 cursor-pointer">Logout</div>
                             </div>
                         </div>
                     </div>
@@ -127,7 +127,7 @@ if ($_SESSION["laboratory"] == false) {
                         </div>
                         <div class="h-full flex justify-center items-center duration-1000" id="section">
                             <!-- <p class="text-gray-300"> <?php echo "laboratory id -: " . $_SESSION["laboratory"]; ?></p> -->
-                            <?php include("Dashboard.php") ?>
+                            <?php include("Dashboard.php"); ?>
                         </div>
                     </div>
                 </div>

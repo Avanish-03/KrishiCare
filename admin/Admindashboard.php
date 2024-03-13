@@ -22,7 +22,7 @@ if ($_SESSION["admin"] == null) {
     <script src="../tailwind.js"></script>
 </head>
 
-<body onload="adminMenuLoader('dashboard')" class="">
+<body onload="adminMenuLoader('dashboard');chatBot();" class="">
     <div class="h-screen w-screen sm:min-w-96 sm:min-h-screen">
         <header class="sticky w-full h-[10%]">
             <div class="bg-gray-800 w-full h-full text-white flex justify-around items-center">

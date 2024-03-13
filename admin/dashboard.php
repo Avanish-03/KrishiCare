@@ -11,7 +11,12 @@
             <h1 class="text-7xl h-full w-full select-none z-10 font-extrabold flex justify-center items-center bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-white">Admin </h1>
         </div>
     </div>
-    <div class="h-96 w-full mt-6 flex rounded-md bg-gray-200 dark:bg-slate-600 ">
-        
+    <div class="h-96 w-full mt-6 flex rounded-md bg-gray-200 dark:bg-slate-600 "></div>
+    <div class="my-8 h-full w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="w-full h-full bg-gray-200 rounded-lg dark:bg-slate-600"></div>
+        <div class="w-full h-full bg-gray-200 rounded-lg dark:bg-slate-600"></div>
+        <div class="w-full h-full bg-gray-200 rounded-lg dark:bg-slate-600"></div>
+        <div class="w-full h-full bg-gray-200 rounded-lg dark:bg-slate-600"></div>
     </div>
+    <div class="h-7"></div>
 </section>
