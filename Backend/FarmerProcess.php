@@ -54,6 +54,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             include("../farmer/Techno.php");
             break;
         case "weather":
+            // API key
+            // $apiKey = "YOUR_API_KEY";
+            // City to get weather data for
+            $city = "surat";
+            // API URL
+            $url = "http://api.weatherapi.com/v1/current.json?key=87bbeaf485224269ae8161604240803&q=" . urlencode($city);
+            // Fetch data from the API
+            $response = file_get_contents($url);
+            if ($response === false) {
+                die("Error fetching data from API");
+            }
+            // print_r($response);
+            $data = json_decode($response, true);
+
             //code block
             include("../farmer/Weather.php");
             break;

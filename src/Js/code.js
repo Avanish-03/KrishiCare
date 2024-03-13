@@ -6,8 +6,8 @@ function registerFarmer() {
         ValidateEmail('email', 'Email') &&
         validateContact('contact', 'Contact number') &&
         validateEmpty('address', 'Address') &&
-        validateEmpty('state', 'State') &&
-        validateEmpty('city', 'City') &&
+        validateDropdown('state', 'State') &&
+        validateDropdown('city', 'City') &&
         validatePassword();
 
     if (result) {
@@ -54,7 +54,7 @@ function registerLaboratory() {
         validateEmpty('address', 'Address') &&
         validateDropdown('state', 'State') &&
         validateDropdown('city', 'City') &&
-        validateEmpty('ownership', 'Ownership') &&
+        validateDropdown('ownership', 'Ownership') &&
         validatePassword();
 
     if (result) {
@@ -311,7 +311,7 @@ function loadStates() {
     var stateSelect = document.querySelector('.state');
     var citySelect = document.querySelector('.city');
 
-    stateSelect.disabled = false;
+    // stateSelect.disabled = false;
     citySelect.disabled = true;
 
     stateSelect.style.pointerEvents = 'auto';
