@@ -27,7 +27,7 @@ for ($i = 0; $i < $data_size; $i++) {
             <div class="w-fit h-full flex justify-start">
                 <img class="h-full w-full" src="../img/Welcome-bro.svg" alt="">
             </div>
-            <div>
+            <div class="h-full">
                 <div class="top-24 h-5 w-[45%] blur-2xl shadow-2xl bg-fuchsia-500 absolute  "></div>
                 <h1 class="text-7xl h-full w-full select-none z-10 font-extrabold flex justify-center items-center bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
                     <?php echo $nested_array["first_name"] . " " . $nested_array["middle_name"] . " " . $nested_array["last_name"]; ?></h1>
