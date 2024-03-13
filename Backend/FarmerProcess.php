@@ -118,12 +118,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     // }
                     ?>
                 </div> -->
-                
+
 <?php
             } else {
                 echo "Failed to retrieve weather forecast data.";
             }
-
 
             //code block
             include("../farmer/Weather.php");

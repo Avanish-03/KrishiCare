@@ -13,7 +13,6 @@
     <!-- Weather Data -->
     <div class="h-fit w-full my-8 bg-gray-200 rounded-lg dark:bg-slate-700">
         <?php
-
         ?>
         <div class="min-h-fit h-[60%] rounded-lg flex justify-center items-center bg-gray-100 p-0 sm:p-5 bg-cover bg-no-repeat bg-center bg-[url('../img/weather-img-up.jpg')]">
             <?php
