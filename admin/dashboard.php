@@ -12,7 +12,7 @@
         </div>
     </div>
     <!-- farmer -->
-    <div class="h-full w-full mt-6 flex rounded-md bg-gray-200 dark:bg-slate-600 ">
+    <div class="h-fit w-full mt-6 flex rounded-md bg-gray-200 dark:bg-slate-600 ">
         <div class="w-full m-2 p-2 h-full">
             <div class="p-4 bg-white dark:bg-gray-900 rounded-md">
                 <label for="table-search" class="sr-only">Search</label>
@@ -66,7 +66,7 @@
 
     </div>
     <!-- laboratory -->
-    <div class="h-full w-full mt-6 flex rounded-md bg-gray-200 dark:bg-slate-600 ">
+    <div class="h-fit w-full mt-6 flex rounded-md bg-gray-200 dark:bg-slate-600 ">
         <div class="w-full m-2 p-2 h-">
             <div class="p-4 bg-white dark:bg-gray-900 rounded-md">
                 <label for="table-search" class="sr-only">Search</label>
