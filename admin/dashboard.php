@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <!-- dashboard -->
-<section class="h-full mx-auto my-8 p-8 pb-28 rounded-md">
+<section class="h-full mx-auto p-8 pb-28 rounded-md">
     <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Dashboard</h1>
     <div class="bg-gray-200 dark:bg-slate-600 w-full h-48 rounded my-2 px-8 flex items-center relative">
         <div class="w-fit h-full flex justify-start">
@@ -67,7 +67,7 @@
     </div>
     <!-- laboratory -->
     <div class="h-fit w-full mt-6 flex rounded-md bg-gray-200 dark:bg-slate-600 ">
-        <div class="w-full m-2 p-2 h-">
+        <div class="w-full m-2 p-2 h-fit">
             <div class="p-4 bg-white dark:bg-gray-900 rounded-md">
                 <label for="table-search" class="sr-only">Search</label>
                 <div class="relative mb-2">
