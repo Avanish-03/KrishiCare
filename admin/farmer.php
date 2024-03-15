@@ -15,7 +15,7 @@
             <div class="p-4 bg-white dark:bg-gray-900 rounded-md">
                 <div class="mb-2 flex justify-between">
                     <label for="" class="font-bold text-2xl font-mono">Farmer Details </label>
-                    <button class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-md shadow-md transition duration-300 ease-in-out">Add Farmer</button>
+                    <a href="./CRUD.php" class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-md shadow-md transition duration-300 ease-in-out">Add Farmer</a href="./CRUD.php">
                 </div>
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-100">
