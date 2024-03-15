@@ -18,7 +18,7 @@
                         <i class="text-red-600 fa-solid fa-receipt"></i>
                         <h3 class="text-xl font-semibold mb-2">Form Designing &amp; Surveyor Tagging</h3>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 dark:text-gray-400">The process starts with the system facilitating in designing the survey forms with predefined questions
+                    <p class="text-gray-700 dark:text-gray-400">The process starts with the system facilitating in designing the survey forms with predefined questions
                         with a dynamic application while tagging the surveyor and also the assigned location from where the soil
                         sample needs to be collected.</p>
                     <div class="accord-handle">
@@ -36,7 +36,7 @@
                         <i class="text-blue-600 fa-solid fa-table"></i>
                         <h3 class="text-xl font-semibold mb-2">Collection of Data &amp; Sample Soil</h3>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 dark:text-gray-400">The survey data is collected and filled in a form in the mobile app. The soil sample collected is
+                    <p class="text-gray-700 dark:text-gray-400">The survey data is collected and filled in a form in the mobile app. The soil sample collected is
                         tagged with a unique identity code for future archiving, reference and retest. The system captures the
                         real-time longitude and latitude of the location from where the sample is collected, to calculate the
                         deviation from the assigned location.</p>
@@ -54,7 +54,7 @@
                         <i class="text-yellow-500 fa-solid fa-people-roof"></i>
                         <h3 class="text-xl font-semibold mb-2">Soil Archival Management</h3>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 dark:text-gray-400">The system facilitates in maintaining the record of the soil archives and helps in tracking the history
+                    <p class="text-gray-700 dark:text-gray-400">The system facilitates in maintaining the record of the soil archives and helps in tracking the history
                         of transaction of a soil sample taken for retesting.</p>
                     <div class="">
                         <span class="icon-plus-button"></span>
@@ -70,7 +70,7 @@
                         <i class="text-teal-600 fa-solid fa-list-check"></i>
                         <h3 class="text-xl font-semibold mb-2">Recommendation</h3>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 dark:text-gray-400">The recommendation is prepared under two different parameters one is soil fertility status and the
+                    <p class="text-gray-700 dark:text-gray-400">The recommendation is prepared under two different parameters one is soil fertility status and the
                         other is region specific fertilization suitable for the soil. These soil informations are accessed
                         through a website and an application by the concerned stakeholders like farmers, extension workers and
                         interested individuals.</p>
@@ -88,7 +88,7 @@
                         <i class="text-fuchsia-800 fa-solid fa-chart-simple"></i>
                         <h3 class="text-xl font-semibold mb-2">Report Analysis &amp; Simplification</h3>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 dark:text-gray-400">The soil scientists,develop simplified recommendations consisting of region-specific soil maps and lab
+                    <p class="text-gray-700 dark:text-gray-400">The soil scientists,develop simplified recommendations consisting of region-specific soil maps and lab
                         data using the most sophisticated tools techniques available, including machine learning algorithm using
                         R scripts and Knime.</p>
                     <div class="">
@@ -105,7 +105,7 @@
                         <i class="text-emerald-400 fa-solid fa-flask-vial"></i>
                         <h3 class="text-xl font-semibold mb-2">Lab Testing &amp; Analysis of Soil</h3>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 dark:text-gray-400">The tests of the sample soil help analyze the soil type found in the specific area and provide
+                    <p class="text-gray-700 dark:text-gray-400">The tests of the sample soil help analyze the soil type found in the specific area and provide
                         information on different soil parameters like PH level, texture, structure and various elements and
                         compounds.</p>
                     <div class="">
@@ -128,8 +128,6 @@
         </div>
         <div class="w-full h-[80%] rounded-b-lg flex justify-center items-center">
             <div class="h-[90%] w-[50%] rounded-lg shadow-lg text-gray-800 dark:text-gray-300 bg-gray-300 dark:bg-gray-900 transition-all duration-300">
-
-
                 <form class="h-full flex justify-center items-center">
                     <div class="h-fit w-[75%]">
                         <div class="p-5 w-full flex justify-center items-center gap-4">
@@ -138,11 +136,12 @@
                         </div>
                         <div class="p-5 w-full flex justify-center items-center gap-4">
                             <label class="w-[25%]" for="requestdate">Request date: </label>
-                            <input class="w-[75%] p-2 outline-none rounded-md bg-gray-100 dark:bg-gray-700" type="date" name="requestdate" id="requestdate">
+                            <input class="w-[75%] p-2 rounded-md bg-gray-100 dark:bg-gray-700" type="date" min="<?php echo date('Y-m-d'); ?>" name="requestdate" id="requestdate">
+                            <!-- value="<?php //echo date('Y-m-d'); ?>"  max="<?php //echo date('Y-m-d'); ?>" -->
                         </div>
                         <div class="p-5 w-full flex justify-center items-center gap-4">
                             <label class="w-[25%]" for="labid">Lab Name: </label>
-                            <select class="w-[75%] p-2 outline-none rounded-md bg-gray-100 dark:bg-gray-700" type="text" namelab="id" id="labid">
+                            <select class="w-[75%] p-2 rounded-md bg-gray-100 dark:bg-gray-700" type="text" name="labid" id="labid">
                                 <option value="default">Select lab</option>
                                 <?php
                                 $data_size = count($labdata);
@@ -158,11 +157,12 @@
                             </select>
                         </div>
                         <div class="p-5 w-full flex justify-center items-center gap-4">
-                            <input type="button" onclick="submitRequest(<?php echo $id; ?>)" value="Submit" class="py-2 px-4 bg-gray-200 dark:bg-gray-700 rounded-lg">
-                            <input type="button" value="Cancel" class="py-2 px-4 bg-gray-200 dark:bg-gray-700 rounded-lg">
+                            <input type="button" onclick="return submitRequest(<?php echo $id; ?>)" value="Submit" class="py-2 px-4 bg-gray-200 dark:bg-gray-700 rounded-lg">
+                            <input type="reset" value="Cancel" class="py-2 px-4 bg-yellow-500 dark:bg-yellow-700 rounded-lg">
                         </div>
                     </div>
                 </form>
+                <input type="hidden" name="status" id="status">
             </div>
         </div>
     </div>

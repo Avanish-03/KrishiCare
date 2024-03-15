@@ -8,7 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $data = array();
 
     $farmersqlquery = "SELECT `farmer_id`,`first_name`, `middle_name`, `last_name`, `email`, `contact_number`, `address`, `city`, `state` FROM `farmer_detail` WHERE `farmer_id`= '$id';";
-
     $result = mysqli_query($con, $farmersqlquery);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
@@ -19,8 +18,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "No user found";
     }
 
-    $labsqlquery = "SELECT `lab_id`,`lab_name`, `email`, `contact`, `lab_add`, `city`, `state`, `ownership` FROM `laboratory_detail`;";
+    $requestQuery = "SELECT r.request_id, r.farmer_id, r.request_date, r.lab_id, r.status, l.lab_name, l.email, l.lab_add ,l.city, l.state, l.ownership
+    FROM request_detail AS r 
+    JOIN laboratory_detail AS l ON r.lab_id = l.lab_id 
+    WHERE r.farmer_id = $id";
 
+    $result = mysqli_query($con, $requestQuery);
+    if ($result) {
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $soilrequestdata[] = $row;
+            }
+        } else {
+            echo "No results found";
+        }
+
+        // Free result set
+        mysqli_free_result($result);
+    } else {
+        // Handle query execution error
+        echo "Error executing query: " . mysqli_error($con);
+    }
+
+    $labsqlquery = "SELECT `lab_id`,`lab_name`, `email`, `contact`, `lab_add`, `city`, `state`, `ownership` FROM `laboratory_detail`;";
     $result = mysqli_query($con, $labsqlquery);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
@@ -134,6 +154,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         case "setting":
             //code block
             include("../farmer/Setting.php");
+            break;
+        case "soilrequest":
+            //code block
+            $farmerid = $_POST["id"];
+            $requestdate = $_POST["requestdate"];
+            $labid = $_POST["labid"];
+
+            $sql = "INSERT INTO `request_detail` (`farmer_id`, `request_date`, `lab_id`) VALUES ($farmerid, '$requestdate', '$labid');";
+            $result = mysqli_query($con, $sql);
+            echo $result;
             break;
         default:
             //code block

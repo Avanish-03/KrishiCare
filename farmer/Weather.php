@@ -18,7 +18,7 @@
             <?php
 
             ?>
-            <div class="mx-auto h-fit py-8 max-w-md px-8 py-3 bg-white border-0 shadow-lg rounded-lg">
+            <div class="mx-auto h-fit py-8 max-w-md px-8 bg-white border-0 shadow-lg rounded-lg">
                 <h1 class="text-2xl font-bold mb-2">Enter city to get weather detail</h1>
                 <form method="post" class="h-fit">
                     <div class="relative z-0 w-full mb-1">

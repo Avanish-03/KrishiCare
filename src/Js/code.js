@@ -164,9 +164,30 @@ function validateUser() {
 }
 
 function submitRequest(id) {
-    alert(id);
-    var dateInput = getvalue("requestdate");
-    alert(dateInput)
+
+    var result = validateEmpty("requestdate", "Request Date")
+        && validateDropdown("labid", "Lab Name");
+    if (result) {
+        var requestdate = getvalue("requestdate");
+        var labId = getvalue("labid");
+
+        var dataForm =
+            'id=' + id +
+            '&requestdate=' + requestdate +
+            '&labid=' + labId +
+            '&process=soilrequest';
+
+        ajaxCall('../Backend/FarmerProcess.php', 'post', dataForm, 'status', true);
+
+        var status = getvalue('status');
+        if (status == 1) {
+            alert("Requested Successfully!");
+            resetFormdata('labForm');
+        } else {
+            alert(status);
+        }
+        return false;
+    }
 }
 
 function validateDropdown(elementId, elementName) {
