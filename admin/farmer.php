@@ -16,7 +16,7 @@
 
                 <div class="mb-2 flex justify-between">
                     <label for="" class="font-bold text-2xl font-mono">Farmer Details </label>
-                    <div class="relative flex flex-col items-center justify-center" x-data="{ open: true }">
+                    <div class="relative flex flex-col items-center justify-center" x-data="{ open: false }">
                         <div class="">
                             <button @click="open = true" class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-md shadow-md transition duration-300 ease-in-out">Add Farmer</button>
                         </div>

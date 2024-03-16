@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <!-- dashboard -->
-<section class="h-full mx-auto p-8 pb-28 rounded-md">
-    <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Dashboard</h1>
+<section class="h-full mx-auto p-8 rounded-md">
+    <h1 class="text-3xl font-bold text-black dark:text-gray-300">Dashboard</h1>
     <div class="bg-gray-200 dark:bg-slate-600 w-full h-48 rounded my-2 px-8 flex items-center relative">
         <div class="w-fit h-full flex justify-start">
             <img class="h-full w-full" src="../img/Hello-rafiki.png" alt="">
@@ -12,8 +12,8 @@
         </div>
     </div>
     <!-- farmer -->
-    <div class="h-fit w-full mt-6 flex rounded-md bg-gray-200 dark:bg-slate-600 ">
-        <div class="w-full m-2 p-2 h-full">
+    <div class="h-fit w-full flex rounded-md bg-gray-200 dark:bg-slate-600 ">
+        <div class="w-full p-2 h-full">
             <div class="p-4 bg-white dark:bg-gray-900 rounded-md">
                 <label for="table-search" class="sr-only">Search</label>
                 <div class="relative mb-2">
@@ -54,11 +54,9 @@
                             <td class='px-6 py-4'>$row[address]</td>
                             <td class='px-6 py-4'>$row[city]</td>
                             <td class='px-6 py-4'>$row[state]</td>
-                            
                             </tr>";
                         }
                         ?>
-
                     </tbody>
                 </table>
             </div>
@@ -66,8 +64,8 @@
 
     </div>
     <!-- laboratory -->
-    <div class="h-fit w-full mt-6 flex rounded-md bg-gray-200 dark:bg-slate-600 ">
-        <div class="w-full m-2 p-2 h-fit">
+    <div class="h-fit w-full flex rounded-md bg-gray-200 dark:bg-slate-600 ">
+        <div class="w-full p-2 h-fit">
             <div class="p-4 bg-white dark:bg-gray-900 rounded-md">
                 <label for="table-search" class="sr-only">Search</label>
                 <div class="relative mb-2">
