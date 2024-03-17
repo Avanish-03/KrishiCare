@@ -43,16 +43,15 @@ if ($_SESSION["laboratory"] == false) {
                     <!-- navbar -->
                     <div class="bg-slate-200 dark:bg-slate-900 h-full px-4 flex items-center duration-500">
                         <div class="w-[50%] flex items-center h-fit py-auto">
-                            <img id="" class="h-full text-center duration-500" src="../img/icons8-tree-planting-48.png" alt="">
-                            <h1 class="ml-3 text-2xl duration-500 text-green-700 dark:text-white font-[poppling]">KrishiCare
-                            </h1>
+                            <img src="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais" class="sm:h-10 h-6" alt="">
+                            <h1 class="sm:text-3xl font-serif cursor-pointer text-gray-500 dark:text-gray-300">KrishiCare</h1>
                         </div>
                         <div class="w-[50%] h-full flex justify-end">
                             <!-- <div class="w-[50%] h-full"></div> -->
                             <div class="w-[50%] h-full flex items-center justify-end">
                                 <div class="lg:inline-flex hidden md:w-[75%] md:inline-flex text-right">
                                     <div class="w-full">
-                                        <h1 class="text-black dark:text-white font-bold"><?php echo $row["lab_name"]?></h1>
+                                        <h1 class="text-black dark:text-white font-bold"><?php echo $row["lab_name"] ?></h1>
                                         <p class="text-sm text-slate-400"><?php echo $row["email"] ?></p>
                                     </div>
                                 </div>
