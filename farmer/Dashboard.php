@@ -97,22 +97,25 @@ for ($i = 0; $i < $data_size; $i++) {
                         </thead>
                         <tbody>
                             <?php
-                            $soilrequestdatasize = count($soilrequestdata);
-                            for ($i = 0; $i < $soilrequestdatasize; $i++) {
-                                // Accessing values of the nested array at index $i
-                                $nested_array = $soilrequestdata[$i];
-                                echo "<tr class='bg-white dark:text-gary-300 border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600'>";
-                                echo "<td class='px-6 py-4 font-medium whitespace-nowrap>" . $nested_array["request_id"] . "</td>";
-                                echo "<td class='px-6 py-4'>" . $nested_array["farmer_id"] . "</td>";
-                                echo "<td class='px-6 py-4'>" . $nested_array["request_date"] . "</td>";
-                                echo "<td class='px-6 py-4'>" . $nested_array["lab_name"] . "</td>";
-                                echo "<td class='px-6 py-4'>" . $nested_array["email"] . "</td>";
-                                echo "<td class='px-6 py-4'>" . $nested_array["lab_add"] . "</td>";
-                                echo "<td class='px-6 py-4'>" . $nested_array["city"] . "</td>";
-                                echo "<td class='px-6 py-4'>" . $nested_array["state"] . "</td>";
-                                echo "<td class='px-6 py-4'>" . $nested_array["ownership"] . "</td>";
-                                echo "<td class='px-6 py-4'>" . $nested_array["status"] . "</td>";
-                                echo "</tr>";
+                            if ($soilrequestdata == null) {
+                            } else {
+                                $soilrequestdatasize = count($soilrequestdata);
+                                for ($i = 0; $i < $soilrequestdatasize; $i++) {
+                                    // Accessing values of the nested array at index $i
+                                    $nested_array = $soilrequestdata[$i];
+                                    echo "<tr class='bg-white dark:text-gary-300 border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600'>";
+                                    echo "<td class='px-6 py-4 font-medium whitespace-nowrap>" . $nested_array["request_id"] . "</td>";
+                                    echo "<td class='px-6 py-4'>" . $nested_array["farmer_id"] . "</td>";
+                                    echo "<td class='px-6 py-4'>" . $nested_array["request_date"] . "</td>";
+                                    echo "<td class='px-6 py-4'>" . $nested_array["lab_name"] . "</td>";
+                                    echo "<td class='px-6 py-4'>" . $nested_array["email"] . "</td>";
+                                    echo "<td class='px-6 py-4'>" . $nested_array["lab_add"] . "</td>";
+                                    echo "<td class='px-6 py-4'>" . $nested_array["city"] . "</td>";
+                                    echo "<td class='px-6 py-4'>" . $nested_array["state"] . "</td>";
+                                    echo "<td class='px-6 py-4'>" . $nested_array["ownership"] . "</td>";
+                                    echo "<td class='px-6 py-4'>" . $nested_array["status"] . "</td>";
+                                    echo "</tr>";
+                                }
                             }
                             ?>
                         </tbody>

@@ -11,7 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = mysqli_query($con, $farmersqlquery);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            // echo "id: " . $row["farmer_id"] . " - Name: " . $row["first_name"] . " " . $row["middle_name"] . " " . $row["last_name"] . "<br>";
             $farmerdata[] = $row;
         }
     } else {
@@ -27,10 +26,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result) {
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
-                $soilrequestdata[] = $row;
+                if (!($row == null)) {
+                    $soilrequestdata[] = $row;
+                } else {
+                    $soilrequestdata = null;
+                }
             }
         } else {
-            echo "No results found";
+            // echo "No results found";
+            $soilrequestdata = null;
         }
 
         // Free result set
@@ -50,7 +54,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "No user found";
     }
-
 
     switch ($process) {
         case "dashboard":
@@ -75,8 +78,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             include("../farmer/Techno.php");
             break;
         case "weather":
-
-
             // Function to get weather forecast data from OpenWeatherMap API
             function getWeatherForecastData($city, $state, $country, $apiKey)
             {
@@ -107,7 +108,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 return $data;
             }
-
             // Your city, state, country, and API key
             $city = "Surat";
             $state = "Gujarat";
@@ -164,6 +164,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $sql = "INSERT INTO `request_detail` (`farmer_id`, `request_date`, `lab_id`) VALUES ($farmerid, '$requestdate', '$labid');";
             $result = mysqli_query($con, $sql);
             echo $result;
+            break;
+        case "updateProfile":
+            //code block
+            // echo $process;
+            include("../farmer/FarmerMenus.php");
+            break;
+        case "updatePassword":
+            //code block
+            // echo $process;
+            include("../farmer/FarmerMenus.php");
             break;
         default:
             //code block

@@ -4,8 +4,29 @@ require('config.php');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $process = $_POST["process"];
-    $id = $_POST["id"];
+    // $id = $_POST["id"];
     $data = array();
+
+    $requestQuery = "SELECT r.request_id, r.farmer_id, r.request_date, r.lab_id, r.status, f.first_name, f.middle_name, f.last_name, f.email, f.address ,f.city, f.state
+    FROM request_detail AS r 
+    JOIN farmer_detail AS f ON r.farmer_id = f.farmer_id";
+
+    $result = mysqli_query($con, $requestQuery);
+    if ($result) {
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $soilrequestdata[] = $row;
+            }
+        } else {
+            echo "No results found";
+        }
+
+        // Free result set
+        mysqli_free_result($result);
+    } else {
+        // Handle query execution error
+        echo "Error executing query: " . mysqli_error($con);
+    }
 
     switch ($process) {
         case "dashboard":
@@ -32,6 +53,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         case "setting":
             //code block
             include("../laboratory/Setting.php");
+            break;
+        case "changeStatus":
+            //code block
+            $farmerId = $_POST["farmerId"];
+
+            $sql = "UPDATE `request_detail` SET `status` = 'Approved' WHERE `farmer_id` = '$farmerId';";
+            $result = mysqli_query($con, $sql);
+            if ($result) {
+                echo "Update successful";
+            } else {
+                echo "Error: " . mysqli_error($con);
+            }
+
+            // include("../laboratory/Setting.php");
             break;
         default:
             //code block

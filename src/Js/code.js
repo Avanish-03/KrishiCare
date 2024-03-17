@@ -701,3 +701,12 @@ function chatBot() {
         }
     }
 }
+
+function loadUpdateForm(process, id) {
+    ajaxCall("../Backend/FarmerProcess.php", "post", "id=" + id + "&process=" + process, "loadUpdateForm");
+}
+
+function acceptRequest(farmerId) {
+    ajaxCall("../Backend/LabProcess.php", "post", "farmerId=" + farmerId + "&process=changeStatus", "requestStatus", true);
+    alert(document.getElementById("requestStatus").value);
+}
