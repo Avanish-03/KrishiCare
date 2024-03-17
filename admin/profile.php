@@ -1,34 +1,21 @@
 <?php
-include('../Backend/config.php');
+// include('../Backend/config.php');
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['admin_img'])) {
-    // Check if a new image is provided
-    if ($_FILES['admin_img']['name'] != '') {
-        $newImageName = $_FILES['admin_img']['name'];
-        $newImageTemp = $_FILES['admin_img']['tmp_name'];
-        $uploadPath = '../img/admin_img/'; // Corrected upload path
-        // Move the uploaded image to the desired directory
-        if (move_uploaded_file($newImageTemp, $uploadPath . $newImageName)) {
-            // Update data in the database with the new image
-            $query = "UPDATE admin SET admin_img='$uploadPath$newImageName' WHERE name ='{$_SESSION['user']}'"; // Corrected query
-            $details = mysqli_query($con, $query);
-            if ($details) {
-                echo "<script>alert('Cover Image updated successfully');</script>";
-                echo "<script>window.location.href='Hospital_dasboard.php';</script>";
-                exit();
-            } else {
-                echo "<script>alert('Error updating database: " . mysqli_error($con) . "');</script>";
-            }
-        } else {
-            echo "<script>alert('Error uploading file. Check if the directory has the correct permissions');</script>";
-        }
+if (isset($_FILES['admin_img'])) {
+
+    $file_name = $_FILES['admin_img']['name'];
+    $file_tmp = $_FILES['admin_img']['tmp_name'];
+    $uploadPath = '../img/admin_img/';
+    if (move_uploaded_file($file_tmp, $uploadPath . $file_name)) {
+        echo "<script>alert('successfully');</script>";
+    } else {
+        echo "<script>alert('Error uploading file. Check if the directory has the correct permissions');</script>";
     }
 }
 ?>
 
 <!-- Profile Section -->
 <section class="w-full h-full mx-auto p-8 rounded-md">
-    <!-- <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Profile</h1> -->
     <div class="profile-page">
         <div class="block h-350-px">
             <div class="h-48 w-full bg-gray-200 rounded-lg dark:bg-slate-600 flex items-center mb-4">
@@ -46,24 +33,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['admin_img'])) {
                     <div class="px-6">
                         <div class="flex flex-wrap justify-center">
                             <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
-                                <div x-data="{photoName: null, photoPreview: null}" class="col-span-6 ml-2 sm:col-span-4 md:mr-3">
-                                    <!-- Photo File Input -->
-                                    <input type="file" class="hidden" x-ref="photo" x-on:change="photoName = $refs.photo.files[0].name; const reader = new FileReader(); reader.onload = (e) => {photoPreview = e.target.result;}; reader.readAsDataURL($refs.photo.files[0]);">
-                                    <div class="text-center">
-                                        <!-- Current Profile Photo -->
-                                        <div class="-mt-20" x-show="! photoPreview">
-                                            <img src="../img/admin_img/ <?php echo "" ?>" class="w-40 h-40 m-auto rounded-full shadow">
+                                <!-- form -->
+                                <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" enctype="multipart/form-data">
+                                    <div x-data="{photoName: null, photoPreview: null}" class="col-span-6 ml-2 sm:col-span-4 md:mr-3">
+
+                                        <input type="file" name="admin_img" class="hidden" x-ref="photo" x-on:change="photoName = $refs.photo.files[0].name; const reader = new FileReader(); reader.onload = (e) => {photoPreview = e.target.result;}; reader.readAsDataURL($refs.photo.files[0]);">
+                                        <div class="text-center">
+                                            <div class="-mt-20" x-show="! photoPreview">
+                                                <img src="../img/admin_img/kanhiya ji.png <?php echo "" ?>" class="w-40 h-40 m-auto rounded-full shadow object-cover">
+                                            </div>
+                                            <div class="-mt-20" x-show="photoPreview" style="display: none;">
+                                                <span class="block w-40 h-40 rounded-full m-auto shadow" x-bind:style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + photoPreview + '\');'" style="background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url('null');">
+                                                </span>
+                                            </div>
+                                            <button type="submit" class="-m-20 inline-flex items-center px-4 py-2 bg-green-600 border border-gray-300 rounded-md font-semibold text-xs text-gray-100 uppercase tracking-widest shadow-sm hover:text-gray-100 focus:outline-none focus:border-green-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-3" x-on:click.prevent="$refs.photo.click()">
+                                                Edit
+                                            </button>
                                         </div>
-                                        <!-- New Profile Photo Preview -->
-                                        <div class="-mt-20" x-show="photoPreview" style="display: none;">
-                                            <span class="block w-40 h-40 rounded-full m-auto shadow" x-bind:style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + photoPreview + '\');'" style="background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url('null');">
-                                            </span>
-                                        </div>
-                                        <button type="submit" class="inline-flex items-center px-4 py-2 bg-green-600 border border-gray-300 rounded-md font-semibold text-xs text-gray-100 uppercase tracking-widest shadow-sm hover:text-gray-100 focus:outline-none focus:border-green-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-3" x-on:click.prevent="$refs.photo.click()">
-                                           Edit
-                                        </button>
                                     </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -101,4 +89,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['admin_img'])) {
         </div>
     </div>
 </section>
-
