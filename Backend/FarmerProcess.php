@@ -58,6 +58,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     switch ($process) {
         case "dashboard":
             //code block
+            $requestQuery = "SELECT r.request_id, r.farmer_id, r.request_date, r.lab_id, r.status, l.lab_name, l.email, l.lab_add ,l.city, l.state, l.ownership
+    FROM request_detail AS r 
+    JOIN laboratory_detail AS l ON r.lab_id = l.lab_id 
+    WHERE r.farmer_id = $id";
+
+            $result = mysqli_query($con, $requestQuery);
+            if ($result) {
+                if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $soilrequestdata[] = $row;
+                    }
+                } else {
+                    echo "No results found";
+                }
+                // Free result set
+                mysqli_free_result($result);
+            } else {
+                // Handle query execution error
+                echo "Error executing query: " . mysqli_error($con);
+            }
             // return $data;
             include("../farmer/Dashboard.php");
             break;

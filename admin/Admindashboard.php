@@ -66,17 +66,17 @@ if ($_SESSION["admin"] == null) {
                                 <!-- Dropdown menu -->
                                 <div id="dropdownDivider" class="hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-32 dark:bg-gray-700 dark:divide-gray-600">
                                     <ul class="py-2 text-md text-gray-700 dark:text-gray-200 text-start" aria-labelledby="dropdownDividerButton">
-                                        <li>
-                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                                        <li onclick="adminMenuLoader('dashboard')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-600 font-bold">
+                                            <div class="cursor-pointer hidden sm:block">Dashboard</div>
                                         </li>
-                                        <li>
-                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                                        <li onclick="adminMenuLoader('setting')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-600 font-bold">
+                                            <div class="cursor-pointer hidden sm:block">Setting</div>
                                         </li>
-                                        <li>
-                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile</a>
+                                        <li onclick="adminMenuLoader('profile')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-600 font-bold">
+                                            <div class="cursor-pointer hidden sm:block">Profile</div>
                                         </li>
                                     </ul>
-                                    <div class="py-2 rounded-md dark:hover:bg-gray-600 text-center">
+                                    <div onclick="logoutUser('admin')" class="py-2 rounded-md dark:hover:bg-gray-600 text-center">
                                         <a href="" class="rounded-md text-white font-mono"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
                                     </div>
                                 </div>
