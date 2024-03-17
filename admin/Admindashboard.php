@@ -6,7 +6,7 @@ if ($_SESSION["admin"] == null) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" id="html" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -18,18 +18,24 @@ if ($_SESSION["admin"] == null) {
     <link rel="stylesheet" href="../src/Js/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../tailwind.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="../src/Js/code.js"></script>
     <script src="../flowbite.js"></script>
     <script src="../tailwind.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
 </head>
 
 <body onload="adminMenuLoader('dashboard');chatBot();" class="">
     <div class="h-screen w-screen sm:min-w-96 sm:min-h-screen">
         <header class="sticky w-full h-[10%]">
-            <div class="bg-gray-800 w-full h-full text-white flex justify-around items-center">
-                <div class="flex justify-center items-center sm:w-[20%]">
+            <div class="dark:bg-gray-800 bg-gray-200 w-full h-full text-white flex justify-around items-center">
+                <div onclick="adminMenuLoader('dashboard')" class="flex justify-center items-center sm:w-[20%]">
                     <img src="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais" class="sm:h-10 h-6" alt="">
                     <h1 class="sm:text-3xl font-serif cursor-pointer">KrishiCare</h1>
                 </div>
@@ -40,9 +46,9 @@ if ($_SESSION["admin"] == null) {
                     </div>
                     <div class="flex justify-center items-center sm:mx-4 ">
                         <div class="toggle-btn sm:w-10 sm:h-6 w-5 h-3 bg-gray-500 bg-opacity-50 rounded-full flex items-start">
-                            <input type="checkbox" id="checkbox" class="hidden">
-                            <label for="checkbox" class="sm:w-6 sm:h-6 w-3 h-3 bg-gray-100 rounded-full relative inline-block cursor-pointer">
-                                <span class="toggle-ball absolute translate-x-2"></span>
+                            <input type="checkbox" id="modeCheckbox" class="hidden">
+                            <label onclick="toggleModeAdmin()" for="modeCheckbox" class="toggle-ball transition-all duration-200 ease-in-out delay-duration-200 sm:w-6 sm:h-6 w-3 h-3 bg-gray-100 rounded-full relative inline-block cursor-pointer">
+                                <span class=" absolute translate-x-2"></span>
                             </label>
                         </div>
                         <div class="hidden sm:block">
@@ -88,7 +94,7 @@ if ($_SESSION["admin"] == null) {
         </header>
         <main class="w-full h-[90%] flex">
             <!-- side navbar -->
-            <div class="sm:w-[16%] w-[18%] h-full bg-gray-800">
+            <div class="sm:w-[16%] w-[18%] h-full dark:bg-gray-800 bg-gray-200">
                 <div class="sm:h-[70%] h-[60%] pt-4">
                     <div class="flex justify-start px-2 items-center text-white my-2 sm:hidden">
                         <img src="../img/avanish.jpg" class="sm:h-12 sm:w-12 h-8 w-8 rounded-full sm:mr-3" alt="">
