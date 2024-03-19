@@ -4,6 +4,8 @@ session_start();
 if ($_SESSION["admin"] == null) {
     header('Location: ' . '../dist/Login.php');
 }
+include("../Backend/config.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en" id="html" class="dark">
@@ -64,7 +66,36 @@ if ($_SESSION["admin"] == null) {
                                     <span class="text-[12px]">avanish123@gmail.com</span>
                                 </div>
                                 <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider" class="text-white focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center " type="button">
-                                    <img src="../img/avanish.jpg" class="h-12 w-12 rounded-full" alt="">
+                                    <?php
+                                    
+                                    $adminQuery = "SELECT `adminprofile`,`email`, `password` FROM `admin` WHERE `email`= 'admin@gmail.com';";
+                                    $result = mysqli_query($con, $adminQuery);
+                                    if ($result->num_rows > 0) {
+                                        while ($row = $result->fetch_assoc()) {
+                                            $admindata[] = $row;
+                                        }
+                                    } else {
+                                        echo "No user found";
+                                    }
+                                    if ($admindata == null) {
+                                    } else {
+                                        $admindatasize = count($admindata);
+                                        for ($i = 0; $i < $admindatasize; $i++) {
+                                            // Accessing values of the nested array at index $i
+                                            $nested_array = $admindata[$i];
+                                    ?>
+                                            <?php
+                                            if (!$nested_array["adminprofile"] == null) {
+                                               echo" <img src='../img/" . $nested_array["adminprofile"] . "' class='h-12 w-12 rounded-full' alt=''>";
+                                            } else {
+                                               echo" <img src='../img/profile.png' class='h-12 w-12 rounded-full' alt=''>";
+                                            }
+                                            ?>
+                                    <?php
+                                        }
+                                    }
+                                    ?>
+
                                     <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
                                     </svg>
