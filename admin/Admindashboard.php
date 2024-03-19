@@ -33,7 +33,7 @@ include("../Backend/config.php");
     </script>
 </head>
 
-<body onload="adminMenuLoader('dashboard');chatBot();" class="">
+<body onload="adminMenuLoader('dashboard');chatBot();" class="overflow-hidden dark:text-white ">
     <div class="h-screen w-screen sm:min-w-96 sm:min-h-screen">
         <header class="sticky w-full h-[10%]">
             <div class="dark:bg-gray-800 bg-gray-200 w-full h-full text-gray-500 dark:text-gray-300 flex justify-around items-center">
@@ -67,12 +67,12 @@ include("../Backend/config.php");
                                 </div>
                                 <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider" class="text-white focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center " type="button">
                                     <?php
-                                    $adminQuery = "SELECT `adminprofile`,`email`, `password` FROM `admin` WHERE `email`= 'admin@gmail.com';";
+                                    $adminQuery = "SELECT `adminprofile`,`name`, `password` FROM `admin` WHERE `name`= 'admin@gmail.com';";
                                     $result = mysqli_query($con, $adminQuery);
                                     if ($result->num_rows > 0) {
                                         while ($row = $result->fetch_assoc()) {
                                             if (!$row["adminprofile"] == null) {
-                                                echo " <img src='../img/" . $row["adminprofile"] . "' class='h-12 w-12 rounded-full' alt=''>";
+                                                echo " <img src='../img/" . $row["adminprofile"] . "' class='h-12 w-12 rounded-full object-cover' alt=''>";
                                             } else {
                                                 echo " <img src='../img/profile.png' class='h-12 w-12 rounded-full' alt=''>";
                                             }
@@ -122,14 +122,14 @@ include("../Backend/config.php");
                             <i class="sm:mr-2 sm:text-xl fa-solid fa-house"></i>
                             <div class="cursor-pointer hidden sm:block">Dashboard</div>
                         </li>
-                        <li onclick="adminMenuLoader('farmer')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
+                        <!-- <li onclick="adminMenuLoader('farmer')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
                             <i class="sm:mr-2 sm:text-xl fa-solid fa-person-digging"></i>
                             <div class="cursor-pointer hidden sm:block">Farmer</div>
                         </li>
                         <li onclick="adminMenuLoader('laboratory')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
                             <i class="sm:mr-2 sm:text-xl fa-solid fa-flask-vial"></i>
                             <div class="cursor-pointer hidden sm:block">Laboratory</div>
-                        </li>
+                        </li> -->
                         <li onclick="adminMenuLoader('report')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
                             <i class="sm:mr-2 sm:text-xl fa-solid fa-file-lines"></i>
                             <div class="cursor-pointer hidden sm:block">Report</div>

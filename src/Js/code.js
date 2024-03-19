@@ -528,11 +528,7 @@ function toggleModeAdmin() {
     var mode = html.classList.contains("dark");
     if (mode) {
         html.classList.remove("dark");
-        toggleball.classList.remove("bg-gray-100");
-        toggleball.classList.add("bg-green-600");
     } else {
         html.classList.add("dark");
-        toggleball.classList.remove("bg-green-600");
-        toggleball.classList.add("bg-gray-100");
     }
 }

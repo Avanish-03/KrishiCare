@@ -1,7 +1,6 @@
 <?php
 include "../Backend/config.php";
 
-
 //------------------ADD Fremer by admin from Admin Dashboard---------------
 if (isset($_POST['addfarmer'])) {
     $first_name = $_POST['firstname'];
@@ -14,9 +13,6 @@ if (isset($_POST['addfarmer'])) {
     $state = $_POST['state'];
     $password = $_POST['pwd'];
 
-    // Establish your database connection first
-
-    // Assuming $con is your database connection
     $query = "INSERT INTO `farmer_detail` (`first_name`, `middle_name`, `last_name`, `email`, `contact_number`, `address`, `city`, `state`, `password`) VALUES ('$first_name', '$middle_name', '$last_name', '$email', '$contact_number', '$address', '$city', '$state', '$password')";
 
     $result = mysqli_query($con, $query);
@@ -27,23 +23,6 @@ if (isset($_POST['addfarmer'])) {
         echo "<script>window.location.href='../admin/Admindashboard.php'</script>";
     }
 }
-
-
-
-
-// --------------UPDATE the detail of farmer from admin dashboard----------------
-if (isset($_POST['updatefarmer'])) {
-    $query = "UPDATE `farmer_detail` SET '$first_name', '$middle_name', '$last_name', '$email', '$contact_number', '$address', '$city', '$state', '$password')";
-
-    $result = mysqli_query($con, $query);
-
-    if (!$result) {
-        echo "<script>alert('error')</script>";
-    } else {
-        echo "<script>window.location.href='../admin/Admindashboard.php'</script>";
-    }
-}
-
 
 
 // -------------DELETE the farmer from the table--------------------------------
