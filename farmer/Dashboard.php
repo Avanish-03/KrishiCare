@@ -21,7 +21,7 @@ for ($i = 0; $i < $data_size; $i++) {
 ?>
 
     <!-- Soil Information Section -->
-    <section class="h-full mx-auto my-8 p-8 pb-28 rounded-md">
+    <section class="h-full mx-auto my-8 p-8 rounded-md">
         <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Dashboard</h1>
         <div class="bg-gray-200 dark:bg-gray-600 w-full h-48 rounded my-2 px-8 flex items-center relative">
             <div class="w-fit h-full flex justify-start">
@@ -129,7 +129,7 @@ for ($i = 0; $i < $data_size; $i++) {
             <div class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  "></div>
             <h1 class="z-10 text-9xl font-bold px-8 transition-all duration-300 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">Farmer Portals</h1>
         </div>
-        <img class="h-full w-full" src="https://366pi.com/wp-content/uploads/2020/07/OnDemandReports-Agri.png" alt="Agri Image">
+        <!-- <img class="h-full w-full" src="https://366pi.com/wp-content/uploads/2020/07/OnDemandReports-Agri.png" alt="Agri Image"> -->
         <!-- Soil Content -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-5">
             <!-- Soil Type 1 -->

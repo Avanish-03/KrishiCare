@@ -526,7 +526,7 @@ function toggleModeAdmin() {
         toggleball.classList.add("bg-green-600");
     } else {
         html.classList.add("dark");
-        toggleball.classList.add("bg-green-600");
-        toggleball.classList.remove("bg-gray-100");
+        toggleball.classList.remove("bg-green-600");
+        toggleball.classList.add("bg-gray-100");
     }
 }

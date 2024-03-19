@@ -1,5 +1,5 @@
 <!-- Notification Section -->
-<section class="w-full h-full mx-auto my-8 p-8 rounded-md">
+<section class="w-full h-full mx-auto my-8 px-8 rounded-md">
     <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Notification</h1>
     <!-- information Section -->
     <div class="h-48 w-full bg-gray-200 rounded-lg dark:bg-slate-600 flex items-center">
