@@ -128,7 +128,7 @@ for ($i = 0; $i < $data_size; $i++) {
             <div class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  "></div>
             <h1 class="z-10 text-9xl font-bold px-8 transition-all duration-300 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">Farmer Portals</h1>
         </div>
-        <!-- <img class="h-full w-full" src="https://366pi.com/wp-content/uploads/2020/07/OnDemandReports-Agri.png" alt="Agri Image"> -->
+        <img class="h-full w-full" src="https://366pi.com/wp-content/uploads/2020/07/OnDemandReports-Agri.png" alt="Agri Image">
         <!-- Soil Content -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-5">
             <!-- Soil Type 1 -->

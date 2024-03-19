@@ -59,7 +59,7 @@
                                 <td class='px-6 py-4'><?php echo $row['address'] ?></td>
                                 <td class='px-6 py-4'><?php echo $row['city'] ?></td>
                                 <td class='px-6 py-4'><?php echo $row['state'] ?></td>
-                            
+
                             </tr>
                         <?php }
                         ?>
@@ -104,18 +104,20 @@
                             die("invalide query");
                         }
                         while ($row = $result->fetch_assoc()) {
-                            echo "
+                        ?>
                             <tr class='bg-white dark:text-gary-300 border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600'>
-                            <th class='px-6 py-4 font-medium whitespace-nowrap'>$row[lab_id]</th>
-                            <td class='px-6 py-4'>$row[lab_name]</td>
-                            <td class='px-6 py-4'>$row[email]</td>
-                            <td class='px-6 py-4'>$row[contact]</td>
-                            <td class='px-6 py-4'>$row[lab_add]</td>
-                            <td class='px-6 py-4'>$row[city]</td>
-                            <td class='px-6 py-4'>$row[state]</td>
-                            <td class='px-6 py-4'>$row[ownership]</td>
-                        
-                            </tr>";
+                                <th class='px-6 py-4 font-medium whitespace-nowrap'><?php $enqFamerId = md5($row['lab_id']);
+                                    echo $enqFamerId; ?></th>
+                                <td class='px-6 py-4'><?php echo $row['lab_name'];?></td>
+                                <td class='px-6 py-4'><?php echo $row['email'];?></td>
+                                <td class='px-6 py-4'><?php echo $row['contact'];?></td>
+                                <td class='px-6 py-4'><?php echo $row['lab_add'];?></td>
+                                <td class='px-6 py-4'><?php echo $row['city'];?></td>
+                                <td class='px-6 py-4'><?php echo $row['state'];?></td>
+                                <td class='px-6 py-4'><?php echo $row['ownership'];?></td>
+
+                            </tr>
+                        <?php
                         }
                         ?>
 

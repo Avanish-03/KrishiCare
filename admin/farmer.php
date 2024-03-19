@@ -46,7 +46,7 @@
 
                                             <div class="md:col-span-2">
                                                 <label for="email">Email Address</label>
-                                                <input type="email" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="email@domain.com" />
+                                                <input type="email" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="email123@gmail.com" />
                                             </div>
 
                                             <div class="md:col-span-2">
@@ -86,7 +86,7 @@
                                             </div>
                                         </div>
                                         <div class="mt-6 flex justify-center gap-x-4">
-                                            <input type="submit" value="Register" name="addfarmer" class="py-2 w-full inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-green-700 text-gray-100 shadow-sm align-middle hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-700 focus:ring-green-600 transition-all text-lg">
+                                            <input type="button" value="Register" name="addfarmer" class="py-2 w-full inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-green-700 text-gray-100 shadow-sm align-middle hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-700 focus:ring-green-600 transition-all text-lg" onclick="return registerFarmer()">
                                         </div>
                                     </form>
                                 </div>
@@ -150,62 +150,46 @@
                                                         <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-4 text-black font-bold">
                                                             <div class="md:col-span-4">
                                                                 <label for="firstname">First Name</label>
-                                                                <input type="text" name="firstname" id="firstname" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                                                                <input type="text" name="firstname" id="firstname" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="<?php echo $row['first_name'] ?>" />
                                                             </div>
 
                                                             <div class="md:col-span-4">
                                                                 <label for="middlename">Middle Name</label>
-                                                                <input type="text" name="middlename" id="middlename" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                                                                <input type="text" name="middlename" id="middlename" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="<?php echo $row['middle_name'] ?>" />
                                                             </div>
 
                                                             <div class="md:col-span-4">
                                                                 <label for="lastname">Last Name</label>
-                                                                <input type="text" name="lastname" id="lastname" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                                                                <input type="text" name="lastname" id="lastname" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="<?php echo $row['last_name'] ?>" />
                                                             </div>
 
                                                             <div class="md:col-span-2">
                                                                 <label for="email">Email Address</label>
-                                                                <input type="email" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="email@domain.com" />
+                                                                <input type="email" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="<?php echo $row['email'] ?>" placeholder="email@domain.com" />
                                                             </div>
 
                                                             <div class="md:col-span-2">
                                                                 <label for="contact">Contact</label>
-                                                                <input type="text" name="contact" id="contact" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
+                                                                <input type="text" name="contact" id="contact" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="<?php echo $row['contact_number'] ?>" placeholder="" />
                                                             </div>
 
                                                             <div class="md:col-span-4">
                                                                 <label for="address">Address / Street</label>
-                                                                <input type="text" name="address" id="address" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
+                                                                <input type="text" name="address" id="address" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="<?php echo $row['address'] ?>" placeholder="" />
                                                             </div>
 
                                                             <div class="md:col-span-2">
                                                                 <label for="state">State</label>
-                                                                <input type="text" name="state" id="state" class="state h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
+                                                                <input type="text" name="state" id="state" class="state h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="<?php echo $row['state'] ?>" placeholder="" />
                                                             </div>
 
                                                             <div class="md:col-span-2">
                                                                 <label for="city">City</label>
-                                                                <input type="text" name="city" id="city" class="city h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
-                                                            </div>
-
-                                                            <div class="md:col-span-2">
-                                                                <label for="pwd">Password</label>
-                                                                <div class="relative flex justify-end items-center">
-                                                                    <img id="imgpwd" src="../img/eye.png" alt="" class="absolute h-5 w-5 z-10 cursor-pointer mr-3" onclick="togglepassword('imgpwd','pwd')">
-                                                                    <input type="password" name="pwd" id="pwd" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="md:col-span-2">
-                                                                <label for="cpwd">Confirm Password</label>
-                                                                <div class="relative flex justify-end items-center">
-                                                                    <img id="imgcpwd" src="../img/eye.png" alt="" class="absolute h-5 w-5 z-10 cursor-pointer mr-3" onclick="togglepassword('imgcpwd','cpwd')">
-                                                                    <input type="password" name="cpwd" id="cpwd" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
-                                                                </div>
+                                                                <input type="text" name="city" id="city" class="city h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="<?php echo $row['city'] ?>" placeholder="" />
                                                             </div>
                                                         </div>
                                                         <div class="mt-6 flex justify-center gap-x-4">
-                                                            <input type="submit" value="Register" name="addfarmer" class="py-2 w-full inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-green-700 text-gray-100 shadow-sm align-middle hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-700 focus:ring-green-600 transition-all text-lg">
+                                                            <input type="button" value="Register" name="updatefarmer" class="py-2 w-full inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-green-700 text-gray-100 shadow-sm align-middle hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-700 focus:ring-green-600 transition-all text-lg" onclick="return registerFarmer()">
                                                         </div>
                                                     </form>
                                                 </div>
