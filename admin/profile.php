@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="mb-6 pt-4">
-        <div class="h-fiy w-full my-8 pb-8 rounded-md bg-gray-300 dark:bg-slate-600 duration-700">
+        <div class="h-fiy w-full my-6 pb-8 rounded-md bg-gray-200 dark:bg-slate-600 duration-700">
             <div class="px-6">
                 <div class="flex flex-wrap justify-center">
                     <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
@@ -41,9 +41,9 @@
                                                 <span class="block w-40 h-40 rounded-full m-auto bg-red-500 shadow" x-bind:style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + photoPreview + '\');'" style="background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url('null');">
                                                 </span>
                                             </div>
-                                            <label for="admin_img" class="inline-flex items-center px-4 py-2 bg-gray-200 dark:bg-slate-600 border border-gray-300 rounded-md font-semibold text-xs text-gray-700 dark:text-gray-100 uppercase tracking-widest shadow-sm hover:text-gray-100 focus:outline-none focus:border-green-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-0">Choose Image
+                                            <label for="admin_img" class="inline-flex items-center px-4 py-2 bg-gray-300 dark:bg-slate-600 border border-gray-300 rounded-md font-semibold text-xs text-gray-700 dark:text-gray-100 uppercase tracking-widest shadow-sm focus:outline-none focus:border-green-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-0">Choose Image
                                             </label>
-                                            <button type="button" onclick="return uploadProfilePic('changeProfile')" name="uploadProfile" class="inline-flex items-center px-4 py-2 bg-gray-200 dark:bg-slate-600 border border-gray-300 rounded-md font-semibold text-xs text-gray-700 dark:text-gray-100 uppercase tracking-widest shadow-sm hover:text-gray-100 focus:outline-none focus:border-green-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-0">
+                                            <button type="button" onclick="return uploadProfilePic('changeProfile')" name="uploadProfile" class="inline-flex items-center px-4 py-2 bg-gray-300 dark:bg-slate-600 border border-gray-300 rounded-md font-semibold text-xs text-gray-700 dark:text-gray-100 uppercase tracking-widest shadow-sm focus:outline-none focus:border-green-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-0">
                                                 Save
                                             </button>
                                         </div>
@@ -57,7 +57,7 @@
                 </div>
                 <input type="text" hidden name="changeProfile" id="changeProfile">
             </div>
-            <div class="text-center mt-10 text-white">
+            <div class="text-center mt-10 text-gray-600 dark:text-white">
                 <h3 class="text-4xl font-semibold leading-normal  mb-2">
                     Avanish Yadav
                 </h3>
@@ -72,7 +72,7 @@
                     <i class="fas fa-university mr-2 text-lg "></i>University of Computer Science
                 </div>
             </div>
-            <div class="my-4 pt-2 border-t border-blueGray-200 text-cente text-whiter">
+            <div class="my-4 pt-2 border-t border-blueGray-200 text-center text-gray-600 dark:text-white">
                 <div class="flex flex-wrap justify-center">
                     <div class="w-full lg:w-9/12 px-4">
                         <p class="mb-4 text-lg leading-relaxed ">
@@ -82,7 +82,7 @@
                             warm, intimate feel with a solid groove structure. An
                             artist of considerable range.
                         </p>
-                        <a href="#pablo" class="font-bold text-black bg-gray-300 rounded-md px-6 py-1">Edit</a>
+                        <!-- <a href="#pablo" class="font-bold text-black bg-gray-200 rounded-md px-6 py-1">Edit</a> -->
                     </div>
                 </div>
             </div>
