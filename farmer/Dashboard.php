@@ -21,7 +21,7 @@ for ($i = 0; $i < $data_size; $i++) {
 ?>
 
     <!-- Soil Information Section -->
-    <section class="h-full mx-auto my-8 p-8 pb-28 rounded-md">
+    <section class="h-full mx-auto my-8 p-8 rounded-md">
         <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Dashboard</h1>
         <div class="bg-gray-200 dark:bg-gray-600 w-full h-48 rounded my-2 px-8 flex items-center relative">
             <div class="w-fit h-full flex justify-start">

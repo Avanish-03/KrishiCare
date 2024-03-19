@@ -10,10 +10,10 @@
         </div>
     </div>
     <div class="h-fit w-full mt-6 flex rounded-md bg-gray-200 dark:bg-slate-600 ">
-        <div class="w-full m-2 p-2 h- ">
+        <div class="w-full m-2 h-full">
             <div class="p-4 bg-white dark:bg-gray-900 rounded-md ">
                 <div class="mb-2 flex justify-between">
-                    <label for="" class="font-bold text-2xl font-mono">Laboratory Details </label>
+                    <label for="" class="font-bold text-2xl font-mono text-gray-900 dark:text-gray-300">Laboratory Details </label>
                     <button class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-md shadow-md transition duration-300 ease-in-out">Add Laboratory</button>
                 </div>
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
