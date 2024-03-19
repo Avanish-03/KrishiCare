@@ -93,10 +93,6 @@
                             </div>
                         </div>
                     </div>
-=======
-                    <label for="" class="font-bold text-2xl font-mono text-gray-900 dark:text-gray-300">Laboratory Details </label>
-                    <button class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-md shadow-md transition duration-300 ease-in-out">Add Laboratory</button>
->>>>>>> d5ba5464097e075d8207f819e9074d3dde33ace4
                 </div>
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-100">
