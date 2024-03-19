@@ -128,7 +128,7 @@
         </div>
         <div class="w-full h-[80%] rounded-b-lg flex justify-center items-center">
             <div class="h-[90%] w-[50%] rounded-lg shadow-lg text-gray-800 dark:text-gray-300 bg-gray-300 dark:bg-gray-900 transition-all duration-300">
-                <form class="h-full flex justify-center items-center">
+                <form id="soilForm" class="h-full flex justify-center items-center">
                     <div class="h-fit w-[75%]">
                         <div class="p-5 w-full flex justify-center items-center gap-4">
                             <label class="w-[25%]" for="id">User id: </label>
