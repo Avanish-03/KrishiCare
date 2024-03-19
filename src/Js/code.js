@@ -316,9 +316,7 @@ function ajaxCall(url, method, data, destination, isHtml, isFile) {
         }
     }
     xhttp.open(method, url, false);
-    if (isFile) {
-        xhttp.setRequestHeader("Content-type", "multipart/form-data");
-    } else {
+    if (!isFile) {
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     }
     xhttp.send(data);
@@ -435,16 +433,24 @@ function adminMenuLoader(process) {
     ajaxCall('../Backend/AdminProcess.php', 'post', "process=" + process, 'adminProcess', false);
 }
 
-function changeProfile(process) {
-    var file = document.getElementById("imageFile");
-    var imageFile = file.files[0];
-    alert(imageFile.name);
+function uploadProfilePic(process) {
+    var result = validateEmpty("admin_img", "Profile Picture");
+    if (result) {
+        alert(process);
+        var file = document.getElementById("admin_img");
+        var imageFile = file.files[0];
+        alert(imageFile.name);
 
-    var formData = new FormData();
-    formData.append("profilePicture", imageFile);
-    formData.append("process", process);
+        var formData = new FormData();
+        formData.append("profilePicture", imageFile);
+        formData.append("process", process);
 
-    ajaxCall('../Backend/AdminProcess.php', 'post', formData, 'changeProfile', true, true);
+        alert(process);
+        ajaxCall('../Backend/AdminProcess.php', 'post', formData, 'changeProfile', true, true);
+        var status = getvalue("changeProfile");
+        alert(status);
+    }
+    adminMenuLoader('profile');
 }
 
 function farmerMenuLoader(process, id) {
