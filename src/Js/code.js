@@ -219,7 +219,6 @@ function validateEmpty(elementId, elementName) {
     return true;
 }
 
-
 function ValidateEmail(elementId, elementName) {
     var res = validateEmpty(elementId, elementName);
     if (res) {
@@ -355,7 +354,7 @@ function loadStates() {
         .catch(error => console.error('Error loading states:', error));
 }
 
-function loadCities(event) {
+function loadCities() {
     var citySelect = document.querySelector('.city');
 
     citySelect.disabled = false
@@ -436,19 +435,20 @@ function adminMenuLoader(process) {
 function uploadProfilePic(process) {
     var result = validateEmpty("admin_img", "Profile Picture");
     if (result) {
-        alert(process);
         var file = document.getElementById("admin_img");
         var imageFile = file.files[0];
-        alert(imageFile.name);
-
+        
         var formData = new FormData();
         formData.append("profilePicture", imageFile);
         formData.append("process", process);
-
-        alert(process);
+        
         ajaxCall('../Backend/AdminProcess.php', 'post', formData, 'changeProfile', true, true);
         var status = getvalue("changeProfile");
         alert(status);
+    } else {
+        document.getElementById("inputDiv").classList.add("bg-red-700");
+        document.getElementById("inputDiv").classList.remove("bg-green-500");
+
     }
     adminMenuLoader('profile');
 }
