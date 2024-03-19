@@ -15,12 +15,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result) {
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
-                $soilrequestdata[] = $row;
+                if (!($row == null)) {
+                    $soilrequestdata[] = $row;
+                } else {
+                    $soilrequestdata = null;
+                }
             }
         } else {
-            echo "No results found";
+            $soilrequestdata = null;
         }
-
         // Free result set
         mysqli_free_result($result);
     } else {
@@ -61,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $sql = "UPDATE `request_detail` SET `status` = 'Approved' WHERE `farmer_id` = '$farmerId';";
             $result = mysqli_query($con, $sql);
             if ($result) {
-                echo "Update successful";
+                echo "Request Accepted!";
             } else {
                 echo "Error: " . mysqli_error($con);
             }

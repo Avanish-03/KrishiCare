@@ -98,6 +98,7 @@ for ($i = 0; $i < $data_size; $i++) {
                         <tbody>
                             <?php
                             if ($soilrequestdata == null) {
+                                
                             } else {
                                 $soilrequestdatasize = count($soilrequestdata);
                                 for ($i = 0; $i < $soilrequestdatasize; $i++) {

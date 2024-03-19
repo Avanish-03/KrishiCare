@@ -13,7 +13,6 @@
     <div class="my-8 h-fit w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
         <?php
-        echo "<div class='w-full h-fit px-4 py-3 dark:text-gray-300 bg-gray-200 rounded-lg dark:bg-slate-700'>";
         if ($soilrequestdata == null) {
             echo "<div>No Notifications</div>";
         } else {
@@ -23,6 +22,7 @@
                 $nested_array = $soilrequestdata[$i];
                 if ($nested_array["status"] !== 'Approved') {
                 } else {
+                    echo "<div class='w-full h-fit px-4 py-3 dark:text-gray-300 bg-gray-200 rounded-lg dark:bg-slate-700'>";
                     echo "<h1>Dear, </h1>";
                     echo "<h1 class='w-fit px-6 py-4 text-justify'>
                 We're truly thankful to you to selecting our laboratory for soil testing. Your trust is invaluable, and we're committed to providing accurate results to support your farming needs. Together, let's cultivate success and sustainability in agriculture.

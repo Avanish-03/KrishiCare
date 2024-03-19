@@ -513,3 +513,20 @@ function acceptRequest(farmerId) {
     ajaxCall("../Backend/LabProcess.php", "post", "farmerId=" + farmerId + "&process=changeStatus", "requestStatus", true);
     alert(document.getElementById("requestStatus").value);
 }
+
+function toggleModeAdmin() {
+    var toggleMode = document.querySelector("#modeCheckbox");
+    var toggleball = document.querySelector(".toggle-ball");
+
+    var html = document.getElementById("html");
+    var mode = html.classList.contains("dark");
+    if (mode) {
+        html.classList.remove("dark");
+        toggleball.classList.remove("bg-gray-100");
+        toggleball.classList.add("bg-green-600");
+    } else {
+        html.classList.add("dark");
+        toggleball.classList.add("bg-green-600");
+        toggleball.classList.remove("bg-gray-100");
+    }
+}
