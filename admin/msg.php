@@ -1,250 +1,404 @@
-<!-- component -->
-<div x-data="chatBot()" class="h-full">
-    <div class="flex-1 p:2 sm:p-6 justify-between flex flex-col h-full bg-slate-600">
-        <div id="messages" class="flex flex-col space-y-4 p-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch">
-            <template x-for="(message, key) in messages">
-                <div>
-                    <div class="flex items-end" :class="message.from=='bot'?'':'justify-end'">
-                        <div class="flex flex-col space-y-2 text-md leading-tight max-w-lg mx-2" :class="message.from=='bot'?'order-2 items-start':'order-1 items-end'">
-                            <div>
-                                <span class="px-4 py-3 rounded-xl inline-block" :class="message.from=='bot'?'rounded-bl-none bg-gray-100 text-gray-600':'rounded-br-none bg-blue-500 text-white'" x-html="message.text"></span>
-                            </div>
+<div class="flex h-screen antialiased text-gray-800">
+    <div class="flex flex-row h-full w-full overflow-x-hidden">
+      <div class="flex flex-col py-8 pl-6 pr-2 w-64 bg-white flex-shrink-0">
+        <div class="flex flex-row items-center justify-center h-12 w-full">
+          <div
+            class="flex items-center justify-center rounded-2xl text-indigo-700 bg-indigo-100 h-10 w-10"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+              ></path>
+            </svg>
+          </div>
+          <div class="ml-2 font-bold text-2xl">QuickChat</div>
+        </div>
+        <div
+          class="flex flex-col items-center bg-indigo-100 border border-gray-200 mt-4 w-full py-6 px-4 rounded-lg"
+        >
+          <div class="h-20 w-20 rounded-full border overflow-hidden">
+            <img
+              src="https://avatars3.githubusercontent.com/u/2763884?s=128"
+              alt="Avatar"
+              class="h-full w-full"
+            />
+          </div>
+          <div class="text-sm font-semibold mt-2">Aminos Co.</div>
+          <div class="text-xs text-gray-500">Lead UI/UX Designer</div>
+          <div class="flex flex-row items-center mt-3">
+            <div
+              class="flex flex-col justify-center h-4 w-8 bg-indigo-500 rounded-full"
+            >
+              <div class="h-3 w-3 bg-white rounded-full self-end mr-1"></div>
+            </div>
+            <div class="leading-none ml-1 text-xs">Active</div>
+          </div>
+        </div>
+        <div class="flex flex-col mt-8">
+          <div class="flex flex-row items-center justify-between text-xs">
+            <span class="font-bold">Active Conversations</span>
+            <span
+              class="flex items-center justify-center bg-gray-300 h-4 w-4 rounded-full"
+              >4</span
+            >
+          </div>
+          <div class="flex flex-col space-y-1 mt-4 -mx-2 h-48 overflow-y-auto">
+            <button
+              class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2"
+            >
+              <div
+                class="flex items-center justify-center h-8 w-8 bg-indigo-200 rounded-full"
+              >
+                H
+              </div>
+              <div class="ml-2 text-sm font-semibold">Henry Boyd</div>
+            </button>
+            <button
+              class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2"
+            >
+              <div
+                class="flex items-center justify-center h-8 w-8 bg-gray-200 rounded-full"
+              >
+                M
+              </div>
+              <div class="ml-2 text-sm font-semibold">Marta Curtis</div>
+              <div
+                class="flex items-center justify-center ml-auto text-xs text-white bg-red-500 h-4 w-4 rounded leading-none"
+              >
+                2
+              </div>
+            </button>
+            <button
+              class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2"
+            >
+              <div
+                class="flex items-center justify-center h-8 w-8 bg-orange-200 rounded-full"
+              >
+                P
+              </div>
+              <div class="ml-2 text-sm font-semibold">Philip Tucker</div>
+            </button>
+            <button
+              class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2"
+            >
+              <div
+                class="flex items-center justify-center h-8 w-8 bg-pink-200 rounded-full"
+              >
+                C
+              </div>
+              <div class="ml-2 text-sm font-semibold">Christine Reid</div>
+            </button>
+            <button
+              class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2"
+            >
+              <div
+                class="flex items-center justify-center h-8 w-8 bg-purple-200 rounded-full"
+              >
+                J
+              </div>
+              <div class="ml-2 text-sm font-semibold">Jerry Guzman</div>
+            </button>
+          </div>
+          <div class="flex flex-row items-center justify-between text-xs mt-6">
+            <span class="font-bold">Archivied</span>
+            <span
+              class="flex items-center justify-center bg-gray-300 h-4 w-4 rounded-full"
+              >7</span
+            >
+          </div>
+          <div class="flex flex-col space-y-1 mt-4 -mx-2">
+            <button
+              class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2"
+            >
+              <div
+                class="flex items-center justify-center h-8 w-8 bg-indigo-200 rounded-full"
+              >
+                H
+              </div>
+              <div class="ml-2 text-sm font-semibold">Henry Boyd</div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col flex-auto h-full p-6">
+        <div
+          class="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gray-100 h-full p-4"
+        >
+          <div class="flex flex-col h-full overflow-x-auto mb-4">
+            <div class="flex flex-col h-full">
+              <div class="grid grid-cols-12 gap-y-2">
+                <div class="col-start-1 col-end-8 p-3 rounded-lg">
+                  <div class="flex flex-row items-center">
+                    <div
+                      class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                    >
+                      A
+                    </div>
+                    <div
+                      class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl"
+                    >
+                      <div>Hey How are you today?</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-start-1 col-end-8 p-3 rounded-lg">
+                  <div class="flex flex-row items-center">
+                    <div
+                      class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                    >
+                      A
+                    </div>
+                    <div
+                      class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl"
+                    >
+                      <div>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Vel ipsa commodi illum saepe numquam maxime
+                        asperiores voluptate sit, minima perspiciatis.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-start-6 col-end-13 p-3 rounded-lg">
+                  <div class="flex items-center justify-start flex-row-reverse">
+                    <div
+                      class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                    >
+                      A
+                    </div>
+                    <div
+                      class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl"
+                    >
+                      <div>I'm ok what about you?</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-start-6 col-end-13 p-3 rounded-lg">
+                  <div class="flex items-center justify-start flex-row-reverse">
+                    <div
+                      class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                    >
+                      A
+                    </div>
+                    <div
+                      class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl"
+                    >
+                      <div>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing. ?
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-start-1 col-end-8 p-3 rounded-lg">
+                  <div class="flex flex-row items-center">
+                    <div
+                      class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                    >
+                      A
+                    </div>
+                    <div
+                      class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl"
+                    >
+                      <div>Lorem ipsum dolor sit amet !</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-start-6 col-end-13 p-3 rounded-lg">
+                  <div class="flex items-center justify-start flex-row-reverse">
+                    <div
+                      class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                    >
+                      A
+                    </div>
+                    <div
+                      class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl"
+                    >
+                      <div>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing. ?
+                      </div>
+                      <div
+                        class="absolute text-xs bottom-0 right-0 -mb-5 mr-2 text-gray-500"
+                      >
+                        Seen
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-start-1 col-end-8 p-3 rounded-lg">
+                  <div class="flex flex-row items-center">
+                    <div
+                      class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                    >
+                      A
+                    </div>
+                    <div
+                      class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl"
+                    >
+                      <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Perspiciatis, in.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-start-1 col-end-8 p-3 rounded-lg">
+                  <div class="flex flex-row items-center">
+                    <div
+                      class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                    >
+                      A
+                    </div>
+                    <div
+                      class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl"
+                    >
+                      <div class="flex flex-row items-center">
+                        <button
+                          class="flex items-center justify-center bg-indigo-600 hover:bg-indigo-800 rounded-full h-8 w-10"
+                        >
+                          <svg
+                            class="w-6 h-6 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="1.5"
+                              d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                            ></path>
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="1.5"
+                              d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                            ></path>
+                          </svg>
+                        </button>
+                        <div class="flex flex-row items-center space-x-px ml-4">
+                          <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-4 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-8 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-8 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-10 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-10 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-12 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-10 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-6 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-5 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-4 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-3 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-10 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-10 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-8 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-8 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-1 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-1 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-8 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-8 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                          <div class="h-4 w-1 bg-gray-500 rounded-lg"></div>
                         </div>
-                        <img :src="message.from=='bot'?'https://cdn.icon-icons.com/icons2/1371/PNG/512/robot02_90810.png':'https://i.pravatar.cc/100?img=7'" alt="" class="w-6 h-6 rounded-full" :class="message.from=='bot'?'order-1':'order-2'">
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </template>
-            <div x-show="botTyping" style="display: none;">
-                <div class="flex items-end">
-                    <div class="flex flex-col space-y-2 text-md leading-tight mx-2 order-2 items-start">
-                        <div><img src="https://support.signal.org/hc/article_attachments/360016877511/typing-animation-3x.gif" alt="..." class="w-16 ml-6"></div>
-                    </div>
-                </div>
+              </div>
             </div>
-        </div>
-        <div class="border-t-2 border-gray-200 px-4 pt-4 mb-2 sm:mb-0">
-            <div class="relative flex">
-                <input type="text" placeholder="Say something..." autocomplete="off" autofocus="true" @keydown.enter="updateChat($event.target)" class="text-md w-full focus:outline-none focus:placeholder-gray-400 text-gray-600 placeholder-gray-600 pl-5 pr-16 bg-gray-100 border-2 border-gray-200 focus:border-blue-500 rounded-full py-2" x-ref="input" />
-                <div class="absolute right-2 items-center inset-y-0 hidden sm:flex">
-                    <button type="button" class="inline-flex items-center justify-center rounded-full h-8 w-8 transition duration-200 ease-in-out text-white bg-blue-500 hover:bg-blue-600 focus:outline-none" @click.prevent="updateChat($refs.input)">
-                        <i class="mdi mdi-arrow-left rotate-90 text-xl leading-none"></i>
-                    </button>
-                </div>
+          </div>
+          <div
+            class="flex flex-row items-center h-16 rounded-xl bg-white w-full px-4"
+          >
+            <div>
+              <button
+                class="flex items-center justify-center text-gray-400 hover:text-gray-600"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"
+                  ></path>
+                </svg>
+              </button>
             </div>
+            <div class="flex-grow ml-4">
+              <div class="relative w-full">
+                <input
+                  type="text"
+                  class="flex w-full border rounded-xl focus:outline-none focus:border-indigo-300 pl-4 h-10"
+                />
+                <button
+                  class="absolute flex items-center justify-center h-full w-12 right-0 top-0 text-gray-400 hover:text-gray-600"
+                >
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="ml-4">
+              <button
+                class="flex items-center justify-center bg-indigo-500 hover:bg-indigo-600 rounded-xl text-white px-4 py-1 flex-shrink-0"
+              >
+                <span>Send</span>
+                <span class="ml-2">
+                  <svg
+                    class="w-4 h-4 transform rotate-45 -mt-px"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                    ></path>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-
-<style>
-    @import url('https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css');
-</style>
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.5.0/dist/alpine.min.js"></script>
-<script>
-    function chatBot() {
-        return {
-            prompts: [
-                ["hi", "hey", "hello", "good morning", "good afternoon"],
-                ["how are you", "how is life", "how are things"],
-                ["what are you doing", "what is going on", "what is up"],
-                ["how old are you"],
-                ["who are you", "are you human", "are you bot", "are you human or bot"],
-                ["who created you", "who made you"],
-                ["your name please", "your name", "may i know your name", "what is your name", "what call yourself"],
-                ["i love you"],
-                ["happy", "good", "fun", "wonderful", "fantastic", "cool"],
-                ["bad", "bored", "tired"],
-                ["help me", "tell me story", "tell me joke"],
-                ["ah", "yes", "ok", "okay", "nice"],
-                ["bye", "good bye", "goodbye", "see you later"],
-                ["what should i eat today"],
-                ["bro"],
-                ["what", "why", "how", "where", "when"],
-                ["no", "not sure", "maybe", "no thanks"],
-                [""],
-                ["haha", "ha", "lol", "hehe", "funny", "joke"],
-                ["flip a coin", "heads or tails", "tails or heads", "head or tails", "head or tail", "tail or heads", "tail or head"],
-                ["beer", "buy me a beer", "want a beer"]
-            ],
-            replies: [
-                ["Hello!", "Hi!", "Hey!", "Hi there!", "Howdy"],
-                ["Fine... how are you?", "Pretty well, how are you?", "Fantastic, how are you?"],
-                ["Nothing much", "About to go to sleep", "Can you guess?", "I don't know actually"],
-                ["I am infinite"],
-                ["I am just a bot", "I am a bot. What are you?"],
-                ["The one true God, JavaScript"],
-                ["I am nameless", "I don't have a name"],
-                ["I love you too", "Me too"],
-                ["Have you ever felt bad?", "Glad to hear it"],
-                ["Why?", "Why? You shouldn't!", "Try watching TV"],
-                ["What about?", "Once upon a time..."],
-                ["Tell me a story", "Tell me a joke", "Tell me about yourself"],
-                ["Bye", "Goodbye", "See you later"],
-                ["Sushi", "Pizza"],
-                ["Bro!"],
-                ["Great question"],
-                ["That's ok", "I understand", "What do you want to talk about?"],
-                ["Please say something :("],
-                ["Haha!", "Good one!"],
-                ["Heads", "Tails"],
-                ["You can buy me a beer at: <a href=\"https://www.buymeacoffee.com/scottwindon\" target=\"_blank\" style=\"text-decoration:underline;\">https://www.buymeacoffee.com/scottwindon</a>"]
-            ],
-            alternative: ["Same", "Go on...", "Bro...", "Try again", "I'm listening...", "I don't understand :/"],
-            coronavirus: ["Please stay home", "Wear a mask", "Fortunately, I don't have COVID", "These are uncertain times"],
-            botTyping: false,
-            messages: [{
-                from: 'bot',
-                text: 'Hello world!'
-            }],
-            output: function(input) {
-                let product;
-
-                // Regex remove non word/space chars
-                // Trim trailing whitespce
-                // Remove digits - not sure if this is best
-                // But solves problem of entering something like 'hi1'
-
-                let text = input.toLowerCase().replace(/[^\w\s]/gi, "").replace(/[\d]/gi, "").trim();
-                text = text
-                    .replace(/ a /g, " ") // 'tell me a story' -> 'tell me story'
-                    .replace(/i feel /g, "")
-                    .replace(/whats/g, "what is")
-                    .replace(/please /g, "")
-                    .replace(/ please/g, "")
-                    .replace(/r u/g, "are you");
-
-                if (this.compare(this.prompts, this.replies, text)) {
-                    // Search for exact match in `prompts`
-                    product = this.compare(this.prompts, this.replies, text);
-                } else if (text.match(/thank/gi)) {
-                    product = "You're welcome!"
-                } else if (text.match(/(corona|covid|virus)/gi)) {
-                    // If no match, check if message contains `coronavirus`
-                    product = this.coronavirus[Math.floor(Math.random() * this.coronavirus.length)];
-                } else {
-                    // If all else fails: random this.alternative
-                    product = this.alternative[Math.floor(Math.random() * this.alternative.length)];
-                }
-
-                // Update DOM
-                this.addChat(input, product);
-            },
-            compare: function(promptsArray, repliesArray, string) {
-                let reply;
-                let replyFound = false;
-                for (let x = 0; x < promptsArray.length; x++) {
-                    for (let y = 0; y < promptsArray[x].length; y++) {
-                        if (promptsArray[x][y] === string) {
-                            let replies = repliesArray[x];
-                            reply = replies[Math.floor(Math.random() * replies.length)];
-                            replyFound = true;
-                            // Stop inner loop when input value matches this.prompts
-                            break;
-                        }
-                    }
-                    if (replyFound) {
-                        // Stop outer loop when reply is found instead of interating through the entire array
-                        break;
-                    }
-                }
-                if (!reply) {
-                    for (let x = 0; x < promptsArray.length; x++) {
-                        for (let y = 0; y < promptsArray[x].length; y++) {
-                            if (this.levenshtein(promptsArray[x][y], string) >= 0.75) {
-                                let replies = repliesArray[x];
-                                reply = replies[Math.floor(Math.random() * replies.length)];
-                                replyFound = true;
-                                // Stop inner loop when input value matches this.prompts
-                                break;
-                            }
-                        }
-                        if (replyFound) {
-                            // Stop outer loop when reply is found instead of interating through the entire array
-                            break;
-                        }
-                    }
-                }
-                return reply;
-            },
-            levenshtein: function(s1, s2) {
-                var longer = s1;
-                var shorter = s2;
-                if (s1.length < s2.length) {
-                    longer = s2;
-                    shorter = s1;
-                }
-                var longerLength = longer.length;
-                if (longerLength == 0) {
-                    return 1.0;
-                }
-                return (longerLength - this.editDistance(longer, shorter)) / parseFloat(longerLength);
-            },
-            editDistance: function(s1, s2) {
-                s1 = s1.toLowerCase();
-                s2 = s2.toLowerCase();
-
-                var costs = new Array();
-                for (var i = 0; i <= s1.length; i++) {
-                    var lastValue = i;
-                    for (var j = 0; j <= s2.length; j++) {
-                        if (i == 0)
-                            costs[j] = j;
-                        else {
-                            if (j > 0) {
-                                var newValue = costs[j - 1];
-                                if (s1.charAt(i - 1) != s2.charAt(j - 1))
-                                    newValue = Math.min(Math.min(newValue, lastValue),
-                                        costs[j]) + 1;
-                                costs[j - 1] = lastValue;
-                                lastValue = newValue;
-                            }
-                        }
-                    }
-                    if (i > 0)
-                        costs[s2.length] = lastValue;
-                }
-                return costs[s2.length];
-            },
-            addChat: function(input, product) {
-
-                // Add user message
-                this.messages.push({
-                    from: 'user',
-                    text: input
-                });
-
-                // Keep messages at most recent
-                this.scrollChat();
-
-                // Fake delay to seem "real"
-                setTimeout(() => {
-                    this.botTyping = true;
-                    this.scrollChat();
-                }, 1000)
-
-                // add bit message with Fake delay to seem "real"
-                setTimeout(() => {
-                    this.botTyping = false;
-                    this.messages.push({
-                        from: 'bot',
-                        text: product
-                    });
-                    this.scrollChat();
-                }, ((product.length / 10) * 1000) + (Math.floor(Math.random() * 2000) + 1500))
-
-            },
-            scrollChat: function() {
-                const messagesContainer = document.getElementById("messages");
-                messagesContainer.scrollTop = messagesContainer.scrollHeight - messagesContainer.clientHeight;
-                setTimeout(() => {
-                    messagesContainer.scrollTop = messagesContainer.scrollHeight - messagesContainer.clientHeight;
-                }, 100);
-            },
-            updateChat: function(target) {
-                if (target.value.trim()) {
-                    this.output(target.value.trim());
-                    target.value = '';
-                }
-            }
-        }
-    }
-</script>
+  </div>
