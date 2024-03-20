@@ -87,14 +87,14 @@ if ($_SESSION["laboratory"] == false) {
                                 <i class="fa-solid fa-bell"></i>
                                 <div class="heading duration-300 cursor-pointer">Notification</div>
                             </div>
+                            <div onclick="labMenuLoader('reqfarmer','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <i class="fa-solid fa-person-circle-question"></i>
+                                <div class="heading duration-300 cursor-pointer">Requests</div>
+                            </div>
                             <div onclick="labMenuLoader('report','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="rotate-180 fa-solid fa-file-lines"></i>
                                 <div class="heading duration-300 cursor-pointer">Report</div>
                             </div>
-                            <!-- <div onclick="labMenuLoader('crop','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
-                                <i class="fa-solid fa-wheat-awn"></i>
-                                <div class="heading duration-300 cursor-pointer">Crop</div>
-                            </div> -->
                             <div onclick="labMenuLoader('weather','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-cloud-bolt"></i>
                                 <div class="heading duration-300 cursor-pointer">Weather</div>

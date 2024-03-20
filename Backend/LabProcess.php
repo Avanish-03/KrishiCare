@@ -45,6 +45,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //code block
             include("../laboratory/Report.php");
             break;
+        case "reqfarmer":
+            //code block
+            include("../laboratory/farmer_req.php");
+            break;
         case "weather":
             //code block
             include("../laboratory/Weather.php");
