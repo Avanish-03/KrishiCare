@@ -17,12 +17,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "No user found";
     }
 
-    $requestQuery = "SELECT r.request_id, r.farmer_id, r.request_date, r.lab_id, r.status, l.lab_name, l.email, l.lab_add ,l.city, l.state, l.ownership
-    FROM request_detail AS r 
-    JOIN laboratory_detail AS l ON r.lab_id = l.lab_id 
-    WHERE r.farmer_id = $id";
+    // $requestQuery = "SELECT r.request_id, r.farmer_id, r.request_date, r.lab_id, r.status, l.lab_name, l.email, l.lab_add ,l.city, l.state, l.ownership
+    // FROM request_detail AS r 
+    // JOIN laboratory_detail AS l ON r.lab_id = l.lab_id 
+    // WHERE r.farmer_id = $id";
 
-    $result = mysqli_query($con, $requestQuery);
+    // $result = mysqli_query($con, $requestQuery);
     if ($result) {
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
@@ -149,7 +149,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;
         case "profile":
             //code block
+            $farmerQuery = "SELECT `farmerprofile`,`email`, `password` FROM `farmer_detail` WHERE `email`= 'vivek@gmail.com';";
+            $result = mysqli_query($con, $farmerQuery);
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $farmerprofiledata[] = $row;
+                }
+            } else {
+                echo "No user found";
+            }
             include("../farmer/Profile.php");
+            break;
+        case "farmerProfile":
+            //code block
+            $file_name = $_FILES['profilePicture']['name'];
+            $file_tmp = $_FILES['profilePicture']['tmp_name'];
+            $uploadPath = '../img/farmer_img/';
+
+            $profilePicPath = $uploadPath . $file_name;
+
+            if (move_uploaded_file($file_tmp, $uploadPath . $file_name)) {
+                $sql = "UPDATE `farmer_detail` SET farmerprofile='$profilePicPath' WHERE email='vivek@gmail.com' AND password='vivek123'";
+                if (mysqli_query($con, $sql)) {
+                    echo "Successfully Uploaded";
+                } else {
+                    echo "Error while uploading";
+                }
+            } else {
+                echo "Error uploading file. Check if the directory has the correct permissions";
+            }
             break;
         case "setting":
             //code block

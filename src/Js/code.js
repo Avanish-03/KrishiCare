@@ -457,6 +457,27 @@ function farmerMenuLoader(process, id) {
     ajaxCall('../Backend/FarmerProcess.php', 'post', "id=" + id + "&process=" + process, 'section', false);
 }
 
+function farmerProfilePic(process) {
+    var result = validateEmpty("farmer_img", "Profile Picture");
+    if (result) {
+        var file = document.getElementById("farmer_img");
+        var imageFile = file.files[0];
+        
+        var formData = new FormData();
+        formData.append("profilePicture", imageFile);
+        formData.append("process", process);
+        
+        ajaxCall('../Backend/FarmerProcess.php', 'post', formData, 'farmerProfile', true, true);
+        var status = getvalue("farmerProfile");
+        alert(status);
+    } else {
+        document.getElementById("inputDiv").classList.add("bg-red-700");
+        document.getElementById("inputDiv").classList.remove("bg-green-500");
+
+    }
+    farmerMenuLoader('profile');
+}
+
 function labMenuLoader(process, id) {
     ajaxCall('../Backend/LabProcess.php', 'post', "id=" + id + "&process=" + process, 'section', false);
 }
