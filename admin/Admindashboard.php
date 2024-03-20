@@ -47,10 +47,11 @@ include("../Backend/config.php");
                         <input name="search" type="text" placeholder="Search..." class="outline-none bg-gray-300 dark:bg-slate-900 rounded-md font-light sm:text-lg text-xs px-2 w-[80%]">
                     </div>
                     <div class="flex justify-center items-center sm:mx-4 space-x-2">
-                        <div class="toggle-btn sm:w-10 sm:h-6 w-5 h-3 bg-gray-500 bg-opacity-50 rounded-full flex items-start">
+                        <div class="toggle-btn sm:w-10 sm:h-5 bg-slate-200 bg-opacity-50 rounded-full flex items-start">
                             <input type="checkbox" id="modeCheckbox" class="hidden">
-                            <label onclick="toggleModeAdmin()" for="modeCheckbox" class="toggle-ball transition-all duration-200 ease-in-out delay-duration-200 sm:w-6 sm:h-6 w-3 h-3 bg-gray-100 rounded-full relative inline-block cursor-pointer">
-                                <span class=" absolute translate-x-2"></span>
+                            <label onclick="toggleModeAdmin()" for="modeCheckbox" class="toggle-ball transition-all duration-200 ease-in-out delay-duration-200  w-3 h-3 dark:pl-3 -mt-1 rounded-full relative inline-block cursor-pointer">
+                                <i class="fa-solid fa-circle-half-stroke dark:rotate-180"></i>
+                                <!-- <span class=" absolute translate-x-2"></span> -->
                             </label>
                         </div>
                         <div class="hidden sm:block">
