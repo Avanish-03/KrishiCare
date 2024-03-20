@@ -482,6 +482,27 @@ function labMenuLoader(process, id) {
     ajaxCall('../Backend/LabProcess.php', 'post', "id=" + id + "&process=" + process, 'section', false);
 }
 
+function labProfilePic(process) {
+    var result = validateEmpty("laboratory_img", "Profile Picture");
+    if (result) {
+        var file = document.getElementById("laboratory_img");
+        var imageFile = file.files[0];
+        
+        var formData = new FormData();
+        formData.append("profilePicture", imageFile);
+        formData.append("process", process);
+        
+        ajaxCall('../Backend/labProcess.php', 'post', formData, 'labProfile', true, true);
+        var status = getvalue("labProfile");
+        alert(status);
+    } else {
+        document.getElementById("inputDiv").classList.add("bg-red-700");
+        document.getElementById("inputDiv").classList.remove("bg-green-500");
+
+    }
+    labMenuLoader('profile');
+}
+
 function loadChart() {
     var dataPoints = [
         { label: "WordPress", y: 60.0 },

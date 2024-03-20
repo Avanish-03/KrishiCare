@@ -51,7 +51,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;
         case "profile":
             //code block
+            $labQuery = "SELECT `labprofile`,`email`, `password` FROM `laboratory_detail` WHERE `email`= 'lab3@gmail.com';";
+            $result = mysqli_query($con, $labQuery);
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $labprofiledata[] = $row;
+                }
+            } else {
+                echo "No user found";
+            }
             include("../laboratory/Profile.php");
+            break;
+        case "labProfile":
+            //code block
+            $file_name = $_FILES['profilePicture']['name'];
+            $file_tmp = $_FILES['profilePicture']['tmp_name'];
+            $uploadPath = '../img/laboratory_img/';
+
+            $profilePicPath = $uploadPath . $file_name;
+
+            if (move_uploaded_file($file_tmp, $uploadPath . $file_name)) {
+                $sql = "UPDATE `laboratory_detail` SET labprofile='$profilePicPath' WHERE email='lab3@gmail.com' AND password='3333'";
+                if (mysqli_query($con, $sql)) {
+                    echo "Successfully Uploaded";
+                } else {
+                    echo "Error while uploading";
+                }
+            } else {
+                echo "Error uploading file. Check if the directory has the correct permissions";
+            }
             break;
         case "setting":
             //code block
