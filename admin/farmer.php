@@ -188,7 +188,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="mt-6 flex justify-center gap-x-4">
-                                                            <input type="button" value="Register" name="updatefarmer" class="py-2 w-full inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-green-700 text-gray-100 shadow-sm align-middle hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-700 focus:ring-green-600 transition-all text-lg" onclick="return registerFarmer()">
+                                                            <input type="submit" value="Update" name="updatefarmer" class="py-2 w-full inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-green-700 text-gray-100 shadow-sm align-middle hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-700 focus:ring-green-600 transition-all text-lg">
                                                         </div>
                                                     </form>
                                                 </div>

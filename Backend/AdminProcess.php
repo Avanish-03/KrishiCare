@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;
         case "profile":
             //code block
-            $adminQuery = "SELECT `adminprofile`,`email`, `password` FROM `admin` WHERE `email`= 'admin@gmail.com';";
+            $adminQuery = "SELECT `adminprofile`,`name`, `password` FROM `admin` WHERE `name`= 'admin@gmail.com';";
             $result = mysqli_query($con, $adminQuery);
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $profilePicPath = $uploadPath . $file_name;
 
             if (move_uploaded_file($file_tmp, $uploadPath . $file_name)) {
-                $sql = "UPDATE `admin` SET adminprofile='$profilePicPath' WHERE email='admin@gmail.com' AND password='admin'";
+                $sql = "UPDATE `admin` SET adminprofile='$profilePicPath' WHERE name='admin@gmail.com' AND password='admin'";
                 if (mysqli_query($con, $sql)) {
                     echo "Successfully Uploaded";
                 } else {
