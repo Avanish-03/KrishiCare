@@ -6,7 +6,7 @@ if ($_SESSION["laboratory"] == false) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en" id="html" class="dark">
+<html lang="en" id="html" class="">
 
 <head>
     <meta charset="UTF-8">
@@ -30,13 +30,11 @@ if ($_SESSION["laboratory"] == false) {
     <?php
     $id = $_SESSION["laboratory"];
     // echo $id;
-    $sql = "SELECT `lab_id`,`lab_name`, `email`, `contact`, `lab_add`, `city`, `state` FROM `laboratory_detail` WHERE `lab_id`= '$id';";
+    $sql = "SELECT `lab_id`,`lab_name`, `email`, `contact`, `lab_add`, `city`, `state`,`labprofile` FROM `laboratory_detail` WHERE `lab_id`= '$id';";
 
     $result = mysqli_query($con, $sql);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            // echo "id: " . $row["farmer_id"] . " - Name: " . $row["first_name"] . " " . $row["middle_name"] . " " . $row["last_name"] . "<br>";
-            // $data[] = $row;
     ?>
             <div class="h-screen w-screen min-w-96 min-h-screen">
                 <div class="w-full h-[10%] outline-none">
@@ -56,10 +54,10 @@ if ($_SESSION["laboratory"] == false) {
                                     </div>
                                 </div>
                                 <div onclick="toggleMode()" class="h-full md:w-auto sm:w-full p-3 cursor-pointer flex items-center justify-end duration-700">
-                                    <img id="mode" src="../img/dark-bulb.png" class="h-full p-1 bg-none dark:bg-gray-500 rounded-full rotate-180 duration-500" alt="">
+                                <img id="mode" src="../img/light-bulb.png" class="h-full p-1 bg-none rounded-full rotate-180 duration-500" alt="">
                                 </div>
                             </div>
-                        </div>
+                        </div> 
                     </div>
                 </div>
                 <div class="w-full h-[90%] flex">
@@ -95,10 +93,10 @@ if ($_SESSION["laboratory"] == false) {
                                 <i class="rotate-180 fa-solid fa-file-lines"></i>
                                 <div class="heading duration-300 cursor-pointer">Report</div>
                             </div>
-                            <div onclick="labMenuLoader('weather','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <!-- <div onclick="labMenuLoader('weather','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-cloud-bolt"></i>
                                 <div class="heading duration-300 cursor-pointer">Weather</div>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="w-full h-[25%]">
                             <div onclick="labMenuLoader('profile','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700">

@@ -10,6 +10,12 @@
             <h1 class=" text-4xl font-bold">Notification</h1>
         </div>
     </div>
+    <div class="h-full w-full my-8 bg-gray-200 rounded-lg dark:bg-slate-600 grid grid-cols-1 md:grid-cols-2">
+        <div class="bg-yellow-400 h-full w-full rounded-lg">
+            
+        </div>
+        <div class="bg-yellow-500 h-full w-full rounded-lg"></div>
+    </div>
     <div class="my-8 h-full w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="w-full h-full bg-gray-200 rounded-lg dark:bg-slate-600"></div>
         <div class="w-full h-full bg-gray-200 rounded-lg dark:bg-slate-600"></div>

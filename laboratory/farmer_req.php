@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <section class="h-full mx-auto my-8 p-8 pb-28 rounded-md">
 
     <div class="relative h-32 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
@@ -27,7 +30,7 @@
                             <th scope="col" class="px-6 py-3">Farmer Address</th>
                             <th scope="col" class="px-6 py-3">Farmer City</th>
                             <th scope="col" class="px-6 py-3">Farmer State</th>
-                            <!-- <th scope="col" class="px-6 py-3">Lab Ownership</th> -->
+                            <th scope="col" class="px-6 py-3">Lab Id</th>
                             <th scope="col" class="px-6 py-3">Accept Request</th>
                         </tr>
                     </thead>
@@ -48,9 +51,10 @@
                                 echo "<td class='px-6 py-4'>" . $nested_array["address"] . "</td>";
                                 echo "<td class='px-6 py-4'>" . $nested_array["city"] . "</td>";
                                 echo "<td class='px-6 py-4'>" . $nested_array["state"] . "</td>";
+                                echo "<td class='px-6 py-4'>" . $nested_array["lab_id"] . "</td>";
                                 // echo "<td class='px-6 py-4'>" . $nested_array["status"] . "</td>";
                                 echo "<td class='px-6 py-2'>
-                            <button onclick='acceptRequest(" . $nested_array["farmer_id"] . ")' class='px-6 py-2 rounded-lg bg-green-300 hover:bg-green-400 text-gray-50 dark:text-gray-700'>
+                            <button onclick='acceptRequest(" . $nested_array["farmer_id"] . ",". $_SESSION['laboratory'] .")' class='px-6 py-2 rounded-lg bg-green-300 hover:bg-green-400 text-gray-50 dark:text-gray-700'>
                             " . ($nested_array["status"] ? "Accepted" : "Accept") . "</button>
                             </td>";
                                 echo "</tr>";
@@ -63,4 +67,5 @@
             </div>
         </div>
     </div>
+    <div class="h-7"></div>
 </section>

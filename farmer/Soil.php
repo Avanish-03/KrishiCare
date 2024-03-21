@@ -1,3 +1,7 @@
+<?php 
+session_start();
+// echo $_SESSION["farmer"];
+?>
 <!-- Soil Information Section -->
 <section class=" h-full mx-auto my-8 p-8 rounded-md">
     <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Soil Information</h1>
@@ -132,7 +136,7 @@
                     <div class="h-fit w-[75%]">
                         <div class="p-5 w-full flex justify-center items-center gap-4">
                             <label class="w-[25%]" for="id">User id: </label>
-                            <input class="w-[75%] p-2 rounded-md bg-gray-100 dark:bg-gray-700" value="<?php echo $id; ?>" disabled type="text" name="id" id="id">
+                            <input class="w-[75%] p-2 rounded-md bg-gray-100 dark:bg-gray-700" value='<?php echo $_SESSION["farmer"] ?>' disabled type="text" name="id" id="id">
                         </div>
                         <div class="p-5 w-full flex justify-center items-center gap-4">
                             <label class="w-[25%]" for="requestdate">Request date: </label>
@@ -157,7 +161,7 @@
                             </select>
                         </div>
                         <div class="p-5 w-full flex justify-center items-center gap-4">
-                            <input type="button" onclick="return submitRequest(<?php echo $id; ?>)" value="Submit" class="py-2 px-4 bg-gray-200 dark:bg-gray-700 rounded-lg">
+                            <input type="button" onclick="return submitRequest(<?php echo $_SESSION['farmer']; ?>)" value="Submit" class="py-2 px-4 bg-gray-200 dark:bg-gray-700 rounded-lg">
                             <input type="reset" value="Cancel" class="py-2 px-4 bg-yellow-500 dark:bg-yellow-700 rounded-lg">
                         </div>
                     </div>

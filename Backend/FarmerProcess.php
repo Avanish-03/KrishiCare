@@ -4,25 +4,25 @@ require('config.php');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $process = $_POST["process"];
-    $id = $_POST["id"];
-    $data = array();
+    $farmerId = $_POST["id"];
 
-    $farmersqlquery = "SELECT `farmer_id`,`first_name`, `middle_name`, `last_name`, `email`, `contact_number`, `address`, `city`, `state` FROM `farmer_detail` WHERE `farmer_id`= '$id';";
+    $farmersqlquery = "SELECT `farmer_id`,`first_name`, `middle_name`, `last_name`, `email`, `contact_number`, `address`, `city`, `state`,`farmerprofile` FROM `farmer_detail` WHERE `farmer_id`= '$farmerId';";
     $result = mysqli_query($con, $farmersqlquery);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $farmerdata[] = $row;
         }
     } else {
-        echo "No user found";
+        $farmerdata[] = null;
     }
 
-    // $requestQuery = "SELECT r.request_id, r.farmer_id, r.request_date, r.lab_id, r.status, l.lab_name, l.email, l.lab_add ,l.city, l.state, l.ownership
-    // FROM request_detail AS r 
-    // JOIN laboratory_detail AS l ON r.lab_id = l.lab_id 
-    // WHERE r.farmer_id = $id";
+    $requestQuery = "SELECT r.request_id, r.farmer_id, r.request_date, r.lab_id, r.status, l.lab_name, l.email, l.lab_add ,l.city, l.state, l.ownership
+    FROM request_detail AS r 
+    JOIN laboratory_detail AS l ON r.lab_id = l.lab_id 
+    WHERE r.farmer_id = $farmerId 
+    ORDER BY request_date DESC";
 
-    // $result = mysqli_query($con, $requestQuery);
+    $result = mysqli_query($con, $requestQuery);
     if ($result) {
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
@@ -149,15 +149,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;
         case "profile":
             //code block
-            $farmerQuery = "SELECT `farmerprofile`,`email`, `password` FROM `farmer_detail` WHERE `email`= 'vivek@gmail.com';";
-            $result = mysqli_query($con, $farmerQuery);
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    $farmerprofiledata[] = $row;
-                }
-            } else {
-                echo "No user found";
-            }
             include("../farmer/Profile.php");
             break;
         case "farmerProfile":
@@ -169,7 +160,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $profilePicPath = $uploadPath . $file_name;
 
             if (move_uploaded_file($file_tmp, $uploadPath . $file_name)) {
-                $sql = "UPDATE `farmer_detail` SET farmerprofile='$profilePicPath' WHERE email='vivek@gmail.com' AND password='vivek123'";
+                $sql = "UPDATE `farmer_detail` SET farmerprofile='$profilePicPath' WHERE `farmer_id`= $farmerId";
                 if (mysqli_query($con, $sql)) {
                     echo "Successfully Uploaded";
                 } else {

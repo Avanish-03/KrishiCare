@@ -8,7 +8,7 @@ include("../Backend/config.php");
 
 ?>
 <!DOCTYPE html>
-<html lang="en" id="html" class="dark">
+<html lang="en" id="html" class="">
 
 <head>
     <meta charset="UTF-8">
@@ -47,11 +47,10 @@ include("../Backend/config.php");
                         <input name="search" type="text" placeholder="Search..." class="outline-none bg-gray-300 dark:bg-slate-900 rounded-md font-light sm:text-lg text-xs px-2 w-[80%]">
                     </div>
                     <div class="flex justify-center items-center sm:mx-4 space-x-2">
-                        <div class="toggle-btn sm:w-10 sm:h-5 bg-slate-200 bg-opacity-50 rounded-full flex items-start">
+                        <div class="toggle-btn sm:w-10 sm:h-5 bg-slate-500 dark:bg-slate-500 bg-opacity-50 rounded-full flex items-start">
                             <input type="checkbox" id="modeCheckbox" class="hidden">
-                            <label onclick="toggleModeAdmin()" for="modeCheckbox" class="toggle-ball transition-all duration-200 ease-in-out delay-duration-200  w-3 h-3 dark:pl-3 -mt-1 rounded-full relative inline-block cursor-pointer">
-                                <i class="fa-solid fa-circle-half-stroke dark:rotate-180"></i>
-                                <!-- <span class=" absolute translate-x-2"></span> -->
+                            <label onclick="toggleModeAdmin()" for="modeCheckbox" class="toggle-ball transition-all duration-300 ease-in-out w-3 h-3 dark:pl-2 -mt-1 rounded-full relative inline-block cursor-pointer">
+                                <i class="fa-solid fa-circle-half-stroke text-slate-600 dark:text-slate-200 dark:rotate-180 duration-150 text-xl"></i>
                             </label>
                         </div>
                         <div class="hidden sm:block">
@@ -110,7 +109,7 @@ include("../Backend/config.php");
         <main class="w-full h-[90%] flex">
             <!-- side navbar -->
             <div class="sm:w-[16%] w-[18%] h-full dark:bg-gray-800 bg-gray-200">
-                <div class="sm:h-[70%] h-[60%] pt-4">
+                <div class="sm:h-fit h-[60%] pt-4">
                     <div class="flex justify-start px-2 items-center text-white my-2 sm:hidden">
                         <img src="../img/avanish.jpg" class="sm:h-12 sm:w-12 h-8 w-8 rounded-full sm:mr-3" alt="">
                     </div>
@@ -123,14 +122,14 @@ include("../Backend/config.php");
                             <i class="sm:mr-2 sm:text-xl fa-solid fa-house"></i>
                             <div class="cursor-pointer hidden sm:block">Dashboard</div>
                         </li>
-                        <!-- <li onclick="adminMenuLoader('farmer')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
+                        <li onclick="adminMenuLoader('farmer')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
                             <i class="sm:mr-2 sm:text-xl fa-solid fa-person-digging"></i>
                             <div class="cursor-pointer hidden sm:block">Farmer</div>
                         </li>
                         <li onclick="adminMenuLoader('laboratory')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
                             <i class="sm:mr-2 sm:text-xl fa-solid fa-flask-vial"></i>
                             <div class="cursor-pointer hidden sm:block">Laboratory</div>
-                        </li> -->
+                        </li>
                         <li onclick="adminMenuLoader('report')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
                             <i class="sm:mr-2 sm:text-xl fa-solid fa-file-lines"></i>
                             <div class="cursor-pointer hidden sm:block">Report</div>
@@ -145,7 +144,7 @@ include("../Backend/config.php");
                         </li>
                     </ul>
                 </div>
-                <div class="sm:h-[30%] h-[40%]">
+                <div class="h-fit">
                     <div>
                         <h1 class="font-light sm:text-xl text-gray-500 sm:px-8 hidden sm:block">SETTING</h1>
                     </div>

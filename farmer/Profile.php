@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!-- Profile Section -->
 <section class="w-full h-full mx-auto my-8 p-8 rounded-md">
     <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Profile</h1>
@@ -18,12 +21,12 @@
                         <!-- form -->
                         <form action="#" method="post" enctype="multipart/form-data">
                             <?php
-                            if ($farmerprofiledata == null) {
+                            if ($farmerdata == null) {
                             } else {
-                                $farmerdatasize = count($farmerprofiledata);
+                                $farmerdatasize = count($farmerdata);
                                 for ($i = 0; $i < $farmerdatasize; $i++) {
                                     // Accessing values of the nested array at index $i
-                                    $nested_array = $farmerprofiledata[$i];
+                                    $nested_array = $farmerdata[$i];
                             ?>
                                     <div class="col-span-6 ml-2 sm:col-span-4 md:mr-3">
                                         <div class="text-center">
@@ -43,7 +46,7 @@
                                             </div>
                                             <label for="farmer_img" class="inline-flex items-center px-4 py-2 bg-gray-300 dark:bg-slate-600 border border-gray-300 rounded-md font-semibold text-xs text-gray-700 dark:text-gray-100 uppercase tracking-widest shadow-sm focus:outline-none focus:border-green-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-0">Choose Image
                                             </label>
-                                            <button type="button" onclick="return farmerProfilePic('farmerProfile')" name="farmerProfile" class="inline-flex items-center px-4 py-2 bg-gray-300 dark:bg-slate-600 border border-gray-300 rounded-md font-semibold text-xs text-gray-700 dark:text-gray-100 uppercase tracking-widest shadow-sm focus:outline-none focus:border-green-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-0">
+                                            <button type="button" onclick="return farmerProfilePic('farmerProfile','<?php echo $_SESSION['farmer'];?>')" name="farmerProfile" class="inline-flex items-center px-4 py-2 bg-gray-300 dark:bg-slate-600 border border-gray-300 rounded-md font-semibold text-xs text-gray-700 dark:text-gray-100 uppercase tracking-widest shadow-sm focus:outline-none focus:border-green-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-0">
                                                 Save
                                             </button>
                                         </div>
@@ -90,3 +93,4 @@
     </div>
     <!-- <div class="h-7"></div> -->
 </section>
+

@@ -421,10 +421,8 @@ function toggleMode() {
     var mode = html.classList.contains("dark");
     if (mode) {
         html.classList.remove("dark");
-        img.src = "../img/light-bulb.png";
     } else {
         html.classList.add("dark");
-        img.src = "../img/dark-bulb.png";
     }
 }
 
@@ -437,11 +435,11 @@ function uploadProfilePic(process) {
     if (result) {
         var file = document.getElementById("admin_img");
         var imageFile = file.files[0];
-        
+
         var formData = new FormData();
         formData.append("profilePicture", imageFile);
         formData.append("process", process);
-        
+
         ajaxCall('../Backend/AdminProcess.php', 'post', formData, 'changeProfile', true, true);
         var status = getvalue("changeProfile");
         alert(status);
@@ -457,50 +455,46 @@ function farmerMenuLoader(process, id) {
     ajaxCall('../Backend/FarmerProcess.php', 'post', "id=" + id + "&process=" + process, 'section', false);
 }
 
-function farmerProfilePic(process) {
+function farmerProfilePic(process, id) {
     var result = validateEmpty("farmer_img", "Profile Picture");
     if (result) {
         var file = document.getElementById("farmer_img");
         var imageFile = file.files[0];
-        
+
         var formData = new FormData();
         formData.append("profilePicture", imageFile);
         formData.append("process", process);
-        
+        formData.append("id", id);
+
         ajaxCall('../Backend/FarmerProcess.php', 'post', formData, 'farmerProfile', true, true);
         var status = getvalue("farmerProfile");
         alert(status);
-    } else {
-        document.getElementById("inputDiv").classList.add("bg-red-700");
-        document.getElementById("inputDiv").classList.remove("bg-green-500");
-
+        farmerMenuLoader('profile', id);
     }
-    farmerMenuLoader('profile');
+    return false;
 }
 
 function labMenuLoader(process, id) {
     ajaxCall('../Backend/LabProcess.php', 'post', "id=" + id + "&process=" + process, 'section', false);
 }
 
-function labProfilePic(process) {
+function labProfilePic(process, id) {
     var result = validateEmpty("laboratory_img", "Profile Picture");
     if (result) {
         var file = document.getElementById("laboratory_img");
         var imageFile = file.files[0];
-        
+
         var formData = new FormData();
         formData.append("profilePicture", imageFile);
         formData.append("process", process);
-        
+        formData.append("id", id);
+
         ajaxCall('../Backend/labProcess.php', 'post', formData, 'labProfile', true, true);
         var status = getvalue("labProfile");
         alert(status);
-    } else {
-        document.getElementById("inputDiv").classList.add("bg-red-700");
-        document.getElementById("inputDiv").classList.remove("bg-green-500");
-
+        labMenuLoader('profile', id);
     }
-    labMenuLoader('profile');
+    return false;
 }
 
 function loadChart() {
@@ -557,8 +551,10 @@ function loadUpdateForm(process, id) {
     ajaxCall("../Backend/FarmerProcess.php", "post", "id=" + id + "&process=" + process, "loadUpdateForm");
 }
 
-function acceptRequest(farmerId) {
-    ajaxCall("../Backend/LabProcess.php", "post", "farmerId=" + farmerId + "&process=changeStatus", "requestStatus", true);
+function acceptRequest(farmerId, labId) {
+    alert(farmerId)
+    alert(labId)
+    ajaxCall("../Backend/LabProcess.php", "post", "farmerId=" + farmerId + "&labId=" + labId + "&process=changeStatus", "requestStatus", true);
     alert(document.getElementById("requestStatus").value);
 }
 

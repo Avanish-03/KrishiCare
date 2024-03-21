@@ -6,7 +6,7 @@ if ($_SESSION["farmer"] == false) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en" id="html" class="dark">
+<html lang="en" id="html" class="">
 
 <head>
     <meta charset="UTF-8">
@@ -53,7 +53,7 @@ if ($_SESSION["farmer"] == false) {
                                     </div>
                                 </div>
                                 <div onclick="toggleMode()" class="h-full md:w-auto sm:w-full p-3 cursor-pointer flex items-center justify-end duration-700">
-                                    <img id="mode" src="../img/dark-bulb.png" class="h-full p-1 bg-none dark:bg-gray-500 rounded-full rotate-180 duration-500" alt="">
+                                    <img id="mode" src="../img/light-bulb.png" class="h-full p-1 bg-none rounded-full rotate-180 duration-500" alt="">
                                 </div>
                             </div>
                         </div>
@@ -76,19 +76,19 @@ if ($_SESSION["farmer"] == false) {
                             </div>
                         </div>
                         <div class="w-full h-[60%]">
-                            <div onclick="farmerMenuLoader('dashboard','<?php echo $_SESSION['farmer'] ?>'); loadChart()" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="farmerMenuLoader('dashboard','<?php echo $id ?>'); loadChart()" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-house"></i>
                                 <div class="heading duration-300 cursor-pointer">Home</div>
                             </div>
-                            <div onclick="farmerMenuLoader('notification','<?php echo $_SESSION['farmer'] ?>')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="farmerMenuLoader('notification','<?php echo $id ?>')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-bell"></i>
                                 <div class="heading duration-300 cursor-pointer">Notification</div>
                             </div>
-                            <div onclick="farmerMenuLoader('soil','<?php echo $_SESSION['farmer'] ?>')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="farmerMenuLoader('soil','<?php echo $id ?>')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="rotate-180 fa-solid fa-icicles"></i>
                                 <div class="heading duration-300 cursor-pointer">Soil</div>
                             </div>
-                            <div onclick="farmerMenuLoader('crop','<?php echo $_SESSION['farmer'] ?>')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="farmerMenuLoader('crop','<?php echo $id ?>')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-wheat-awn"></i>
                                 <div class="heading duration-300 cursor-pointer">Crop</div>
                             </div>

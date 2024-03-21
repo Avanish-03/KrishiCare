@@ -4,12 +4,13 @@ require('config.php');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $process = $_POST["process"];
-    // $id = $_POST["id"];
-    $data = array();
+    $labId = $_POST["id"];
 
-    $requestQuery = "SELECT r.request_id, r.farmer_id, r.request_date, r.lab_id, r.status, f.first_name, f.middle_name, f.last_name, f.email, f.address ,f.city, f.state
+    $requestQuery = "SELECT r.request_id, r.farmer_id, r.request_date, r.lab_id, r.status, f.first_name, f.middle_name, f.last_name, f.email, f.address, f.city, f.state
     FROM request_detail AS r 
-    JOIN farmer_detail AS f ON r.farmer_id = f.farmer_id";
+    JOIN farmer_detail AS f ON r.farmer_id = f.farmer_id
+    WHERE r.lab_id = $labId 
+    ORDER BY request_date DESC";
 
     $result = mysqli_query($con, $requestQuery);
     if ($result) {
@@ -49,13 +50,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //code block
             include("../laboratory/farmer_req.php");
             break;
-        case "weather":
-            //code block
-            include("../laboratory/Weather.php");
-            break;
+            // case "weather":
+            //     //code block
+            //     include("../laboratory/Weather.php");
+            //     break;
         case "profile":
             //code block
-            $labQuery = "SELECT `labprofile`,`email`, `password` FROM `laboratory_detail` WHERE `email`= 'lab3@gmail.com';";
+            $labQuery = "SELECT `labprofile`,`email`, `password` FROM `laboratory_detail` WHERE `lab_id`= '$labId';";
             $result = mysqli_query($con, $labQuery);
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
@@ -75,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $profilePicPath = $uploadPath . $file_name;
 
             if (move_uploaded_file($file_tmp, $uploadPath . $file_name)) {
-                $sql = "UPDATE `laboratory_detail` SET labprofile='$profilePicPath' WHERE email='lab3@gmail.com' AND password='3333'";
+                $sql = "UPDATE `laboratory_detail` SET labprofile='$profilePicPath' WHERE `lab_id`='$labId'";
                 if (mysqli_query($con, $sql)) {
                     echo "Successfully Uploaded";
                 } else {
@@ -93,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //code block
             $farmerId = $_POST["farmerId"];
 
-            $sql = "UPDATE `request_detail` SET `status` = 'Approved' WHERE `farmer_id` = '$farmerId';";
+            $sql = "UPDATE `request_detail` SET `status` = 'Approved' WHERE `farmer_id` = '$farmerId' and `lab_id`=$labId;";
             $result = mysqli_query($con, $sql);
             if ($result) {
                 echo "Request Accepted!";
