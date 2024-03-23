@@ -295,7 +295,7 @@ function verifyUser(labId) {
 }
 
 function submitSampleForm(labId) {
-    var result = validateDropdown("verifyotp", "OTP");
+    var result = validateEmpty("verifyotp", "OTP");
     if (result) {
 
         var verifyUser = getvalue("verifyUser");
