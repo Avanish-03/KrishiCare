@@ -49,7 +49,7 @@
                 // echo "City: " . $forecastData['city']['name'] . "<br>";
                 foreach ($forecastData['list'] as $forecast) {
                     $timestamp = $forecast['dt'];
-                    $dateTime = date('Y-m-d H:i:s', $timestamp);
+                    $dateTime = date('Y-m-d h:i', $timestamp);
                     $temperature = $forecast['main']['temp'];
                     $description = $forecast['weather'][0]['description'];
 
@@ -60,8 +60,8 @@
                 ?>
                     <div class="bg-gray-100 p-6 rounded-lg">
                         <!-- <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://images.pexels.com/photos/1162251/pexels-photo-1162251.jpeg?auto=compress&cs=tinysrgb&w=600" alt="content"> -->
-                        <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Time : <?php echo "Current temperature in $city: " . round($temperature - 273.15, 2) . "°C<br>"; ?></h3>
-                        <h2 class="text-lg text-gray-900 font-medium title-font">Date : <?php echo "DateTime: $dateTime "; ?></h2>
+                        <h3 class="tracking-widest text-indigo-500 text-sm font-medium title-font">Time : <?php echo "Current temperature in $city: " . round($temperature - 273.15, 2) . "°C<br>"; ?></h3>
+                        <h2 class="text-lg text-gray-900 font-medium title-font">Date : <?php echo $dateTime ; ?></h2>
                         <h2 class="text-lg text-gray-900 font-medium title-font mb-2"><?php echo "Description: $description " ?>°C</h2>
                         <!-- <p class="leading-relaxed text-base"><?php echo $description ?></p> -->
                     </div>
