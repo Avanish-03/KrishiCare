@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais">
-    <title>KrishiCare</title>
+    <title>KrishiCare - Farmer Information System</title>
     <link rel="stylesheet" href="../dist/output.css">
     <link rel="stylesheet" href="../src/Js/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
@@ -71,8 +71,9 @@
                         </li>
                         <!-- <li class="py-2 md:py-0">
                             <a href="../dist/Services.php" class="mr-3 hover:text-green-900 text-lg font-bold hover:border-b-2 border-black <?php //if ($path == 'Services.php') {
-                                                                                                                                                    //echo "border-b-2 border-black text-black";
-                                                                                                                                                //} ?> ">Services</a>
+                                                                                                                                            //echo "border-b-2 border-black text-black";
+                                                                                                                                            //} 
+                                                                                                                                            ?> ">Services</a>
                         </li> -->
                         <li class="py-2 md:py-0">
                             <a href="../dist/About.php" class="mr-3 hover:text-green-900 text-lg font-bold hover:border-b-2 border-black <?php if ($path == 'About.php') {
@@ -86,8 +87,8 @@
                         </li>
                         <li class="py-2 md:py-0">
                             <a href="../dist/Faq.php" class="mr-3 hover:text-green-900 text-lg font-bold hover:border-b-2 border-black <?php if ($path == 'Faq.php') {
-                                                                                                                                                echo "border-b-2 border-black text-black";
-                                                                                                                                            } ?> ">FAQ</a>
+                                                                                                                                            echo "border-b-2 border-black text-black";
+                                                                                                                                        } ?> ">FAQ</a>
                         </li>
                         <li class="sm:hidden py-2 md:py-0">
                             <a href="../dist/farmer_reg.php" class="mr-3 hover:text-green-900 text-lg font-bold hover:border-b-2 border-black <?php if ($path == 'Contact.php') {

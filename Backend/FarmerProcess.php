@@ -33,10 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
             }
         } else {
-            // echo "No results found";
             $soilrequestdata = null;
         }
-
         // Free result set
         mysqli_free_result($result);
     } else {
@@ -63,6 +61,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;
         case "notification":
             //code block;
+            $samplesqlquery = "SELECT `sample_id`, `request_id`, `lab_id`, `farmer_id`, `collected_date`,`status` FROM `sample_detail` where `farmer_id`='$farmerId';";
+            $sampleresult = mysqli_query($con, $samplesqlquery);
+            if ($sampleresult->num_rows > 0) {
+                while ($row = $sampleresult->fetch_assoc()) {
+                    $sampledata[] = $row;
+                }
+            } else {
+                $sampledata = null;
+            }
             include("../farmer/Notification.php");
             break;
         case "soil":
@@ -82,32 +89,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             function getWeatherForecastData($city, $state, $country, $apiKey)
             {
                 $city = urlencode($city);
-                $url = "http://api.openweathermap.org/data/2.5/forecast?q=$city,$state,$country&appid=$apiKey";
-
+                $url = "http://api.openweathermap.org/data/2.5/forecast?q=$city,$state,$country&appid=$apiKey&cnt=3"; // Adjusted URL to get 3-day forecast data
+            
                 // Initialize cURL
                 $ch = curl_init();
-
+            
                 // Set cURL options
                 curl_setopt($ch, CURLOPT_URL, $url);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
+            
                 // Execute cURL
                 $response = curl_exec($ch);
-
+            
                 // Check for errors
                 if (curl_errno($ch)) {
                     echo 'Error: ' . curl_error($ch);
                     return null;
                 }
-
+            
                 // Close cURL
                 curl_close($ch);
-
+            
                 // Decode JSON response
                 $data = json_decode($response, true);
-
+            
                 return $data;
             }
+            
             // Your city, state, country, and API key
             $city = "Surat";
             $state = "Gujarat";
@@ -146,6 +154,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             //code block
             include("../farmer/Weather.php");
+            break;
+        case "report":
+            //code block
+            include("../farmer/Report.php");
             break;
         case "profile":
             //code block

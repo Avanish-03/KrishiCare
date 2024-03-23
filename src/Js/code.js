@@ -17,8 +17,8 @@ function registerFarmer() {
         var email = getvalue('email');
         var contact = getvalue('contact');
         var address = getvalue('address');
-        var state = getvalue('state');
-        var city = getvalue('city');
+        var state = getSelectedOption('state');
+        var city = getSelectedOption('city');
         var password = getvalue('pwd');
 
         var dataForm =
@@ -32,7 +32,7 @@ function registerFarmer() {
             '&city=' + city +
             '&password=' + password +
             '&process=registerFarmer';
-
+        alert(dataForm);
         ajaxCall('../Backend/Register.php', 'post', dataForm, 'status', true);
 
         var status = getvalue('status');
@@ -63,8 +63,8 @@ function registerLaboratory() {
         var email = getvalue('email');
         var contact = getvalue('contact');
         var address = getvalue('address');
-        var state = getvalue('state');
-        var city = getvalue('city');
+        var state = getSelectedOption('state');
+        var city = getSelectedOption('city');
         var password = getvalue('pwd');
         var ownership = getvalue('ownership');
 
@@ -96,13 +96,12 @@ function validateContactForm() {
     var result =
         validateEmpty('email', 'Email') &&
         validateEmpty('message', 'Message');
-    alert(result);
+
     if (result) {
         var email = getvalue('email');
         var message = getvalue('message');
 
         var dataForm = 'email=' + email + '&message=' + message + '&process=registerContact';
-        alert(dataForm);
 
         ajaxCall('../Backend/Register.php', 'post', dataForm, 'status', true);
 
@@ -115,6 +114,79 @@ function validateContactForm() {
         }
     }
 
+    return false;
+}
+
+function updateFarmerData(farmerId) {
+    var result =
+        validateEmpty('firstname', 'First name') &&
+        validateEmpty('middlename', 'Middle name') &&
+        validateEmpty('lastname', 'last name') &&
+        ValidateEmail('email', 'Email') &&
+        validateContact('contact', 'Contact number') &&
+        validateEmpty('address', 'Address') &&
+        validateEmpty('city', 'City') &&
+        validateEmpty('state', 'State');
+
+    if (result) {
+        var firstname = getvalue('firstname');
+        var middlename = getvalue('middlename');
+        var lastname = getvalue('lastname');
+        var email = getvalue('email');
+        var contact = getvalue('contact');
+        var address = getvalue('address');
+        var city = getvalue('city');
+        var state = getvalue('state');
+
+        var dataForm =
+            'farmerid=' + farmerId +
+            '&firstname=' + firstname +
+            '&lastname=' + lastname +
+            '&middlename=' + middlename +
+            '&email=' + email +
+            '&contact=' + contact +
+            '&address=' + address +
+            '&state=' + state +
+            '&city=' + city +
+            '&process=updateFarmer';
+
+        ajaxCall('../Backend/Register.php', 'post', dataForm, 'updateFarmerData', true);
+
+        var status = getvalue('updateFarmerData');
+        if (status == 1) {
+            alert("Updated Successfully!");
+        } else {
+            alert(status);
+        }
+    }
+    return false;
+}
+
+function updateFarmerPassword(farmerId) {
+    var result =
+        validateEmpty('oldpass', 'Old Password') &&
+        validatePassword();
+
+    if (result) {
+        var oldpass = getvalue('oldpass');
+        var password = getvalue('pwd');
+
+        var dataForm =
+            'farmerid=' + farmerId +
+            '&oldpass=' + oldpass +
+            '&password=' + password +
+            '&process=updateFarmerPassword';
+
+        ajaxCall('../Backend/Register.php', 'post', dataForm, 'updateFarmerPassword', true);
+
+        var status = getvalue('updateFarmerPassword');
+        if (status == 1) {
+            alert("Updated Successfully!");
+            resetFormdata("updateFarmerPassword");
+        } else {
+            alert(status);
+        }
+    }
     return false;
 }
 
@@ -188,10 +260,85 @@ function submitRequest(id) {
     }
 }
 
+function verifyUser(labId) {
+    var result = validateDropdown("farmername", "Farmer name") &&
+        validateDropdown("email", "Farmer Email") &&
+        validateDropdown("requestid", "Request Id") &&
+        validateEmpty("collectiondate", "Collection Date");
+
+    if (result) {
+        alert(labId);
+        var farmerid = getvalue("farmername");
+        var farmername = getSelectedOption("farmername");
+        var email = getvalue("email");
+        var requestid = getvalue("requestid");
+
+        var dataForm =
+            'farmerid=' + farmerid +
+            '&farmername=' + farmername +
+            '&email=' + email +
+            '&requestid=' + requestid +
+            '&labId=' + labId +
+            '&process=verifyUser';
+
+        alert(dataForm);
+        ajaxCall('../Backend/labProcess.php', 'post', dataForm, 'verifyUser', true, false);
+
+        var status = getvalue('verifyUser');
+        if (isNaN(status)) {
+            alert(status);
+        } else {
+            alert("OTP Sent Successfully!");
+        }
+        return false;
+    }
+}
+
+function submitSampleForm(labId) {
+    var result = validateDropdown("verifyotp", "OTP");
+    if (result) {
+
+        var verifyUser = getvalue("verifyUser");
+        var verifyotp = getvalue("verifyotp");
+
+        if (verifyUser == verifyotp) {
+            var farmerid = getvalue("farmername");
+            var farmername = getSelectedOption("farmername");
+            var email = getvalue("email");
+            var requestid = getvalue("requestid");
+            var collectiondate = getvalue("collectiondate");
+
+            var dataForm =
+                'farmerid=' + farmerid +
+                '&farmername=' + farmername +
+                '&email=' + email +
+                '&requestid=' + requestid +
+                '&collectiondate=' + collectiondate +
+                '&labId=' + labId +
+                '&process=submitSampleForm';
+
+            ajaxCall('../Backend/labProcess.php', 'post', dataForm, 'submitSampleForm', true, false);
+
+            var status = getvalue('submitSampleForm');
+            alert(status);
+        } else {
+            alert("invalid");
+        }
+    }
+    return false;
+}
+
+function getSelectedOption(elementId) {
+    var selectElement = document.getElementById(elementId);
+    var selectedOption = selectElement.options[selectElement.selectedIndex];
+    var selectedOptionInnerHTML = selectedOption.innerHTML;
+    return selectedOptionInnerHTML;
+}
+
 function validateDropdown(elementId, elementName) {
     var element = document.getElementById(elementId);
     if (element.value == "default") {
-        alert(elementName + " can't be empty!");
+        alert(elementName + " should be selected!");
         document.getElementById(elementId).focus();
         console.log(element.value);
         return false;
@@ -261,7 +408,7 @@ function CheckPassword(elementId, elementName) {
             return true;
         }
         else {
-            alert(elementName + ' should be of 7 t0 14 character!')
+            alert(elementName + ' should be of 7 to 14 character!')
             document.getElementById(elementId).focus();
             return false;
         }
@@ -430,6 +577,14 @@ function adminMenuLoader(process) {
     ajaxCall('../Backend/AdminProcess.php', 'post', "process=" + process, 'adminProcess', false);
 }
 
+function farmerMenuLoader(process, id) {
+    ajaxCall('../Backend/FarmerProcess.php', 'post', "id=" + id + "&process=" + process, 'section', false);
+}
+
+function labMenuLoader(process, id) {
+    ajaxCall('../Backend/LabProcess.php', 'post', "labId=" + id + "&process=" + process, 'section', false);
+}
+
 function uploadProfilePic(process) {
     var result = validateEmpty("admin_img", "Profile Picture");
     if (result) {
@@ -451,10 +606,6 @@ function uploadProfilePic(process) {
     adminMenuLoader('profile');
 }
 
-function farmerMenuLoader(process, id) {
-    ajaxCall('../Backend/FarmerProcess.php', 'post', "id=" + id + "&process=" + process, 'section', false);
-}
-
 function farmerProfilePic(process, id) {
     var result = validateEmpty("farmer_img", "Profile Picture");
     if (result) {
@@ -472,10 +623,6 @@ function farmerProfilePic(process, id) {
         farmerMenuLoader('profile', id);
     }
     return false;
-}
-
-function labMenuLoader(process, id) {
-    ajaxCall('../Backend/LabProcess.php', 'post', "id=" + id + "&process=" + process, 'section', false);
 }
 
 function labProfilePic(process, id) {
@@ -559,9 +706,6 @@ function acceptRequest(farmerId, labId) {
 }
 
 function toggleModeAdmin() {
-    var toggleMode = document.querySelector("#modeCheckbox");
-    var toggleball = document.querySelector(".toggle-ball");
-
     var html = document.getElementById("html");
     var mode = html.classList.contains("dark");
     if (mode) {

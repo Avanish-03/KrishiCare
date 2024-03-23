@@ -4,24 +4,14 @@
 $data_size = count($farmerdata);
 // $id = $_SESSION["farmer"];
 // echo $id;
-
-// Looping through the array elements
 for ($i = 0; $i < $data_size; $i++) {
     // Accessing values of the nested array at index $i
     $nested_array = $farmerdata[$i];
     // echo $nested_array["farmer_id"];
-    // echo $nested_array["first_name"];
-    // echo $nested_array["middle_name"];
-    // echo $nested_array["last_name"];
-    // echo $nested_array["email"];
-    // echo $nested_array["contact_number"];
-    // echo $nested_array["address"];
-    // echo $nested_array["city"];
-    // echo $nested_array["state"];
 ?>
 
     <!-- Soil Information Section -->
-    <section class="h-full mx-auto my-8 p-8 rounded-md">
+    <section class="h-full w-full min-w-96 mx-auto my-8 p-8 rounded-md">
         <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Dashboard</h1>
         <div class="bg-gray-200 dark:bg-gray-600 w-full h-48 rounded my-2 px-8 flex items-center relative">
             <div class="w-fit h-full flex justify-start">
@@ -29,18 +19,18 @@ for ($i = 0; $i < $data_size; $i++) {
             </div>
             <div class="h-full">
                 <div class="top-24 h-5 w-[45%] blur-2xl shadow-2xl bg-fuchsia-500 absolute  "></div>
-                <h1 class="text-7xl h-full w-full select-none z-10 font-extrabold flex justify-center items-center bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+                <h1 class="text-xl sm:text-5xl md:text-7xl h-full w-full select-none z-10 font-extrabold flex justify-center items-center bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
                     <?php echo $nested_array["first_name"] . " " . $nested_array["middle_name"] . " " . $nested_array["last_name"]; ?></h1>
             </div>
         </div>
-        <div class="h-96 w- flex rounded-md bg-gray-200 dark:bg-slate-700 ">
-            <div class="w-[50%] h-full rounded-md flex items-center justify-center relative">
-                <div class="-top-2 h-96 w-96 blur-xl rounded-full shadow-2xl shadow-fuchsia-900 absolute  "></div>
-                <img class="h-full w-full z-10" src="../img/rice field-bro.svg" alt="">
+        <div class="lg:h-96 h-fit w-full mt-6 rounded-md bg-gray-200 dark:bg-slate-700 grid grid-cols-1 md:grid-cols-2">
+            <div class="w-full h-full rounded-md flex items-center justify-center relative">
+                <div class="h-80 w-80 blur-xl rounded-full shadow-2xl shadow-fuchsia-900 absolute  "></div>
+                <img class="h-96 w-96 z-10" src="../img/rice field-bro.svg" alt="">
             </div>
-            <div class="bg-gray-200 dark:bg-slate-700 w-[50%] h-full px-8 flex flex-col justify-center items-center relative rounded-md">
+            <div class="w-full h-full px-8 py-2 flex flex-col justify-center items-center relative rounded-md">
                 <!-- <h1>Farming is a proffession of hope</h1> -->
-                <div class="z-10 text-5xl font-bold text-center transition-all duration-500 hover:scale-110 text-green-700 dark:text-gray-300 peer">"The good farmer is a craftsman of the highest order, a kind of artist." </div>
+                <div class="z-10 text-5xl font-bold text-center transition-all duration-1000 hover:scale-110 text-green-700 dark:text-gray-300 peer">"The good farmer is a craftsman of the highest order, a kind of artist." </div>
                 <div class="h-8 w-[90%] blur-3xl shadow-2xl dark:bg-blue-400 dark:peer-hover:shadow-fuchsia-900 absolute  "></div>
                 <h1 class="text-xs pt-4 text-gray-500 dark:text-gray-300">अच्छा किसान सर्वोच्च कोटि का शिल्पकार, एक प्रकार का कलाकार होता है</h1>
             </div>
@@ -69,11 +59,20 @@ for ($i = 0; $i < $data_size; $i++) {
             </div>
         </div>-->
         <!-- <a href="https://www.behance.net/gallery/150172499/Agricultural-Dashboard-UI-Design?tracking_source=search_projects|agricultural+dashboard&l=39">Image</a> -->
+        <div class="h-48 w-full my-8 bg-gray-200 rounded-lg dark:bg-slate-700 flex items-center">
+            <div class="w-fit h-full flex justify-start">
+                <img class="h-full w-full" src="../img/Attached files-rafiki.svg" alt="">
+            </div>
+            <div class="w-[50%] h-full flex items-center">
+                <h1 class="text-4xl font-bold">Reports</h1>
+            </div>
+        </div>
+        <!-- Reports data -->
         <div class="relative h-fit w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 rounded-md">
             <div class="w-full m-2 p-2 h-full">
-                <div class="p-4 bg-white dark:bg-gray-900 rounded-md">
-                    <label for="table-search" class="sr-only">Search</label>
+                <div class="w-full p-4 bg-gray-100 dark:bg-gray-900 rounded-md">
                     <div class="relative mb-2">
+                        <label for="table-search" class="sr-only">Search</label>
                         <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
                             <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
@@ -81,10 +80,11 @@ for ($i = 0; $i < $data_size; $i++) {
                         </div>
                         <input type="text" id="table-search" class="block pt-2 ps-10 py-2 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Requests">
                     </div>
-                    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-100">
+                    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-100">
                             <tr>
                                 <th scope="col" class="px-6 py-3">Farmer Id</th>
+                                <th scope="col" class="px-6 py-3">Request Id</th>
                                 <th scope="col" class="px-6 py-3">Request date</th>
                                 <th scope="col" class="px-6 py-3">Lab Name</th>
                                 <th scope="col" class="px-6 py-3">Lab Email</th>
@@ -98,15 +98,15 @@ for ($i = 0; $i < $data_size; $i++) {
                         <tbody>
                             <?php
                             if ($soilrequestdata == null) {
-                                
                             } else {
                                 $soilrequestdatasize = count($soilrequestdata);
                                 for ($i = 0; $i < $soilrequestdatasize; $i++) {
                                     // Accessing values of the nested array at index $i
                                     $nested_array = $soilrequestdata[$i];
-                                    echo "<tr class='bg-white dark:text-gary-300 border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600'>";
+                                    echo "<tr class='bg-gray-100 dark:text-gray-300 border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'>";
                                     echo "<td class='px-6 py-4 font-medium whitespace-nowrap>" . $nested_array["request_id"] . "</td>";
                                     echo "<td class='px-6 py-4'>" . $nested_array["farmer_id"] . "</td>";
+                                    echo "<td class='px-6 py-4'>" . $nested_array["request_id"] . "</td>";
                                     echo "<td class='px-6 py-4'>" . $nested_array["request_date"] . "</td>";
                                     echo "<td class='px-6 py-4'>" . $nested_array["lab_name"] . "</td>";
                                     echo "<td class='px-6 py-4'>" . $nested_array["email"] . "</td>";
@@ -114,7 +114,7 @@ for ($i = 0; $i < $data_size; $i++) {
                                     echo "<td class='px-6 py-4'>" . $nested_array["city"] . "</td>";
                                     echo "<td class='px-6 py-4'>" . $nested_array["state"] . "</td>";
                                     echo "<td class='px-6 py-4'>" . $nested_array["ownership"] . "</td>";
-                                    echo "<td class='px-6 py-4'>" . $nested_array["status"] . "</td>";
+                                    echo "<td class='px-6 py-4'>" . ($nested_array["status"] == 'Approved' ? 'Generating Report' : $nested_array["status"]) . "</td>";
                                     echo "</tr>";
                                 }
                             }
@@ -124,10 +124,10 @@ for ($i = 0; $i < $data_size; $i++) {
                 </div>
             </div>
         </div>
-        <div class="relative h-60 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
+        <div class="relative h-fit py-6 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
             <!-- <img class="absolute h-full w-full rounded-md" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUGAPxvg9Az-96-mrVDSJUtgkL0jRjDulUyw&usqp=CAU" alt=""> -->
             <div class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  "></div>
-            <h1 class="z-10 text-9xl font-bold px-8 transition-all duration-300 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">Farmer Portals</h1>
+            <h1 class="z-10 text-xl sm:text-5xl md:text-7xl font-bold px-8 transition-all duration-1000 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">Farmer Portals</h1>
         </div>
         <!-- <img class="h-full w-full" src="https://366pi.com/wp-content/uploads/2020/07/OnDemandReports-Agri.png" alt="Agri Image"> -->
         <!-- Soil Content -->
@@ -216,7 +216,5 @@ for ($i = 0; $i < $data_size; $i++) {
         <div class="h-7"></div>
     </section>
 <?php
-
 }
-
 ?>

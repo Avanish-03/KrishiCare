@@ -1,16 +1,14 @@
 <?php
 session_start();
 ?>
-<section class="h-full mx-auto my-8 p-8 pb-28 rounded-md">
-
+<section class="h-full w-full mx-auto my-8 p-8 rounded-md">
     <div class="relative h-32 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
         <div class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  "></div>
-        <h1 class="z-10 text-7xl font-bold px-8 transition-all duration-300 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">Requests By Farmers</h1>
+        <h1 class="z-10 h-full flex justify-center items-center text-7xl font-bold px-8 transition-all duration-300 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">Requests By Farmers</h1>
     </div>
-
     <div class="relative h-fit w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 rounded-md">
         <div class="w-full m-2 p-2 h-full">
-            <div class="p-4 bg-white dark:bg-gray-900 rounded-md">
+            <div class="p-4 bg-gray-100 dark:bg-gray-900 rounded-md">
                 <label for="table-search" class="sr-only">Search</label>
                 <div class="relative mb-2">
                     <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -21,7 +19,7 @@ session_start();
                     <input type="text" id="table-search" class="block pt-2 ps-10 py-2 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Requests">
                 </div>
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-100">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-100">
                         <tr>
                             <th scope="col" class="px-6 py-3">Farmer Id</th>
                             <th scope="col" class="px-6 py-3">Request date</th>
@@ -42,7 +40,7 @@ session_start();
                             for ($i = 0; $i < $soilrequestdatasize; $i++) {
                                 // Accessing values of the nested array at index $i
                                 $nested_array = $soilrequestdata[$i];
-                                echo "<tr class='bg-white dark:text-gary-300 border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600'>";
+                                echo "<tr class='bg-gray-100 dark:text-gray-300 border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'>";
                                 echo "<td class='px-6 py-4 font-medium whitespace-nowrap>" . $nested_array["request_id"] . "</td>";
                                 echo "<td class='px-6 py-4'>" . $nested_array["farmer_id"] . "</td>";
                                 echo "<td class='px-6 py-4'>" . $nested_array["request_date"] . "</td>";
@@ -54,7 +52,7 @@ session_start();
                                 echo "<td class='px-6 py-4'>" . $nested_array["lab_id"] . "</td>";
                                 // echo "<td class='px-6 py-4'>" . $nested_array["status"] . "</td>";
                                 echo "<td class='px-6 py-2'>
-                            <button onclick='acceptRequest(" . $nested_array["farmer_id"] . ",". $_SESSION['laboratory'] .")' class='px-6 py-2 rounded-lg bg-green-300 hover:bg-green-400 text-gray-50 dark:text-gray-700'>
+                            <button onclick='acceptRequest(" . $nested_array["farmer_id"] . "," . $_SESSION['laboratory'] . ")' class='px-6 py-2 rounded-lg bg-green-300 hover:bg-green-400 text-gray-50 dark:text-gray-700'>
                             " . ($nested_array["status"] ? "Accepted" : "Accept") . "</button>
                             </td>";
                                 echo "</tr>";

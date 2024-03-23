@@ -30,7 +30,7 @@
                                             <input type="file" id="admin_img" multiple accept=".jpg,.jpeg,.png" class="hidden">
                                             <div id="inputDiv" class="-mt-20 bg-gray-400 dark:bg-gray-700 h-44 w-44 flex justify-center items-center rounded-full">
                                                 <?php
-                                                if (!$nested_array["adminprofile"] == null) {
+                                                if (file_exists($nested_array["adminprofile"]) == true) {
                                                     echo "<img src='../img/" . $nested_array["adminprofile"] . "' class='w-40 h-40 m-auto rounded-full shadow object-cover'>";
                                                 } else {
                                                     echo "<img src='../img/profile.png' class='w-40 h-40 m-auto rounded-full shadow object-cover'>";

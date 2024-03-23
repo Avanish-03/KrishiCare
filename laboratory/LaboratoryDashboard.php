@@ -11,7 +11,8 @@ if ($_SESSION["laboratory"] == false) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>laboratory Dashboard</title>
+    <title>KrishiCare - Farmer Information System</title>
+    <link rel="icon" href="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais">
     <link rel="stylesheet" href="../dist/output.css">
     <link rel="stylesheet" href="../src/Js/styles.css">
     <!-- <link rel="stylesheet" href="../tailwind.css"> -->
@@ -77,37 +78,37 @@ if ($_SESSION["laboratory"] == false) {
                             </div>
                         </div>
                         <div class="w-full h-[60%]">
-                            <div onclick="labMenuLoader('dashboard','<?php echo $_SESSION['laboratory'] ?>'); loadChart()" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="labMenuLoader('dashboard','<?php echo $_SESSION['laboratory'] ?>'); loadChart()" class="w-full py-3 space-x-2 font-bold text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-house"></i>
                                 <div class="heading duration-300 cursor-pointer">Home</div>
                             </div>
-                            <div onclick="labMenuLoader('notification','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="labMenuLoader('notification','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 font-bold text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-bell"></i>
                                 <div class="heading duration-300 cursor-pointer">Notification</div>
                             </div>
-                            <div onclick="labMenuLoader('reqfarmer','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="labMenuLoader('reqfarmer','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 font-bold text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                             <i class="fa-solid fa-person-circle-question"></i>
                                 <div class="heading duration-300 cursor-pointer">Requests</div>
                             </div>
-                            <div onclick="labMenuLoader('report','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="labMenuLoader('report','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 font-bold text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="rotate-180 fa-solid fa-file-lines"></i>
                                 <div class="heading duration-300 cursor-pointer">Report</div>
                             </div>
-                            <!-- <div onclick="labMenuLoader('weather','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <!-- <div onclick="labMenuLoader('weather','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 font-bold text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-cloud-bolt"></i>
                                 <div class="heading duration-300 cursor-pointer">Weather</div>
                             </div> -->
                         </div>
                         <div class="w-full h-[25%]">
-                            <div onclick="labMenuLoader('profile','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="labMenuLoader('profile','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 font-bold text-black dark:text-white hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-user"></i>
                                 <div class="heading duration-300 cursor-pointer">Profile</div>
                             </div>
-                            <div onclick="labMenuLoader('setting','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="labMenuLoader('setting','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 font-bold text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-gear"></i>
                                 <div class="heading duration-300 cursor-pointer">Settings</div>
                             </div>
-                            <div onclick="logoutUser('laboratory')" class="w-full py-3 space-x-2 text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="logoutUser('laboratory')" class="w-full py-3 space-x-2 font-bold text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-right-from-bracket"></i>
                                 <div class="heading duration-300 cursor-pointer">Logout</div>
                             </div>

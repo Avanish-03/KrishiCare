@@ -14,7 +14,8 @@ include("../Backend/config.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://cdn-icons-png.freepik.com/256/4140/4140048.png?ga=GA1.1.253096211.1707907143&">
-    <title>Admin</title>
+    <title>KrishiCare - Farmer Information System</title>
+    <link rel="icon" href="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais">
     <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
     <link rel="stylesheet" href="../dist/output.css">
     <link rel="stylesheet" href="../src/Js/styles.css">
@@ -134,10 +135,10 @@ include("../Backend/config.php");
                             <i class="sm:mr-2 sm:text-xl fa-solid fa-file-lines"></i>
                             <div class="cursor-pointer hidden sm:block">Report</div>
                         </li>
-                        <li onclick="adminMenuLoader('messages')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
+                        <!-- <li onclick="adminMenuLoader('messages')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
                             <i class="sm:mr-2 sm:text-xl fa-brands fa-facebook-messenger"></i>
                             <div class="cursor-pointer hidden sm:block"> Messages</div>
-                        </li>
+                        </li> -->
                         <li onclick="adminMenuLoader('notification')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
                             <i class="sm:mr-2 sm:text-xl fa-regular fa-bell"></i>
                             <div class="cursor-pointer hidden sm:block"> Notification</div>

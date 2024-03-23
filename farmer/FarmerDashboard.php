@@ -11,7 +11,8 @@ if ($_SESSION["farmer"] == false) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmer Dashboard</title>
+    <title>KrishiCare - Farmer Information System</title>
+    <link rel="icon" href="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais">
     <link rel="stylesheet" href="../dist/output.css">
     <link rel="stylesheet" href="../src/Js/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -76,6 +77,9 @@ if ($_SESSION["farmer"] == false) {
                             </div>
                         </div>
                         <div class="w-full h-[60%]">
+                            <div>
+                                <h1 class="font-light sm:text-xl text-gray-500 sm:px-8 hidden sm:block uppercase select-none heading duration-300 cursor-pointer">MENU</h1>
+                            </div>
                             <div onclick="farmerMenuLoader('dashboard','<?php echo $id ?>'); loadChart()" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-house"></i>
                                 <div class="heading duration-300 cursor-pointer">Home</div>
@@ -92,12 +96,23 @@ if ($_SESSION["farmer"] == false) {
                                 <i class="fa-solid fa-wheat-awn"></i>
                                 <div class="heading duration-300 cursor-pointer">Crop</div>
                             </div>
+                            <div onclick="farmerMenuLoader('technology','<?php echo $id ?>')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                                <i class="fa-solid fa-building-wheat"></i>
+                                <div class="heading duration-300 cursor-pointer">Technology</div>
+                            </div>
                             <div onclick="farmerMenuLoader('weather','<?php echo $_SESSION['farmer'] ?>')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-cloud-bolt"></i>
                                 <div class="heading duration-300 cursor-pointer">Weather</div>
                             </div>
+                            <div onclick="farmerMenuLoader('report','<?php echo $_SESSION['farmer'] ?>')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                                <i class="fas fa-file"></i>
+                                <div class="heading duration-300 cursor-pointer">Report</div>
+                            </div>
                         </div>
                         <div class="w-full h-[25%]">
+                            <div>
+                                <h1 class="font-light sm:text-xl text-gray-500 sm:px-8 hidden sm:block uppercase select-none heading duration-300 cursor-pointer">Setting</h1>
+                            </div>
                             <div onclick="farmerMenuLoader('profile','<?php echo $_SESSION['farmer'] ?>')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-user"></i>
                                 <div class="heading duration-300 cursor-pointer">Profile</div>

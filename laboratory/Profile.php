@@ -13,8 +13,8 @@ session_start();
             <h1 class=" text-4xl font-bold">profile Details</h1>
         </div>
     </div>
-    <div class="h-full w-full my-8 rounded-md bg-gray-200 dark:bg-slate-700">
-        <div class="h-fiy w-full my-6 pb-8 rounded-md bg-gray-200 dark:bg-slate-600 duration-700">
+    <div class="h-fit w-full my-8 rounded-md bg-gray-200 dark:bg-slate-700">
+        <div class="h-fiy w-full my-6 pb-8 rounded-md bg-gray-200 dark:bg-slate-700 duration-700">
             <div class="px-6">
                 <div class="flex flex-wrap justify-center">
                     <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
@@ -31,9 +31,9 @@ session_start();
                                     <div class="col-span-6 ml-2 sm:col-span-4 md:mr-3">
                                         <div class="text-center">
                                             <input type="file" id="laboratory_img" multiple accept=".jpg,.jpeg,.png" class="hidden">
-                                            <div id="inputDiv" class="-mt-20 bg-gray-400 dark:bg-gray-700 h-44 w-44 flex justify-center items-center rounded-full">
+                                            <div id="inputDiv" class="-mt-20 bg-gray-300 dark:bg-gray-700 h-44 w-44 flex justify-center items-center rounded-full">
                                                 <?php
-                                                if (!$nested_array["labprofile"] == null) {
+                                                if (file_exists($nested_array["labprofile"]) == true) {
                                                     echo "<img src='../img/" . $nested_array["labprofile"] . "' class='w-40 h-40 m-auto rounded-full shadow object-cover'>";
                                                 } else {
                                                     echo "<img src='../img/profile.png' class='w-40 h-40 m-auto rounded-full shadow object-cover'>";

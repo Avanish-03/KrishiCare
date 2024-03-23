@@ -120,18 +120,23 @@ session_start();
                     </div>
                 </div>
             </div>
-            <div class="h-7 w-full"></div>
+            <!-- <div class="h-7 w-full"></div> -->
         </div>
     </div>
-    <div class="w-full h-full mb-8 rounded-lg bg-gray-200 dark:bg-slate-700">
-        <div class="w-full h-[20%] flex items-center rounded-t-lg">
-            <h1 class="text-5xl font-bold pl-8">Request form for Soil Testing</h1>
+    <div class="h-32 w-full bg-gray-200 rounded-lg my-8 dark:bg-slate-700 flex items-center">
+        <div class="w-[50%] h-full flex items-center">
+        <h1 class="text-5xl font-bold text-slate-700 dark:text-gray-400 pl-8">Request form for Soil Testing</h1>
         </div>
-        <div class="flex justify-center items-center ">
+    </div>
+    <div class="w-full h-fit mb-8 py-5 rounded-lg bg-gray-200 dark:bg-slate-700">
+        <div class="flex justify-center items-center mb-5">
             <hr class="w-[90%] ">
         </div>
-        <div class="w-full h-[80%] rounded-b-lg flex justify-center items-center">
-            <div class="h-[90%] w-[50%] rounded-lg shadow-lg text-gray-800 dark:text-gray-300 bg-gray-300 dark:bg-gray-900 transition-all duration-300">
+        <div class="w-full h-[80%] rounded-b-lg grid grid-cols-1 md:grid-cols-2">
+            <div class="h-full w-full flex justify-center items-center">
+                <img class="h-96 w-full" src="../img/Farmer-amico.svg" alt="">
+            </div>
+            <div class="h-[90%] w-[90%] rounded-lg shadow-lg text-gray-800 dark:text-gray-300 bg-gray-300 dark:bg-slate-800 transition-all duration-300">
                 <form id="soilForm" class="h-full flex justify-center items-center">
                     <div class="h-fit w-[75%]">
                         <div class="p-5 w-full flex justify-center items-center gap-4">
@@ -161,8 +166,8 @@ session_start();
                             </select>
                         </div>
                         <div class="p-5 w-full flex justify-center items-center gap-4">
-                            <input type="button" onclick="return submitRequest(<?php echo $_SESSION['farmer']; ?>)" value="Submit" class="py-2 px-4 bg-gray-200 dark:bg-gray-700 rounded-lg">
-                            <input type="reset" value="Cancel" class="py-2 px-4 bg-yellow-500 dark:bg-yellow-700 rounded-lg">
+                            <input type="button" onclick="return submitRequest(<?php echo $_SESSION['farmer']; ?>)" value="Submit" class="py-2 px-4 bg-green-500 dark:bg-green-700 rounded-lg">
+                            <input type="reset" value="Cancel" class="py-2 px-4 bg-gray-200 dark:bg-gray-700 rounded-lg">
                         </div>
                     </div>
                 </form>
@@ -174,7 +179,7 @@ session_start();
         <img src="../img/soil-processing.webp" alt="">
     </div>
     <div class="h-48 rounded-lg my-4 flex items-center bg-gray-200 dark:bg-slate-700 ">
-        <h1 class="text-7xl px-8 font-bold">Soil Types</h1>
+        <h1 class="text-7xl px-8 font-bold text-slate-700 dark:text-gray-400">Soil Types</h1>
     </div>
     <!-- Soil Content -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

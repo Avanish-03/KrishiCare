@@ -1,41 +1,41 @@
 <?php
 require('config.php');
 
+require "./PHPMailer-master/src/PHPMailer.php";
+require "./PHPMailer-master/src/Exception.php";
+require "./PHPMailer-master/src/SMTP.php";
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $process = $_POST["process"];
-    $labId = $_POST["id"];
+    $labId = mysqli_real_escape_string($con, $_POST["labId"]); // Sanitize input
 
     $requestQuery = "SELECT r.request_id, r.farmer_id, r.request_date, r.lab_id, r.status, f.first_name, f.middle_name, f.last_name, f.email, f.address, f.city, f.state
     FROM request_detail AS r 
     JOIN farmer_detail AS f ON r.farmer_id = f.farmer_id
-    WHERE r.lab_id = $labId 
-    ORDER BY request_date DESC";
+    WHERE r.lab_id = '$labId' 
+    ORDER BY request_date DESC;";
 
     $result = mysqli_query($con, $requestQuery);
     if ($result) {
-        if (mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_assoc($result)) {
-                if (!($row == null)) {
-                    $soilrequestdata[] = $row;
-                } else {
-                    $soilrequestdata = null;
-                }
-            }
-        } else {
-            $soilrequestdata = null;
+        $soilrequestdata = []; // Initialize array
+        while ($row = mysqli_fetch_assoc($result)) {
+            $soilrequestdata[] = $row; // Populate array
         }
-        // Free result set
-        mysqli_free_result($result);
+        mysqli_free_result($result); // Free result set
     } else {
         // Handle query execution error
         echo "Error executing query: " . mysqli_error($con);
     }
+    // The randomly generated otp
+    $verification_otp = random_int(100000, 999999);
 
     switch ($process) {
         case "dashboard":
             //code block
-            // return $data;
             include("../laboratory/Dashboard.php");
             break;
         case "notification":
@@ -50,17 +50,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //code block
             include("../laboratory/farmer_req.php");
             break;
-            // case "weather":
-            //     //code block
-            //     include("../laboratory/Weather.php");
-            //     break;
         case "profile":
             //code block
             $labQuery = "SELECT `labprofile`,`email`, `password` FROM `laboratory_detail` WHERE `lab_id`= '$labId';";
             $result = mysqli_query($con, $labQuery);
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    $labprofiledata[] = $row;
+            if ($result && mysqli_num_rows($result) > 0) {
+                $labprofiledata = []; // Initialize array
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $labprofiledata[] = $row; // Populate array
                 }
             } else {
                 echo "No user found";
@@ -92,21 +89,96 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;
         case "changeStatus":
             //code block
-            $farmerId = $_POST["farmerId"];
+            $farmerId = mysqli_real_escape_string($con, $_POST["farmerId"]); // Sanitize input
 
-            $sql = "UPDATE `request_detail` SET `status` = 'Approved' WHERE `farmer_id` = '$farmerId' and `lab_id`=$labId;";
+            $sql = "UPDATE `request_detail` SET `status` = 'Approved' WHERE `farmer_id` = '$farmerId' and `lab_id`='$labId';";
             $result = mysqli_query($con, $sql);
             if ($result) {
                 echo "Request Accepted!";
             } else {
                 echo "Error: " . mysqli_error($con);
             }
+            break;
+        case "verifyUser":
+            //code block
+            $requestid = mysqli_real_escape_string($con, $_POST["requestid"]); // Sanitize input
+            $farmerid = mysqli_real_escape_string($con, $_POST["farmerid"]); // Sanitize input
+            $farmeremail = mysqli_real_escape_string($con, $_POST["email"]); // Sanitize input
+            $farmername = mysqli_real_escape_string($con, $_POST["farmername"]);
 
-            // include("../laboratory/Setting.php");
+            $requestresult = mysqli_query($con, "SELECT * FROM `request_detail` WHERE `request_id`= '$requestid' and `farmer_id`= '$farmerid';");
+            if (mysqli_num_rows($requestresult) > 0) {
+                // while ($row = mysqli_fetch_assoc($sampleresult)) {
+                // }
+                $sampleresult = mysqli_query($con, "SELECT * FROM `sample_detail` WHERE `request_id`= '$requestid' and `farmer_id`= '$farmerid';");
+                if (mysqli_num_rows($sampleresult) > 0) {
+                    echo "Sample Collected Already!";
+                } else {
+                    $subject = "OTP verification";
+                    $body = "Hello, $farmername\n Your otp is $verification_otp .";
+
+                    $send = sendMail($farmeremail, $subject, $body);
+                    if ($send) {
+                        echo $verification_otp;
+                    } else {
+                        echo "Failed to send email. Please try again later.";
+                    }
+                }
+            }
+            break;
+        case "submitSampleForm":
+            //code block
+            $farmeremail = mysqli_real_escape_string($con, $_POST["email"]); // Sanitize input
+            $farmername = mysqli_real_escape_string($con, $_POST["farmername"]);
+            $requestid = mysqli_real_escape_string($con, $_POST["requestid"]); // Sanitize input
+            $farmerId = mysqli_real_escape_string($con, $_POST["farmername"]); // Sanitize input
+            $collectiondate = mysqli_real_escape_string($con, $_POST["collectiondate"]); // Sanitize input
+
+            $sql = "INSERT INTO `sample_detail` (`request_id`, `lab_id`, `farmer_id`, `collected_date`, `status`) VALUES ('$requestid', '$labId', '$farmerId', '$collectiondate','Collected');";
+            $result = mysqli_query($con, $sql);
+            if ($result) {
+                $subject = "Sample Collection!";
+                $body = "Hello, $farmername\n Your request for Sample Collection is done.\nThank you for your continued trust and support.!";
+
+                $send = sendMail($farmeremail, $subject, $body);
+                if ($send) {
+                    echo "Sample Collected Successfully!";
+                } else {
+                    echo "Failed to send email. Please try again later.";
+                }
+            } else {
+                echo "Error: " . mysqli_error($con);
+            }
             break;
         default:
             //code block
             echo "Invalid Request";
             break;
+    }
+}
+
+function sendMail($send_to, $subject, $body) {
+    try {
+        $mail = new PHPMailer(true);
+        $mail->isSMTP();
+        $mail->SMTPAuth = true;
+        $mail->SMTPSecure = "tls";
+        $mail->Host = "smtp.gmail.com";
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
+
+        $mail->Username = "collageucc@gmail.com";
+        $mail->Password = "dtglgypehnapiiqr";
+
+        $mail->setFrom("collageucc@gmail.com", "Dwivedi Jyoti");
+
+        $mail->addAddress($send_to);
+        $mail->Subject  = $subject;
+        $mail->Body = $body;
+        $mail->send();
+        return true; // Email sent successfully
+    } catch (Exception $e) {
+        echo $e;
+        return false; // Failed to send email
     }
 }

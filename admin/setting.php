@@ -11,12 +11,12 @@
             <h1 class="text-md sm:text-4xl font-bold">Update Details</h1>
         </div>
     </div>
-    <div class="h-auto w-full my-8 rounded-md bg-gray-300 dark:bg-slate-600 duration-700">
+    <div class="h-auto w-full my-8 rounded-md bg-gray-200 dark:bg-slate-600 duration-700">
         <!-- Update Form -->
         <div class="bg-opacity-50 ">
             <div class="container">
                 <div class=" ">
-                    <div class="md:inline-flex space-y-4 md:space-y-0 w-full p-4 text-black dark:text-white duration-700 items-center">
+                    <div class="md:inline-flex space-y-4 md:space-y-0 w-full p-4 border-b border-slate-600 dark:border-slate-300 text-black dark:text-white duration-700 items-center">
                         <h2 class="md:w-1/3 max-w-sm mx-auto">Account</h2>
                         <div class="md:w-2/3 max-w-sm mx-auto">
                             <label class="text-sm text-black dark:text-white duration-700">Email</label>
@@ -30,9 +30,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <hr />
-                    <div class="md:inline-flex  space-y-4 md:space-y-0  w-full p-4 text-black dark:text-white duration-700 items-center">
+                    <div class="md:inline-flex  space-y-4 md:space-y-0 w-full p-4 border-b border-slate-600 dark:border-slate-300 text-black dark:text-white duration-700 items-center">
                         <h2 class="md:w-1/3 mx-auto max-w-sm">Personal info</h2>
                         <div class="md:w-2/3 mx-auto max-w-sm space-y-5">
                             <div>
@@ -59,9 +57,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <hr />
-                    <div class="md:inline-flex w-full space-y-4 md:space-y-0 p-8 text-black dark:text-white duration-700 items-center">
+                    <div class="md:inline-flex w-full space-y-4 md:space-y-0 p-8 border-b border-slate-600 dark:border-slate-300 text-black dark:text-white duration-700 items-center">
                         <h2 class="md:w-4/12 max-w-sm mx-auto">Change password</h2>
                         <div class="md:w-5/12 w-full md:pl-9 max-w-sm mx-auto space-y-5 md:inline-flex pl-2">
                             <div class="w-full inline-flex">
@@ -73,7 +69,6 @@
                                 <input type="password" class="w-11/12 focus:outline-none bg-transparent focus:text-white p-2 ml-4" placeholder="New" />
                             </div>
                         </div>
-
                         <div class="md:w-3/12 text-center md:pl-6">
                             <button class="text-white w-full mx-auto max-w-sm rounded-md text-center bg-indigo-400 py-2 px-4 inline-flex items-center focus:outline-none md:float-right">
                                 <svg fill="none" class="w-4 text-black dark:text-white duration-700 mr-2" viewBox="0 0 24 24" stroke="currentColor">
@@ -83,8 +78,6 @@
                             </button>
                         </div>
                     </div>
-
-                    <hr />
                     <div class="w-full p-4 text-right text-black dark:text-white duration-700">
                         <button class="inline-flex items-center focus:outline-none mr-4 bg-red-500 px-2 py-1 rounded-md">
                             <svg fill="none" class="w-4 mr-2" viewBox="0 0 24 24" stroke="currentColor">
