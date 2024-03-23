@@ -131,7 +131,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $farmeremail = mysqli_real_escape_string($con, $_POST["email"]); // Sanitize input
             $farmername = mysqli_real_escape_string($con, $_POST["farmername"]);
             $requestid = mysqli_real_escape_string($con, $_POST["requestid"]); // Sanitize input
-            $farmerId = mysqli_real_escape_string($con, $_POST["farmername"]); // Sanitize input
+            $farmerId = mysqli_real_escape_string($con, $_POST["farmerid"]); // Sanitize input
             $collectiondate = mysqli_real_escape_string($con, $_POST["collectiondate"]); // Sanitize input
 
             $sql = "INSERT INTO `sample_detail` (`request_id`, `lab_id`, `farmer_id`, `collected_date`, `status`) VALUES ('$requestid', '$labId', '$farmerId', '$collectiondate','Collected');";

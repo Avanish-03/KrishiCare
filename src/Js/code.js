@@ -320,6 +320,8 @@ function submitSampleForm(labId) {
             ajaxCall('../Backend/labProcess.php', 'post', dataForm, 'submitSampleForm', true, false);
 
             var status = getvalue('submitSampleForm');
+            resetFormdata("verifyForm");
+            resetFormdata("submitForm");
             alert(status);
         } else {
             alert("invalid");
