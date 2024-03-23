@@ -55,10 +55,10 @@ if ($_SESSION["laboratory"] == false) {
                                     </div>
                                 </div>
                                 <div onclick="toggleMode()" class="h-full md:w-auto sm:w-full p-3 cursor-pointer flex items-center justify-end duration-700">
-                                <img id="mode" src="../img/light-bulb.png" class="h-full p-1 bg-none rounded-full rotate-180 duration-500" alt="">
+                                    <img id="mode" src="../img/light-bulb.png" class="h-full p-1 bg-none rounded-full rotate-180 duration-500" alt="">
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
                 <div class="w-full h-[90%] flex">
@@ -71,7 +71,14 @@ if ($_SESSION["laboratory"] == false) {
                             </svg>
                         </div>
                         <div class="lg:inline-flex md:flex my-2 h-[15%] w-full pt-4 gap-2">
-                            <img id="profile" class="h-10" src="../img/profile.png" alt="">
+                            <?php
+                            if (file_exists($row["labprofile"]) == true) {
+                                echo "<img src='../img/" . $row["labprofile"] . "' class='w-10 h-10 rounded-full shadow object-cover'>";
+                            } else {
+                                echo "<img id='profile' class='w-10 h-10 rounded-full shadow object-cover' src='../img/profile.png' alt=''> ";
+                            }
+                            ?>
+                            <!-- <img id="profile" class="h-10" src="../img/profile.png" alt=""> -->
                             <div class="w-full duration-300 heading" id="">
                                 <h1 class="text-black font-bold dark:text-white"><?php echo $row["lab_name"] ?></h1>
                                 <p class="text-sm text-slate-400"><?php echo $row["email"] ?></p>
@@ -87,7 +94,7 @@ if ($_SESSION["laboratory"] == false) {
                                 <div class="heading duration-300 cursor-pointer">Notification</div>
                             </div>
                             <div onclick="labMenuLoader('reqfarmer','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 font-bold text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
-                            <i class="fa-solid fa-person-circle-question"></i>
+                                <i class="fa-solid fa-person-circle-question"></i>
                                 <div class="heading duration-300 cursor-pointer">Requests</div>
                             </div>
                             <div onclick="labMenuLoader('report','<?php echo $_SESSION['laboratory'] ?>')" class="w-full py-3 space-x-2 font-bold text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">

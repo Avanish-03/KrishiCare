@@ -627,7 +627,7 @@ function farmerProfilePic(process, id) {
     return false;
 }
 
-function labProfilePic(process, id) {
+function labProfilePic(process, labid) {
     var result = validateEmpty("laboratory_img", "Profile Picture");
     if (result) {
         var file = document.getElementById("laboratory_img");
@@ -636,12 +636,12 @@ function labProfilePic(process, id) {
         var formData = new FormData();
         formData.append("profilePicture", imageFile);
         formData.append("process", process);
-        formData.append("id", id);
+        formData.append("labId", labid);
 
         ajaxCall('../Backend/labProcess.php', 'post', formData, 'labProfile', true, true);
         var status = getvalue("labProfile");
         alert(status);
-        labMenuLoader('profile', id);
+        labMenuLoader('profile', labid);
     }
     return false;
 }
