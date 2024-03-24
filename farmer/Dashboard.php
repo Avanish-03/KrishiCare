@@ -114,7 +114,16 @@ for ($i = 0; $i < $data_size; $i++) {
                                     echo "<td class='px-6 py-4'>" . $nested_array["city"] . "</td>";
                                     echo "<td class='px-6 py-4'>" . $nested_array["state"] . "</td>";
                                     echo "<td class='px-6 py-4'>" . $nested_array["ownership"] . "</td>";
-                                    echo "<td class='px-6 py-4 text-red-500'>" . ($nested_array["status"] == 'Approved' ? 'Generating Report...' : $nested_array["status"]) . "</td>";
+                                   
+                                    if ($nested_array["report_status"] == 'Generated') {
+                                        echo "<td class='px-6 py-4 font-bold text-green-500'>" . $nested_array["report_status"] . "</td>";
+                                    } else if ($nested_array["sample_status" == 'Collected']) {
+                                        echo "<td class='px-6 py-4 font-bold text-green-500'>" . $nested_array["sample_status"] . "</td>";
+                                    } else if ($nested_array["request_status"] == 'Approved') {
+                                        echo "<td class='px-6 py-4 font-bold text-green-500'>" . $nested_array["request_status"] . "</td>";
+                                    } else {
+                                        echo "<td class='px-6 py-4 text-red-500'>Pending</td>";
+                                    }
                                     echo "</tr>";
                                 }
                             }
@@ -132,7 +141,7 @@ for ($i = 0; $i < $data_size; $i++) {
         <!-- <img class="h-full w-full" src="https://366pi.com/wp-content/uploads/2020/07/OnDemandReports-Agri.png" alt="Agri Image"> -->
         <!-- Schems of governments -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-5">
-            
+
             <div class="bg-gray-200 dark:bg-slate-700 p-6 rounded-md hover:shadow-xl hover:scale-100 transition-all duration-300 ease-in-out">
                 <img src="../img/PM-KISAN.png" class="rounded-md mb-2" alt="">
                 <h2 class="text-2xl font-semibold mb-2 dark:text-gray-100">Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)</h2>
@@ -150,7 +159,7 @@ for ($i = 0; $i < $data_size; $i++) {
                 <h2 class="text-2xl font-semibold mb-2 dark:text-gray-100">Pradhan Mantri Fasal Bima Yojana (PMFBY)</h2>
                 <p class="text-gray-700 dark:text-gray-200">PMFBY was launched in 2016 in order to provide a simple and affordable crop insurance product to ensure comprehensive risk cover for crops to farmers against all non-preventable natural risks from pre-sowing to post-harvest and to provide adequate claim amount. <a href="https://pmfby.gov.in/" target="_blank" class="text-blue-300 dark:text-blue-600 hover:text-green-500">read more</a></p>
             </div>
-            
+
             <div class="bg-gray-200 dark:bg-slate-700 p-6 rounded-md hover:shadow-xl hover:scale-100 transition-all duration-300 ease-in-out">
                 <img src="../img/MISS.jpeg" class="rounded-md mb-2 w-full h-48" alt="">
                 <h2 class="text-2xl font-semibold mb-2 dark:text-gray-100">Modified Interest Subvention Scheme (MISS)</h2>
@@ -168,7 +177,7 @@ for ($i = 0; $i < $data_size; $i++) {
                 <h2 class="text-2xl font-semibold mb-2 dark:text-gray-100">Formation & Promotion of new 10,000 FPOs</h2>
                 <p class="text-gray-700 dark:text-gray-200">The Government of India launched the Central Sector Scheme (CSS) for “Formation and Promotion of 10,000 Farmer Producer Organizations (FPOs)” in the year 2020. <a href="https://pib.gov.in/PressReleaseIframePage.aspx?PRID=1988649#:~:text=The%20Government%20of%20India%20has%20launched%20the%20Central,thus%20playing%20a%20major%20role%20towards%20sustainable%20incomes." target="_blank" class="text-blue-300 dark:text-blue-600 hover:text-green-500">read more</a></p>
             </div>
-            
+
             <div class="bg-gray-200 dark:bg-slate-700 p-6 rounded-md hover:shadow-xl hover:scale-100 transition-all duration-300 ease-in-out">
                 <img src="../img/NBHM.jpeg" class="rounded-md mb-2 w-full h-48" alt="">
                 <h2 class="text-2xl font-semibold mb-2 dark:text-gray-100">National beekeeping and Honey Mission (NBHM)</h2>
@@ -186,7 +195,7 @@ for ($i = 0; $i < $data_size; $i++) {
                 <h2 class="text-2xl font-semibold mb-2 dark:text-gray-100">Namo Drone Didi</h2>
                 <p class="text-gray-700 dark:text-gray-200">The Government has recently approved a Central Sector Scheme for providing drones to the Women Self Help Group (SHGs) for the period from 2024-25 to 2025-26 with an outlay of Rs. 1261 Crores. <a href="https://www.gktoday.in/namo-drone-didi-scheme/#google_vignette" target="_blank" class="text-blue-300 dark:text-blue-600 hover:text-green-500">read more</a></p>
             </div>
-           
+
             <div class="bg-gray-200 dark:bg-slate-700 p-6 rounded-md hover:shadow-xl hover:scale-100 transition-all duration-300 ease-in-out">
                 <img src="../img/RKVY-DPR.png" class="rounded-md mb-2" alt="">
                 <h2 class="text-2xl font-semibold mb-2 dark:text-gray-100">Rastriya Krishi Vikas Yojana-Detailed Project Report based schemes (RKVY- DPR)</h2>
@@ -199,7 +208,7 @@ for ($i = 0; $i < $data_size; $i++) {
                 <p class="text-gray-700 dark:text-gray-200">Soil health card provides information to farmers on nutrient status of their soil along with recommendation on appropriate dosage of nutrients to be applied for improving soil health and its fertility. <a href="https://soilhealth.dac.gov.in/progress/" target="_blank" class="text-blue-300 dark:text-blue-600 hover:text-green-500">read more</a></p>
             </div>
 
-            
+
             <div class="bg-gray-200 dark:bg-slate-700 p-6 rounded-md hover:shadow-xl hover:scale-100 transition-all duration-300 ease-in-out">
                 <img src="../img/RAD.png" class="rounded-md mb-2" alt="">
                 <h2 class="text-2xl font-semibold mb-2 dark:text-gray-100">Rainfed Area Development (RAD)</h2>

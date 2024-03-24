@@ -267,7 +267,6 @@ function verifyUser(labId) {
         validateEmpty("collectiondate", "Collection Date");
 
     if (result) {
-        alert(labId);
         var farmerid = getvalue("farmername");
         var farmername = getSelectedOption("farmername");
         var email = getvalue("email");
@@ -330,6 +329,34 @@ function submitSampleForm(labId) {
     return false;
 }
 
+function uploadReport(labId) {
+    var result = validateDropdown("farmername", "Farmer name") &&
+        validateDropdown("email", "Farmer Email") &&
+        validateDropdown("sampleid", "Request Id");
+
+    if (result) {
+        var farmerid = getvalue("farmername");
+        var farmername = getSelectedOption("farmername");
+        var email = getvalue("email");
+        var sampleid = getvalue("sampleid");
+
+        var dataForm =
+            'farmerid=' + farmerid +
+            '&farmername=' + farmername +
+            '&email=' + email +
+            '&sampleid=' + sampleid +
+            '&labId=' + labId +
+            '&process=uploadReport';
+
+        ajaxCall('../Backend/labProcess.php', 'post', dataForm, 'uploadReport', true, false);
+
+        var status = getvalue('uploadReport');
+        resetFormdata("uploadReportForm");
+        alert(status);
+    }
+    return false;
+}
+
 function getSelectedOption(elementId) {
     var selectElement = document.getElementById(elementId);
     var selectedOption = selectElement.options[selectElement.selectedIndex];
@@ -342,7 +369,6 @@ function validateDropdown(elementId, elementName) {
     if (element.value == "default") {
         alert(elementName + " should be selected!");
         document.getElementById(elementId).focus();
-        console.log(element.value);
         return false;
     }
     return true;

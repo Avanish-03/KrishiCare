@@ -16,11 +16,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $farmerdata[] = null;
     }
 
-    $requestQuery = "SELECT r.request_id, r.farmer_id, r.request_date, r.lab_id, r.status, l.lab_name, l.email, l.lab_add ,l.city, l.state, l.ownership
-    FROM request_detail AS r 
-    JOIN laboratory_detail AS l ON r.lab_id = l.lab_id 
-    WHERE r.farmer_id = $farmerId 
-    ORDER BY request_date DESC";
+    $requestQuery = "SELECT r.request_id, r.farmer_id, r.request_date, r.lab_id, r.status AS request_status,
+    l.lab_name, l.email, l.lab_add, l.city, l.state, l.ownership, q.report_id, 
+    s.sample_id, s.request_id, s.lab_id AS sample_lab_id, s.farmer_id AS sample_farmer_id, s.collected_date AS sample_collected_date, s.status AS sample_status,
+    q.farmer_id AS report_farmer_id, q.status AS report_status, q.report_image
+FROM request_detail AS r 
+JOIN laboratory_detail AS l ON r.lab_id = l.lab_id
+LEFT JOIN Sample_detail AS s ON r.farmer_id = s.farmer_id
+LEFT JOIN report_detail AS q ON r.farmer_id = q.farmer_id
+WHERE r.farmer_id = $farmerId
+OR s.farmer_id = $farmerId
+OR q.farmer_id = $farmerId
+ORDER BY request_date DESC";
 
     $result = mysqli_query($con, $requestQuery);
     if ($result) {
@@ -90,32 +97,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             {
                 $city = urlencode($city);
                 $url = "http://api.openweathermap.org/data/2.5/forecast?q=$city,$state,$country&appid=$apiKey&cnt=3"; // Adjusted URL to get 3-day forecast data
-            
+
                 // Initialize cURL
                 $ch = curl_init();
-            
+
                 // Set cURL options
                 curl_setopt($ch, CURLOPT_URL, $url);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            
+
                 // Execute cURL
                 $response = curl_exec($ch);
-            
+
                 // Check for errors
                 if (curl_errno($ch)) {
                     echo 'Error: ' . curl_error($ch);
                     return null;
                 }
-            
+
                 // Close cURL
                 curl_close($ch);
-            
+
                 // Decode JSON response
                 $data = json_decode($response, true);
-            
+
                 return $data;
             }
-            
+
             // Your city, state, country, and API key
             $city = "Surat";
             $state = "Gujarat";

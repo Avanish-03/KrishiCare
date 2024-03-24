@@ -30,7 +30,7 @@ if ($_SESSION["farmer"] == false) {
     <?php
     $id = $_SESSION["farmer"];
     // echo $id;
-    $sql = "SELECT `farmer_id`,`first_name`, `middle_name`, `last_name`, `email`, `contact_number`, `address`, `city`, `state` FROM `farmer_detail` WHERE `farmer_id`= '$id';";
+    $sql = "SELECT `farmer_id`,`first_name`, `middle_name`, `last_name`, `email`, `contact_number`, `address`, `city`, `state`,`farmerprofile` FROM `farmer_detail` WHERE `farmer_id`= '$id';";
 
     $result = mysqli_query($con, $sql);
     if ($result->num_rows > 0) {
@@ -70,7 +70,14 @@ if ($_SESSION["farmer"] == false) {
                             </svg>
                         </div>
                         <div class="lg:inline-flex md:flex my-2 h-[15%] w-full pt-4 gap-2">
-                            <img id="profile" class="h-10" src="../img/profile.png" alt="">
+                            <?php
+                            if (file_exists($row["farmerprofile"]) == true) {
+                                echo "<img src='../img/" . $row["farmerprofile"] . "' class='w-10 h-10 rounded-full shadow object-cover'>";
+                            } else {
+                                echo "<img id='profile' class='w-10 h-10 rounded-full shadow object-cover' src='../img/profile.png' alt=''> ";
+                            }
+                            ?>
+                            <!-- <img id="profile" class="h-10" src="../img/profile.png" alt=""> -->
                             <div class="w-full duration-300 heading" id="">
                                 <h1 class="text-black font-bold dark:text-white"><?php echo $row["first_name"] . " " . $row["middle_name"]; ?></h1>
                                 <p class="text-sm text-slate-400"><?php echo $row["email"] ?></p>
