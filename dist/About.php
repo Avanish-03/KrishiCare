@@ -1,4 +1,4 @@
-<?php include('Header.php'); ?>
+<?php //include('Header.php'); ?>
 <!-- About us page -->
 <section>
     <div>
@@ -74,4 +74,4 @@
 </section>
 
 
-<?php include('Footer.php'); ?>
+<?php //include('Footer.php'); ?>

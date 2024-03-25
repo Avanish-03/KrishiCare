@@ -1,4 +1,4 @@
-<?php include('Header.php') ?>
+<?php //include('Header.php') ?>
 
 <section class="text-gray-800 body-font relative">
     <div class="absolute inset-0 bg-gray-300">
@@ -26,4 +26,4 @@
 </section>
 
 
-<?php include('footer.php') ?>
+<?php //include('footer.php') ?>

@@ -1,121 +1,212 @@
-<?php include("Header.php"); ?>
+<?php include ("Header.php"); ?>
 <!-- section 1 -->
 <section>
     <!-- background img on landing page -->
-    <div class="w-full lg:h-screen h-96 object-cover bg-gray-100 sm:block -z-30 overflow-hidden">
-        <div class="relative flex justify-center pt-10 h-full z-10 bg-center bg-cover" style="background-image: url('../img/FMS-home.jpeg');">
-            <h1 class=" lg:text-7xl md:text-5xl text-3xl text-center sm:font-bold font-serif md:font-thin lg:font-semibold">"FARMING IS A PEOFESSION <br> OF HOPE" <br>
-                <span class=" lg:text-3xl md:text-xl text-lg font-bold font-serif">TAKING AGRICULTURE TO THE NEXT LEVEL</span>
-                <div class="w-full h-full text-center mt-5 ">
-                    <a class="w-fit border-2 border-white bg-white font-bold rounded-md md:py-2 py-1 px-2 md:px-5 text-black text-lg md:text-2xl" href="Login.php">Get Started</a>
+    <div class="w-full h-screen object-cover text-white bg-gray-100 sm:block -z-30 overflow-hidden">
+        <div class="flex justify-center pt-10 h-full z-10 bg-center bg-cover bg-fixed"
+            style="background-image: url('../img/bg-img2.jpg');">
+            <div class="w-[50%] flex flex-col justify-center items-start  p-10">
+                <h1 class="text-5xl font-bold text-wrap">FARMING IS A PEOFESSION OF HOPE </h1>
+                <span class="text-2xl font-normal capitalize">Taking agriculture To The Next Level , Join us in
+                    revolutionizing
+                    farming practices with Krishicare. Together, let's cultivate a brighter future for
+                    agriculture.</span>
+                <div class="mt-10">
+                    <a class="bg-green-600 hover:bg-white text-white hover:text-black py-2 px-4 rounded font-bold text-2xl"
+                        href="Login.php">Get Started</a>
+
                 </div>
-            </h1>
+            </div>
+            <div class="w-[50%] ">
+                <!-- right side content -->
+            </div>
         </div>
     </div>
+</section>
 
-    <section class="text-gray-600 body-font">
-        <div class="container px-5 py-10 mx-auto flex flex-wrap">
-            <div class="flex flex-wrap md:-m-2 -m-1">
-                <div class="flex flex-wrap w-1/2">
-                    <div class="md:p-2 p-1 w-1/2">
-                        <h1 class="text-7xl font-bold">All things grow with care & love</h1>
-                    </div>
-                    <div class="md:p-2 p-1 w-1/2">
-                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://images.pexels.com/photos/2252618/pexels-photo-2252618.jpeg?auto=compress&cs=tinysrgb&w=600">
-                    </div>
-                    <div class="md:p-2 p-1 w-full">
-                        <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://images.pexels.com/photos/2255801/pexels-photo-2255801.jpeg?auto=compress&cs=tinysrgb&w=600">
-                    </div>
+<!-- section 2 -->
+<section>
+    <div class="bg-white h-28 flex justify-around">
+        <div class="bg-gray-200 flex justify-center items-center px-4">
+            <img class="h-14 "
+                src="https://cdn-icons-png.freepik.com/256/346/346195.png?uid=R138725432&ga=GA1.1.1583059735.1708077775&"
+                alt="">
+            <p>New technology famring</p>
+        </div>
+        <div class="bg-gray-200 flex justify-center items-center px-4">
+            <img class="h-14"
+                src="https://cdn-icons-png.freepik.com/256/2625/2625688.png?uid=R138725432&ga=GA1.1.1583059735.1708077775&"
+                alt="">
+            <p>New technology famring</p>
+        </div>
+        <div class="bg-gray-200 flex justify-center items-center px-4">
+            <img class="h-14"
+                src="https://cdn-icons-png.freepik.com/256/5313/5313678.png?uid=R138725432&ga=GA1.1.1583059735.1708077775&"
+                alt="">
+            <p>New technology famring</p>
+        </div>
+    </div>
+</section>
+
+<!-- section 3 -->
+<section>
+    <!-- component -->
+    <div class="container bg-grey-lightest mx-auto shadow rounded pb-4 bg-cover"
+        style="color:#606F7B;background-color: rgb(165, 182, 198); background-image:url('https://68.media.tumblr.com/f6a4004f3092b0d664daeabb95d5d195/tumblr_oduyciOJNb1uhjffgo1_500.gif');">
+        <div class="mt-2 p-4 border-b border-grey-light  text-center">
+            <span class="text-4xl font-thin">Mountain View, US</span>
+            <span class="hidden sm:inline-block align-bottom text-xs">( 94041 )</span>
+        </div>
+        <div class="text-center text-xl text-grey-light p-4">
+            <span>Fog</span>
+            <span>, fog</span>
+        </div>
+        <div class="flex justify-center">
+            <div class="text-center p-2">
+                <div class="text-lg text-grey-light">
+                    <span class="text-right">45˚F</span>
+                    <span class="text-center text-5xl text-white mx-6  font-thin">49˚F</span>
+                    <span class="text-left">58˚F</span>
                 </div>
-                <div class="flex flex-wrap w-1/2">
-                    <div class="md:p-2 p-1 w-full">
-                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://images.pexels.com/photos/16019936/pexels-photo-16019936/free-photo-of-man-on-machine-plowing-field.jpeg?auto=compress&cs=tinysrgb&w=600">
-                    </div>
-                    <div class="md:p-2 p-1 w-1/2">
-                        <h1 class="text-5xl text-justify font-bold">Professional, On time, Every time!</h1>
-                    </div>
-                    <div class="md:p-2 p-1 w-1/2">
-                        <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://images.pexels.com/photos/265242/pexels-photo-265242.jpeg?auto=compress&cs=tinysrgb&w=600">
-                    </div>
+                <div class="text-grey-light tracking-wide">
+                    Saturday | 30 Dec | 10:30pm
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- section 4 -->
+<section class="text-gray-600 body-font overflow-hidden">
+    <div class="px-5 py-10 mx-auto">
+        <div class="lg:w-full mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pr-10  mb-6 lg:mb-0">
+                <h2 class="text-sm title-font text-gray-500 ">About Us</h2>
+                <h1 class="text-gray-900 text-3xl title-font font-bold mb-4">Welcome To KrishiCare</h1>
+
+                <p class=" mb-4 text-justify">The project “KrishiCare” is like a smart helper for farmers. It gives
+                    them instant info about weather, crops, and expert tips through a simple website. Using clever tech,
+                    it suggests how to grow crops better and connects farmers with laboratories. It's not just a tool,
+                    it's a friend helping farmers succeed together.
+                    KrishiCare goes a step further by generating easy-to-understand soil health reports. With just a few
+                    clicks, farmers can access comprehensive information about the health of their soil. These reports
+                    provide insights into essential factors like nutrient levels, pH balance, and recommendations for
+                    improvement. It simplifies the process of managing soil health, helping farmers make informed
+                    decisions for better crop growth and yield.
+                    KrishiCare's laboratory tool makes farming simpler. Farmers send soil and water samples, and the
+                    tool gives easy reports. It suggests what crops need for better growth. It's like a helpful friend
+                    making farming easier.
+                </p>
 
 
-    <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-10 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-                <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://images.pexels.com/photos/33044/sunflower-sun-summer-yellow.jpg?auto=compress&cs=tinysrgb&w=600">
-                <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0 text-justify">
-                    <h2 class="title-font tracking-widest text-gray-900 text-3xl title-font font-medium mb-1">Krishicare</h2>
-                    <!-- <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">The Catcher in the Rye</h1> -->
-                    <p class="leading-relaxed text-lg">The project “KrishiCare” is like a smart helper for farmers. It gives them instant info about weather, crops, and expert tips through a simple website. Using clever tech, it suggests how to grow crops better and connects farmers with laboratories. It's not just a tool, it's a friend helping farmers succeed together.
-                    </p>
-                    <p class="leading-relaxed text-lg">KrishiCare  goes a step further by generating easy-to-understand soil health reports. With just a few clicks, farmers can access comprehensive information about the health of their soil. These reports provide insights into essential factors like nutrient levels, pH balance, and recommendations for improvement. It simplifies the process of managing soil health, helping farmers make informed decisions for better crop growth and yield.
-                    </p>
-                    <!-- <div class="flex">
-                        <button class="flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded">Read More</button>
-                    </div> -->
+            </div>
+            <img alt="ecommerce" class="lg:w-1/2 w-full h-96 object-cover object-center rounded"
+                src="https://images.pexels.com/photos/2519332/pexels-photo-2519332.jpeg?auto=compress&cs=tinysrgb&w=600">
+        </div>
+    </div>
+</section>
+
+<!-- section 5 -->
+<!-- <section class="text-gray-600 body-font">
+    <div class="container px-5 py-10 mx-auto bg-white">
+        <div class="flex flex-wrap -m-4 text-center">
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+                <div class="p-6 rounded-lg">
+                    <img class="h-40 rounded w-full object-cover object-center mb-6"
+                        src="https://dummyimage.com/720x400" alt="content">
+                    <h2 class="text-lg text-gray-900 font-bold title-font mb-4">Chichen Itza</h2>
+                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery
+                        hexagon disrupt edison bulbche.</p>
+                </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+                <div class="p-6 rounded-lg">
+                    <img class="h-40 rounded w-full object-cover object-center mb-6"
+                        src="https://dummyimage.com/721x401" alt="content">
+                    <h2 class="text-lg text-gray-900 font-bold title-font mb-4">Colosseum Roma</h2>
+                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery
+                        hexagon disrupt edison bulbche.</p>
+                </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+                <div class="p-6 rounded-lg">
+                    <img class="h-40 rounded w-full object-cover object-center mb-6"
+                        src="https://dummyimage.com/722x402" alt="content">
+                    <h2 class="text-lg text-gray-900 font-bold title-font mb-4">Great Pyramid of Giza</h2>
+                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery
+                        hexagon disrupt edison bulbche.</p>
+                </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+                <div class="p-6 rounded-lg">
+                    <img class="h-40 rounded w-full object-cover object-center mb-6"
+                        src="https://dummyimage.com/723x403" alt="content">
+                    <h2 class="text-lg text-gray-900 font-bold title-font mb-4">San Francisco</h2>
+                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery
+                        hexagon disrupt edison bulbche.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section> -->
 
-    <!-- Information Section -->
-    <section class="text-gray-600 body-font">
-        <div class="container px-5 py-10 mx-auto">
-            <div class="flex flex-col text-center w-full mb-20">
-                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Information</h1>
+<!-- section 6 -->
+<section>
+    <div class="h-[90vh] flex">
+        <div class="bg-cover w-full bg-center bg-fixed"
+            style="background-image: url('https://images.pexels.com/photos/247512/pexels-photo-247512.jpeg?auto=compress&cs=tinysrgb&w=600');">
+            <span class="sr-only">hello</span>
+        </div>
+    </div>
+</section>
+
+<!-- section 7 -->
+<section>
+    <?php include 'About.php'; ?>
+</section>
+
+<!-- section 8 -->
+<section class="bg-white ">
+    <div class="container px-6 py-10 mx-auto">
+        <div class="xl:flex xl:items-center xL:-mx-4">
+            <div class="xl:w-1/2 xl:mx-4">
+                <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-4xl ">Know About Us !</h1>
+
+                <p class="text-lg mt-4 text-gray-700 text-justify">
+                    The Krishicare team is a group of passionate professionals who are dedicated to making farming
+                    better. They use new ideas and smart technology to help farmers grow more food in a way that's good
+                    for the environment. They work closely with farmers and others in the industry to make sure their
+                    solutions fit everyone's needs. By always listening to feedback and trying to get better, they're
+                    making a real difference in farming communities worldwide. With their leadership and determination,
+                    they're not just solving problems — they're shaping the future of agriculture for the better..
+                </p>
             </div>
-            <div class="flex flex-wrap -m-4">
-                <div class="lg:w-1/2 sm:w-1/2 p-4">
-                    <div class="flex relative">
-                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://images.pexels.com/photos/16209742/pexels-photo-16209742/free-photo-of-a-person-with-a-bicycle-walking-on-a-road-between-croplands-in-the-countryside.jpeg?auto=compress&cs=tinysrgb&w=600">
-                        <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 transition-all delay-500 ease-in-out duration-300">
-                            <h2 class="tracking-widest text-sm title-font font-medium text-green-500 mb-1">THE SUBTITLE</h2>
-                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
-                            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                        </div>
-                    </div>
+
+            <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-0 xl:mx-4 xl:w-1/2 md:grid-cols-2 text-center">
+                <div>
+                    <img class="object-cover rounded-full aspect-square"
+                        src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                        alt="">
+                    <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize ">Yadav Avanish</h1>
+                    <p class="mt-2 text-gray-700 capitalize ">Full stack website developer</p>
                 </div>
-                <div class="lg:w-1/2 sm:w-1/2 p-4">
-                    <div class="flex relative">
-                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://images.pexels.com/photos/16166132/pexels-photo-16166132/free-photo-of-woman-working-at-tea-plantation.jpeg?auto=compress&cs=tinysrgb&w=600">
-                        <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 transition-all delay-500 ease-in-out duration-300">
-                            <h2 class="tracking-widest text-sm title-font font-medium text-green-500 mb-1">THE SUBTITLE</h2>
-                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Neptune</h1>
-                            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:w-1/2 sm:w-1/2 p-4">
-                    <div class="flex relative">
-                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://images.pexels.com/photos/16166132/pexels-photo-16166132/free-photo-of-woman-working-at-tea-plantation.jpeg?auto=compress&cs=tinysrgb&w=600">
-                        <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 transition-all delay-500 ease-in-out duration-300">
-                            <h2 class="tracking-widest text-sm title-font font-medium text-green-500 mb-1">THE SUBTITLE</h2>
-                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Holden Caulfield</h1>
-                            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:w-1/2 sm:w-1/2 p-4">
-                    <div class="flex relative">
-                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://images.pexels.com/photos/849403/pexels-photo-849403.jpeg?auto=compress&cs=tinysrgb&w=600">
-                        <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 transition-all delay-500 ease-in-out duration-300">
-                            <h2 class="tracking-widest text-sm title-font font-medium text-green-500 mb-1">THE SUBTITLE</h2>
-                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-                            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                        </div>
-                    </div>
+
+                <div>
+                    <img class="object-cover rounded-full aspect-square"
+                        src="https://images.unsplash.com/photo-1499470932971-a90681ce8530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                        alt="">
+                    <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize ">Dwivedi Jyoti</h1>
+                    <p class="mt-2 text-gray-700 capitalize ">Full stack website developer</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-
+<!-- section 9 -->
+<section>
+    <?php include '../dist/Contact.php' ?>
 </section>
 
 
-
-<?php include("Footer.php"); ?>
+<?php include ("Footer.php"); ?>
