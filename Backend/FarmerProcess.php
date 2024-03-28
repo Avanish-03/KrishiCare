@@ -16,14 +16,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $farmerdata[] = null;
     }
 
-    $requestQuery = "SELECT r.request_id, r.farmer_id, r.request_date, r.lab_id, r.status AS request_status,
+    $requestQuery = "SELECT r.request_id As request_id, r.farmer_id, r.request_date, r.lab_id, r.status AS request_status,
     l.lab_name, l.email, l.lab_add, l.city, l.state, l.ownership, q.report_id, 
-    s.sample_id, s.request_id, s.lab_id AS sample_lab_id, s.farmer_id AS sample_farmer_id, s.collected_date AS sample_collected_date, s.status AS sample_status,
+    s.sample_id, s.request_id As sample_request_id, s.lab_id AS sample_lab_id, s.farmer_id AS sample_farmer_id, s.collected_date AS sample_collected_date, s.status AS sample_status,
     q.farmer_id AS report_farmer_id, q.status AS report_status, q.report_image
 FROM request_detail AS r 
 JOIN laboratory_detail AS l ON r.lab_id = l.lab_id
-LEFT JOIN Sample_detail AS s ON r.farmer_id = s.farmer_id
-LEFT JOIN report_detail AS q ON r.farmer_id = q.farmer_id
+LEFT JOIN Sample_detail AS s ON r.farmer_id = s.farmer_id And r.lab_id = s.lab_id
+LEFT JOIN report_detail AS q ON r.farmer_id = q.farmer_id AND r.lab_id = q.lab_id
 WHERE r.farmer_id = $farmerId
 OR s.farmer_id = $farmerId
 OR q.farmer_id = $farmerId

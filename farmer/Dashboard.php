@@ -117,11 +117,13 @@ for ($i = 0; $i < $data_size; $i++) {
                                    
                                     if ($nested_array["report_status"] == 'Generated') {
                                         echo "<td class='px-6 py-4 font-bold text-green-500'>" . $nested_array["report_status"] . "</td>";
-                                    } else if ($nested_array["sample_status" == 'Collected']) {
-                                        echo "<td class='px-6 py-4 font-bold text-green-500'>" . $nested_array["sample_status"] . "</td>";
-                                    } else if ($nested_array["request_status"] == 'Approved') {
-                                        echo "<td class='px-6 py-4 font-bold text-green-500'>" . $nested_array["request_status"] . "</td>";
-                                    } else {
+                                    } 
+                                    // else if ($nested_array["sample_status" == 'Collected']) {
+                                    //     echo "<td class='px-6 py-4 font-bold text-green-500'>" . $nested_array["sample_status"] . "</td>";
+                                    // } else if ($nested_array["request_status"] == 'Approved') {
+                                    //     echo "<td class='px-6 py-4 font-bold text-green-500'>" . $nested_array["request_status"] . "</td>";
+                                    // } 
+                                    else {
                                         echo "<td class='px-6 py-4 text-red-500'>Pending</td>";
                                     }
                                     echo "</tr>";
