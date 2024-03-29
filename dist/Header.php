@@ -15,8 +15,7 @@
     <script src="../tailwind.js"></script>
 </head>
 
-<body onload="loadStates()">
-
+<body onload="initializeCarousel();loadStates();">
     <header>
         <div class="h-10 w-full bg-slate-200 flex justify-around items-center">
             <div class="flex justify-start items-center font-mono">
@@ -73,8 +72,6 @@
             </div>
         </div>
     </header>
-
-    <!-- (1)NAVBAAR! -->
     <?php
 
     $path = $_SERVER['REQUEST_URI'];
@@ -82,7 +79,8 @@
     $path = end($path);
 
     ?>
-
+    
+    <!-- NAVBAAR! -->
     <section class="sticky top-0 z-50 min-w-96">
         <nav class="bg-white border-gray-200 dark:bg-white shadow-lg">
             <div class=" flex flex-wrap md:items-center justify-between mx-auto p-3">

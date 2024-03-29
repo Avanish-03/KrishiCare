@@ -233,31 +233,30 @@ function validateUser() {
     return false;
 }
 
-function submitRequest(id) {
+function submitRequest(farmerid, labid) {
 
-    var result = validateEmpty("requestdate", "Request Date")
-        && validateDropdown("labid", "Lab Name");
-    if (result) {
-        var requestdate = getvalue("requestdate");
-        var labId = getvalue("labid");
+    let date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
 
-        var dataForm =
-            'id=' + id +
-            '&requestdate=' + requestdate +
-            '&labid=' + labId +
-            '&process=soilrequest';
+    var requestdate = `${year}-${month}-${day}`;
 
-        ajaxCall('../Backend/FarmerProcess.php', 'post', dataForm, 'status', true);
+    var dataForm =
+        'id=' + farmerid +
+        '&requestdate=' + requestdate +
+        '&labid=' + labid +
+        '&process=soilrequest';
 
-        var status = getvalue('status');
-        if (status == 1) {
-            alert("Requested Successfully!");
-            resetFormdata('soilForm');
-        } else {
-            alert(status);
-        }
-        return false;
+    ajaxCall('../Backend/FarmerProcess.php', 'post', dataForm, 'status', true);
+
+    var status = getvalue('status');
+    if (status == 1) {
+        alert("Requested Successfully!");
+    } else {
+        alert(status);
     }
+    return false;
 }
 
 function verifyUser(labId) {
@@ -764,4 +763,57 @@ function drawChart() {
 
     var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
     chart.draw(data, options);
+}
+
+function initializeCarousel() {
+    let carouselContainer = document.querySelector(".carousel-container");
+    let carouselItems = document.querySelector(".carousel-items");
+    let currentIndex = 0;
+    let indicators = document.querySelectorAll('.indicator');
+    let prevButton = document.querySelector('.prev');
+    let nextButton = document.querySelector('.next');
+
+    // Function to update indicators
+    function updateIndicators() {
+        indicators.forEach(indicator => indicator.classList.remove('bg-white'));
+        indicators.forEach(indicator => indicator.classList.add('bg-opacity-70'));
+        indicators[currentIndex].classList.add('bg-white');
+        indicators[currentIndex].classList.remove('bg-opacity-70');
+    }
+
+    // Function to move to the selected index
+    function moveToIndex(index) {
+        currentIndex = index;
+        carouselItems.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateIndicators();
+    }
+
+    // Function to move to the previous slide
+    function moveToPrev() {
+        currentIndex = (currentIndex - 1 + carouselItems.children.length) % carouselItems.children.length;
+        carouselItems.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateIndicators();
+    }
+
+    // Function to move to the next slide
+    function moveToNext() {
+        currentIndex = (currentIndex + 1) % carouselItems.children.length;
+        carouselItems.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateIndicators();
+    }
+
+    // Automatic sliding
+    let slideInterval = setInterval(moveToNext, 3000); // Adjust the interval as needed
+
+    // Event listener for prev button
+    prevButton.addEventListener('click', () => {
+        clearInterval(slideInterval); // Stop automatic sliding when manually navigating
+        moveToPrev();
+    });
+
+    // Event listener for next button
+    nextButton.addEventListener('click', () => {
+        clearInterval(slideInterval); // Stop automatic sliding when manually navigating
+        moveToNext();
+    });
 }

@@ -15,22 +15,21 @@
             <div class="h-full w-full flex justify-center items-center">
                 <img class="h-80 w-80" src="../img/Download-rafiki.svg" alt="">
             </div>
-            <div class="h-full w-full flex justify-evenly items-center">
+            <div class="h-full w-full flex justify-center items-center gap-x-4">
                 <form action="../Backend/Reports/SoilTestReport/ViewReport.php" method="post">
                     <input type="submit" class="bg-green-600 cursor-pointer text-white rounded-lg p-2" name="viewReport" value="View Report">
                 </form>
                 <form action="../Backend/Reports/SoilTestReport/DownloadReport.php" method="post">
                     <input type="submit" class="bg-red-600 cursor-pointer text-white rounded-lg p-2" name="downloadReport" value=" Download Report ↆ ">
-                    
                 </form>
             </div>
         </div>
-        <div class="p-8 bg-gray-200 dark:bg-slate-700 rounded-lg">
+        <!-- <div class="p-8 bg-gray-200 dark:bg-slate-700 rounded-lg">
             <h1 class="text-2xl dark:text-gray-100 font-bold">Download Your Report</h1>
             <p class="dark:text-gray-200 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam delectus quam sint consequuntur iure incidunt obcaecati quidem aperiam expedita perspiciatis, magnam voluptates harum possimus doloribus minima, sapiente numquam voluptas praesentium rerum tempora, eius ipsam distinctio architecto? Facilis reprehenderit iste labore pariatur unde. Nam incidunt ab soluta nemo, harum dolor, velit pariatur porro voluptates earum, similique rerum. Cum suscipit tenetur laboriosam nam voluptatum ducimus debitis vitae iste odit optio. Aspernatur aliquam ad voluptatum dolores, temporibus vitae maxime nostrum eligendi nemo asperiores soluta quos vel illum alias nam nisi pariatur officiis. Natus officiis ex reiciendis. Eum in reiciendis nesciunt odio magni nobis.</p>
-        </div>
+        </div> -->
     </div>
-    
+
     <div class="h-fit w-full my-8 bg-gray-200 rounded-lg dark:bg-slate-700 flex items-center">
         <!-- Reports data -->
         <div class="relative h-fit w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 rounded-md">
@@ -79,16 +78,14 @@
                                     echo "<td class='px-6 py-4'>" . $nested_array["city"] . "</td>";
                                     echo "<td class='px-6 py-4'>" . $nested_array["state"] . "</td>";
                                     echo "<td class='px-6 py-4'>" . $nested_array["ownership"] . "</td>";
-                                   
+
                                     if ($nested_array["report_status"] == 'Generated') {
                                         echo "<td class='px-6 py-4 font-bold text-green-500'>" . $nested_array["report_status"] . "</td>";
-                                    } 
-                                    // else if ($nested_array["sample_status" == 'Collected']) {
-                                    //     echo "<td class='px-6 py-4 font-bold text-green-500'>" . $nested_array["sample_status"] . "</td>";
-                                    // } else if ($nested_array["request_status"] == 'Approved') {
-                                    //     echo "<td class='px-6 py-4 font-bold text-green-500'>" . $nested_array["request_status"] . "</td>";
-                                    // } 
-                                    else {
+                                    } else if ($nested_array["sample_status" == 'Collected']) {
+                                        echo "<td class='px-6 py-4 font-bold text-green-500'>" . $nested_array["sample_status"] . "</td>";
+                                    } else if ($nested_array["request_status"] == 'Approved') {
+                                        echo "<td class='px-6 py-4 font-bold text-green-500'>" . $nested_array["request_status"] . "</td>";
+                                    } else {
                                         echo "<td class='px-6 py-4 text-red-500'>Pending</td>";
                                     }
                                     echo "</tr>";
@@ -100,5 +97,6 @@
                 </div>
             </div>
         </div>
+    </div>
     <div class="h-7"></div>
 </section>
