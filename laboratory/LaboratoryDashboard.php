@@ -105,11 +105,6 @@ if ($_SESSION["laboratory"] == false) {
                                 <i class="fa-solid fa-house"></i>
                                 <div class="heading duration-300 cursor-pointer">Home</div>
                             </div>
-                            <div onclick="labMenuLoader('notification','<?php echo $_SESSION['laboratory'] ?>')"
-                                class="w-full py-3 space-x-2 font-bold text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
-                                <i class="fa-solid fa-bell"></i>
-                                <div class="heading duration-300 cursor-pointer">Notification</div>
-                            </div>
                             <div onclick="labMenuLoader('reqfarmer','<?php echo $_SESSION['laboratory'] ?>')"
                                 class="w-full py-3 space-x-2 font-bold text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-person-circle-question"></i>
@@ -124,6 +119,11 @@ if ($_SESSION["laboratory"] == false) {
                                 class="w-full py-3 space-x-2 font-bold text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="rotate-180 fa-solid fa-file-lines"></i>
                                 <div class="heading duration-300 cursor-pointer">Report</div>
+                            </div>
+                            <div onclick="labMenuLoader('notification','<?php echo $_SESSION['laboratory'] ?>')"
+                                class="w-full py-3 space-x-2 font-bold text-black dark:text-white hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                                <i class="fa-solid fa-bell"></i>
+                                <div class="heading duration-300 cursor-pointer">Notification</div>
                             </div>
                         </div>
                         <div class="w-full h-[25%]">

@@ -10,7 +10,7 @@ session_start();
             <img class="h-full w-full" src="../img/Profile data-rafiki.svg" alt="">
         </div>
         <div class="w-[50%] h-full flex items-center">
-            <h1 class=" text-4xl font-bold">profile Details</h1>
+            <h1 class="text-4xl font-bold dark:text-gray-100">profile Details</h1>
         </div>
     </div>
     <div class="h-fit w-full my-8 rounded-md bg-gray-200 dark:bg-slate-700">
@@ -60,7 +60,7 @@ session_start();
                 </div>
                 <input type="text" hidden name="labProfile" id="labProfile">
             </div>
-            <div class="text-center mt-10 text-gray-600 dark:text-white">
+            <div class="text-center mt-10 text-gray-800 dark:text-white">
                 <h3 class="text-4xl font-semibold leading-normal  mb-2">
                     Vivek Jagarwal
                 </h3>
