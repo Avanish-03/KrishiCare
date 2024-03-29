@@ -37,13 +37,11 @@
                         <tr>
                             <th scope="col" class="px-6 py-3">Sample Id</th>
                             <th scope="col" class="px-6 py-3">Sample Collected date</th>
-                            <th scope="col" class="px-6 py-3">Farmer Id</th>
                             <th scope="col" class="px-6 py-3">Farmer Name</th>
                             <th scope="col" class="px-6 py-3">Farmer Email</th>
                             <th scope="col" class="px-6 py-3">Farmer Address</th>
                             <th scope="col" class="px-6 py-3">Farmer City</th>
                             <th scope="col" class="px-6 py-3">Farmer State</th>
-                            <th scope="col" class="px-6 py-3">Lab Id</th>
                             <th scope="col" class="px-6 py-3">Status</th>
                             <!-- <th scope="col" class="px-6 py-3">Report</th> -->
                         </tr>
@@ -59,13 +57,11 @@
                                 echo "<tr class='bg-gray-100 dark:text-gray-300 border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'>";
                                 echo "<td class='px-6 py-4 font-medium whitespace-nowrap' >" . $nested_array["sample_id"] . "</td>";
                                 echo "<td class='px-6 py-4'>" . $nested_array["collected_date"] . "</td>";
-                                echo "<td class='px-6 py-4'>" . $nested_array["farmer_id"] . "</td>";
                                 echo "<td class='px-6 py-4'>" . $nested_array["first_name"] . " " . $nested_array["middle_name"] . " " . $nested_array["last_name"] . "</td>";
                                 echo "<td class='px-6 py-4'>" . $nested_array["email"] . "</td>";
                                 echo "<td class='px-6 py-4'>" . $nested_array["address"] . "</td>";
                                 echo "<td class='px-6 py-4'>" . $nested_array["city"] . "</td>";
                                 echo "<td class='px-6 py-4'>" . $nested_array["state"] . "</td>";
-                                echo "<td class='px-6 py-4'>" . $nested_array["lab_id"] . "</td>";
                                 echo "<td class='px-6 py-4'>" . $nested_array["status"] . "</td>";
                                 //     echo "<td class='px-6 py-2'>
                                 // <button onclick='acceptRequest(" . $nested_array["farmer_id"] . "," . $_SESSION['laboratory'] . ")' class='px-6 py-2 rounded-lg bg-green-300 hover:bg-green-400 text-gray-50 dark:text-gray-700'>
@@ -94,6 +90,22 @@
         <div class="h-full w-full flex justify-center items-center px-2">
             <div class="max-w-xl w-full mx-auto bg-slate-50 dark:bg-slate-800 p-8 rounded-lg shadow-xl">
                 <form id="verifyForm" class="">
+                    <div class="relative z-0 w-full my-5 group">
+                        <label for="requestid" class=" text-gray-500 dark:text-gray-400 " inputmode="numeric">Request Id
+                            : </label>
+                        <select name="requestid" id="requestid"
+                            class="bg-transparent border-b-2 border-gray-300 dark:border-gray-600 pb-1 text-slate-700 dark:text-gray-400 w-full">
+                            <option value="default">Select Request ID</option>
+                            <?php
+                            $data_size = count($soilrequestdata);
+                            for ($i = 0; $i < $data_size; $i++) {
+                                $nested_array = $soilrequestdata[$i];
+                                echo "<option value='" . $nested_array["request_id"] . "'>" . $nested_array["request_id"] . " </option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    
                     <div class="relative z-0 w-full my-5 group">
                         <label for="farmername" class=" text-gray-500 dark:text-gray-400 " inputmode="text">Farmer Name
                             : </label>
@@ -126,21 +138,6 @@
                         </select>
                     </div>
 
-                    <div class="relative z-0 w-full my-5 group">
-                        <label for="requestid" class=" text-gray-500 dark:text-gray-400 " inputmode="numeric">Request Id
-                            : </label>
-                        <select name="requestid" id="requestid"
-                            class="bg-transparent border-b-2 border-gray-300 dark:border-gray-600 pb-1 text-slate-700 dark:text-gray-400 w-full">
-                            <option value="default">Select Request ID</option>
-                            <?php
-                            $data_size = count($soilrequestdata);
-                            for ($i = 0; $i < $data_size; $i++) {
-                                $nested_array = $soilrequestdata[$i];
-                                echo "<option value='" . $nested_array["request_id"] . "'>" . $nested_array["request_id"] . " </option>";
-                            }
-                            ?>
-                        </select>
-                    </div>
 
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="text" onfocus="this.type='date';" onblur="this.type='text'"
