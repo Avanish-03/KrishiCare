@@ -7,7 +7,7 @@
             <img class="h-full w-full" src="../img/Push notifications-rafiki.svg" alt="">
         </div>
         <div class="w-[50%] h-full flex items-center">
-            <h1 class=" text-4xl font-bold">Notification received</h1>
+            <h1 class=" text-4xl dark:text-gray-200 font-bold">Notification received</h1>
         </div>
     </div>
     <div class="my-8 h-fit w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

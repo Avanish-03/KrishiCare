@@ -10,7 +10,7 @@
             <h1 class=" text-4xl font-bold">Notification</h1>
         </div>
     </div>
-    <div class="h-fit w-full bg-gray-200 dark:bg-gray-600 my-8 rounded-md">
+    <div class="h-fit w-full bg-gray-200 dark:bg-slate-600 my-8 rounded-md">
         <div class="px-12 py-12 ">
             <h1 class="text-3xl font-bold">Notification Settings</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, cumque.</p>

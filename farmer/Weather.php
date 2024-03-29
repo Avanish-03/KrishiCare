@@ -7,7 +7,7 @@
             <img class="h-full w-full" src="../img/Weather-cuate.svg" alt="">
         </div>
         <div class="w-[50%] h-full flex items-center">
-            <h1 class=" text-4xl font-bold">Weather Detail</h1>
+            <h1 class="dark:text-gray-100 text-4xl font-bold">Weather Detail</h1>
         </div>
     </div>
     <!-- Weather Data -->
@@ -36,7 +36,7 @@
         <div class="container px-5 py-10 mx-auto">
             <div class="flex flex-wrap w-full mb-3">
                 <div class="lg:w-1/2 w-full lg:mb-0">
-                    <?php echo '<h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900"> 7-Day Weather Forecast for ' . $city . ', India</h1>'; ?>
+                    <?php echo '<h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 dark:text-gray-50 text-gray-900"> 7-Day Weather Forecast for ' . $city . ', India</h1>'; ?>
                     <div class="h-1 ml-96 w-20 bg-indigo-500 rounded"></div>
                 </div>
             </div>

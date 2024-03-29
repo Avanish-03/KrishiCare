@@ -10,7 +10,7 @@ session_start();
             <img class="h-full w-full" src="../img/Profile data-rafiki.svg" alt="">
         </div>
         <div class="w-[50%] h-full flex items-center">
-            <h1 class=" text-4xl font-bold">Profile Detail</h1>
+            <h1 class="dark:text-gray-100 text-4xl font-bold">Profile Detail</h1>
         </div>
     </div>
     <div class="h-fit w-full my-8 rounded-md bg-gray-200 dark:bg-slate-700">

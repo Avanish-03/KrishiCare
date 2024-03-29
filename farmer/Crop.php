@@ -7,7 +7,7 @@
       <img class="h-full w-full" src="../img/rice field-amico.svg" alt="">
     </div>
     <div class="w-[50%] h-full flex items-center">
-      <h1 class=" text-4xl font-bold">Crops Detail</h1>
+      <h1 class="dark:text-gray-100 text-4xl font-bold">Crops Detail</h1>
     </div>
   </div>
   <section class="my-8 text-gray-600 body-font">

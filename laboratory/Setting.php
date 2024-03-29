@@ -14,7 +14,7 @@
         <!-- Update Form -->
         <h1 class="text-2xl font-bold">Setting > <span class="text-gray-700 dark:text-gray-200 text-lg">Security</span></h1>
         <p>Protect Your Data</p>
-        <div class="bg-gray-300 dark:bg-gray-700 h-fit rounded-lg px-16 mt-4 flex justify-around items-center">
+        <div class="bg-gray-300 dark:bg-slate-700 h-fit rounded-lg px-16 mt-4 flex justify-around items-center">
             <div class="">
                 <img src="../img/Security-setting.png" class="h-[60vh]" alt="">
             </div>

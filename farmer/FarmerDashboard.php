@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../Backend/config.php");
+include ("../Backend/config.php");
 if ($_SESSION["farmer"] == false) {
     header("location: ../dist/Login.php");
 }
@@ -12,7 +12,8 @@ if ($_SESSION["farmer"] == false) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KrishiCare - Farmer Information System</title>
-    <link rel="icon" href="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais">
+    <link rel="icon"
+        href="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais">
     <link rel="stylesheet" href="../dist/output.css">
     <link rel="stylesheet" href="../src/Js/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -35,13 +36,14 @@ if ($_SESSION["farmer"] == false) {
     $result = mysqli_query($con, $sql);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-    ?>
-            <div class="h-screen w-screen min-w-96 min-h-screen">
-                <div class="w-full h-[10%] outline-none">
+            ?>
+            <div class="h-screen w-screen min-w-96 min-h-screen ">
+                <div class="w-full h-[10%] outline-none overflow-hidden">
                     <!-- navbar -->
                     <div class="bg-slate-200 dark:bg-slate-900 h-full px-4 flex items-center duration-500">
                         <div class="w-[50%] flex items-center h-fit py-auto">
-                            <img src="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais" class="sm:h-10 h-6" alt="">
+                            <img src="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais"
+                                class="sm:h-10 h-6" alt="">
                             <h1 class="sm:text-3xl font-serif cursor-pointer text-gray-500 dark:text-gray-300">KrishiCare</h1>
                         </div>
                         <div class="w-[50%] h-full flex justify-end">
@@ -49,12 +51,18 @@ if ($_SESSION["farmer"] == false) {
                             <div class="w-[50%] h-full flex items-center justify-end">
                                 <div class="lg:inline-flex hidden md:w-[75%] md:inline-flex text-right">
                                     <div class="w-full">
-                                        <h1 class="text-black dark:text-white font-bold"><?php echo $row["first_name"] . " " . $row["middle_name"]; ?></h1>
-                                        <p class="text-sm text-slate-400"><?php echo $row["email"] ?></p>
+                                        <h1 class="text-black dark:text-white font-bold">
+                                            <?php echo $row["first_name"] . " " . $row["middle_name"]; ?>
+                                        </h1>
+                                        <p class="text-sm text-slate-400">
+                                            <?php echo $row["email"] ?>
+                                        </p>
                                     </div>
                                 </div>
-                                <div onclick="toggleMode()" class="h-full md:w-auto sm:w-full p-3 cursor-pointer flex items-center justify-end duration-700">
-                                    <img id="mode" src="../img/light-bulb.png" class="h-full p-1 bg-none rounded-full rotate-180 duration-500" alt="">
+                                <div onclick="toggleMode()"
+                                    class="h-full md:w-auto sm:w-full p-3 cursor-pointer flex items-center justify-end duration-700">
+                                    <img id="mode" src="../img/light-bulb.png"
+                                        class="h-full p-1 bg-none rounded-full rotate-180 duration-500" alt="">
                                 </div>
                             </div>
                         </div>
@@ -64,12 +72,15 @@ if ($_SESSION["farmer"] == false) {
                     <!-- Sidebar -->
                     <div id="sidebar" class="bg-slate-200 dark:bg-slate-900 h-full p-5 w-72 relative duration-500">
                         <!-- arrow icon -->
-                        <div onclick="toggleSidebar()" class="z-20 bg-white w-fit rounded-full px-0.5 absolute -right-3 top-2 cursor-pointer shadow-lg">
-                            <svg id="arrow" xmlns="http://www.w3.org/2000/svg" class="h-7 p-1 duration-500" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                        <div onclick="toggleSidebar()"
+                            class="z-20 bg-white w-fit rounded-full px-0.5 absolute -right-3 top-2 cursor-pointer shadow-lg">
+                            <svg id="arrow" xmlns="http://www.w3.org/2000/svg" class="h-7 p-1 duration-500"
+                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path
+                                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
                             </svg>
                         </div>
-                        <div class="lg:inline-flex md:flex my-2 h-[15%] w-full pt-4 gap-2">
+                        <div class="lg:inline-flex md:flex my-1 h-[15%] w-full pt-2 gap-2">
                             <?php
                             if (file_exists($row["farmerprofile"]) == true) {
                                 echo "<img src='../img/" . $row["farmerprofile"] . "' class='w-10 h-10 rounded-full shadow object-cover'>";
@@ -79,56 +90,74 @@ if ($_SESSION["farmer"] == false) {
                             ?>
                             <!-- <img id="profile" class="h-10" src="../img/profile.png" alt=""> -->
                             <div class="w-full duration-300 heading" id="">
-                                <h1 class="text-black font-bold dark:text-white"><?php echo $row["first_name"] . " " . $row["middle_name"]; ?></h1>
-                                <p class="text-sm text-slate-400"><?php echo $row["email"] ?></p>
+                                <h1 class="text-black font-bold dark:text-white">
+                                    <?php echo $row["first_name"] . " " . $row["middle_name"]; ?>
+                                </h1>
+                                <p class="text-sm text-slate-400">
+                                    <?php echo $row["email"] ?>
+                                </p>
                             </div>
                         </div>
                         <div class="w-full h-[60%]">
-                            <div>
-                                <h1 class="font-light sm:text-xl text-gray-500 sm:px-8 hidden sm:block uppercase select-none heading duration-300 cursor-pointer">MENU</h1>
-                            </div>
-                            <div onclick="farmerMenuLoader('dashboard','<?php echo $id ?>'); loadChart()" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <!-- <div>
+                                <h1
+                                    class="font-light sm:text-lg text-gray-600 sm:px-8 hidden sm:block uppercase select-none heading duration-300 cursor-pointer">
+                                    MENU</h1>
+                            </div> -->
+                            <div onclick="farmerMenuLoader('dashboard','<?php echo $id ?>'); loadChart()"
+                                class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-house"></i>
                                 <div class="heading duration-300 cursor-pointer">Home</div>
                             </div>
-                            <div onclick="farmerMenuLoader('notification','<?php echo $id ?>')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="farmerMenuLoader('notification','<?php echo $id ?>')"
+                                class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-bell"></i>
                                 <div class="heading duration-300 cursor-pointer">Notification</div>
                             </div>
-                            <div onclick="farmerMenuLoader('soil','<?php echo $id ?>')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="farmerMenuLoader('soil','<?php echo $id ?>')"
+                                class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="rotate-180 fa-solid fa-icicles"></i>
                                 <div class="heading duration-300 cursor-pointer">Soil</div>
                             </div>
-                            <div onclick="farmerMenuLoader('crop','<?php echo $id ?>')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="farmerMenuLoader('crop','<?php echo $id ?>')"
+                                class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-wheat-awn"></i>
                                 <div class="heading duration-300 cursor-pointer">Crop</div>
                             </div>
-                            <div onclick="farmerMenuLoader('technology','<?php echo $id ?>')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="farmerMenuLoader('technology','<?php echo $id ?>')"
+                                class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-building-wheat"></i>
                                 <div class="heading duration-300 cursor-pointer">Technology</div>
                             </div>
-                            <div onclick="farmerMenuLoader('weather','<?php echo $_SESSION['farmer'] ?>')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="farmerMenuLoader('weather','<?php echo $_SESSION['farmer'] ?>')"
+                                class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-cloud-bolt"></i>
                                 <div class="heading duration-300 cursor-pointer">Weather</div>
                             </div>
-                            <div onclick="farmerMenuLoader('report','<?php echo $_SESSION['farmer'] ?>')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="farmerMenuLoader('report','<?php echo $_SESSION['farmer'] ?>')"
+                                class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fas fa-file"></i>
                                 <div class="heading duration-300 cursor-pointer">Report</div>
                             </div>
                         </div>
                         <div class="w-full h-[25%]">
                             <div>
-                                <h1 class="font-light sm:text-xl text-gray-500 sm:px-8 hidden sm:block uppercase select-none heading duration-300 cursor-pointer">Setting</h1>
+                                <h1
+                                    class="font-light sm:text-md text-gray-600 hidden sm:block uppercase select-none heading duration-300 cursor-pointer">
+                                    Setting</h1>
                             </div>
-                            <div onclick="farmerMenuLoader('profile','<?php echo $_SESSION['farmer'] ?>')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="farmerMenuLoader('profile','<?php echo $_SESSION['farmer'] ?>')"
+                                class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-user"></i>
                                 <div class="heading duration-300 cursor-pointer">Profile</div>
                             </div>
-                            <div onclick="farmerMenuLoader('setting','<?php echo $_SESSION['farmer'] ?>'); loadUpdateForm('updateProfile','<?php echo $id ?>')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="farmerMenuLoader('setting','<?php echo $_SESSION['farmer'] ?>'); loadUpdateForm('updateProfile','<?php echo $id ?>')"
+                                class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-gear"></i>
                                 <div class="heading duration-300 cursor-pointer">Settings</div>
                             </div>
-                            <div onclick="logoutUser('farmer')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="logoutUser('farmer')"
+                                class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-right-from-bracket"></i>
                                 <div class="heading duration-300 cursor-pointer">Logout</div>
                             </div>
@@ -136,10 +165,13 @@ if ($_SESSION["farmer"] == false) {
                     </div>
                     <!-- Content -->
                     <div id="maincontent" class="w-full h-full bg-gray-100 dark:bg-slate-800 overflow-y-auto static">
-                        <div class="z-20 absolute bottom-2 right-8 m-2 bg-white px-1.5 py-1 w-fit rounded-full text-black cursor-pointer animate-bounce shadow-lg">
+                        <div
+                            class="z-20 absolute bottom-2 right-8 m-2 bg-white px-1.5 py-1 w-fit rounded-full text-black cursor-pointer animate-bounce shadow-lg">
                             <a href="#section">
-                                <svg id="arrow" xmlns="http://www.w3.org/2000/svg" class="h-5 duration-500 rotate-90" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                                    <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                                <svg id="arrow" xmlns="http://www.w3.org/2000/svg" class="h-5 duration-500 rotate-90"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    <path
+                                        d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
                                 </svg>
                             </a>
                         </div>
@@ -147,7 +179,7 @@ if ($_SESSION["farmer"] == false) {
                     </div>
                 </div>
             </div>
-    <?php
+            <?php
         }
     } else {
         echo "No user found";

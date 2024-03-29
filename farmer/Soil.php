@@ -10,11 +10,11 @@ session_start();
             <img class="h-full w-full" src="../img/Next steps-amico.svg" alt="">
         </div>
         <div class="w-[50%] h-full flex items-center">
-            <h1 class="text-4xl font-bold">Steps To Request For Soil Testing</h1>
+            <h1 class="text-4xl dark:text-gray-100 font-bold">Steps To Request For Soil Testing</h1>
         </div>
     </div>
     <!-- information Section -->
-    <div class="w-full mt-8">
+    <div class="w-full mt-8 text-gray-700 dark:text-gray-200">
         <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-x-scroll">
             <div class=" w-full">
                 <div class="rounded-xl bg-gray-200 dark:bg-slate-700 hover:shadow-2xl p-7 pb-12 relative w-full h-full">
@@ -22,7 +22,7 @@ session_start();
                         <i class="text-red-600 fa-solid fa-receipt"></i>
                         <h3 class="text-xl font-semibold mb-2">Form Designing &amp; Surveyor Tagging</h3>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-400">The process starts with the system facilitating in
+                    <p class="">The process starts with the system facilitating in
                         designing the survey forms with predefined questions
                         with a dynamic application while tagging the surveyor and also the assigned location from where
                         the soil
@@ -42,7 +42,7 @@ session_start();
                         <i class="text-blue-600 fa-solid fa-table"></i>
                         <h3 class="text-xl font-semibold mb-2">Collection of Data &amp; Sample Soil</h3>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-400">The survey data is collected and filled in a form in the
+                    <p class="">The survey data is collected and filled in a form in the
                         mobile app. The soil sample collected is
                         tagged with a unique identity code for future archiving, reference and retest. The system
                         captures the
@@ -63,7 +63,7 @@ session_start();
                         <i class="text-yellow-500 fa-solid fa-people-roof"></i>
                         <h3 class="text-xl font-semibold mb-2">Soil Archival Management</h3>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-400">The system facilitates in maintaining the record of the
+                    <p class="">The system facilitates in maintaining the record of the
                         soil archives and helps in tracking the history
                         of transaction of a soil sample taken for retesting.</p>
                     <div class="">
@@ -80,7 +80,7 @@ session_start();
                         <i class="text-teal-600 fa-solid fa-list-check"></i>
                         <h3 class="text-xl font-semibold mb-2">Recommendation</h3>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-400">The recommendation is prepared under two different
+                    <p class="">The recommendation is prepared under two different
                         parameters one is soil fertility status and the
                         other is region specific fertilization suitable for the soil. These soil informations are
                         accessed
@@ -101,7 +101,7 @@ session_start();
                         <i class="text-fuchsia-800 fa-solid fa-chart-simple"></i>
                         <h3 class="text-xl font-semibold mb-2">Report Analysis &amp; Simplification</h3>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-400">The soil scientists,develop simplified recommendations
+                    <p class="">The soil scientists,develop simplified recommendations
                         consisting of region-specific soil maps and lab
                         data using the most sophisticated tools techniques available, including machine learning
                         algorithm using
@@ -120,7 +120,7 @@ session_start();
                         <i class="text-emerald-400 fa-solid fa-flask-vial"></i>
                         <h3 class="text-xl font-semibold mb-2">Lab Testing &amp; Analysis of Soil</h3>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-400">The tests of the sample soil help analyze the soil type
+                    <p class="">The tests of the sample soil help analyze the soil type
                         found in the specific area and provide
                         information on different soil parameters like PH level, texture, structure and various elements
                         and
@@ -139,7 +139,7 @@ session_start();
 
     <div class="h-32 w-full bg-gray-200 rounded-lg my-8 dark:bg-slate-700 flex items-center">
         <div class="w-[50%] h-full flex items-center">
-            <h1 class="text-5xl font-bold text-slate-700 dark:text-gray-400 pl-8">Request form for Soil Testing</h1>
+            <h1 class="text-5xl font-bold text-slate-700  dark:text-gray-200 pl-8">Request form for Soil Testing</h1>
         </div>
     </div>
 
@@ -163,8 +163,8 @@ session_start();
                         placeholder="Search Requests">
                 </div>
                 <div class="w-full h-full rounded-b-lg grid grid-cols-1">
-                    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                        <thead class="text-xs text-gray-100 uppercase bg-gray-400 dark:bg-gray-900 dark:text-gray-100">
+                    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-200">
+                        <thead class="text-xs text-gray-100 uppercase bg-gray-400 dark:bg-slate-600 dark:text-gray-100">
                             <tr>
                                 <th scope="col" class="px-6 py-3">lab Name</th>
                                 <th scope="col" class="px-6 py-3">lab Address</th>
@@ -180,7 +180,7 @@ session_start();
                                 for ($i = 0; $i < $labdatasize; $i++) {
                                     // Accessing values of the nested array at index $i
                                     $nested_array = $labdata[$i];
-                                    echo "<tr class='bg-gray-100 dark:text-gray-300 border-b dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-600'>";
+                                    echo "<tr class='bg-gray-100 dark:text-gray-200 border-b dark:bg-slate-800 dark:border-gray-700 dark:hover:bg-slate-600'>";
                                     echo "<td class='px-6 py-4'>" . $nested_array["lab_name"] . "</td>";
                                     echo "<td class='px-6 py-4'>" . $nested_array["lab_add"] . "</td>";
                                     echo "<td class='px-6 py-4'>" . $nested_array["city"] . "</td>";

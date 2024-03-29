@@ -129,7 +129,7 @@ include("../Backend/config.php");
                             <div class="cursor-pointer hidden sm:block">Farmer</div>
                         </li>
                         <li onclick="adminMenuLoader('laboratory')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
-                            <i class="sm:mr-2 sm:text-xl fa-solid fa-flask-vial"></i>
+                            <i class="sm:mr-2 sm:text-xl fa-solid fa-bell"></i>
                             <div class="cursor-pointer hidden sm:block">Laboratory</div>
                         </li>
                         <li onclick="adminMenuLoader('report')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
