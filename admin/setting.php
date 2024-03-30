@@ -5,7 +5,7 @@
     <!-- information Section -->
     <div class="h-48 w-full bg-gray-200 rounded-lg dark:bg-slate-600 flex items-center">
         <div class="px-8 w-fit h-full flex justify-start">
-            <img class="h-full w-full" src="../img/Update-pana.svg" alt="">
+            <img class="h-full w-full" src="../img/setting-pana.png" alt="">
         </div>
         <div class="w-[50%] h-full flex items-center">
             <h1 class="text-md sm:text-4xl font-bold">Setting</h1>
