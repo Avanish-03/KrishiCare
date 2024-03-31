@@ -1002,6 +1002,10 @@ video {
   margin-top: 2rem;
 }
 
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1382,8 +1386,16 @@ video {
   max-width: 20rem;
 }
 
+.max-w-7xl {
+  max-width: 80rem;
+}
+
 .flex-auto {
   flex: 1 1 auto;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
 }
 
 .flex-shrink-0 {
@@ -2243,6 +2255,11 @@ video {
   padding-bottom: 2rem;
 }
 
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -2514,6 +2531,10 @@ video {
   line-height: 1.625;
 }
 
+.leading-5 {
+  line-height: 1.25rem;
+}
+
 .tracking-tight {
   letter-spacing: -0.025em;
 }
@@ -2679,6 +2700,11 @@ video {
   color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
+.text-indigo-600 {
+  --tw-text-opacity: 1;
+  color: rgb(79 70 229 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -2747,6 +2773,11 @@ video {
 
 .shadow-fuchsia-900 {
   --tw-shadow-color: #701a75;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow-gray-100 {
+  --tw-shadow-color: #f3f4f6;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -3262,6 +3293,11 @@ video {
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
 }
 
+:is(.dark .dark\:border-slate-700) {
+  --tw-border-opacity: 1;
+  border-color: rgb(51 65 85 / var(--tw-border-opacity));
+}
+
 :is(.dark .dark\:bg-blue-400) {
   --tw-bg-opacity: 1;
   background-color: rgb(96 165 250 / var(--tw-bg-opacity));
@@ -3496,6 +3532,12 @@ video {
   color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
+@media not all and (min-width: 1024px) {
+  .max-lg\:max-w-2xl {
+    max-width: 42rem;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:col-span-4 {
     grid-column: span 4 / span 4;
@@ -3695,6 +3737,11 @@ video {
   .sm\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .sm\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .sm\:text-left {
@@ -3956,6 +4003,11 @@ video {
     grid-column: span 2 / span 2;
   }
 
+  .lg\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .lg\:mb-0 {
     margin-bottom: 0px;
   }
@@ -4106,6 +4158,11 @@ video {
     padding-bottom: 2.5rem;
   }
 
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .lg\:pl-10 {
     padding-left: 2.5rem;
   }
@@ -4161,6 +4218,10 @@ video {
 
   .xl\:items-center {
     align-items: center;
+  }
+
+  .xl\:gap-8 {
+    gap: 2rem;
   }
 }
 

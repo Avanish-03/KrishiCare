@@ -7,7 +7,7 @@ session_start();
     <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Soil Information</h1>
     <div class="h-48 w-full bg-gray-200 rounded-lg dark:bg-slate-700 flex items-center">
         <div class="px-8 w-fit h-full flex justify-start">
-            <img class="h-full w-full" src="../img/Next steps-amico.svg" alt="">
+            <img class="h-full w-full" src="../img/soil.png" alt="">
         </div>
         <div class="w-[50%] h-full flex items-center">
             <h1 class="text-4xl dark:text-gray-100 font-bold">Steps To Request For Soil Testing</h1>

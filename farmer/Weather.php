@@ -4,7 +4,7 @@
     <!-- information Section -->
     <div class="h-48 w-full bg-gray-200 rounded-lg dark:bg-slate-700 flex items-center">
         <div class="px-8 w-fit h-full flex justify-start">
-            <img class="h-full w-full" src="../img/Weather-cuate.svg" alt="">
+            <img class="h-full w-full" src="../img/Weather-amico.png" alt="">
         </div>
         <div class="w-[50%] h-full flex items-center">
             <h1 class="dark:text-gray-100 text-4xl font-bold">Weather Detail</h1>

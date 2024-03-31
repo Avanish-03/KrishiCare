@@ -4,7 +4,7 @@
     <!-- information Section -->
     <div class="h-48 w-full bg-gray-200 rounded-lg dark:bg-slate-700 flex items-center">
         <div class="w-fit h-full flex justify-start">
-            <img class="h-full w-full" src="../img/Push notifications-rafiki.svg" alt="">
+            <img class="h-full w-full" src="../img/New notifications-bro.png" alt="">
         </div>
         <div class="w-[50%] h-full flex items-center">
             <h1 class=" text-4xl dark:text-gray-200 font-bold">Notification received</h1>

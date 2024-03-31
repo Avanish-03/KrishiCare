@@ -5,7 +5,7 @@ session_start();
     <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Dashboard</h1>
     <div class="bg-gray-200 dark:bg-gray-600 w-full h-36 rounded my-2 px-8 flex items-center relative">
         <div class="w-fit h-full flex justify-start">
-            <img class="h-full w-full min-w-fit" src="../img/Welcome-bro.svg" alt="">
+            <img class="h-full w-full min-w-fit" src="https://cdn.pixabay.com/photo/2019/03/18/17/23/hello-4063591_640.png" alt="">
         </div>
         <div class="h-full">
             <div class="top-24 h-5 w-[30%] blur-2xl shadow-2xl bg-fuchsia-500 absolute"></div>
