@@ -8,14 +8,17 @@
     <title>KrishiCare - Farmer Information System</title>
     <link rel="stylesheet" href="../dist/output.css">
     <link rel="stylesheet" href="../src/Js/styles.css">
-    <link rel="stylesheet" href="../src/Js/style.scss">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src="../src/Js/code.js"></script>
     <script src="../flowbite.js"></script>
-    <script src="../tailwind.js"></script>
+    <script>
+        window.onload = function () {
+            loadStates();
+            // initializeCarousel();
+        }
+    </script>
 </head>
 
-<body onload="initializeCarousel();loadStates();">
+<body onload="loadStates()">
     <header>
         <div class="h-10 w-full bg-slate-200 flex justify-around items-center">
             <div class="flex justify-start items-center font-mono">
@@ -79,21 +82,19 @@
     $path = end($path);
 
     ?>
-    
+
     <!-- NAVBAAR! -->
-    <section class="sticky top-0 z-50 min-w-96">
+    <section class="sticky top-0 z-50 min-w-96" onclick="initializeCarousel()">
         <nav class="bg-white border-gray-200 dark:bg-white shadow-lg">
-            <div class=" flex flex-wrap md:items-center justify-between mx-auto p-3">
+            <div class="flex flex-wrap md:items-center justify-between mx-auto p-3">
                 <a href="Home.php" class="flex md:items-center space-x-2 rtl:space-x-reverse sm:w-fit md:ml-10">
                     <img src="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais" alt="" class="h-10 lg:block sm:hidden hidden">
                     <p class="self-center text-3xl font-serif font-bold dark:text-black ">KrishiCare</p>
                 </a>
                 <div class="flex items-center md:items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse lg:pr-2">
-                    <button type="button" data-dropdown-toggle="language-dropdown-menu" class="hidden mx-2 sm:inline-flex items-center hover:text-green-900 text-lg font-bold hover:border-b-2 border-black">Register</button>
-                    <span class="hidden sm:flex text-lg font-bold px-2">|</span>
-                    <a role="button" href="Login.php" class="hidden mx-2 sm:inline-flex items-center hover:text-green-900 text-lg font-bold hover:border-b-2 border-black">Login</a>
+                    <button type="button" data-dropdown-toggle="register-dropdown-menu" class="hidden mx-2 sm:inline-flex items-center hover:text-green-900 text-lg font-bold hover:border-b-2 border-black">Register</button>
                     <!--Register Dropdown -->
-                    <div class="z-50 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-white" id="language-dropdown-menu">
+                    <div class="z-50 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-white" id="register-dropdown-menu">
                         <ul class="font-medium" role="none">
                             <li>
                                 <a href="lab_reg.php" class="block px-4 py-2 text-md text-gray-900 hover:bg-gray-100 dark:text-black dark:hover:bg-gray-300 dark:hover:text-gray-700" role="menuitem">
@@ -103,6 +104,28 @@
                             <li>
                                 <a href="farmer_reg.php" class="block px-4 py-2 text-md text-gray-900 hover:bg-gray-100 dark:text-black dark:hover:bg-gray-300 dark:hover:text-gray-700" role="menuitem">
                                     <div class="inline-flex items-center">Farmer</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="hidden sm:flex text-lg font-bold px-2">|</span>
+                    <button type="button" data-dropdown-toggle="login-dropdown-menu" class="hidden mx-2 sm:inline-flex items-center hover:text-green-900 text-lg font-bold hover:border-b-2 border-black">Login</button>
+                    <!--Login Dropdown -->
+                    <div class="z-50 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-white" id="login-dropdown-menu">
+                        <ul class="font-medium" role="none">
+                            <li>
+                                <a href="FarmerLogin.php" class="block px-4 py-2 text-md text-gray-900 hover:bg-gray-100 dark:text-black dark:hover:bg-gray-300 dark:hover:text-gray-700" role="menuitem">
+                                    <div class="inline-flex items-center">Farmer</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="LabLogin.php" class="block px-4 py-2 text-md text-gray-900 hover:bg-gray-100 dark:text-black dark:hover:bg-gray-300 dark:hover:text-gray-700" role="menuitem">
+                                    <div class="inline-flex items-center">Laboratory</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Login.php" class="block px-4 py-2 text-md text-gray-900 hover:bg-gray-100 dark:text-black dark:hover:bg-gray-300 dark:hover:text-gray-700" role="menuitem">
+                                    <div class="inline-flex items-center">Admin</div>
                                 </a>
                             </li>
                         </ul>
@@ -148,12 +171,12 @@
                                                                                                                                         } ?> ">FAQ</a>
                         </li>
                         <li class="sm:hidden py-2 md:py-0">
-                            <a href="../dist/farmer_reg.php" class="mr-3 hover:text-green-900 text-lg font-bold hover:border-b-2 border-black <?php if ($path == 'Contact.php') {
+                            <a href="../dist/farmer_reg.php" class="mr-3 hover:text-green-900 text-lg font-bold hover:border-b-2 border-black <?php if ($path == 'farmer_reg.php') {
                                                                                                                                                     echo "border-b-2 border-black text-black";
                                                                                                                                                 } ?> ">Register</a>
                         </li>
                         <li class="sm:hidden py-2 md:py-0">
-                            <a href="../dist/Login.php" class="mr-3 hover:text-green-900 text-lg font-bold hover:border-b-2 border-black <?php if ($path == 'Contact.php') {
+                            <a href="../dist/FarmerLogin.php" class="mr-3 hover:text-green-900 text-lg font-bold hover:border-b-2 border-black <?php if ($path == 'FarmerLogin.php') {
                                                                                                                                                 echo "border-b-2 border-black text-black";
                                                                                                                                             } ?> ">Login</a>
                         </li>

@@ -1,15 +1,7 @@
 <?php
-require ('config.php');
-
-require "./PHPMailer-master/src/PHPMailer.php";
-require "./PHPMailer-master/src/Exception.php";
-require "./PHPMailer-master/src/SMTP.php";
-require "./Reports/FPDF-master/fpdf.php";
-
-include ("./Reports/SoilReport.php");
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+require('config.php');
+include("./Reports/SoilReport.php");
+include("./Mail-master/SendEmail.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -22,11 +14,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     switch ($process) {
         case "dashboard":
             //code block
-            include ("../laboratory/Dashboard.php");
+            include("../laboratory/Dashboard.php");
             break;
         case "notification":
             //code block;
-            include ("../laboratory/Notification.php");
+            include("../laboratory/Notification.php");
             break;
         case "sample":
             //code block;
@@ -52,7 +44,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         FROM sample_detail As s
         JOIN farmer_detail As f ON s.farmer_id = f.farmer_id
         WHERE s.lab_id = '$labId';";
-
             $result = mysqli_query($con, $requestQuery);
             if ($result) {
                 $samplerequestdata = []; // Initialize array
@@ -65,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Handle query execution error
                 echo "Error executing query: " . mysqli_error($con);
             }
-            include ("../laboratory/Sample.php");
+            include("../laboratory/Sample.php");
             break;
         case "reqfarmer":
             //code block
@@ -104,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Handle query execution error
                 echo "Error executing query: " . mysqli_error($con);
             }
-            include ("../laboratory/farmer_req.php");
+            include("../laboratory/farmer_req.php");
             break;
         case "report":
             //code block
@@ -145,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Handle query execution error
                 echo "Error executing query: " . mysqli_error($con);
             }
-            include ("../laboratory/Report.php");
+            include("../laboratory/Report.php");
             break;
         case "uploadReport":
             //code block
@@ -190,7 +181,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } else {
                 echo "No user found";
             }
-            include ("../laboratory/Profile.php");
+            include("../laboratory/Profile.php");
             break;
         case "labProfile":
             //code block
@@ -213,7 +204,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;
         case "setting":
             //code block
-            include ("../laboratory/Setting.php");
+            include("../laboratory/Setting.php");
             break;
         case "changeStatus":
             //code block
@@ -282,32 +273,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //code block
             echo "Invalid Request";
             break;
-    }
-}
-
-function sendMail($send_to, $subject, $body)
-{
-    try {
-        $mail = new PHPMailer(true);
-        $mail->isSMTP();
-        $mail->SMTPAuth = true;
-        $mail->SMTPSecure = "tls";
-        $mail->Host = "smtp.gmail.com";
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = 587;
-
-        $mail->Username = "collageucc@gmail.com";
-        $mail->Password = "dtglgypehnapiiqr";
-
-        $mail->setFrom("collageucc@gmail.com", "Dwivedi Jyoti");
-
-        $mail->addAddress($send_to);
-        $mail->Subject = $subject;
-        $mail->Body = $body;
-        $mail->send();
-        return true; // Email sent successfully
-    } catch (Exception $e) {
-        echo $e;
-        return false; // Failed to send email
     }
 }

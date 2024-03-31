@@ -1,6 +1,7 @@
 <?php
 session_start();
 require('config.php');
+include("./Mail-master/SendEmail.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -25,6 +26,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $sql = "INSERT INTO `farmer_detail` (`farmer_id`, `first_name`, `middle_name`, `last_name`, `email`, `contact_number`, `address`, `city`, `state`, `password`) VALUES (NULL, '$firstname', '$middlename', '$lastname', '$email', '$contact', '$address', '$city', '$state', '$pwd');";
             $result = mysqli_query($con, $sql);
             echo $result;
+
+            $subject = "Reset Password!";
+            $body = "Dear " . $firstname . " " . $middlename . " " . $lastname . " , You Are Successfully Registered With Us. \nStay Connected Through Your dashboard!";
+
+            if ($result) {
+                sendMail($email, $subject, $body);
+            }
         }
     } else if ($process == "registerlab") {
 
@@ -44,6 +52,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $sql = "INSERT INTO `laboratory_detail` (`lab_id`, `lab_name`, `email`, `contact`, `lab_add`, `city`, `state`, `password`, `ownership`) VALUES (NULL, '$fullname', '$email','$contact','$address','$city','$state','$pwd','$ownership');";
             $result = mysqli_query($con, $sql);
             echo $result;
+
+            $subject = "Reset Password!";
+            $body = "Dear " . $fullname . " , You Are Successfully Registered With Us. \nStay Connected Through Your dashboard!";
+
+            if ($result) {
+                sendMail($email, $subject, $body);
+            }
         }
     } else if ($process == "registerContact") {
 
@@ -86,6 +101,66 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo $result;
         } else {
             echo "Invalid User !";
+        }
+    } elseif ($process == "adminPassword") {
+
+        $email = $_POST["email"];
+        $oldpass = $_POST['oldpass'];
+        $newpass = $_POST['newpass'];
+
+        $subject = "Reset Password!";
+        $body = "Dear $email, Your Password has been changed!";
+
+        $result = mysqli_query($con, "SELECT * FROM `admin` WHERE `name`= '$email' and `password` = '$oldpass'; ");
+        if (mysqli_num_rows($result) > 0) {
+            $sql = "UPDATE `admin` SET `password`='$newpass' WHERE `name`='$email' and `password` = '$oldpass';";
+            $result = mysqli_query($con, $sql);
+            echo $result;
+            if ($result) {
+                sendMail($email, $subject, $body);
+            }
+        } else {
+            echo "Invalid User!";
+        }
+    } elseif ($process == "labPassword") {
+
+        $email = $_POST["email"];
+        $oldpass = $_POST['oldpass'];
+        $newpass = $_POST['newpass'];
+
+        $subject = "Reset Password!";
+        $body = "Dear $email, Your Password has been changed!";
+
+        $result = mysqli_query($con, "SELECT * FROM `laboratory_detail` WHERE `email`= '$email' and `password` = '$oldpass'; ");
+        if (mysqli_num_rows($result) > 0) {
+            $sql = "UPDATE `laboratory_detail` SET `password`='$newpass' WHERE `email`='$email' and `password` = '$oldpass';";
+            $result = mysqli_query($con, $sql);
+            echo $result;
+            if ($result) {
+                sendMail($email, $subject, $body);
+            }
+        } else {
+            echo "Invalid User!";
+        }
+    } elseif ($process == "farmerPassword") {
+
+        $email = $_POST["email"];
+        $oldpass = $_POST['oldpass'];
+        $newpass = $_POST['newpass'];
+
+        $subject = "Reset Password!";
+        $body = "Dear $email, Your Password has been changed!";
+
+        $result = mysqli_query($con, "SELECT * FROM `farmer_detail` WHERE `email`= '$email' and `password` = '$oldpass'; ");
+        if (mysqli_num_rows($result) > 0) {
+            $sql = "UPDATE `farmer_detail` SET `password`='$newpass' WHERE `email`='$email' and `password` = '$oldpass';";
+            $result = mysqli_query($con, $sql);
+            echo $result;
+            if ($result) {
+                sendMail($email, $subject, $body);
+            }
+        } else {
+            echo "Invalid User!";
         }
     }
 }

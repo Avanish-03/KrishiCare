@@ -8,7 +8,7 @@ function registerFarmer() {
         validateEmpty('address', 'Address') &&
         validateDropdown('state', 'State') &&
         validateDropdown('city', 'City') &&
-        validatePassword();
+        validatePassword('pwd', 'cpwd');
 
     if (result) {
         var firstname = getvalue('firstname');
@@ -32,7 +32,7 @@ function registerFarmer() {
             '&city=' + city +
             '&password=' + password +
             '&process=registerFarmer';
-        alert(dataForm);
+
         ajaxCall('../Backend/Register.php', 'post', dataForm, 'status', true);
 
         var status = getvalue('status');
@@ -55,7 +55,7 @@ function registerLaboratory() {
         validateDropdown('state', 'State') &&
         validateDropdown('city', 'City') &&
         validateDropdown('ownership', 'Ownership') &&
-        validatePassword();
+        validatePassword('pwd', 'cpwd');
 
     if (result) {
 
@@ -165,7 +165,7 @@ function updateFarmerData(farmerId) {
 function updateFarmerPassword(farmerId) {
     var result =
         validateEmpty('oldpass', 'Old Password') &&
-        validatePassword();
+        validatePassword('pwd', 'cpwd');
 
     if (result) {
         var oldpass = getvalue('oldpass');
@@ -190,7 +190,7 @@ function updateFarmerPassword(farmerId) {
     return false;
 }
 
-function validateUser() {
+function validateUser(user) {
     var result =
         ValidateEmail('email', 'Email') &&
         validateEmpty('pwd', 'pwd');
@@ -199,25 +199,27 @@ function validateUser() {
         var email = getvalue('email');
         var pwd = getvalue('pwd');
 
-        var farmer = document.getElementById("farmer");
-        var laboratory = document.getElementById("laboratory");
-        let user = "";
-        let url = "";
-
-        if (farmer.checked) {
-            user = "farmer";
+        if (user == "farmer") {
             var dataForm = 'email=' + email + '&password=' + pwd + '&user=' + user + '&process=userLogin';
             url = "../farmer/FarmerDashboard.php";
 
-        } else if (laboratory.checked) {
-            user = "laboratory";
+        } else if (user == "laboratory") {
             var dataForm = 'email=' + email + '&password=' + pwd + '&user=' + user + '&process=userLogin';
             url = "../laboratory/LaboratoryDashboard.php";
 
+        } else if (user == "admin") {
+            var res = validateEmpty("verifyotp", "OTP");
+            if (res) {
+                var varifyAdmin = getvalue("varifyAdmin");
+                var verifyotp = getvalue("verifyotp");
+                if (varifyAdmin == verifyotp) {
+                    var dataForm = 'email=' + email + '&password=' + pwd + '&user=' + user + '&process=adminLogin';
+                    url = "../admin/Admindashboard.php";
+                    resetFormdata('varifyAdminForm');
+                }
+            }
         } else {
-            user = "admin";
-            var dataForm = 'email=' + email + '&password=' + pwd + '&user=' + user + '&process=adminLogin';
-            url = "../admin/Admindashboard.php";
+            alert("Invalid Request");
         }
 
         ajaxCall('../Backend/Login.php', 'post', dataForm, 'status', true);
@@ -228,6 +230,59 @@ function validateUser() {
             window.location.href = url;
         } else {
             alert("Invalid Username or Password");
+        }
+    }
+    return false;
+}
+
+function ResetPassword(user) {
+    alert(user)
+    var result = ValidateEmail('email', 'Email')
+        && CheckPassword('pwd', 'Password')
+        && CheckPassword('cpwd', 'New Password');
+    if (result) {
+        alert(result)
+        var email = getvalue('email');
+        var pwd = getvalue('pwd');
+        var newpwd = getvalue('cpwd');
+
+        if (user == "farmer") {
+            var dataForm = 'email=' + email + '&oldpass=' + pwd + '&newpass=' + newpwd + '&user=' + user + '&process=farmerPassword';
+        } else if (user == "laboratory") {
+            var dataForm = 'email=' + email + '&oldpass=' + pwd + '&newpass=' + newpwd + '&user=' + user + '&process=labPassword';
+        } else if (user == "admin") {
+            var dataForm = 'email=' + email + '&oldpass=' + pwd + '&newpass=' + newpwd + '&user=' + user + '&process=adminPassword';
+        } else {
+            alert("Invalid Request");
+        }
+
+        ajaxCall('../Backend/Register.php', 'post', dataForm, 'status', true);
+        var status = getvalue('status');
+        if (status == 1) {
+            alert("Password Changed Successfully!");
+            resetFormdata('ResetPassword');
+        } else {
+            alert("Invalid Username or Password");
+        }
+    }
+    return false;
+}
+
+function varifyAdmin() {
+    var result = ValidateEmail('email', 'Email') &&
+        validateEmpty('pwd', 'Password');
+    if (result) {
+        var email = getvalue('email');
+        var pwd = getvalue('pwd');
+
+        let dataForm = 'email=' + email + '&password=' + pwd + '&user=admin' + '&process=varifyAdmin';
+        ajaxCall('../Backend/Login.php', 'post', dataForm, 'varifyAdmin', true, false);
+
+        var status = getvalue('varifyAdmin');
+        if (isNaN(status)) {
+            alert(status);
+        } else {
+            alert("OTP Sent Successfully!");
         }
     }
     return false;
@@ -279,7 +334,6 @@ function verifyUser(labId) {
             '&labId=' + labId +
             '&process=verifyUser';
 
-        alert(dataForm);
         ajaxCall('../Backend/labProcess.php', 'post', dataForm, 'verifyUser', true, false);
 
         var status = getvalue('verifyUser');
@@ -442,14 +496,14 @@ function CheckPassword(elementId, elementName) {
     }
 }
 
-function validatePassword() {
+function validatePassword(firstElement, secondElement) {
     var res =
-        CheckPassword('pwd', 'Password') &&
-        CheckPassword('cpwd', 'Confirm Password');
+        CheckPassword(firstElement, 'Password') &&
+        CheckPassword(secondElement, 'Confirm Password');
 
     if (res) {
-        var pass = document.getElementById('pwd').value;
-        var cpass = document.getElementById('cpwd').value;
+        var pass = document.getElementById(firstElement).value;
+        var cpass = document.getElementById(secondElement).value;
         if (pass == cpass) {
             return true;
         } else {
@@ -466,10 +520,10 @@ function togglepassword(imageId, textboxId) {
     var input = document.getElementById(textboxId);
 
     if (input.type == "password") {
-        img.src = "../img/eye.png";
+        img.src = "../img/seen.png";
         input.type = "text";
     } else {
-        img.src = "../img/seen.png";
+        img.src = "../img/eye.png";
         input.type = "password";
     }
 }
@@ -504,8 +558,8 @@ function loadStates() {
     var stateSelect = document.querySelector('.state');
     var citySelect = document.querySelector('.city');
 
-    // stateSelect.disabled = false;
-    citySelect.disabled = true;
+    stateSelect.disabled = false;
+    citySelect.disabled = false;
 
     stateSelect.style.pointerEvents = 'auto';
     citySelect.style.pointerEvents = 'none';
@@ -581,9 +635,9 @@ function toggleheadings(opensidebar) {
     var headings = document.getElementsByClassName("heading");
     for (let i = 0; i < headings.length; i++) {
         if (opensidebar) {
-            headings[i].classList.add("scale-0");
+            headings[i].classList.add("hidden");
         } else {
-            headings[i].classList.remove("scale-0");
+            headings[i].classList.remove("hidden");
         }
     }
 }
@@ -671,44 +725,44 @@ function labProfilePic(process, labid) {
     return false;
 }
 
-function loadChart() {
-    var dataPoints = [
-        { label: "WordPress", y: 60.0 },
-        { label: "Joomla", y: 6.5 },
-        { label: "Drupal", y: 4.6 },
-        { label: "Magento", y: 2.4 },
-        { label: "Blogger", y: 1.9 },
-        { label: "Shopify", y: 1.8 },
-        { label: "Bitrix", y: 1.5 },
-        { label: "Squarespace", y: 1.5 },
-        { label: "PrestaShop", y: 1.3 },
-        { label: "Wix", y: 0.9 },
-        { label: "OpenCart", y: 0.8 }
-    ];
+// function loadChart() {
+//     var dataPoints = [
+//         { label: "WordPress", y: 60.0 },
+//         { label: "Joomla", y: 6.5 },
+//         { label: "Drupal", y: 4.6 },
+//         { label: "Magento", y: 2.4 },
+//         { label: "Blogger", y: 1.9 },
+//         { label: "Shopify", y: 1.8 },
+//         { label: "Bitrix", y: 1.5 },
+//         { label: "Squarespace", y: 1.5 },
+//         { label: "PrestaShop", y: 1.3 },
+//         { label: "Wix", y: 0.9 },
+//         { label: "OpenCart", y: 0.8 }
+//     ];
 
-    var chart = new CanvasJS.Chart("chartContainer", {
-        animationEnabled: true,
-        theme: "light2",
-        title: {
-            text: "CMS Market Share - 2017"
-        },
-        axisY: {
-            suffix: "%",
-            scaleBreaks: {
-                autoCalculate: true
-            }
-        },
-        data: [{
-            type: "column",
-            yValueFormatString: "#,##0\"%\"",
-            indexLabel: "{y}",
-            indexLabelPlacement: "inside",
-            indexLabelFontColor: "white",
-            dataPoints: dataPoints
-        }]
-    });
-    chart.render();
-}
+//     var chart = new CanvasJS.Chart("chartContainer", {
+//         animationEnabled: true,
+//         theme: "light2",
+//         title: {
+//             text: "CMS Market Share - 2017"
+//         },
+//         axisY: {
+//             suffix: "%",
+//             scaleBreaks: {
+//                 autoCalculate: true
+//             }
+//         },
+//         data: [{
+//             type: "column",
+//             yValueFormatString: "#,##0\"%\"",
+//             indexLabel: "{y}",
+//             indexLabelPlacement: "inside",
+//             indexLabelFontColor: "white",
+//             dataPoints: dataPoints
+//         }]
+//     });
+//     chart.render();
+// }
 
 function logoutUser(user) {
     var result = confirm("Are you sure to logout!");
@@ -742,31 +796,30 @@ function toggleModeAdmin() {
     }
 }
 
-google.charts.load("current", {
-    packages: ["corechart"]
-});
-google.charts.setOnLoadCallback(drawChart);
-function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-        ['Task', 'Hours per Day'],
-        ['Work', 11],
-        ['Eat', 2],
-        ['Commute', 2],
-        ['Watch TV', 2],
-        ['Sleep', 7]
-    ]);
+// google.charts.load("current", {
+//     packages: ["corechart"]
+// });
+// google.charts.setOnLoadCallback(drawChart);
+// function drawChart() {
+//     var data = google.visualization.arrayToDataTable([
+//         ['Task', 'Hours per Day'],
+//         ['Work', 11],
+//         ['Eat', 2],
+//         ['Commute', 2],
+//         ['Watch TV', 2],
+//         ['Sleep', 7]
+//     ]);
 
-    var options = {
-        title: 'My Daily Activities',
-        is3D: true,
-    };
+//     var options = {
+//         title: 'My Daily Activities',
+//         is3D: true,
+//     };
 
-    var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-    chart.draw(data, options);
-}
+//     var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+//     chart.draw(data, options);
+// }
 
 function initializeCarousel() {
-    let carouselContainer = document.querySelector(".carousel-container");
     let carouselItems = document.querySelector(".carousel-items");
     let currentIndex = 0;
     let indicators = document.querySelectorAll('.indicator');
@@ -779,13 +832,6 @@ function initializeCarousel() {
         indicators.forEach(indicator => indicator.classList.add('bg-opacity-70'));
         indicators[currentIndex].classList.add('bg-white');
         indicators[currentIndex].classList.remove('bg-opacity-70');
-    }
-
-    // Function to move to the selected index
-    function moveToIndex(index) {
-        currentIndex = index;
-        carouselItems.style.transform = `translateX(-${currentIndex * 100}%)`;
-        updateIndicators();
     }
 
     // Function to move to the previous slide

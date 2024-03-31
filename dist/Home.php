@@ -11,7 +11,7 @@
                     agriculture.
                 </span>
                 <div class="mt-10 px-20">
-                    <a class="bg-green-600 hover:bg-white text-white hover:text-black py-2 px-4 rounded font-bold text-2xl" href="Login.php">Get Started</a>
+                    <a class="bg-green-500 hover:bg-green-600 text-white hover:text-black/45 duration-200 py-2 px-4 rounded font-bold text-2xl" href="FarmerLogin.php">Get Started</a>
                 </div>
             </div>
             <div class="carousel-item h-full w-full shrink-0 px-4 text-gray-100 flex-col flex justify-center items-start bg-cover bg-norepeat bg-[url(../img/thumbnail-img-1.jpg)]">
@@ -21,7 +21,7 @@
                     agriculture.
                 </span>
                 <div class="mt-10 px-20">
-                    <a class="bg-green-600 hover:bg-white text-white hover:text-black py-2 px-4 rounded font-bold text-2xl" href="Login.php">Get Started</a>
+                    <a class="bg-green-500 hover:bg-green-600 text-white hover:text-black/45 duration-200 py-2 px-4 rounded font-bold text-2xl" href="FarmerLogin.php">Get Started</a>
                 </div>
             </div>
             <div class="carousel-item h-full w-full shrink-0 px-4 text-gray-100 flex-col flex justify-center items-start bg-cover bg-norepeat bg-[url(../img/thumbnail-img-2.jpg)]">
@@ -31,7 +31,7 @@
                     agriculture.
                 </span>
                 <div class="mt-10 px-20">
-                    <a class="bg-green-600 hover:bg-white text-white hover:text-black py-2 px-4 rounded font-bold text-2xl" href="Login.php">Get Started</a>
+                    <a class="bg-green-500 hover:bg-green-600 text-white hover:text-black/45 duration-200 py-2 px-4 rounded font-bold text-2xl" href="FarmerLogin.php">Get Started</a>
                 </div>
             </div>
             <div class="carousel-item h-full w-full shrink-0 px-4 text-gray-100 flex-col flex justify-center items-start bg-cover bg-norepeat bg-[url(../img/bg-img1.jpg)]">
@@ -41,7 +41,7 @@
                     agriculture.
                 </span>
                 <div class="mt-10 px-20">
-                    <a class="bg-green-600 hover:bg-white text-white hover:text-black py-2 px-4 rounded font-bold text-2xl" href="Login.php">Get Started</a>
+                    <a class="bg-green-500 hover:bg-green-600 text-white hover:text-black/45 duration-200 py-2 px-4 rounded font-bold text-2xl" href="FarmerLogin.php">Get Started</a>
                 </div>
             </div>
             <div class="carousel-item h-full w-full shrink-0 px-4 text-gray-100 flex-col flex justify-center items-start bg-cover bg-norepeat bg-[url(../img/satallite-img2.jpg)]">
@@ -51,7 +51,7 @@
                     agriculture.
                 </span>
                 <div class="mt-10 px-20">
-                    <a class="bg-green-600 hover:bg-white text-white hover:text-black py-2 px-4 rounded font-bold text-2xl" href="Login.php">Get Started</a>
+                    <a class="bg-green-500 hover:bg-green-600 text-white hover:text-black/45 duration-200 py-2 px-4 rounded font-bold text-2xl" href="FarmerLogin.php">Get Started</a>
                 </div>
             </div>
         </div>
@@ -86,7 +86,7 @@
                     farming practices with Krishicare. Together, let's cultivate a brighter future for
                     agriculture.</span>
                 <div class="mt-10">
-                    <a class="bg-green-600 hover:bg-white text-white hover:text-black py-2 px-4 rounded font-bold text-2xl" href="Login.php">Get Started</a>
+                    <a class="bg-green-500 hover:bg-green-600 text-white hover:text-black/45 duration-200 py-2 px-4 rounded font-bold text-2xl" href="FarmerLogin.php">Get Started</a>
                 </div>
             </div>
             <div class="w-[50%] ">
@@ -270,7 +270,7 @@
 
 <!-- section 8 -->
 <section>
-    <?php include '../dist/Contact.php' ?>
+    <?php include 'Contact.php' ?>
 </section>
 
 <?php include("Footer.php"); ?>

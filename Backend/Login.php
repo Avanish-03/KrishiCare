@@ -1,20 +1,42 @@
 <?php
 session_start();
 require('config.php');
+include("./Mail-master/SendEmail.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $process = $_POST["process"];
 
-    if ($process == "adminLogin") {
+    if ($process == "varifyAdmin") {
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $result = mysqli_query($con, "SELECT * FROM `admin` WHERE name= '$email' and password = '$password';");
+        if (mysqli_num_rows($result) > 0) {
+            
+            $verification_otp = random_int(100000, 999999);
+
+            $subject = "OTP verification";
+            $body = "Hello, $email \n Your otp is $verification_otp .";
+
+            $send = sendMail($email, $subject, $body);
+            if ($send) {
+                echo $verification_otp;
+            } else {
+                echo "Failed to send email. Please try again later.";
+            }
+        }
+    } else if ($process == "adminLogin") {
 
         $email = $_POST['email'];
         $password = $_POST['password'];
         $user = $_POST['user'];
+
         $result = mysqli_query($con, "SELECT * FROM `admin` WHERE name= '$email' and password = '$password';");
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 $adminName = $row["name"];
+
                 $_SESSION[$user] = $adminName;
                 echo "1";
             }

@@ -13,26 +13,17 @@ include("../Backend/config.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://cdn-icons-png.freepik.com/256/4140/4140048.png?ga=GA1.1.253096211.1707907143&">
+    <!-- <link rel="icon" href="https://cdn-icons-png.freepik.com/256/4140/4140048.png?ga=GA1.1.253096211.1707907143&"> -->
     <title>KrishiCare - Farmer Information System</title>
     <link rel="icon" href="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais">
     <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
     <link rel="stylesheet" href="../dist/output.css">
     <link rel="stylesheet" href="../src/Js/styles.css">
+    <script src="../src/Js/code.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../tailwind.css">
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="../src/Js/code.js"></script>
-    <script src="../flowbite.js"></script>
-    <script src="../tailwind.js"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-        }
-    </script>
 </head>
 
 <body onload="adminMenuLoader('dashboard');drawChart();" class="overflow-hidden dark:text-white ">
@@ -113,7 +104,19 @@ include("../Backend/config.php");
             <div class="sm:w-[16%] w-[18%] h-full dark:bg-gray-800 bg-gray-200">
                 <div class="sm:h-fit h-[60%] pt-4">
                     <div class="flex justify-start px-2 items-center text-white my-2 sm:hidden">
-                        <img src="../img/avanish.jpg" class="sm:h-12 sm:w-12 h-8 w-8 rounded-full sm:mr-3" alt="">
+                        <?php
+                        $adminQuery = "SELECT `adminprofile`,`name`, `password` FROM `admin` WHERE `name`= 'admin@gmail.com';";
+                        $result = mysqli_query($con, $adminQuery);
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                if (!$row["adminprofile"] == null) {
+                                    echo " <img src='../img/" . $row["adminprofile"] . "' class='h-12 w-12 rounded-full object-cover' alt=''>";
+                                } else {
+                                    echo " <img src='../img/profile.png' class='h-12 w-12 rounded-full' alt=''>";
+                                }
+                            }
+                        }
+                        ?>
                     </div>
                     <!-- MENU -->
                     <div>
