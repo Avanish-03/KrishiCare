@@ -10,11 +10,13 @@
             <h1 class="text-7xl h-full w-full select-none z-10 font-extrabold flex justify-center items-center bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-gray-400">Admin</h1>
         </div>
     </div>
-    <div class="h-96 w-full grid grid-cols-1 sm:grid-cols-2 gap-8">
-        <div>
-            <?php require_once("chart.php"); ?>
+    <div class="h-96 w-full grid grid-cols-1 sm:grid-cols-2 gap-8 my-8">
+        <div class="bg-gray-200 dark:bg-slate-600 rounded">
+
         </div>
-        <div class="bg-gray-200 dark:bg-slate-600 rounded"></div>
+        <div class="bg-gray-200 dark:bg-slate-600 rounded">
+
+        </div>
     </div>
     <div class="h-7"></div>
 </section>

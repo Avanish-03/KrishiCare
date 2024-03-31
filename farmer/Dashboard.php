@@ -175,19 +175,19 @@ for ($i = 0; $i < $data_size; $i++) {
             </div>
         </section>
 
-        <div class="lg:h-96 h-fit w-full my-3 rounded-md bg-gray-200 dark:bg-slate-700 grid grid-cols-1 md:grid-cols-2">
+        <!--<div class="lg:h-96 h-fit w-full my-3 rounded-md bg-gray-200 dark:bg-slate-700 grid grid-cols-1 md:grid-cols-2">
             <div class="w-full h-full rounded-md flex items-center justify-center relative">
                 <div class="h-80 w-80 blur-xl rounded-full shadow-2xl shadow-fuchsia-900 absolute  "></div>
                 <img class="h-96 w-96 z-10" src="../img/rice field-bro.svg" alt="">
             </div>
             <div class="w-full h-full px-8 py-2 flex flex-col justify-center items-center relative rounded-md">
-                <!-- <h1>Farming is a proffession of hope</h1> -->
+                <h1>Farming is a proffession of hope</h1>
                 <div class="z-10 text-5xl font-bold text-center transition-all duration-1000 hover:scale-110 text-green-700 dark:text-gray-300 peer">"The good farmer is a craftsman of the highest order, a kind of artist." </div>
                 <div class="h-8 w-[90%] blur-3xl shadow-2xl dark:bg-blue-400 dark:peer-hover:shadow-fuchsia-900 absolute  "></div>
                 <h1 class="text-xs pt-4 text-gray-500 dark:text-gray-300">अच्छा किसान सर्वोच्च कोटि का शिल्पकार, एक प्रकार का कलाकार होता है</h1>
             </div>
         </div>
-        <!-- data -->
+       data -->
         <!--  <div class="h-96 w-full my-5 flex bg-gray-200 dark:bg-slate-700 rounded-md">
             <div class="w-[50%] h-full flex items-center">
                  <div class="h-full w-[90%] space-y-2 py-0.5">

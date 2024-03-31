@@ -42,7 +42,7 @@ include("../Backend/config.php");
                     <div class="flex justify-center items-center sm:mx-4 space-x-2">
                         <div class="toggle-btn sm:w-10 sm:h-5 bg-slate-500 dark:bg-slate-500 bg-opacity-50 rounded-full flex items-start">
                             <input type="checkbox" id="modeCheckbox" class="hidden">
-                            <label onclick="toggleModeAdmin()" for="modeCheckbox" class="toggle-ball transition-all duration-300 ease-in-out w-3 h-3 dark:pl-2 -mt-1 rounded-full relative inline-block cursor-pointer">
+                            <label onclick="toggleModeAdmin()" for="modeCheckbox" class="toggle-ball transition-all duration-300 ease-in-out w-3 h-3 dark:pl-2 -mt-0.5 rounded-full relative inline-block cursor-pointer">
                                 <i class="fa-solid fa-circle-half-stroke text-slate-600 dark:text-slate-200 dark:rotate-180 duration-150 text-xl"></i>
                             </label>
                         </div>

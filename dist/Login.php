@@ -1,14 +1,15 @@
 <?php include("Header.php") ?>
 <section class="h-screen w-screen">
-    <div class="h-full md:h-[60%] w-full flex items-center justify-center">
-        <div class="min-h-full w-full py-6 flex flex-col justify-center sm:py-12 mt-8">
+    <div class="h-fit md:h-[60%] w-full flex items-center justify-center my-9">
+        <div class="h-full w-full py-6 flex flex-col justify-center sm:py-12 mt-8">
             <div>
-                <!-- <h1 class="text-4xl w-full text-center font-semibold">Admin Login Form</h1> -->
+                <h1 class="text-xl w-full text-center font-semibold">Welcome Back</h1>
+                <h1 class="text-lg w-full text-center font-semibold my-4">We are <span class="text-green-500 border-b-2 py-1 border-green-500">Happy</span> to see you back</h1>
             </div>
-            <div class="relative py-3 px-4 w-full sm:mx-auto flex justify-center">
+            <div class="relative px-4 w-full h-full sm:mx-auto flex justify-center">
                 <div class="relative min-w-96 px-4 py-10 w-[50%] shadow-lg sm:rounded-3xl sm:p-20 md:p-4 grid grid-cols-1 md:grid-cols-2">
                     <div class="w-full h-full mx-auto flex justify-center items-center">
-                        <img class="h-full md:h-80 w-full" src="../img/Admin-bro.svg" alt="">
+                        <img class="h-full md:h-80 p-4 w-full" src="../img/Admin-bro.svg" alt="">
                     </div>
                     <div class="w-full h-full mx-auto pl-4">
                         <form id="ValidateUser" method="post" action="#">
@@ -41,7 +42,7 @@
                                 <input type="button" onclick="return validateUser('admin')" class="outline-none bg-gradient-to-r cursor-pointer from-green-300 to-green-500 text-white rounded-md px-2 py-1 w-full sm:w-full md:w-1/3" value="Submit">
                             </div>
                         </form>
-                        <div class="w-full h- flex justify-end text-sm items-center">
+                        <div class="w-full h-7 flex justify-end text-sm items-center">
                             <p><a class="text-green-400 hover:text-green-600 hover:border-b-2 pb-0.5 hover:border-green-600 duration-100" href="AdminPassword.php">Change Password</a></p>
                         </div>
                         <input type="hidden" class="border" name="result" id="status">

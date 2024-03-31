@@ -3,7 +3,7 @@
     <!-- information Section -->
     <div class="h-48 w-full bg-gray-200 rounded-lg dark:bg-slate-600 flex items-center">
         <div class="w-fit h-full flex justify-start px-8">
-            <img class="h-full w-full" src="../img/lab-illustrater.png" alt="">
+            <img class="h-full w-full" src="../img/chemistry lab-bro.svg" alt="">
         </div>
         <div class="w-[50%] h-full flex items-center">
             <h1 class=" text-4xl font-bold">Laboratory</h1>
