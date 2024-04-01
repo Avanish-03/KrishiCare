@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error executing query: " . mysqli_error($con);
     }
 
-    $labsqlquery = "SELECT `lab_id`,`lab_name`, `email`, `contact`, `lab_add`, `city`, `state`, `ownership` FROM `laboratory_detail`;";
+    $labsqlquery = "SELECT `lab_id`,`lab_name`, `email`, `contact`, `lab_add`, `city`, `state`, `ownership` FROM `laboratory_detail` WHERE `status`='Approved';";
     $result = mysqli_query($con, $labsqlquery);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {

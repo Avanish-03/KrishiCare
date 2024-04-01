@@ -162,5 +162,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             echo "Invalid User!";
         }
+    } elseif ($process == "approveLab") {
+
+        $labid = $_POST["labid"];
+        $email = $_POST["email"];
+
+        $subject = "Account Creation!";
+        $body = "Dear $email, Your Request For Account creation has been accepted!";
+
+        $result = mysqli_query($con, "SELECT * FROM `laboratory_detail` WHERE `lab_id`= '$labid' AND `email`= '$email' AND `status`='Approved';");
+        if (mysqli_num_rows($result) > 0) {
+            echo "Invalid User!";
+        } else {
+            $sql = "UPDATE `laboratory_detail` SET `status`='Approved' WHERE `lab_id`='$labid' AND `email`= '$email';";
+            $result = mysqli_query($con, $sql);
+            echo $result;
+            if ($result) {
+                sendMail($email, $subject, $body);
+            }
+        }
     }
 }

@@ -18,43 +18,51 @@
                                 <div class="md:col-span-4">
                                     <label for="firstname">First Name</label>
                                     <input type="text" name="firstname" id="firstname" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                                    <span class="text-red-500" id="spanfirstname"></span>
                                 </div>
 
                                 <div class="md:col-span-4">
                                     <label for="middlename">Middle Name</label>
                                     <input type="text" name="middlename" id="middlename" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                                    <span class="text-red-500" id="spanmiddlename"></span>
                                 </div>
 
                                 <div class="md:col-span-4">
                                     <label for="lastname">Last Name</label>
                                     <input type="text" name="lastname" id="lastname" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                                    <span class="text-red-500" id="spanlastname"></span>
                                 </div>
 
                                 <div class="md:col-span-2">
                                     <label for="email">Email Address</label>
                                     <input type="email" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="email@domain.com" />
+                                    <span class="text-red-500" id="spanemail"></span>
                                 </div>
 
                                 <div class="md:col-span-2">
                                     <label for="contact">Contact</label>
                                     <input type="text" name="contact" id="contact" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
+                                    <span class="text-red-500" id="spancontact"></span>
                                 </div>
 
                                 <div class="md:col-span-4">
                                     <label for="address">Address / Street</label>
                                     <input type="text" name="address" id="address" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
+                                    <span class="text-red-500" id="spanaddress"></span>
                                 </div>
 
                                 <div class="md:col-span-2">
                                     <label for="state">State</label>
                                     <!-- <input type="text" name="state" id="state" class="state h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" /> -->
                                     <select type="text" name="state" id="state" class="state h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" onchange="loadCities()"></select>
+                                    <span class="text-red-500" id="spanstate"></span>
                                 </div>
 
                                 <div class="md:col-span-2">
                                     <label for="city">City</label>
                                     <!-- <input type="text" name="city" id="city" class="city h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" /> -->
                                     <select type="text" name="city" id="city" class="city h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder=""></select>
+                                    <span class="text-red-500" id="spancity"></span>
                                 </div>
 
                                 <div class="md:col-span-2">
@@ -63,6 +71,7 @@
                                         <img id="imgpwd" src="../img/eye.png" alt="" class="absolute h-5 w-5 z-10 cursor-pointer mr-3" onclick="togglepassword('imgpwd','pwd')">
                                         <input type="password" name="pwd" id="pwd" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
                                     </div>
+                                    <span class="text-red-500" id="spanpass"></span>
                                 </div>
 
                                 <div class="md:col-span-2">
@@ -71,6 +80,7 @@
                                         <img id="imgcpwd" src="../img/eye.png" alt="" class="absolute h-5 w-5 z-10 cursor-pointer mr-3" onclick="togglepassword('imgcpwd','cpwd')">
                                         <input type="password" name="cpwd" id="cpwd" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
                                     </div>
+                                    <span class="text-red-500" id="spancpass"></span>
                                 </div>
 
                                 <div class="md:col-span-5 text-left">

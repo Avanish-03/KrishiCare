@@ -11,7 +11,7 @@
     <script src="../src/Js/code.js"></script>
     <script src="../flowbite.js"></script>
     <script>
-        window.onload = function () {
+        window.onload = function() {
             loadStates();
             // initializeCarousel();
         }
@@ -97,13 +97,13 @@
                     <div class="z-50 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-white" id="register-dropdown-menu">
                         <ul class="font-medium" role="none">
                             <li>
-                                <a href="lab_reg.php" class="block px-4 py-2 text-md text-gray-900 hover:bg-gray-100 dark:text-black dark:hover:bg-gray-300 dark:hover:text-gray-700" role="menuitem">
-                                    <div class="inline-flex items-center">Laboratory</div>
+                                <a href="farmer_reg.php" class="block px-4 py-2 text-md text-gray-900 hover:bg-gray-100 dark:text-black dark:hover:bg-gray-300 dark:hover:text-gray-700" role="menuitem">
+                                    <div class="inline-flex items-center">Farmer</div>
                                 </a>
                             </li>
                             <li>
-                                <a href="farmer_reg.php" class="block px-4 py-2 text-md text-gray-900 hover:bg-gray-100 dark:text-black dark:hover:bg-gray-300 dark:hover:text-gray-700" role="menuitem">
-                                    <div class="inline-flex items-center">Farmer</div>
+                                <a href="lab_reg.php" class="block px-4 py-2 text-md text-gray-900 hover:bg-gray-100 dark:text-black dark:hover:bg-gray-300 dark:hover:text-gray-700" role="menuitem">
+                                    <div class="inline-flex items-center">Laboratory</div>
                                 </a>
                             </li>
                         </ul>
@@ -177,8 +177,8 @@
                         </li>
                         <li class="sm:hidden py-2 md:py-0">
                             <a href="../dist/FarmerLogin.php" class="mr-3 hover:text-green-900 text-lg font-bold hover:border-b-2 border-black <?php if ($path == 'FarmerLogin.php') {
-                                                                                                                                                echo "border-b-2 border-black text-black";
-                                                                                                                                            } ?> ">Login</a>
+                                                                                                                                                    echo "border-b-2 border-black text-black";
+                                                                                                                                                } ?> ">Login</a>
                         </li>
                     </ul>
                 </div>

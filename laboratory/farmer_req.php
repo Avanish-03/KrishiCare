@@ -61,9 +61,10 @@ session_start();
                                 echo "<td class='px-6 py-4'>" . $nested_array["state"] . "</td>";
                                 // echo "<td class='px-6 py-4'>" . $nested_array["status"] . "</td>";
                                 echo "<td class='px-6 py-2'>
-                            <button onclick='acceptRequest(" . $nested_array["farmer_id"] . "," . $_SESSION['laboratory'] . ")' class='px-6 py-2 rounded-lg bg-green-300 hover:bg-green-400 text-gray-50 dark:text-gray-700'>
-                            " . ($nested_array["status"] ? "Accepted" : "Accept") . "</button>
-                            </td>";
+                                <button onclick='acceptRequest(" . $nested_array["farmer_id"] . "," . $_SESSION['laboratory'] . ")' class='px-6 py-2 rounded-lg bg-green-300 hover:bg-green-400 text-gray-50 dark:text-gray-700'>
+                                " . ($nested_array["status"] ? "Accepted" : "Accept") . "
+                                </button>
+                                </td>";
                                 echo "</tr>";
                             }
                         }

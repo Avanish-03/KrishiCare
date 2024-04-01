@@ -1,14 +1,14 @@
 function registerFarmer() {
     var result =
-        validateEmpty('firstname', 'First name') &&
-        validateEmpty('middlename', 'Middle name') &&
-        validateEmpty('lastname', 'last name') &&
-        ValidateEmail('email', 'Email') &&
-        validateContact('contact', 'Contact number') &&
-        validateEmpty('address', 'Address') &&
-        validateDropdown('state', 'State') &&
-        validateDropdown('city', 'City') &&
-        validatePassword('pwd', 'cpwd');
+        validateEmpty('firstname', 'First name', 'spanfirstname') &&
+        validateEmpty('middlename', 'Middle name', 'spanmiddlename') &&
+        validateEmpty('lastname', 'last name', 'spanlastname') &&
+        ValidateEmail('email', 'Email', 'spanemail') &&
+        validateContact('contact', 'Contact number', 'spancontact') &&
+        validateEmpty('address', 'Address', 'spanaddress') &&
+        validateDropdown('state', 'State', 'spanstate') &&
+        validateDropdown('city', 'City', 'spancity') &&
+        validatePassword('pwd', 'cpwd', 'spancpass');
 
     if (result) {
         var firstname = getvalue('firstname');
@@ -48,14 +48,14 @@ function registerFarmer() {
 
 function registerLaboratory() {
     var result =
-        validateEmpty('fullname', 'Laboratory name') &&
-        ValidateEmail('email', 'Email') &&
-        validateContact('contact', 'Contact number') &&
-        validateEmpty('address', 'Address') &&
-        validateDropdown('state', 'State') &&
-        validateDropdown('city', 'City') &&
-        validateDropdown('ownership', 'Ownership') &&
-        validatePassword('pwd', 'cpwd');
+        validateEmpty('fullname', 'Laboratory name', 'spanfullname') &&
+        ValidateEmail('email', 'Email', 'spanemail') &&
+        validateContact('contact', 'Contact number', 'spancontact') &&
+        validateEmpty('address', 'Address', 'spanaddress') &&
+        validateDropdown('state', 'State', 'spanstate') &&
+        validateDropdown('city', 'City', 'spancity') &&
+        validateDropdown('ownership', 'Ownership', 'spanownership') &&
+        validatePassword('pwd', 'cpwd', 'spancpass');
 
     if (result) {
 
@@ -65,8 +65,8 @@ function registerLaboratory() {
         var address = getvalue('address');
         var state = getSelectedOption('state');
         var city = getSelectedOption('city');
-        var password = getvalue('pwd');
         var ownership = getvalue('ownership');
+        var password = getvalue('pwd');
 
         var dataForm =
             'fullname=' + fullname +
@@ -75,8 +75,8 @@ function registerLaboratory() {
             '&address=' + address +
             '&state=' + state +
             '&city=' + city +
-            '&password=' + password +
             '&ownership=' + ownership +
+            '&password=' + password +
             '&process=registerlab';
 
         ajaxCall('../Backend/Register.php', 'post', dataForm, 'status', true);
@@ -192,8 +192,8 @@ function updateFarmerPassword(farmerId) {
 
 function validateUser(user) {
     var result =
-        ValidateEmail('email', 'Email') &&
-        validateEmpty('pwd', 'pwd');
+        ValidateEmail('email', 'Email', 'spanemail') &&
+        validateEmpty('pwd', 'pwd', 'spanpass');
 
     if (result) {
         var email = getvalue('email');
@@ -208,7 +208,7 @@ function validateUser(user) {
             url = "../laboratory/LaboratoryDashboard.php";
 
         } else if (user == "admin") {
-            var res = validateEmpty("verifyotp", "OTP");
+            var res = validateEmpty("verifyotp", "OTP", 'spanotp');
             if (res) {
                 var varifyAdmin = getvalue("varifyAdmin");
                 var verifyotp = getvalue("verifyotp");
@@ -236,10 +236,9 @@ function validateUser(user) {
 }
 
 function ResetPassword(user) {
-    alert(user)
-    var result = ValidateEmail('email', 'Email')
-        && CheckPassword('pwd', 'Password')
-        && CheckPassword('cpwd', 'New Password');
+    var result = ValidateEmail('email', 'Email', 'spanemail')
+        && CheckPassword('pwd', 'Password', 'spanpass')
+        && CheckPassword('cpwd', 'New Password', 'spancpass');
     if (result) {
         alert(result)
         var email = getvalue('email');
@@ -269,8 +268,8 @@ function ResetPassword(user) {
 }
 
 function varifyAdmin() {
-    var result = ValidateEmail('email', 'Email') &&
-        validateEmpty('pwd', 'Password');
+    var result = ValidateEmail('email', 'Email', 'spanemail') &&
+        validateEmpty('pwd', 'Password', 'spanpass');
     if (result) {
         var email = getvalue('email');
         var pwd = getvalue('pwd');
@@ -410,6 +409,18 @@ function uploadReport(labId) {
     return false;
 }
 
+function ApproveLab(labid, email) {
+    ajaxCall("../Backend/Register.php", "post", "labid=" + labid + "&email=" + email + "&process=approveLab", "approveLab", true);
+    let status = getvalue("approveLab");
+    if (status == 1) {
+        alert("Lab Approved Successfully!")
+        adminMenuLoader('dashboard');
+    } else {
+        alert("Invalid request!")
+
+    }
+}
+
 function getSelectedOption(elementId) {
     var selectElement = document.getElementById(elementId);
     var selectedOption = selectElement.options[selectElement.selectedIndex];
@@ -417,14 +428,18 @@ function getSelectedOption(elementId) {
     return selectedOptionInnerHTML;
 }
 
-function validateDropdown(elementId, elementName) {
+function validateDropdown(elementId, elementName, spanid) {
     var element = document.getElementById(elementId);
     if (element.value == "default") {
-        alert(elementName + " should be selected!");
+        // alert(elementName + " should be selected!");
         document.getElementById(elementId).focus();
+        document.getElementById(spanid).textContent = elementName + " should be selected!";
         return false;
+    } else {
+        document.getElementById(spanid).textContent = "";
+        return true;
     }
-    return true;
+    // return true;
 }
 
 function getvalue(elementId) {
@@ -437,34 +452,39 @@ function resetFormdata(formId) {
     form.reset();
 }
 
-function validateEmpty(elementId, elementName) {
+function validateEmpty(elementId, elementName, spanid) {
     var element = document.getElementById(elementId);
     if (element.value == '' || element == null) {
-        alert(elementName + " can't be empty!");
+        // alert(elementName + " can't be empty!");
         document.getElementById(elementId).focus();
+        document.getElementById(spanid).textContent = elementName + " can't be empty!";
         return false;
+    } else {
+        document.getElementById(spanid).textContent = "";
+        return true;
     }
-    return true;
+    // return true;
 }
 
-function ValidateEmail(elementId, elementName) {
-    var res = validateEmpty(elementId, elementName);
+function ValidateEmail(elementId, elementName, spanid) {
+    var res = validateEmpty(elementId, elementName, spanid);
     if (res) {
         var input = document.getElementById(elementId);
         var validRegexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
         if (input.value.match(validRegexEmail)) {
             return true;
         } else {
-            alert("Invalid email address!");
+            // alert("Invalid email address!");
             document.getElementById(elementId).focus();
+            document.getElementById(spanid).textContent = "Invalid email address!";
             return false;
         }
     }
     return false;
 }
 
-function validateContact(elementId, elementName) {
-    var res = validateEmpty(elementId, elementName);
+function validateContact(elementId, elementName, spanid) {
+    var res = validateEmpty(elementId, elementName, spanid);
     if (res) {
         var validRegexPhoneno = /^\d{10}$/;
         var input = document.getElementById(elementId);
@@ -472,16 +492,17 @@ function validateContact(elementId, elementName) {
             return true;
         }
         else {
-            alert("Invalid contact number!");
+            // alert("Invalid contact number!");
             document.getElementById(elementId).focus();
+            document.getElementById(spanid).textContent = "Invalid Contact Number!";
             return false;
         }
     }
     return false;
 }
 
-function CheckPassword(elementId, elementName) {
-    var res = validateEmpty(elementId, elementName);
+function CheckPassword(elementId, elementName, spanid) {
+    var res = validateEmpty(elementId, elementName, spanid);
     if (res) {
         var passw = /^\w{7,14}$/;
         var input = document.getElementById(elementId);
@@ -489,8 +510,9 @@ function CheckPassword(elementId, elementName) {
             return true;
         }
         else {
-            alert(elementName + ' should be of 7 to 14 character!')
+            // alert(elementName + ' should be of 7 to 14 character!')
             document.getElementById(elementId).focus();
+            document.getElementById(spanid).textContent = elementName + ' should be of 7 to 14 character!';
             return false;
         }
     }
@@ -498,8 +520,8 @@ function CheckPassword(elementId, elementName) {
 
 function validatePassword(firstElement, secondElement) {
     var res =
-        CheckPassword(firstElement, 'Password') &&
-        CheckPassword(secondElement, 'Confirm Password');
+        CheckPassword(firstElement, 'Password', 'spanpass') &&
+        CheckPassword(secondElement, 'Confirm Password', 'spancpass');
 
     if (res) {
         var pass = document.getElementById(firstElement).value;
@@ -508,7 +530,8 @@ function validatePassword(firstElement, secondElement) {
             return true;
         } else {
             alert('Password not Matched!');
-            document.getElementById('cpwd').focus();
+            document.getElementById(secondElement).focus();
+            // document.getElementById(spanid).textContent = "Password not Matched!";
             return false;
         }
     }
@@ -780,8 +803,6 @@ function loadUpdateForm(process, id) {
 }
 
 function acceptRequest(farmerId, labId) {
-    alert(farmerId)
-    alert(labId)
     ajaxCall("../Backend/LabProcess.php", "post", "farmerId=" + farmerId + "&labId=" + labId + "&process=changeStatus", "requestStatus", true);
     alert(document.getElementById("requestStatus").value);
 }
