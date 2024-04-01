@@ -1,7 +1,7 @@
 <?php include("Header.php"); ?>
 <!-- Farmer resiter page -->
 <div class="min-h-screen p-6 bg-gray-100 flex items-center justify-center bg-fixed bg-cover" style="background-image: url('../img/dron-img.jpg');">
-    <div class="container max-w-screen-lg mx-auto">
+    <div class="mx-auto">
         <div>
             <h2 class="font-semibold text-5xl font-serif text-gray-600">Farmer Register form</h2>
             <p class="text-gray-700 text-xl mb-6">Get started with us</p>
@@ -11,6 +11,7 @@
                     <div class="text-gray-600">
                         <p class="font-medium text-lg">Farmer Details</p>
                         <p>Please fill out all the fields.</p>
+                        <img src="../img/Sign up-amico.png" class="h-fit" alt="">
                     </div>
                     <div class="lg:col-span-2">
                         <form id="farmForm" method="post" action="#">
