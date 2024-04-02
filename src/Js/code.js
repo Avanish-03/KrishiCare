@@ -94,8 +94,8 @@ function registerLaboratory() {
 
 function validateContactForm() {
     var result =
-        validateEmpty('email', 'Email') &&
-        validateEmpty('message', 'Message');
+        validateEmpty('email', 'Email', 'spanemail') &&
+        validateEmpty('message', 'Message', 'spanmsg');
 
     if (result) {
         var email = getvalue('email');
@@ -119,14 +119,14 @@ function validateContactForm() {
 
 function updateFarmerData(farmerId) {
     var result =
-        validateEmpty('firstname', 'First name') &&
-        validateEmpty('middlename', 'Middle name') &&
-        validateEmpty('lastname', 'last name') &&
-        ValidateEmail('email', 'Email') &&
-        validateContact('contact', 'Contact number') &&
-        validateEmpty('address', 'Address') &&
-        validateEmpty('city', 'City') &&
-        validateEmpty('state', 'State');
+        validateEmpty('firstname', 'First name', 'spanfirstname') &&
+        validateEmpty('middlename', 'Middle name', 'spanmiddlename') &&
+        validateEmpty('lastname', 'last name', 'spanlastname') &&
+        ValidateEmail('email', 'Email', 'spanemail') &&
+        validateContact('contact', 'Contact number', 'spancontact') &&
+        validateEmpty('address', 'Address', 'spanaddress') &&
+        validateEmpty('city', 'City', 'spancity') &&
+        validateEmpty('state', 'State', 'spanstate');
 
     if (result) {
         var firstname = getvalue('firstname');
@@ -164,8 +164,8 @@ function updateFarmerData(farmerId) {
 
 function updateFarmerPassword(farmerId) {
     var result =
-        validateEmpty('oldpass', 'Old Password') &&
-        validatePassword('pwd', 'cpwd');
+        validateEmpty('oldpass', 'Old Password', 'spanoldpass') &&
+        validatePassword('pwd', 'cpwd', 'spancpass');
 
     if (result) {
         var oldpass = getvalue('oldpass');
@@ -314,10 +314,10 @@ function submitRequest(farmerid, labid) {
 }
 
 function verifyUser(labId) {
-    var result = validateDropdown("farmername", "Farmer name") &&
-        validateDropdown("email", "Farmer Email") &&
-        validateDropdown("requestid", "Request Id") &&
-        validateEmpty("collectiondate", "Collection Date");
+    var result = validateDropdown("requestid", "Request Id", 'spanrequestid') &&
+        validateDropdown("farmername", "Farmer name", 'spanfarmername') &&
+        validateDropdown("email", "Farmer Email", 'spanemail') &&
+        validateEmpty("collectiondate", "Collection Date", 'spandate');
 
     if (result) {
         var farmerid = getvalue("farmername");
@@ -346,7 +346,7 @@ function verifyUser(labId) {
 }
 
 function submitSampleForm(labId) {
-    var result = validateEmpty("verifyotp", "OTP");
+    var result = validateEmpty("verifyotp", "OTP", 'spanotp');
     if (result) {
 
         var verifyUser = getvalue("verifyUser");
@@ -382,9 +382,9 @@ function submitSampleForm(labId) {
 }
 
 function uploadReport(labId) {
-    var result = validateDropdown("farmername", "Farmer name") &&
-        validateDropdown("email", "Farmer Email") &&
-        validateDropdown("sampleid", "Request Id");
+    var result = validateDropdown("farmername", "Farmer name", 'spanfarmername') &&
+        validateDropdown("email", "Farmer Email", 'spanemail') &&
+        validateDropdown("sampleid", "Request Id", 'spansampleid');
 
     if (result) {
         var farmerid = getvalue("farmername");
@@ -690,9 +690,9 @@ function labMenuLoader(process, id) {
 }
 
 function uploadProfilePic(process) {
-    var result = validateEmpty("admin_img", "Profile Picture");
+    var result = validateEmpty('admin_img', 'Profile Picture', 'spanadmin_img');
     if (result) {
-        var file = document.getElementById("admin_img");
+        var file = document.getElementById('admin_img');
         var imageFile = file.files[0];
 
         var formData = new FormData();
@@ -702,18 +702,14 @@ function uploadProfilePic(process) {
         ajaxCall('../Backend/AdminProcess.php', 'post', formData, 'changeProfile', true, true);
         var status = getvalue("changeProfile");
         alert(status);
-    } else {
-        document.getElementById("inputDiv").classList.add("bg-red-700");
-        document.getElementById("inputDiv").classList.remove("bg-green-500");
-
     }
     adminMenuLoader('profile');
 }
 
 function farmerProfilePic(process, id) {
-    var result = validateEmpty("farmer_img", "Profile Picture");
+    var result = validateEmpty('farmer_img', 'Profile Picture', 'spanfarmer_img');
     if (result) {
-        var file = document.getElementById("farmer_img");
+        var file = document.getElementById('farmer_img');
         var imageFile = file.files[0];
 
         var formData = new FormData();
@@ -722,15 +718,13 @@ function farmerProfilePic(process, id) {
         formData.append("id", id);
 
         ajaxCall('../Backend/FarmerProcess.php', 'post', formData, 'farmerProfile', true, true);
-        var status = getvalue("farmerProfile");
-        alert(status);
         farmerMenuLoader('profile', id);
     }
     return false;
 }
 
 function labProfilePic(process, labid) {
-    var result = validateEmpty("laboratory_img", "Profile Picture");
+    var result = validateEmpty("laboratory_img", "Profile Picture", 'spanlaboratory_img');
     if (result) {
         var file = document.getElementById("laboratory_img");
         var imageFile = file.files[0];
@@ -741,8 +735,6 @@ function labProfilePic(process, labid) {
         formData.append("labId", labid);
 
         ajaxCall('../Backend/labProcess.php', 'post', formData, 'labProfile', true, true);
-        var status = getvalue("labProfile");
-        alert(status);
         labMenuLoader('profile', labid);
     }
     return false;
@@ -870,7 +862,7 @@ function initializeCarousel() {
     }
 
     // Automatic sliding
-    let slideInterval = setInterval(moveToNext, 3000); // Adjust the interval as needed
+    let slideInterval = setInterval(moveToNext, 2000); // Adjust the interval as needed
 
     // Event listener for prev button
     prevButton.addEventListener('click', () => {

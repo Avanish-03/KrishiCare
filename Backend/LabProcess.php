@@ -171,12 +171,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;
         case "profile":
             //code block
-            $labQuery = "SELECT `labprofile`,`email`, `password` FROM `laboratory_detail` WHERE `lab_id`= '$labId';";
+            $labQuery = "SELECT `lab_id`,`lab_name`, `email`, `contact`, `lab_add`, `city`, `state`,`labprofile`, `password` FROM `laboratory_detail` WHERE `lab_id`= '$labId';";
             $result = mysqli_query($con, $labQuery);
             if ($result && mysqli_num_rows($result) > 0) {
-                $labprofiledata = []; // Initialize array
+                $labdata = []; // Initialize array
                 while ($row = mysqli_fetch_assoc($result)) {
-                    $labprofiledata[] = $row; // Populate array
+                    $labdata[] = $row; // Populate array
                 }
             } else {
                 echo "No user found";

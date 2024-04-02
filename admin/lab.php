@@ -46,7 +46,7 @@
                         }
                         while ($row = $result->fetch_assoc()) {
                         ?>
-                            <tr class='bg-white dark:text-gary-300 border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600'>
+                            <tr class='bg-gray-100 dark:text-gray-300 border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'>
                                 <th class='px-6 py-4 font-medium whitespace-nowrap'>
                                     <?php $enqFamerId = md5($row['lab_id']);
                                     echo $enqFamerId; ?>
@@ -69,12 +69,12 @@
             </div>
         </div>
     </div>
-    <div class="my-8 h-full w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- <div class="my-8 h-full w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="w-full h-full bg-gray-200 rounded-lg dark:bg-slate-600"></div>
         <div class="w-full h-full bg-gray-200 rounded-lg dark:bg-slate-600"></div>
         <div class="w-full h-full bg-gray-200 rounded-lg dark:bg-slate-600"></div>
         <div class="w-full h-full bg-gray-200 rounded-lg dark:bg-slate-600"></div>
-    </div>
+    </div> -->
     <div class="h-7"></div>
 </section>
 

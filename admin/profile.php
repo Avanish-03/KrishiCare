@@ -28,7 +28,7 @@
                                     <div class="col-span-6 ml-2 sm:col-span-4 md:mr-3">
                                         <div class="text-center">
                                             <input type="file" id="admin_img" multiple accept=".jpg,.jpeg,.png" class="hidden">
-                                            <div id="inputDiv" class="-mt-20 bg-gray-400 dark:bg-gray-700 h-44 w-44 flex justify-center items-center rounded-full">
+                                            <div id="inputDiv" class="-mt-20 relative bg-gray-400 dark:bg-gray-700 h-44 w-44 flex justify-center items-center rounded-full">
                                                 <?php
                                                 if (file_exists($nested_array["adminprofile"]) == true) {
                                                     echo "<img src='../img/" . $nested_array["adminprofile"] . "' class='w-40 h-40 m-auto rounded-full shadow object-cover'>";
@@ -36,16 +36,18 @@
                                                     echo "<img src='../img/profile.png' class='w-40 h-40 m-auto rounded-full shadow object-cover'>";
                                                 }
                                                 ?>
+                                                <label for="admin_img" class="absolute bottom-3 right-3 inline-flex items-center cursor-pointer px-2 py-2 bg-gray-300 hover:bg-gray-400/60 dark:bg-slate-600 hover:dark:bg-slate-500 border border-gray-300 rounded-full font-semibold text-lg text-gray-700 dark:text-gray-100 uppercase tracking-widest shadow-sm focus:outline-none focus:border-green-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-0">
+                                                    <i class="fa-solid fa-camera"></i>
+                                                </label>
                                             </div>
-                                            <div class="-mt-20" style="display: none;">
-                                                <span class="block w-40 h-40 rounded-full m-auto bg-red-500 shadow" x-bind:style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + photoPreview + '\');'" style="background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url('null');">
-                                                </span>
+                                            <div class="w-full flex justify-center items-center">
+                                                <span id="spanadmin_img" class="text-red-500"></span>
                                             </div>
-                                            <label for="admin_img" class="inline-flex items-center px-4 py-2 bg-gray-300 dark:bg-slate-600 border border-gray-300 rounded-md font-semibold text-xs text-gray-700 dark:text-gray-100 uppercase tracking-widest shadow-sm focus:outline-none focus:border-green-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-0">Choose Image
-                                            </label>
-                                            <button type="button" onclick="return uploadProfilePic('changeProfile')" name="uploadProfile" class="inline-flex items-center px-4 py-2 bg-gray-300 dark:bg-slate-600 border border-gray-300 rounded-md font-semibold text-xs text-gray-700 dark:text-gray-100 uppercase tracking-widest shadow-sm focus:outline-none focus:border-green-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-0">
-                                                Save
-                                            </button>
+                                            <div class="flex justify-center items-center">
+                                                <button type="button" onclick="return uploadProfilePic('changeProfile')" name="uploadProfile" class="inline-flex items-center px-4 py-2 bg-gray-300 dark:bg-slate-600 border border-gray-300 rounded-md font-semibold text-xs text-gray-700 dark:text-gray-100 uppercase tracking-widest shadow-sm focus:outline-none focus:border-green-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-0">
+                                                    Save
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                             <?php

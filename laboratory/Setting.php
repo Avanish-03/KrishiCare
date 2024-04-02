@@ -21,7 +21,7 @@
             <div class="dark:text-gray-100 text-gray-600">
                 <h1 class="text-4xl font-serif"><b>Change Password</b></h1>
                 <p class=" text-xl">Update password !</p>
-                <form action="#" class="flex flex-col justify-center items-center my-10">
+                <form class="flex flex-col justify-center items-center my-10">
                     <div class="">
                         <label for="" class="font-mono text-xl pr-2 font-bold">Old password</label>
                         <input type="" name="" class="rounded-lg bg-transparent border-gray-500 border-2 p-2"><br><br>
@@ -29,8 +29,7 @@
                         <input type="" name="" class="rounded-lg bg-transparent border-gray-500 border-2 p-2">
                     </div>
                     <br>
-                    <button
-                        class="border-green-500 border-2 w-1/2 rounded-full text-green-500 hover:text-white hover:bg-green-500 p-2 mt-2 font-bold font-mono">Change</button>
+                    <button class="border-green-500 border-2 w-1/2 rounded-full text-green-500 hover:text-white hover:bg-green-500 p-2 mt-2 font-bold font-mono">Change</button>
                 </form>
             </div>
         </div>

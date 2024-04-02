@@ -47,7 +47,7 @@
                     <img src="../img/1IOT-img1.jpg" alt="img" class="h-80 w-full outline-none rounded-lg shadow-lg">
                 </div>
             </div>
-            <div class="lg:px-5">
+            <div class="lg:px-5 pt-8">
                 <h1 class="font-bold text-2xl">Agrila develops an IoT-based Sensor Station</h1>
                 <span class="ml-10">Drones can be used for a wide range of tasks in the agriculture sector, such as:</span>
                 <p class=" text-lg">

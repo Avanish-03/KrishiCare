@@ -165,6 +165,13 @@ for ($i = 0; $i < $data_size; $i++) {
                     <span class="indicator inline-block w-2.5 h-2.5 rounded-full cursor-pointer my-1 bg-gray-200"></span>
                     <span class="indicator inline-block w-2.5 h-2.5 rounded-full cursor-pointer my-1 bg-gray-200"></span>
                     <span class="indicator inline-block w-2.5 h-2.5 rounded-full cursor-pointer my-1 bg-gray-200"></span>
+                    <span class="indicator inline-block w-2.5 h-2.5 rounded-full cursor-pointer my-1 bg-gray-200"></span>
+                    <span class="indicator inline-block w-2.5 h-2.5 rounded-full cursor-pointer my-1 bg-gray-200"></span>
+                    <span class="indicator inline-block w-2.5 h-2.5 rounded-full cursor-pointer my-1 bg-gray-200"></span>
+                    <span class="indicator inline-block w-2.5 h-2.5 rounded-full cursor-pointer my-1 bg-gray-200"></span>
+                    <span class="indicator inline-block w-2.5 h-2.5 rounded-full cursor-pointer my-1 bg-gray-200"></span>
+                    <span class="indicator inline-block w-2.5 h-2.5 rounded-full cursor-pointer my-1 bg-gray-200"></span>
+                    <span class="indicator inline-block w-2.5 h-2.5 rounded-full cursor-pointer my-1 bg-gray-200"></span>
                 </div>
                 <button class="prev absolute bg-gray-200 h-10 w-10 flex justify-center items-center bg-opacity-40 text-white text-xl font-bold rounded-full top-1/2 left-2 transform -translate-y-1/2">
                     &lt;

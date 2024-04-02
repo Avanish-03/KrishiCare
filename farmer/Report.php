@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!-- Report Section -->
 <section class="w-full h-full mx-auto my-8 p-8 rounded-md">
     <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Report</h1>
@@ -16,11 +19,14 @@
                 <img class="h-80 w-80" src="../img/Download-rafiki.svg" alt="">
             </div>
             <div class="h-full w-full flex justify-center items-center gap-x-4">
-                <form action="../Backend/Reports/SoilTestReport/ViewReport.php" method="post">
+                <form action="../Backend/Reports/SoilTestReport/ViewReport.php" method="POST">
+                    <input type="hidden" name="farmerid" value='<?php echo $_SESSION["farmer"]; ?>' />
                     <input type="submit" class="bg-green-600 cursor-pointer text-white rounded-lg p-2" name="viewReport" value="View Report">
                 </form>
-                <form action="../Backend/Reports/SoilTestReport/DownloadReport.php" method="post">
-                    <input type="submit" class="bg-red-600 cursor-pointer text-white rounded-lg p-2" name="downloadReport" value=" Download Report ↆ ">
+                <form action="../Backend/Reports/SoilTestReport/DownloadReport.php" method="POST" class="relative">
+                    <input type="submit" class="bg-red-600 cursor-pointer text-white rounded-lg pl-4 pr-8 py-2" name="downloadReport" value="Download Report">
+                    <input type="hidden" name="farmerid" value='<?php echo $_SESSION["farmer"]; ?>' />
+                    <i class="fa-solid fa-download absolute py-3 text-white right-2"></i>
                 </form>
             </div>
         </div>

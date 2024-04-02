@@ -120,10 +120,10 @@ if ($_SESSION["farmer"] == false) {
                             </div>
                         </div>
                         <div class="w-full h-[25%]">
-                            <div>
+                            <!-- <div>
                                 <h1 class="font-light sm:text-md text-gray-600 hidden sm:block uppercase select-none heading duration-300 cursor-pointer">
                                     Setting</h1>
-                            </div>
+                            </div> -->
                             <div onclick="farmerMenuLoader('profile','<?php echo $_SESSION['farmer'] ?>')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-user"></i>
                                 <div class="heading duration-300 cursor-pointer">Profile</div>
