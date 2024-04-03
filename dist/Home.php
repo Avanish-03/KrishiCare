@@ -93,7 +93,7 @@
                 &gt;
             </button>
         </div>
-        <div class="h-1/4">
+        <div class="h-1/4" id="newtech">
             <div class="h-full pb-12 w-full flex flex-col justify-center items-center">
                 <h1 class="text-4xl font-[poppins] h-full flex justify-center items-center uppercase">Benifit of Website
                 </h1>
@@ -101,26 +101,9 @@
             </div>
         </div>
     </section>
-    <!-- <section>
-    <div class="w-full h-screen object-cover text-white bg-gray-100 sm:block -z-30 overflow-hidden">
-        <div class="flex justify-center pt-10 h-full z-10 bg-center bg-cover bg-fixed" style="background-image: url('../img/bg-img2.jpg');">
-            <div class="w-[50%] flex flex-col justify-center items-start  p-10">
-                <h1 class="text-4xl font-bold text-wrap">"FARMING IS A PEOFESSION OF HOPE"</h1>
-                <span class="text-2xl font-normal capitalize px-3">Taking agriculture To The Next Level , Join us in
-                    revolutionizing
-                    farming practices with Krishicare. Together, let's cultivate a brighter future for
-                    agriculture.</span>
-                <div class="mt-10">
-                    <a class="bg-green-500 hover:bg-green-600 text-white hover:text-black/45 duration-200 py-2 px-4 rounded font-bold text-2xl" href="FarmerLogin.php">Get Started</a>
-                </div>
-            </div>
-            <div class="w-[50%] ">
-            </div>
-        </div>
-    </div>
-</section> -->
 
-    <section class="text-gray-600 body-font">
+    <!-- section 2 -->
+    <section class="text-gray-600 body-font" >
         <div class="container px-5 mx-auto bg-white">
             <div class="flex flex-wrap -m-4 text-center">
                 <div class="xl:w-1/4 md:w-1/2">
@@ -192,16 +175,13 @@
                 </p>
             </div>
         </div>
-        <div class="w-[90%] h-fit bg-grey-lightest mx-auto shadow-xl rounded pb-4 bg-cover" style="color:#606F7B;background-color: rgb(165, 182, 198); background-image:url('https://68.media.tumblr.com/f6a4004f3092b0d664daeabb95d5d195/tumblr_oduyciOJNb1uhjffgo1_500.gif');">
+        <div class="w-[90%] flex flex-col justify-between items-center h-96 bg-grey-lightest mx-auto shadow-xl rounded pb-4 bg-center bg-cover" style="color:#606F7B;background-color: rgb(165, 182, 198); background-image:url('https://68.media.tumblr.com/f6a4004f3092b0d664daeabb95d5d195/tumblr_oduyciOJNb1uhjffgo1_500.gif');">
             <div class="mt-2 p-4 text-center">
-                <span class="text-4xl font-thin">Mountain View, US</span>
+                <span class="text-4xl font-thin text-white">Weather nfluencing crop growth and agricultural practices.</span>
                 <span class="hidden sm:inline-block align-bottom text-xs">( 94041 )</span>
             </div>
-            <div class="text-center text-xl text-grey-light p-4">
-                <span>Fog</span>
-                <span>, fog</span>
-            </div>
-            <div class="flex justify-center">
+            
+            <div class="flex justify-center text-gray-100">
                 <div class="text-center p-2">
                     <div class="text-lg text-grey-light">
                         <span class="text-right">45˚F</span>
@@ -238,7 +218,7 @@
                 <div class="border-2 w-full min-w-fit border-gray-200 px-12 py-6 rounded-lg bg-gray-100">
                     <img class="h-28 mx-auto" src="https://cdn-icons-png.freepik.com/256/14133/14133245.png?uid=R129996386&ga=GA1.1.1933265658.1701935286&semt=ais" alt="">
                     <h2 class="font-bold font-mono text-5xl text-gray-900">
-                        <div class="counter" data-speed="1000">15</div>
+                        <div class="counter" data-speed="1000">25</div>
                     </h2>
                     <p class="text-xl font-bold font-serif ">Reports</p>
                 </div>
@@ -247,7 +227,7 @@
                 <div class="border-2 w-full min-w-fit border-gray-200 px-12 py-6 rounded-lg bg-gray-100">
                     <img class="h-28 mx-auto" src="https://cdn-icons-png.freepik.com/256/10839/10839252.png?uid=R129996386&ga=GA1.1.1933265658.1701935286&semt=ais" alt="">
                     <h2 class="font-bold font-mono text-5xl text-gray-900">
-                        <div class="counter" data-speed="1000">15</div>
+                        <div class="counter" data-speed="1000">100</div>
                     </h2>
                     <p class="text-xl font-bold font-serif ">Farmers</p>
                 </div>
@@ -256,7 +236,7 @@
                 <div class="border-2 w-full min-w-fit border-gray-200 px-12 py-6 rounded-lg bg-gray-100">
                     <img class="h-28 mx-auto" src="https://cdn-icons-png.freepik.com/256/9088/9088919.png?uid=R129996386&ga=GA1.1.1933265658.1701935286&semt=ais" alt="">
                     <h2 class="font-bold font-mono text-5xl text-gray-900">
-                        <div class="counter" data-speed="1000">15</div>
+                        <div class="counter" data-speed="1000">35</div>
                     </h2>
                     <p class="text-xl font-bold font-serif ">Labotatory</p>
                 </div>

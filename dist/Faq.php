@@ -33,17 +33,11 @@
         <div class="mx-auto max-w-6xl">
             <div class="p-2 rounded">
                 <div class="flex flex-col md:flex-row">
-                    <div class="md:w-1/3  text-sm">
+                    <div class="md:w-1/3 text-sm">
                         <div class="sticky inset-x-0 top-0 left-0 ">
                             <div class="text-3xl text-green-500 mb-8">Frequently asked questions.</div>
                             <div class="mb-2">You have any question ?</div>
                             <div class="text-xs text-gray-700">See our FAQ for more details</div>
-                            <div class=" text-gray-600 mt-8 lg:mr-16">
-                                <label for="" class="text-xl flex justify-center items-center hover">
-                                    🔎<input type="search" name="serch" placeholder="Search"
-                                        class="bg-white w-full h-10 px-5 rounded-full text-sm focus:outline-green-600">
-                                </label>
-                            </div>
                             <div>
                                 <img src="../img/FAQs-bro.png" alt="">
                             </div>
