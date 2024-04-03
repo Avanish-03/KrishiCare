@@ -11,7 +11,7 @@ for ($i = 0; $i < $data_size; $i++) {
 ?>
 
     <!-- Soil Information Section -->
-    <section class="h-full w-full min-w-96 mx-auto my-8 p-8 rounded-md">
+    <section class="h-full w-full min-w-96 mx-auto p-8">
         <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Dashboard</h1>
         <section class="h-screen w-full rounded-lg">
             <div class="bg-gray-200 dark:bg-gray-600 w-full h-32 rounded my-2 px-8 flex items-center relative">
@@ -25,57 +25,46 @@ for ($i = 0; $i < $data_size; $i++) {
                 </div>
             </div>
             <!-- Carousel -->
-            <div class="carousel-container h-3/4 w-full flex overflow-hidden my-8 relative">
-                <div class="carousel-items h-full w-full flex transition-transform duration-500 ease-linear">
-                    <div class="carousel-item relative rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start">
+            <div class="carousel-container h-1/2 w-full flex overflow-hidden my-8 relative">
+                <div class="carousel-items h-fit w-full flex transition-transform duration-500 ease-linear">
+                    <div class="carousel-item relative rounded-lg h-96 w-full shrink-0 text-gray-100 flex-col flex justify-center items-start">
                         <img src="../img/PM-KISAN.png" class="rounded-md h-full w-full mb-2" alt="">
-                
                     </div>
-                    <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start">
+                    <div class="carousel-item rounded-lg h-96 w-full shrink-0 text-gray-100 flex-col flex justify-center items-start">
                         <img src="../img/PM-Kisan-Maandhan.jpg" class="rounded-md mb-2 h-full w-full" alt="">
                     </div>
-                    <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start">
+                    <div class="carousel-item rounded-lg h-96 w-full shrink-0 text-gray-100 flex-col flex justify-center items-start">
                         <img src="../img/PM-Fasal-Bima-Yojana.jpg" class="rounded-md mb-2 h-full w-full" alt="">
-                        
                     </div>
-                    <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
+                    <div class="carousel-item rounded-lg h-96 w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
                         <img src="../img/MISS.jpeg" class="rounded-md mb-2 h-full w-full" alt="">
-                        
                     </div>
-                    <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
+                    <div class="carousel-item rounded-lg h-96 w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
                         <img src="../img/AIF-FUND.png" class="rounded-md mb-2 h-full w-full" alt="">
-                        
                     </div>
-                    <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
+                    <div class="carousel-item rounded-lg h-96 w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
                         <img src="../img/FPO.jpg" class="rounded-md mb-2 h-full w-full" alt="">
-                        
                     </div>
-                    <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
+                    <div class="carousel-item rounded-lg h-96 w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
                         <img src="../img/NBHM.jpeg" class="rounded-md mb-2 h-full w-full" alt="">
-                        
                     </div>
-                    <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
+                    <div class="carousel-item rounded-lg h-96 w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
                         <img src="../img/MIS-PSS.png" class="rounded-md mb-2 h-full w-full" alt="">
-                        
                     </div>
-                    <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
+                    <div class="carousel-item rounded-lg h-96 w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
                         <img src="../img/NMO-DRON-DID.png" class="rounded-md mb-2 h-full w-full" alt="">
-                        
                     </div>
-                    <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
+                    <div class="carousel-item rounded-lg h-96 w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
                         <img src="../img/RKVY-DPR.png" class="rounded-md mb-2 h-full w-full" alt="">
-                        
                     </div>
-                    <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
+                    <div class="carousel-item rounded-lg h-96 w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
                         <img src="../img/SOIL-HEALTH_CARD.png" class="rounded-md mb-2 h-full w-full" alt="">
-                        
                     </div>
-                    <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
+                    <div class="carousel-item rounded-lg h-96 w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
                         <img src="../img/RAD.png" class="rounded-md mb-2 h-full w-full" alt="">
-                        
                     </div>
                 </div>
-                <div class="indicators absolute bottom-2 left-0 w-full text-center">
+                <div class="indicators absolute bottom-4 left-0 w-full text-center">
                     <span class="indicator inline-block w-2.5 h-2.5 rounded-full cursor-pointer my-1 bg-gray-200"></span>
                     <span class="indicator inline-block w-2.5 h-2.5 rounded-full cursor-pointer my-1 bg-gray-200"></span>
                     <span class="indicator inline-block w-2.5 h-2.5 rounded-full cursor-pointer my-1 bg-gray-200"></span>
@@ -96,13 +85,14 @@ for ($i = 0; $i < $data_size; $i++) {
                     &gt;
                 </button>
             </div>
+            <div class="relative h-fit py-8 w-full my-8 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
+                <div class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  "></div>
+                <h1 class="z-10 text-xl sm:text-5xl md:text-7xl font-bold px-8 transition-all duration-1000 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">Farmer Portals</h1>
+            </div>
         </section>
-        <div class="relative h-fit py-8 w-full my-8 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
-            <div class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  "></div>
-            <h1 class="z-10 text-xl sm:text-5xl md:text-7xl font-bold px-8 transition-all duration-1000 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">Farmer Portals</h1>
-        </div>
+
         <!-- Schems of governments -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
 
             <div class="bg-gray-200 dark:bg-slate-700 p-6 rounded-md hover:shadow-xl hover:scale-100 transition-all duration-300 ease-in-out">
                 <img src="../img/PM-KISAN.png" class="rounded-md mb-2" alt="">

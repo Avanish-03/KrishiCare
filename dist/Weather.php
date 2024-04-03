@@ -10,94 +10,166 @@
     <link rel="stylesheet" href="../src/Js/styles.css">
     <script src="../src/Js/code.js"></script>
     <script src="../flowbite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
-<body>
+<body onload="loadStates()">
 
     <?php include("Header.php") ?>
-    <div class="min-h-fit bg-gray-100 p-0 sm:p-5 bg-cover bg-no-repeat bg-center" style="background-image: url('../img/weather-img-up.jpg');">
-        <div class="flex items-center justify-center">
-            <div class="bg-white p-8 rounded shadow-md max-w-md w-full">
-                <h1 class="text-2xl font-bold mb-4">Enter city and state to get weather details</h1>
-                <form action="" method="post" class="mb-4">
-                    <div class="flex items-center mb-4">
-                        <label for="state" class="mr-2">State:</label>
-                        <select id="state" name="state" class="border rounded px-2 py-1 focus:outline-none focus:border-blue-500">
-                            <!-- Add options for Indian states -->
-                            <option value="">----select stat----</option>
-                            <option value="Andhra Pradesh">Andhra Pradesh</option>
-                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                            <option value="Assam">Assam</option>
-                            <option value="Bihar">Bihar</option>
-                            <option value="Chhattisgarh">Chhattisgarh</option>
-                            <option value="Goa">Goa</option>
-                            <option value="Gujarat">Gujarat</option>
-                            <option value="Haryana">Haryana</option>
-                            <option value="Himachal Pradesh">Himachal Pradesh</option>
-                            <option value="Jharkhand">Jharkhand</option>
-                            <option value="Karnataka">Karnataka</option>
-                            <option value="Kerala">Kerala</option>
-                            <option value="Madhya Pradesh">Madhya Pradesh</option>
-                            <option value="Maharashtra">Maharashtra</option>
-                            <option value="Manipur">Manipur</option>
-                            <option value="Meghalaya">Meghalaya</option>
-                            <option value="Mizoram">Mizoram</option>
-                            <option value="Nagaland">Nagaland</option>
-                            <option value="Odisha">Odisha</option>
-                            <option value="Punjab">Punjab</option>
-                            <option value="Rajasthan">Rajasthan</option>
-                            <option value="Sikkim">Sikkim</option>
-                            <option value="Tamil Nadu">Tamil Nadu</option>
-                            <option value="Telangana">Telangana</option>
-                            <option value="Tripura">Tripura</option>
-                            <option value="Uttar Pradesh">Uttar Pradesh</option>
-                            <option value="Uttarakhand">Uttarakhand</option>
-                            <option value="West Bengal">West Bengal</option>
-                        </select>
+    <div class="min-h-fit bg- p-0 sm:p-5">
+        <div class="grid grid-cols-1 md:grid-cols-4">
+            <div class="bg-gray-100 p-8 my-8 rounded shadow-md max-w-md w-full md:col-span-1">
+                <div>
+                    <h1 class="text-2xl font-bold mb-4">Weather details</h1>
+                    <form action="" method="post" class="mb-4">
+                        <div class="flex items-center mb-4">
+                            <label for="state" class="mr-2">State:</label>
+                            <select id="state" name="state" onchange="loadCities()" class="state border rounded w-full px-2 py-1 focus:outline-none focus:border-blue-500"></select>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <label for="city" class="mr-2">City:</label>
+                            <select id="city" name="city" class="city border rounded w-full px-2 py-1 focus:outline-none focus:border-blue-500"></select>
+                        </div>
+                        <button type="submit" name="getWeather" class="mt-2 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 focus:outline-none focus:bg-green-600">Get Weather</button>
+                    </form>
+                </div>
+            </div>
+            <div class="md:col-span-3 p-8">
+                <div class="h-full">
+                    <div class="h-full grid">
+                        <?php
+                        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                            $api_key = "97852380926fcca385c9165c3d2f7a2d";
+                            if (isset($_POST["getWeather"])) {
+                                if (!isset($_POST['state'])) {
+                                    echo "<script>
+                        Swal.fire({
+                            title: 'Oops!',
+                            text: 'Please select both the city and state!',
+                            icon: 'error'
+                        });
+                    </script>";
+                                } elseif (!isset($_POST['city'])) {
+                                    echo "<script>
+                        Swal.fire({
+                            title: 'Oops!',
+                            text: 'Please select both the city and state!',
+                            icon: 'error'
+                        });
+                    </script>";
+                                } else {
+                                    $city = $_POST['city'];
+                                    $state = $_POST['state'];
+                                    $location = $city . ',' . $state . ',IN'; // Adding the state and country code
+                                    getWeather($api_key, $location, $city, $state);
+                                }
+                            } else {
+                                echo "<script>
+                    Swal.fire({
+                        title: 'Oops!',
+                        text: 'Please select both the city and state!',
+                        icon: 'success'
+                    });
+                </script>";
+                            }
+                        } else {
+                            $city = "surat";
+                            $state = "GJ";
+                            $api_key = "97852380926fcca385c9165c3d2f7a2d";
+                            $location = $city . ',' . $state . ',IN'; // Adding the state and country code
+                            getWeather($api_key, $location, $city, $state);
+                        }
+                        ?>
                     </div>
-                    <div class="flex items-center mb-4">
-                        <label for="city" class="mr-2">City:</label>
-                        <input type="text" id="city" name="city" class="border rounded px-2 py-1 focus:outline-none focus:border-blue-500">
-                    </div>
-                    <button type="submit" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Get Weather</button>
-                </form>
-                <?php
-                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                    $api_key = "97852380926fcca385c9165c3d2f7a2d";
-                    $city = $_POST['city'];
-                    $state = $_POST['state'];
-                    $location = $city . ',' . $state . ',IN'; // Adding the state and country code
-
-                    getWeather($api_key, $location);
-                }
-
-                function getWeather($api_key, $location)
-                {
-                    $base_url = "http://api.openweathermap.org/data/2.5/weather";
-                    $params = [
-                        'q' => $location,
-                        'appid' => $api_key,
-                        'units' => 'metric', // Change to 'imperial' for Fahrenheit
-                    ];
-
-                    $url = $base_url . '?' . http_build_query($params);
-                    $weather_data = json_decode(file_get_contents($url), true);
-
-                    if ($weather_data && isset($weather_data['main'])) {
-                ?><b>Weather in </b> <?php echo "$location"; ?><br> <?php
-                                                                        ?><b>Temperature: </b> <?php echo "{$weather_data['main']['temp']}°C "; ?><br> <?php
-                                                                                                    ?><b>Time: </b> <?php echo date("d-m-Y h:i:s", $weather_data['dt']) . ""; ?><br> <?php
-                                                                                                    ?><b>Description: </b> <?php echo "{$weather_data['weather'][0]['description']}"; ?><br> <?php
-                                                                                                                ?><b>Humidity: </b> <?php echo "{$weather_data['main']['humidity']}%"; ?><br> <?php
-                                                                                                    ?><b>Wind Speed: </b> <?php echo "{$weather_data['wind']['speed']} m/s"; ?><br> <?php
-                                                                                                } else {
-                                                                                                    echo "Failed to retrieve weather data."; ?><br> <?php
-                                                                                                }
-                                                                                            }
-                                                                    ?>
+                </div>
             </div>
         </div>
     </div>
+    <?php
+
+    function getWeather($api_key, $location, $city, $state)
+    {
+        $base_url = "http://api.openweathermap.org/data/2.5/weather";
+        $params = [
+            'q' => $location,
+            'appid' => $api_key,
+            'units' => 'metric', // Change to 'imperial' for Fahrenheit
+        ];
+
+        $url = $base_url . '?' . http_build_query($params);
+        $weather_data = json_decode(file_get_contents($url), true);
+
+        if ($weather_data && isset($weather_data['main'])) {
+            $temperature = $weather_data['main']['temp'];
+            $weather_condition = $weather_data['weather'][0]['description'];
+            $wind_speed = $weather_data['wind']['speed'];
+            $wind_direction = $weather_data['wind']['deg'];
+            $humidity = $weather_data['main']['humidity'];
+            // $cloudiness = $weather_data['clouds']['all'];
+            $sunrise_time = date('H:i', $weather_data['sys']['sunrise']);
+            $sunset_time = date('H:i', $weather_data['sys']['sunset']);
+            $data_time = date('d-m-y', $weather_data['dt']);
+            // $latitude = $weather_data['coord']['lat'];
+            // $longitude = $weather_data['coord']['lon'];
+    ?>
+            <div class="h-fit py-4 bg-gray-100 shadow-lg mb-4 px-8 rounded-lg">
+                <?php echo "Weather in  : " . $city ?>
+            </div>
+            <div class="h-full grid gap-4 grid-cols-1 md:grid-cols-4">
+                <div class="bg-gray-100 hover:shadow-lg p-8 h-40 md:h-full rounded-lg">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="w-full flex flex-col justify-center">
+                            <h1>Humidity</h1>
+                            <h1 class="text-4xl h-16 flex justify-center items-center"><?php echo $humidity; ?> %</h1>
+                            <p>Normal</p>
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <div class="w-9 h-full rounded-full border border-gray-400 flex justify-center items-end">
+                                <div class="bg-green-500 h-7 w-7 rounded-full my-1"></div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-100 hover:shadow-lg h-40 md:h-full rounded-lg flex justify-center items-center">
+                    <div class="w-fit">
+                        <h1>Wind Status</h1>
+                        <h1 class="text-4xl py-3 w-full flex justify-center items-end"><?php echo $wind_speed; ?><span class="text-sm px-1 text-end">m/s</span></h1>
+                        <p><?php echo $wind_direction; ?> °</p>
+                    </div>
+                </div>
+                <div class="bg-gray-100 hover:shadow-lg p-8 h-40 md:h-full rounded-lg grid grid-cols-2 gap-4">
+                    <div class="w-full flex flex-col justify-center">
+                        <h1>Temperature</h1>
+                        <h1 class="text-4xl h-16 w-full flex justify-center items-center"><?php echo $temperature; ?></h1>
+                        <p><?php echo $weather_condition; ?></p>
+                    </div>
+                    <div class="flex justify-center items-center my-2">
+                        <div class="w-9 h-full rounded-full border border-gray-400 flex justify-center items-center">
+                            <div class="bg-green-500 h-7 w-7 rounded-full my-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-100 hover:shadow-lg h-40 md:h-full rounded-lg flex justify-center items-center">
+                    <div class="w-fit">
+                        <h1>Sunrise & Sunset</h1>
+                        <h1 class="text-2xl py-1 w-full flex ml-8"><span><img src="../img/sun-rise.png" class="h-7 pr-2" alt=""></span><?php echo $sunrise_time; ?> </h1>
+                        <h1 class="text-2xl py-1 w-full flex ml-8"><span><img src="../img/sun-set.png" class="h-7 pr-2" alt=""></span><?php echo $sunset_time; ?> </h1>
+                        <p><?php echo $data_time; ?></p>
+                    </div>
+                </div>
+            </div>
+    <?php
+        } else {
+            echo "<script>
+                    Swal.fire({
+                        title: 'Oops!',
+                        text: 'Failed to retrieve weather data!',
+                        icon: 'error'
+                      });
+                    </script>";
+        }
+    }
+    ?>
 
     <?php include('Footer.php'); ?>
 

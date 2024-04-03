@@ -14,22 +14,18 @@
     <div class="h-fit w-full my-8 bg-gray-200 rounded-lg dark:bg-slate-700">
         <?php
         ?>
-        <div
-            class="min-h-fit h-[60%] rounded-lg flex justify-center items-center bg-gray-200 dark:bg-slate-700 p-0 sm:p-5">
+        <div class="min-h-fit h-[60%] rounded-lg flex justify-center items-center bg-gray-200 dark:bg-slate-700 p-0 sm:p-5">
             <?php
 
             ?>
-            <div
-                class="mx-auto h-fit py-8 max-w-md px-8 bg-white dark:bg-slate-800 dark:text-gray-300 border-0 shadow-lg rounded-lg">
+            <div class="mx-auto h-fit py-8 max-w-md px-8 bg-white dark:bg-slate-800 dark:text-gray-300 border-0 shadow-lg rounded-lg">
                 <h1 class="text-2xl font-bold mb-2">Enter city to get weather detail</h1>
                 <form method="post" class="h-fit">
                     <div class="relative z-0 w-full mb-1">
-                        <input type="text" name="city" placeholder="Enter city" required
-                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                        <input type="text" name="city" placeholder="Enter city" required class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                         <label for="city" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500"></label>
                     </div>
-                    <button id="button" name="weatherSearchBtn" type="submit"
-                        class="w-full px-6 py-3 mt-3 text-lg text-white transition-all duration-150 ease-linear rounded-lg shadow outline-none bg-green-500 hover:bg-green-600 hover:shadow-lg focus:outline-none">
+                    <button id="button" name="weatherSearchBtn" type="submit" class="w-full px-6 py-3 mt-3 text-lg text-white transition-all duration-150 ease-linear rounded-lg shadow outline-none bg-green-500 hover:bg-green-600 hover:shadow-lg focus:outline-none">
                         Search
                     </button>
                 </form>
@@ -51,28 +47,42 @@
             <div class="w-full p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <?php
                 // echo "City: " . $forecastData['city']['name'] . "<br>";
-                foreach ($forecastData['list'] as $forecast) {
-                    $timestamp = $forecast['dt'];
-                    $dateTime = date('Y-m-d h:i', $timestamp);
-                    $temperature = $forecast['main']['temp'];
-                    $description = $forecast['weather'][0]['description'];
+                if ($forecastData && isset($forecastData['list'][0])) {
+                    $forecast = $forecastData['list'][0];
+                    // $timestamp = $forecast['dt'];
+                    // $dateTime = date('Y-m-d h:i', $timestamp);
+                    // $temperature = $forecast['main']['temp'];
+                    // $description = $forecast['weather'][0]['description'];
+                    $forecast = $forecastData['list'][0];
 
-                    // echo "DateTime: $dateTime<br>";
-                    // echo "Temperature: " . round($temperature - 273.15, 2) . "°C<br>";
-                    // echo "Description: $description<br>";
-                    // echo "-----------------------<br>";
-                    ?>
-                    <!-- <div class="bg-gray-100 p-6 rounded-lg">
-                        <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://images.pexels.com/photos/1162251/pexels-photo-1162251.jpeg?auto=compress&cs=tinysrgb&w=600" alt="content">
-                        <h3 class="tracking-widest text-indigo-500 text-sm font-medium title-font">Time : <?php echo "Current temperature in $city: " . round($temperature - 273.15, 2) . "°C<br>"; ?></h3>
-                        <h2 class="text-lg text-gray-900 font-medium title-font">Date : <?php echo $dateTime; ?></h2>
-                        <h2 class="text-lg text-gray-900 font-medium title-font mb-2"><?php echo "Description: $description " ?>°C</h2>
-                        <p class="leading-relaxed text-base"><?php echo $description ?></p>
-                    </div> -->
+                    // Extract forecasted data
+                    $temperature = $forecast['main']['temp'];
+                    $weather_condition = $forecast['weather'][0]['description'];
+                    $wind_speed = $forecast['wind']['speed'];
+                    $wind_direction = $forecast['wind']['deg'];
+                    $humidity = $forecast['main']['humidity'];
+                    $pressure = $forecast['main']['pressure'];
+                    $cloudiness = $forecast['clouds']['all'];
+                    $rainfall = isset($forecast['rain']) ? $forecast['rain']['3h'] : 0; // Rainfall in last 3 hours
+                    $snowfall = isset($forecast['snow']) ? $forecast['snow']['3h'] : 0; // Snowfall in last 3 hours
+                    $timestamp = $forecast['dt'];
+
+                    // Output forecasted data
+                    echo "Temperature: " . $temperature . "°C<br>";
+                    echo "Weather Condition: " . $weather_condition . "<br>";
+                    echo "Wind Speed: " . $wind_speed . " m/s<br>";
+                    echo "Wind Direction: " . $wind_direction . "°<br>";
+                    echo "Humidity: " . $humidity . "%<br>";
+                    echo "Pressure: " . $pressure . " hPa<br>";
+                    echo "Cloudiness: " . $cloudiness . "%<br>";
+                    echo "Rainfall: " . $rainfall . " mm<br>";
+                    echo "Snowfall: " . $snowfall . " mm<br>";
+                    echo "Timestamp: " . date('Y-m-d H:i:s', $timestamp);
+                ?>
                     <div class="h-48 w-full rounded-xl text-black p-8 bg-white grid grid-cols-2 gap-4">
                         <div>
                             <h1>Humidity</h1>
-                            <h1 class="text-4xl h-20 flex justify-center items-center">12%</h1>
+                            <h1 class="text-4xl h-20 flex justify-center items-center"><?php echo $humidity;?>%</h1>
                             <p>Normal</p>
                         </div>
                         <div class="flex justify-center items-center">
@@ -87,11 +97,6 @@
                             <h1 class="text-4xl h-20 w-full flex justify-center items-center">7.70<span class="text-sm px-3 text-end">km/h</span></h1>
                             <p>WSW</p>
                         </div>
-                        <!-- <div class="flex justify-center items-center">
-                            <div class="w-9 h-full rounded-full border border-gray-400 flex justify-center items-end">
-                                <div class="bg-green-500 h-7 w-7 rounded-full my-1"></div>
-                            </div>
-                        </div> -->
                     </div>
                     <div class="h-48 w-full rounded-xl text-black p-8 bg-white grid grid-cols-2 gap-4">
                         <div class="w-full">
@@ -112,13 +117,8 @@
                             <h1 class="text-2xl py-1 w-full flex ml-8"><span><img src="../img/sun-set.png" class="h-7 pr-2" alt=""></span>06:45 </h1>
                             <p>WSW</p>
                         </div>
-                        <!-- <div class="flex justify-center items-center">
-                            <div class="w-9 h-full rounded-full border border-gray-400 flex justify-center items-end">
-                                <div class="bg-green-500 h-7 w-7 rounded-full my-1"></div>
-                            </div>
-                        </div> -->
                     </div>
-                    <?php
+                <?php
                 }
                 ?>
             </div>
@@ -140,7 +140,7 @@
         // if ($data === null) {
         //     die("Error decoding JSON data");
         // }
-        
+
         // Extract relevant weather information
         // $city = $data["location"]["name"];
         // $country = $data["location"]["country"];
@@ -151,7 +151,7 @@
         // $windDirection = $data["current"]["wind_dir"];
         // $humidity = $data["current"]["humidity"];
         // $pressureMb = $data["current"]["pressure_mb"];
-        
+
         // Output weather information
         // echo "Weather in $city, $country:\n";
         // echo "Temperature: $temperatureCelsius" . "°C /" .  $temperatureFahrenheit . "°F \n";
@@ -159,25 +159,25 @@
         // echo "Wind: $windSpeedKph km/h from $windDirection\n";
         // echo "Humidity: $humidity%\n";
         // echo "Pressure: $pressureMb mb\n";
-        
+
         // Decode JSON response
         // $data = json_decode($response, true);
-        
+
         // Check if data is valid
         // if ($data === null || $data["cod"] !== 200) {
         //     die("Error getting weather data");
         // }
-        
+
         // Extract relevant weather information
         // $weatherDescription = $data["weather"][0]["description"];
         // $temperature = $data["main"]["temp"];
         // $humidity = $data["main"]["humidity"];
-        
+
         // Output weather information
         // echo "Weather in $city: $weatherDescription\n";
         // echo "Temperature: $temperature°C\n";
         // echo "Humidity: $humidity%\n";
-        
+
         ?>
 
 
