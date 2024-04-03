@@ -740,45 +740,6 @@ function labProfilePic(process, labid) {
     return false;
 }
 
-// function loadChart() {
-//     var dataPoints = [
-//         { label: "WordPress", y: 60.0 },
-//         { label: "Joomla", y: 6.5 },
-//         { label: "Drupal", y: 4.6 },
-//         { label: "Magento", y: 2.4 },
-//         { label: "Blogger", y: 1.9 },
-//         { label: "Shopify", y: 1.8 },
-//         { label: "Bitrix", y: 1.5 },
-//         { label: "Squarespace", y: 1.5 },
-//         { label: "PrestaShop", y: 1.3 },
-//         { label: "Wix", y: 0.9 },
-//         { label: "OpenCart", y: 0.8 }
-//     ];
-
-//     var chart = new CanvasJS.Chart("chartContainer", {
-//         animationEnabled: true,
-//         theme: "light2",
-//         title: {
-//             text: "CMS Market Share - 2017"
-//         },
-//         axisY: {
-//             suffix: "%",
-//             scaleBreaks: {
-//                 autoCalculate: true
-//             }
-//         },
-//         data: [{
-//             type: "column",
-//             yValueFormatString: "#,##0\"%\"",
-//             indexLabel: "{y}",
-//             indexLabelPlacement: "inside",
-//             indexLabelFontColor: "white",
-//             dataPoints: dataPoints
-//         }]
-//     });
-//     chart.render();
-// }
-
 function logoutUser(user) {
     var result = confirm("Are you sure to logout!");
     if (result) {
@@ -808,29 +769,6 @@ function toggleModeAdmin() {
         html.classList.add("dark");
     }
 }
-
-// google.charts.load("current", {
-//     packages: ["corechart"]
-// });
-// google.charts.setOnLoadCallback(drawChart);
-// function drawChart() {
-//     var data = google.visualization.arrayToDataTable([
-//         ['Task', 'Hours per Day'],
-//         ['Work', 11],
-//         ['Eat', 2],
-//         ['Commute', 2],
-//         ['Watch TV', 2],
-//         ['Sleep', 7]
-//     ]);
-
-//     var options = {
-//         title: 'My Daily Activities',
-//         is3D: true,
-//     };
-
-//     var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-//     chart.draw(data, options);
-// }
 
 function initializeCarousel() {
     let carouselItems = document.querySelector(".carousel-items");
@@ -875,4 +813,49 @@ function initializeCarousel() {
         clearInterval(slideInterval); // Stop automatic sliding when manually navigating
         moveToNext();
     });
+}
+
+// chart on admin dashboard
+
+google.charts.load('current', { packages: ['corechart', 'bar'] });
+google.charts.setOnLoadCallback(drawMultSeries);
+
+function drawMultSeries() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('timeofday', 'Time of Day');
+    data.addColumn('number', 'Motivation Level');
+    data.addColumn('number', 'Energy Level');
+
+    data.addRows([
+        [{ v: [8, 0, 0], f: '8 am' }, 1, .25],
+        [{ v: [9, 0, 0], f: '9 am' }, 2, .5],
+        [{ v: [10, 0, 0], f: '10 am' }, 3, 1],
+        [{ v: [11, 0, 0], f: '11 am' }, 4, 2.25],
+        [{ v: [12, 0, 0], f: '12 pm' }, 5, 2.25],
+        [{ v: [13, 0, 0], f: '1 pm' }, 6, 3],
+        [{ v: [14, 0, 0], f: '2 pm' }, 7, 4],
+        [{ v: [15, 0, 0], f: '3 pm' }, 8, 5.25],
+        [{ v: [16, 0, 0], f: '4 pm' }, 9, 7.5],
+        [{ v: [17, 0, 0], f: '5 pm' }, 10, 10],
+    ]);
+
+    var options = {
+        title: 'Motivation and Energy Level Throughout the Day',
+        hAxis: {
+            title: 'Time of Day',
+            format: 'h:mm a',
+            viewWindow: {
+                min: [7, 30, 0],
+                max: [17, 30, 0]
+            }
+        },
+        vAxis: {
+            title: 'Rating (scale of 1-10)'
+        }
+    };
+
+    var chart = new google.visualization.ColumnChart(
+        document.getElementById('chart_div'));
+
+    chart.draw(data, options);
 }

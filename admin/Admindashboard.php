@@ -4,7 +4,7 @@ session_start();
 if ($_SESSION["admin"] == null) {
     header('Location: ' . '../dist/Login.php');
 }
-include("../Backend/config.php");
+include ("../Backend/config.php");
 
 ?>
 <!DOCTYPE html>
@@ -15,7 +15,8 @@ include("../Backend/config.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="icon" href="https://cdn-icons-png.freepik.com/256/4140/4140048.png?ga=GA1.1.253096211.1707907143&"> -->
     <title>KrishiCare - Farmer Information System</title>
-    <link rel="icon" href="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais">
+    <link rel="icon"
+        href="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais">
     <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
     <link rel="stylesheet" href="../dist/output.css">
     <link rel="stylesheet" href="../src/Js/styles.css">
@@ -23,34 +24,45 @@ include("../Backend/config.php");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- chart admin dashboard -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
 </head>
 
 <body onload="adminMenuLoader('dashboard');drawChart();" class="overflow-hidden dark:text-white ">
     <div class="h-screen w-screen sm:min-w-96 sm:min-h-screen">
         <header class="sticky w-full h-[10%]">
-            <div class="dark:bg-gray-800 bg-gray-200 w-full h-full text-gray-500 dark:text-gray-300 flex justify-around items-center">
+            <div
+                class="dark:bg-gray-800 bg-gray-200 w-full h-full text-gray-500 dark:text-gray-300 flex justify-around items-center">
                 <div onclick="adminMenuLoader('dashboard')" class="flex justify-center items-center sm:w-[20%]">
-                    <img src="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais" class="sm:h-10 h-6" alt="">
+                    <img src="https://cdn-icons-png.freepik.com/256/10341/10341413.png?ga=GA1.1.253096211.1707907143&semt=ais"
+                        class="sm:h-10 h-6" alt="">
                     <h1 class="sm:text-3xl font-serif cursor-pointer">KrishiCare</h1>
                 </div>
                 <div class="flex justify-around items-center sm:w-[80%]">
                     <div class="flex sm:mx-4 w-[60%]">
-                        <label name="search" class="sm:text-2xl cursor-pointer hover:bg-gray-900 rounded-md p-1 mr-1">🔎</label>
-                        <input name="search" type="text" placeholder="Search..." class="outline-none bg-gray-300 dark:bg-slate-900 rounded-md font-light sm:text-lg text-xs px-2 w-[80%]">
+                        <label name="search"
+                            class="sm:text-2xl cursor-pointer hover:bg-gray-900 rounded-md p-1 mr-1">🔎</label>
+                        <input name="search" type="text" placeholder="Search..."
+                            class="outline-none bg-gray-300 dark:bg-slate-900 rounded-md font-light sm:text-lg text-xs px-2 w-[80%]">
                     </div>
                     <div class="flex justify-center items-center sm:mx-4 space-x-2">
-                        <div class="toggle-btn sm:w-10 sm:h-5 bg-slate-500 dark:bg-slate-500 bg-opacity-50 rounded-full flex items-start">
+                        <div
+                            class="toggle-btn sm:w-10 sm:h-5 bg-slate-500 dark:bg-slate-500 bg-opacity-50 rounded-full flex items-start">
                             <input type="checkbox" id="modeCheckbox" class="hidden">
-                            <label onclick="toggleModeAdmin()" for="modeCheckbox" class="toggle-ball transition-all duration-300 ease-in-out w-3 h-3 dark:pl-2 -mt-0.5 rounded-full relative inline-block cursor-pointer">
-                                <i class="fa-solid fa-circle-half-stroke text-slate-600 dark:text-slate-200 dark:rotate-180 duration-150 text-xl"></i>
+                            <label onclick="toggleModeAdmin()" for="modeCheckbox"
+                                class="toggle-ball transition-all duration-300 ease-in-out w-3 h-3 dark:pl-2 -mt-0.5 rounded-full relative inline-block cursor-pointer">
+                                <i
+                                    class="fa-solid fa-circle-half-stroke text-slate-600 dark:text-slate-200 dark:rotate-180 duration-150 text-xl"></i>
                             </label>
                         </div>
                         <div class="hidden sm:block">
-                            <button><i class="hover:bg-gray-300 dark:hover:bg-gray-900 rounded-md text-2xl fa-regular fa-bell px-2"></i></button>
+                            <button><i
+                                    class="hover:bg-gray-300 dark:hover:bg-gray-900 rounded-md text-2xl fa-regular fa-bell px-2"></i></button>
                         </div>
                         <div class="hidden sm:block">
-                            <button><i class="hover:bg-gray-300 dark:hover:bg-gray-900 rounded-md text-2xl fa-solid fa-comment-dots px-2"></i></button>
+                            <button><i
+                                    class="hover:bg-gray-300 dark:hover:bg-gray-900 rounded-md text-2xl fa-solid fa-comment-dots px-2"></i></button>
                         </div>
                         <div class="hidden sm:block w-full">
                             <div class="flex justify-end items-center ml-16 text-right ">
@@ -58,7 +70,9 @@ include("../Backend/config.php");
                                     <h2 class="font-mono">Avanish Yadav</h2>
                                     <span class="text-[12px]">avanish123@gmail.com</span>
                                 </div>
-                                <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider" class="text-white focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center " type="button">
+                                <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
+                                    class="text-white focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center "
+                                    type="button">
                                     <?php
                                     $adminQuery = "SELECT `adminprofile`,`name`, `password` FROM `admin` WHERE `name`= 'admin@gmail.com';";
                                     $result = mysqli_query($con, $adminQuery);
@@ -72,25 +86,35 @@ include("../Backend/config.php");
                                         }
                                     }
                                     ?>
-                                    <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                                    <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m1 1 4 4 4-4" />
                                     </svg>
                                 </button>
                                 <!-- Dropdown menu -->
-                                <div id="dropdownDivider" class="hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-32 dark:bg-gray-800 dark:divide-gray-600">
-                                    <ul class="py-2 text-md text-gray-700 dark:text-gray-200 text-start" aria-labelledby="dropdownDividerButton">
-                                        <li onclick="adminMenuLoader('dashboard')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-600 font-bold">
+                                <div id="dropdownDivider"
+                                    class="hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-32 dark:bg-gray-800 dark:divide-gray-600">
+                                    <ul class="py-2 text-md text-gray-700 dark:text-gray-200 text-start"
+                                        aria-labelledby="dropdownDividerButton">
+                                        <li onclick="adminMenuLoader('dashboard')"
+                                            class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-600 font-bold">
                                             <div class="cursor-pointer hidden sm:block">Dashboard</div>
                                         </li>
-                                        <li onclick="adminMenuLoader('setting')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-600 font-bold">
+                                        <li onclick="adminMenuLoader('setting')"
+                                            class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-600 font-bold">
                                             <div class="cursor-pointer hidden sm:block">Setting</div>
                                         </li>
-                                        <li onclick="adminMenuLoader('profile')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-600 font-bold">
+                                        <li onclick="adminMenuLoader('profile')"
+                                            class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-600 font-bold">
                                             <div class="cursor-pointer hidden sm:block">Profile</div>
                                         </li>
                                     </ul>
-                                    <div onclick="logoutUser('admin')" class="py-2 rounded-md dark:hover:bg-gray-600 text-center">
-                                        <a href="" class="rounded-md text-gray-900 dark:text-gray-300 duration-700 font-mono">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+                                    <div onclick="logoutUser('admin')"
+                                        class="py-2 rounded-md dark:hover:bg-gray-600 text-center">
+                                        <a href=""
+                                            class="rounded-md text-gray-900 dark:text-gray-300 duration-700 font-mono">Logout
+                                            <i class="fa-solid fa-right-from-bracket"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -123,19 +147,23 @@ include("../Backend/config.php");
                         <h1 class="font-light sm:text-xl text-gray-500 sm:px-8 hidden sm:block">MENU</h1>
                     </div>
                     <ul class="sm:mb-8 sm:px-8">
-                        <li onclick="adminMenuLoader('dashboard')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
+                        <li onclick="adminMenuLoader('dashboard')"
+                            class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
                             <i class="sm:mr-2 sm:text-xl fa-solid fa-house"></i>
                             <div class="cursor-pointer hidden sm:block">Dashboard</div>
                         </li>
-                        <li onclick="adminMenuLoader('farmer')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
+                        <li onclick="adminMenuLoader('farmer')"
+                            class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
                             <i class="sm:mr-2 sm:text-xl fa-solid fa-person-digging"></i>
                             <div class="cursor-pointer hidden sm:block">Farmer</div>
                         </li>
-                        <li onclick="adminMenuLoader('laboratory')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
+                        <li onclick="adminMenuLoader('laboratory')"
+                            class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
                             <i class="sm:mr-2 sm:text-xl fa-solid fa-flask-vial"></i>
                             <div class="cursor-pointer hidden sm:block">Laboratory</div>
                         </li>
-                        <li onclick="adminMenuLoader('report')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
+                        <li onclick="adminMenuLoader('report')"
+                            class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
                             <i class="sm:mr-2 sm:text-xl fa-solid fa-file-lines"></i>
                             <div class="cursor-pointer hidden sm:block">Report</div>
                         </li>
@@ -143,7 +171,8 @@ include("../Backend/config.php");
                             <i class="sm:mr-2 sm:text-xl fa-brands fa-facebook-messenger"></i>
                             <div class="cursor-pointer hidden sm:block"> Messages</div>
                         </li> -->
-                        <li onclick="adminMenuLoader('notification')" class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
+                        <li onclick="adminMenuLoader('notification')"
+                            class="w-full py-3 space-x-2 text-gray-900 dark:text-gray-300 duration-700 hover:rounded flex items-center px-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
                             <i class="sm:mr-2 sm:text-xl fa-solid fa-bell"></i>
                             <div class="cursor-pointer hidden sm:block"> Notification</div>
                         </li>
@@ -153,15 +182,18 @@ include("../Backend/config.php");
                     <div>
                         <h1 class="font-light sm:text-xl text-gray-500 sm:px-8 hidden sm:block">SETTING</h1>
                     </div>
-                    <li onclick="adminMenuLoader('profile')" class="flex hover:rounded py-3 sm:mx-8 px-4 text-gray-900 dark:text-gray-300 duration-700 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
+                    <li onclick="adminMenuLoader('profile')"
+                        class="flex hover:rounded py-3 sm:mx-8 px-4 text-gray-900 dark:text-gray-300 duration-700 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
                         <i class="sm:mr-2 sm:text-xl fa-solid fa-user"></i>
                         <div class="cursor-pointer hidden sm:block">Profile</div>
                     </li>
-                    <li onclick="adminMenuLoader('setting')" class="flex hover:rounded py-3 sm:mx-8 px-4 text-gray-900 dark:text-gray-300 duration-700 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
+                    <li onclick="adminMenuLoader('setting')"
+                        class="flex hover:rounded py-3 sm:mx-8 px-4 text-gray-900 dark:text-gray-300 duration-700 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
                         <i class="sm:mr-2 sm:text-xl fa-solid fa-gear"></i>
                         <div class="cursor-pointer hidden sm:block">Setting</div>
                     </li>
-                    <li onclick="logoutUser('admin')" class="flex hover:rounded py-3 sm:mx-8 px-4 text-gray-900 dark:text-gray-300 duration-700 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
+                    <li onclick="logoutUser('admin')"
+                        class="flex hover:rounded py-3 sm:mx-8 px-4 text-gray-900 dark:text-gray-300 duration-700 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">
                         <i class="sm:mr-2 sm:text-xl fa-solid fa-right-from-bracket"></i>
                         <div class="cursor-pointer hidden sm:block">Logout</div>
                     </li>
