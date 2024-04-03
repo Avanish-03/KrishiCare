@@ -123,53 +123,40 @@
     <section class="text-gray-600 body-font">
         <div class="container px-5 mx-auto bg-white">
             <div class="flex flex-wrap -m-4 text-center">
-                <div class="xl:w-1/4 md:w-1/2 ">
+                <div class="xl:w-1/4 md:w-1/2">
                     <div class="p-6 rounded-lg">
-                        <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://www.nicheagriculture.com/wp-content/uploads/2020/10/ezgif.com-gif-maker-9-1.webp" alt="content">
+                        <img class="h-40 rounded w-full object-cover object-center hover:shadow-lg mb-6 hover:border" src="https://www.nicheagriculture.com/wp-content/uploads/2020/10/ezgif.com-gif-maker-9-1.webp" alt="content">
                         <h2 class="text-lg text-gray-900 font-bold title-font mb-4">New Technology In Farming</h2>
                         <p class="leading-relaxed text-base text-justify px-2">By utilizing KrishiCare, farmers gain instant
-                            access to
-                            information about new advancements in agricultural practices, techniques, and technologies. This
-                            invaluable resource enables farmers to stay updated with the latest innovations, empowering them
-                            to enhance their productivity, optimize resource utilization, and improve crop yields.
+                            access to information about new advancements in agricultural practices, techniques, and technologies. 
                         </p>
                     </div>
                 </div>
                 <div class="xl:w-1/4 md:w-1/2 ">
                     <div class="p-6 rounded-lg">
-                        <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://cdn.uc.assets.prezly.com/712d7152-a1c1-4e19-82f5-2d505c9f4dea/-/resize/1200x/-/format/auto/" alt="content">
+                        <img class="h-40 rounded w-full object-cover object-center mb-6 hover:shadow-lg hover:border" src="https://cdn.uc.assets.prezly.com/712d7152-a1c1-4e19-82f5-2d505c9f4dea/-/resize/1200x/-/format/auto/" alt="content">
                         <h2 class="text-lg text-gray-900 font-bold title-font mb-4">Farmer Collab with Lab</h2>
                         <p class="leading-relaxed text-base text-justify px-2">Farmers can easily connect with accredited
-                            labs to analyze
-                            soil samples and receive comprehensive reports on the health and composition of their land. By
-                            understanding the specific nutrient levels, pH balance, and other crucial factors affecting soil
-                            quality, farmers can make informed decisions regarding fertilization, crop selection, and land
-                            management practices.
+                            labs to analyze soil samples and receive comprehensive reports on the health and composition of their land. 
                         </p>
                     </div>
                 </div>
                 <div class="xl:w-1/4 md:w-1/2 ">
                     <div class="p-6 rounded-lg">
-                        <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://www.india.gov.in/sites/upload_files/npi/files/spotlights/soil-health-card-inner.jpg" alt="content">
+                        <img class="h-40 rounded w-full object-cover object-center mb-6 hover:shadow-lg hover:border" src="https://www.india.gov.in/sites/upload_files/npi/files/spotlights/soil-health-card-inner.jpg" alt="content">
                         <h2 class="text-lg text-gray-900 font-bold title-font mb-4">Soil Health Card</h2>
                         <p class="leading-relaxed text-base text-justify px-2">KrishiCare simplifies soil health reports
-                            from labs into easily
-                            understandable soil health cards for farmers. These concise summaries empower farmers to
-                            interpret crucial information about their soil's condition and make informed decisions to
-                            improve fertility and productivity. This streamlined process enhances agricultural efficiency
-                            and promotes sustainable land management practices.
+                            from labs into easily understandable soil health cards for farmers.
                         </p>
                     </div>
                 </div>
                 <div class="xl:w-1/4 md:w-1/2 ">
                     <div class="p-6 rounded-lg">
-                        <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://cdn.britannica.com/87/192187-050-B42C0C0B/Doppler-radars-signal-echo-target-National-Weather.jpg" alt="content">
+                        <img class="h-40 rounded w-full object-cover object-center mb-6 hover:shadow-lg hover:border" src="https://cdn.britannica.com/87/192187-050-B42C0C0B/Doppler-radars-signal-echo-target-National-Weather.jpg" alt="content">
                         <h2 class="text-lg text-gray-900 font-bold title-font mb-4">Weather Forecasting</h2>
                         <p class="leading-relaxed text-base text-justify px-2">KrishiCare provides real-time weather
                             forecasting, offering farmers invaluable access to up-to-date weather data crucial for farming
-                            decisions. This feature enables farmers to plan and adjust their agricultural activities
-                            according to current weather conditions, minimizing risks and optimizing crop management
-                            practices.
+                            decisions.
                         </p>
                     </div>
                 </div>

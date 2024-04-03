@@ -99,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             function getWeatherForecastData($city, $state, $country, $apiKey)
             {
                 $city = urlencode($city);
-                $url = "http://api.openweathermap.org/data/2.5/forecast?q=$city,$state,$country&appid=$apiKey&cnt=3"; // Adjusted URL to get 3-day forecast data
+                $url = "http://api.openweathermap.org/data/2.5/forecast?q=$city,$state,$country&appid=$apiKey&cnt=1"; // Adjusted URL to get 3-day forecast data
 
                 // Initialize cURL
                 $ch = curl_init();

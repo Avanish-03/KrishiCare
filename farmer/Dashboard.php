@@ -28,135 +28,51 @@ for ($i = 0; $i < $data_size; $i++) {
             <div class="carousel-container h-3/4 w-full flex overflow-hidden my-8 relative">
                 <div class="carousel-items h-full w-full flex transition-transform duration-500 ease-linear">
                     <div class="carousel-item relative rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start">
-                        <img src="../img/PM-KISAN.png" class="rounded-md h-full mb-2" alt="">
-                        <!-- <h1 class="text-2xl font-[poppins] h-fit pl-16">"Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)"</h1>
-                        <span class="text-xl font-normal capitalize px-20">
-                            <p>PM-KISAN is a central sector scheme launched on 24th February 2019 to supplement financial needs of land holding farmers, subject to exclusions. <a href="https://pmkisan.gov.in/" target="_blank" class="text-blue-300 dark:text-blue-600 hover:text-green-500">read more</a></p>
-                        </span>
-                        <div class="mt-10 px-20 w-full absolute flex justify-end">
-                            <a class="bg-green-600 hover:bg-white text-white hover:text-black py-2 px-4 rounded font-medium text-2xl" href="#">Read More</a>
-                        </div> -->
+                        <img src="../img/PM-KISAN.png" class="rounded-md h-full w-full mb-2" alt="">
+                
                     </div>
                     <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start">
                         <img src="../img/PM-Kisan-Maandhan.jpg" class="rounded-md mb-2 h-full w-full" alt="">
-                        <!-- <h1 class="text-2xl font-[poppins] h-fit pl-16">"As the earth yields its treasures, <br /> so does the farmer sow the seeds of prosperity for the nation."</h1>
-                        <span class="text-2xl font-normal capitalize px-20">Taking agriculture To The Next Level , Join us in revolutionizing
-                            <br> farming practices with Krishicare. Together, let's cultivate a brighter future for
-                            agriculture.
-                        </span>
-                        <div class="mt-10 px-20">
-                            <a class="bg-green-600 hover:bg-white text-white hover:text-black py-2 px-4 rounded font-medium text-2xl" href="#">Read More</a>
-                        </div> -->
                     </div>
                     <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start">
                         <img src="../img/PM-Fasal-Bima-Yojana.jpg" class="rounded-md mb-2 h-full w-full" alt="">
-                        <!-- <h1 class="text-2xl font-[poppins] h-fit pl-16">"Farming is not merely about growing crops, <br /> it's about nurturing life and preserving traditions."</h1>
-                        <span class="text-2xl font-normal capitalize px-20">Taking agriculture To The Next Level , Join us in revolutionizing
-                            <br> farming practices with Krishicare. Together, let's cultivate a brighter future for
-                            agriculture.
-                        </span>
-                        <div class="mt-10 px-20">
-                            <a class="bg-green-600 hover:bg-white text-white hover:text-black py-2 px-4 rounded font-medium text-2xl" href="#">Read More</a>
-                        </div> -->
+                        
                     </div>
                     <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
                         <img src="../img/MISS.jpeg" class="rounded-md mb-2 h-full w-full" alt="">
-                        <!-- <h1 class="text-2xl font-[poppins] h-fit pl-16">"From the sweat of the farmer's <br /> brow springs the bounty that sustains us all."</h1>
-                        <span class="text-2xl font-normal capitalize px-20">Taking agriculture To The Next Level , Join us in revolutionizing
-                            <br> farming practices with Krishicare. Together, let's cultivate a brighter future for
-                            agriculture.
-                        </span>
-                        <div class="mt-10 px-20">
-                            <a class="bg-green-600 hover:bg-white text-white hover:text-black py-2 px-4 rounded font-medium text-2xl" href="#">Read More</a>
-                        </div> -->
+                        
                     </div>
                     <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
                         <img src="../img/AIF-FUND.png" class="rounded-md mb-2 h-full w-full" alt="">
-                        <!-- <h1 class="text-2xl font-[poppins] h-fit pl-16">"Farming is not just a livelihood, <br /> it's a way of life deeply rooted in our culture."</h1>
-                        <span class="text-2xl font-normal capitalize px-20">Taking agriculture To The Next Level , Join us in revolutionizing
-                            <br> farming practices with Krishicare. Together, let's cultivate a brighter future for
-                            agriculture.
-                        </span>
-                        <div class="mt-10 px-20">
-                            <a class="bg-green-600 hover:bg-white text-white hover:text-black py-2 px-4 rounded font-medium text-2xl" href="#">Read More</a>
-                        </div> -->
+                        
                     </div>
                     <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
                         <img src="../img/FPO.jpg" class="rounded-md mb-2 h-full w-full" alt="">
-                        <!-- <h1 class="text-2xl font-[poppins] h-fit pl-16">"Farming is not just a livelihood, <br /> it's a way of life deeply rooted in our culture."</h1>
-                        <span class="text-2xl font-normal capitalize px-20">Taking agriculture To The Next Level , Join us in revolutionizing
-                            <br> farming practices with Krishicare. Together, let's cultivate a brighter future for
-                            agriculture.
-                        </span>
-                        <div class="mt-10 px-20">
-                            <a class="bg-green-600 hover:bg-white text-white hover:text-black py-2 px-4 rounded font-medium text-2xl" href="#">Read More</a>
-                        </div> -->
+                        
                     </div>
                     <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
                         <img src="../img/NBHM.jpeg" class="rounded-md mb-2 h-full w-full" alt="">
-                        <!-- <h1 class="text-2xl font-[poppins] h-fit pl-16">"Farming is not just a livelihood, <br /> it's a way of life deeply rooted in our culture."</h1>
-                        <span class="text-2xl font-normal capitalize px-20">Taking agriculture To The Next Level , Join us in revolutionizing
-                            <br> farming practices with Krishicare. Together, let's cultivate a brighter future for
-                            agriculture.
-                        </span>
-                        <div class="mt-10 px-20">
-                            <a class="bg-green-600 hover:bg-white text-white hover:text-black py-2 px-4 rounded font-medium text-2xl" href="#">Read More</a>
-                        </div> -->
+                        
                     </div>
                     <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
                         <img src="../img/MIS-PSS.png" class="rounded-md mb-2 h-full w-full" alt="">
-                        <!-- <h1 class="text-2xl font-[poppins] h-fit pl-16">"Farming is not just a livelihood, <br /> it's a way of life deeply rooted in our culture."</h1>
-                        <span class="text-2xl font-normal capitalize px-20">Taking agriculture To The Next Level , Join us in revolutionizing
-                            <br> farming practices with Krishicare. Together, let's cultivate a brighter future for
-                            agriculture.
-                        </span>
-                        <div class="mt-10 px-20">
-                            <a class="bg-green-600 hover:bg-white text-white hover:text-black py-2 px-4 rounded font-medium text-2xl" href="#">Read More</a>
-                        </div> -->
+                        
                     </div>
                     <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
                         <img src="../img/NMO-DRON-DID.png" class="rounded-md mb-2 h-full w-full" alt="">
-                        <!-- <h1 class="text-2xl font-[poppins] h-fit pl-16">"Farming is not just a livelihood, <br /> it's a way of life deeply rooted in our culture."</h1>
-                        <span class="text-2xl font-normal capitalize px-20">Taking agriculture To The Next Level , Join us in revolutionizing
-                            <br> farming practices with Krishicare. Together, let's cultivate a brighter future for
-                            agriculture.
-                        </span>
-                        <div class="mt-10 px-20">
-                            <a class="bg-green-600 hover:bg-white text-white hover:text-black py-2 px-4 rounded font-medium text-2xl" href="#">Read More</a>
-                        </div> -->
+                        
                     </div>
                     <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
                         <img src="../img/RKVY-DPR.png" class="rounded-md mb-2 h-full w-full" alt="">
-                        <!-- <h1 class="text-2xl font-[poppins] h-fit pl-16">"Farming is not just a livelihood, <br /> it's a way of life deeply rooted in our culture."</h1>
-                        <span class="text-2xl font-normal capitalize px-20">Taking agriculture To The Next Level , Join us in revolutionizing
-                            <br> farming practices with Krishicare. Together, let's cultivate a brighter future for
-                            agriculture.
-                        </span>
-                        <div class="mt-10 px-20">
-                            <a class="bg-green-600 hover:bg-white text-white hover:text-black py-2 px-4 rounded font-medium text-2xl" href="#">Read More</a>
-                        </div> -->
+                        
                     </div>
                     <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
                         <img src="../img/SOIL-HEALTH_CARD.png" class="rounded-md mb-2 h-full w-full" alt="">
-                        <!-- <h1 class="text-2xl font-[poppins] h-fit pl-16">"Farming is not just a livelihood, <br /> it's a way of life deeply rooted in our culture."</h1>
-                        <span class="text-2xl font-normal capitalize px-20">Taking agriculture To The Next Level , Join us in revolutionizing
-                            <br> farming practices with Krishicare. Together, let's cultivate a brighter future for
-                            agriculture.
-                        </span>
-                        <div class="mt-10 px-20">
-                            <a class="bg-green-600 hover:bg-white text-white hover:text-black py-2 px-4 rounded font-medium text-2xl" href="#">Read More</a>
-                        </div> -->
+                        
                     </div>
                     <div class="carousel-item rounded-lg h-full w-full shrink-0 text-gray-100 flex-col flex justify-center items-start ">
                         <img src="../img/RAD.png" class="rounded-md mb-2 h-full w-full" alt="">
-                        <!-- <h1 class="text-2xl font-[poppins] h-fit pl-16">"Farming is not just a livelihood, <br /> it's a way of life deeply rooted in our culture."</h1>
-                        <span class="text-2xl font-normal capitalize px-20">Taking agriculture To The Next Level , Join us in revolutionizing
-                            <br> farming practices with Krishicare. Together, let's cultivate a brighter future for
-                            agriculture.
-                        </span>
-                        <div class="mt-10 px-20">
-                            <a class="bg-green-600 hover:bg-white text-white hover:text-black py-2 px-4 rounded font-medium text-2xl" href="#">Read More</a>
-                        </div> -->
+                        
                     </div>
                 </div>
                 <div class="indicators absolute bottom-2 left-0 w-full text-center">
@@ -181,50 +97,10 @@ for ($i = 0; $i < $data_size; $i++) {
                 </button>
             </div>
         </section>
-
-        <!--<div class="lg:h-96 h-fit w-full my-3 rounded-md bg-gray-200 dark:bg-slate-700 grid grid-cols-1 md:grid-cols-2">
-            <div class="w-full h-full rounded-md flex items-center justify-center relative">
-                <div class="h-80 w-80 blur-xl rounded-full shadow-2xl shadow-fuchsia-900 absolute  "></div>
-                <img class="h-96 w-96 z-10" src="../img/rice field-bro.svg" alt="">
-            </div>
-            <div class="w-full h-full px-8 py-2 flex flex-col justify-center items-center relative rounded-md">
-                <h1>Farming is a proffession of hope</h1>
-                <div class="z-10 text-5xl font-bold text-center transition-all duration-1000 hover:scale-110 text-green-700 dark:text-gray-300 peer">"The good farmer is a craftsman of the highest order, a kind of artist." </div>
-                <div class="h-8 w-[90%] blur-3xl shadow-2xl dark:bg-blue-400 dark:peer-hover:shadow-fuchsia-900 absolute  "></div>
-                <h1 class="text-xs pt-4 text-gray-500 dark:text-gray-300">अच्छा किसान सर्वोच्च कोटि का शिल्पकार, एक प्रकार का कलाकार होता है</h1>
-            </div>
-        </div>
-       data -->
-        <!--  <div class="h-96 w-full my-5 flex bg-gray-200 dark:bg-slate-700 rounded-md">
-            <div class="w-[50%] h-full flex items-center">
-                 <div class="h-full w-[90%] space-y-2 py-0.5">
-                <div class="h-28 w-full sm:my-2 bg-gray-200 dark:bg-gray-600 border border-black rounded-xl flex justify-center items-center text-4xl">1</div>
-                <div class="h-28 w-full sm:my-2 bg-gray-200 dark:bg-gray-600 border border-black rounded-xl flex justify-center items-center text-4xl">2</div>
-                <div class="h-28 w-full sm:my-2 bg-gray-200 dark:bg-gray-600 border border-black rounded-xl flex justify-center items-center text-4xl">3</div>
-            </div>
-          <div class="h-full w-[50%]">
-                <div class="sm:h-[50%] flex px-3 py-2">
-                    <div class="w-[50%] h-full bg-gray-100 border border-black rounded-xl flex justify-center items-center text-4xl mr-3">9</div>
-                    <div class="w-[50%] h-full bg-gray-100 border border-black rounded-xl flex justify-center items-center text-4xl">8</div>
-                </div>
-                <div class="sm:h-[50%] flex px-3 py-2">
-                    <div class="w-[50%] h-full bg-gray-100 border border-black rounded-xl flex justify-center items-center text-4xl mr-3">7</div>
-                    <div class="w-[50%] h-full bg-gray-100 border border-black rounded-xl flex justify-center items-center text-4xl">6</div>
-                </div>
-            </div>
-            </div>
-            <div class="w-[50%] h-full flex justify-center items-center p-4 bg-gray-200 dark:bg-slate-700">
-                 <div id="chartContainer" class="h-full w-full bg-gray-200 dark:bg-gray-600"></div> 
-            </div>
-        </div>-->
-        <!-- <a href="https://www.behance.net/gallery/150172499/Agricultural-Dashboard-UI-Design?tracking_source=search_projects|agricultural+dashboard&l=39">Image</a> -->
-
-
-        <div class="relative h-fit py-6 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
+        <div class="relative h-fit py-8 w-full my-8 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
             <div class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  "></div>
             <h1 class="z-10 text-xl sm:text-5xl md:text-7xl font-bold px-8 transition-all duration-1000 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">Farmer Portals</h1>
         </div>
-        <!-- <img class="h-full w-full" src="https://366pi.com/wp-content/uploads/2020/07/OnDemandReports-Agri.png" alt="Agri Image"> -->
         <!-- Schems of governments -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-5">
 
