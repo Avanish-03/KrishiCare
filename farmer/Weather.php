@@ -11,33 +11,27 @@
         </div>
     </div>
     <!-- Weather Data -->
-    <div class="h-fit w-full my-8 bg-gray-200 rounded-lg dark:bg-slate-700">
-        <?php
-        ?>
-        <div
-            class="min-h-fit h-[60%] rounded-lg flex justify-center items-center bg-gray-200 dark:bg-slate-700 p-0 sm:p-5">
-            <?php
-
-            ?>
-            <div
-                class="mx-auto h-fit py-8 max-w-md px-8 bg-white dark:bg-slate-800 dark:text-gray-300 border-0 shadow-lg rounded-lg">
-                <h1 class="text-2xl font-bold mb-2">Enter city to get weather detail</h1>
-                <form method="post" class="h-fit">
-                    <div class="relative z-0 w-full mb-1">
-                        <input type="text" name="city" placeholder="Enter city" required
-                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                        <label for="city" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500"></label>
-                    </div>
-                    <button id="button" name="weatherSearchBtn" type="submit"
-                        class="w-full px-6 py-3 mt-3 text-lg text-white transition-all duration-150 ease-linear rounded-lg shadow outline-none bg-green-500 hover:bg-green-600 hover:shadow-lg focus:outline-none">
-                        Search
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
     <section class="text-gray-600 dark:text-gray-300 my-8 bg-gray-200 rounded-lg dark:bg-slate-700">
-        <div class="container px-5 py-10 mx-auto">
+        <div class="h-7 my-4 px-5 py-10">
+            <form action="">
+                <div class="flex justify-end ">
+                    <div>
+                        <h1 class="text-xl font-bold p-2">Select Your State For weather Details </h1>
+                        <select type="text" name="city" id="city"
+                            class="city py-2 h-10 border m-1 rounded px-4 w-full bg-gray-50 dark:bg-gray-700">
+                        </select>
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div>
+                        <h1 class="text-xl font-bold p-2">Select Your City For Weather Detail</h1>
+                        <select type="text" name="state" id="state"
+                            class="state py-2 h-10 border m-1 rounded px-4 w-full bg-gray-50 dark:bg-gray-700">
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="container px-5 py-10 mx-auto mt-10">
             <div class="flex flex-wrap w-full mb-3">
                 <div class="lg:w-1/2 w-full lg:mb-0">
                     <?php echo '<h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 dark:text-gray-50 text-gray-900"> 7-Day Weather Forecast for ' . $city . ', India</h1>'; ?>
@@ -76,7 +70,7 @@
                             <p>Normal</p>
                         </div>
                         <div class="flex justify-center items-center">
-                            <div class="w-9 h-full rounded-full border border-gray-400 flex justify-center items-end">
+                            <div class="w-9 h-full rounded-full border-2 border-gray-400 flex justify-center items-end">
                                 <div class="bg-green-500 h-7 w-7 rounded-full my-1"></div>
                             </div>
                         </div>
@@ -84,7 +78,8 @@
                     <div class="h-48 w-full rounded-xl text-black p-8 bg-white ">
                         <div class="w-full">
                             <h1>Wind Status</h1>
-                            <h1 class="text-4xl h-20 w-full flex justify-center items-center">7.70<span class="text-sm px-3 text-end">km/h</span></h1>
+                            <h1 class="text-4xl h-20 w-full flex justify-center items-center">7.70<span
+                                    class="text-sm px-3 text-end">km/h</span></h1>
                             <p>WSW</p>
                         </div>
                         <!-- <div class="flex justify-center items-center">
@@ -100,7 +95,7 @@
                             <p>Unhealthy</p>
                         </div>
                         <div class="flex justify-center items-center">
-                            <div class="w-9 h-full rounded-full border border-gray-400 flex justify-center items-center">
+                            <div class="w-9 h-full rounded-full border-2 border-gray-400 flex justify-center items-center">
                                 <div class="bg-green-500 h-7 w-7 rounded-full my-1"></div>
                             </div>
                         </div>
@@ -108,8 +103,10 @@
                     <div class="h-48 w-full rounded-xl text-black p-8 bg-white ">
                         <div class="w-full ">
                             <h1>Sunrise & Sunset</h1>
-                            <h1 class="text-2xl py-1 w-full flex ml-8"><span><img src="../img/sun-rise.png" class="h-7 pr-2" alt=""></span>05:55 </h1>
-                            <h1 class="text-2xl py-1 w-full flex ml-8"><span><img src="../img/sun-set.png" class="h-7 pr-2" alt=""></span>06:45 </h1>
+                            <h1 class="text-2xl py-1 w-full flex ml-8"><span><img src="../img/sun-rise.png" class="h-7 pr-2"
+                                        alt=""></span>05:55 </h1>
+                            <h1 class="text-2xl py-1 w-full flex ml-8"><span><img src="../img/sun-set.png" class="h-7 pr-2"
+                                        alt=""></span>06:45 </h1>
                             <p>WSW</p>
                         </div>
                         <!-- <div class="flex justify-center items-center">
