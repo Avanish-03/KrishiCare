@@ -17,6 +17,7 @@ if ($_SESSION["farmer"] == false) {
     <link rel="stylesheet" href="../src/Js/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="../src/Js/code.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body onload="farmerMenuLoader('dashboard','<?php echo $_SESSION['farmer'] ?>'); initializeCarousel();">
@@ -110,7 +111,7 @@ if ($_SESSION["farmer"] == false) {
                                 <i class="fa-solid fa-building-wheat"></i>
                                 <div class="heading duration-300 cursor-pointer">Technology</div>
                             </div>
-                            <div onclick="farmerMenuLoader('weather','<?php echo $_SESSION['farmer'] ?>')" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
+                            <div onclick="farmerMenuLoader('weather','<?php echo $_SESSION['farmer'] ?>'); loadStates();" class="w-full py-3 space-x-2 font-bold text-gray-900 dark:text-gray-300 hover:rounded flex items-center px-3 hover:bg-slate-300 dark:hover:bg-slate-700">
                                 <i class="fa-solid fa-cloud-bolt"></i>
                                 <div class="heading duration-300 cursor-pointer">Weather</div>
                             </div>

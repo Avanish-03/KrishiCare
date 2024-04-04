@@ -95,12 +95,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             include("../farmer/Techno.php");
             break;
         case "weather":
-            $city = "Surat";
-            $state = "Gujarat";
-            $country = "IN";
-            $apiKey = "97852380926fcca385c9165c3d2f7a2d";
-            // Get weather forecast data
-            $forecastData = getWeatherForecastData($city, $state, $country, $apiKey);
+            $city = "surat";
+            $state = "GJ";
+            $api_key = "97852380926fcca385c9165c3d2f7a2d";
+            $location = $city . ',' . $state . ',IN'; // Adding the state and country code
+            // $forecastData = getWeatherForecastData($api_key, $location, $city, $state);
+            // $forecastData = getWeatherForecastData($apiKey, $location, $city, $state);
             //code block
             include("../farmer/Weather.php");
             break;
@@ -162,33 +162,116 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Function to get weather forecast data from OpenWeatherMap API
-function getWeatherForecastData($city, $state, $country, $apiKey)
+function getWeatherForecastData($api_key, $location, $city, $state)
 {
-    $city = urlencode($city);
-    $url = "http://api.openweathermap.org/data/2.5/forecast?q=$city,$state,$country&appid=$apiKey&cnt=1"; // Adjusted URL to get 3-day forecast data
+    $base_url = "http://api.openweathermap.org/data/2.5/weather";
+    $params = [
+        'q' => $location,
+        'appid' => $api_key,
+        'units' => 'metric', // Change to 'imperial' for Fahrenheit
+    ];
 
-    // Initialize cURL
-    $ch = curl_init();
+    $url = $base_url . '?' . http_build_query($params);
+    $weather_data = json_decode(file_get_contents($url), true);
 
-    // Set cURL options
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-    // Execute cURL
-    $response = curl_exec($ch);
-
-    // Check for errors
-    if (curl_errno($ch)) {
-        echo 'Error: ' . curl_error($ch);
-        return null;
+    if ($weather_data && isset($weather_data['main'])) {
+        $temperature = $weather_data['main']['temp'];
+        $weather_condition = $weather_data['weather'][0]['description'];
+        $wind_speed = $weather_data['wind']['speed'];
+        $wind_direction = $weather_data['wind']['deg'];
+        $humidity = $weather_data['main']['humidity'];
+        // $cloudiness = $weather_data['clouds']['all'];
+        $sunrise_time = date('H:i', $weather_data['sys']['sunrise']);
+        $sunset_time = date('H:i', $weather_data['sys']['sunset']);
+        $data_time = date('d-m-y', $weather_data['dt']);
+        // $latitude = $weather_data['coord']['lat'];
+        // $longitude = $weather_data['coord']['lon'];
+?>
+        <div class="h-fit py-4 bg-gray-100 shadow-lg mb-4 px-8 rounded-lg">
+            <?php echo "Weather in  : " . $city ?>
+        </div>
+        <div class="h-full min-w-fit grid gap-4 grid-cols-1 md:grid-cols-4">
+            <div class="bg-gray-100 hover:shadow-lg p-8 h-40 md:h-full rounded-lg">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="w-full flex flex-col justify-center">
+                        <h1>Humidity</h1>
+                        <h1 class="text-4xl h-16 flex justify-center items-center"><?php echo $humidity; ?> %</h1>
+                        <p>Normal</p>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <div class="w-9 h-full rounded-full border border-gray-400 flex justify-center items-end">
+                            <div class="bg-green-500 h-7 w-7 rounded-full my-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-100 hover:shadow-lg h-40 md:h-full rounded-lg flex justify-center items-center">
+                <div class="w-fit">
+                    <h1>Wind Status</h1>
+                    <h1 class="text-4xl py-3 w-full flex justify-center items-end"><?php echo $wind_speed; ?><span class="text-sm px-1 text-end">m/s</span></h1>
+                    <p><?php echo $wind_direction; ?> °</p>
+                </div>
+            </div>
+            <div class="bg-gray-100 hover:shadow-lg p-8 h-40 md:h-full rounded-lg grid grid-cols-2 gap-4">
+                <div class="w-full flex flex-col justify-center">
+                    <h1>Temperature</h1>
+                    <h1 class="text-4xl h-full w-full flex justify-center items-center"><?php echo $temperature; ?></h1>
+                    <p><?php echo $weather_condition; ?></p>
+                </div>
+                <div class="flex justify-center items-center h-full">
+                    <div class="w-9 h-full rounded-full border border-gray-400 flex justify-center items-center">
+                        <div class="bg-green-500 h-7 w-7 rounded-full my-1"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-100 hover:shadow-lg h-40 md:h-full rounded-lg flex justify-center items-center">
+                <div class="w-fit">
+                    <h1>Sunrise & Sunset</h1>
+                    <h1 class="text-2xl py-1 w-full flex ml-8"><span><img src="../img/sun-rise.png" class="h-7 pr-2" alt=""></span><?php echo $sunrise_time; ?> </h1>
+                    <h1 class="text-2xl py-1 w-full flex ml-8"><span><img src="../img/sun-set.png" class="h-7 pr-2" alt=""></span><?php echo $sunset_time; ?> </h1>
+                    <p><?php echo $data_time; ?></p>
+                </div>
+            </div>
+        </div>
+<?php
+    } else {
+        echo "<script>
+                Swal.fire({
+                    title: 'Oops!',
+                    text: 'Failed to retrieve weather data!',
+                    icon: 'error'
+                  });
+                </script>";
     }
-
-    // Close cURL
-    curl_close($ch);
-
-    // Decode JSON response
-    $data = json_decode($response, true);
-
-    return $data;
 }
+
+// Function to get weather forecast data from OpenWeatherMap API
+// function getWeatherForecastData($city, $state, $country, $apiKey)
+// {
+// $city = urlencode($city);
+// $url = "http://api.openweathermap.org/data/2.5/forecast?q=$city,$state,$country&appid=$apiKey&cnt=1"; // Adjusted URL to get 3-day forecast data
+
+// // Initialize cURL
+// $ch = curl_init();
+
+// // Set cURL options
+// curl_setopt($ch, CURLOPT_URL, $url);
+// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+// // Execute cURL
+// $response = curl_exec($ch);
+
+// // Check for errors
+// if (curl_errno($ch)) {
+// echo 'Error: ' . curl_error($ch);
+// return null;
+// }
+
+// // Close cURL
+// curl_close($ch);
+
+// // Decode JSON response
+// $data = json_decode($response, true);
+
+// return $data;
+// }
