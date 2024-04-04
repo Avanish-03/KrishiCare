@@ -2,7 +2,7 @@
 <section class="w-full h-full mx-auto p-8 rounded-md">
     <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Profile</h1>
     <!-- information Section -->
-    <div class="h-48 w-full bg-gray-200 rounded-lg dark:bg-slate-600 flex items-center">
+    <div class="h-48 w-full dark:text-gray-300 bg-gray-200 rounded-lg dark:bg-slate-600 flex items-center">
         <div class="px-8 w-fit h-full flex justify-start">
             <img class="h-full w-full" src="../img/admin.png" alt="">
         </div>
@@ -45,7 +45,7 @@
                                             </div>
                                             <div class="flex justify-center items-center">
                                                 <button type="button" onclick="return uploadProfilePic('changeProfile')" name="uploadProfile" class="inline-flex items-center px-4 py-2 bg-gray-300 dark:bg-slate-600 border border-gray-300 rounded-md font-semibold text-xs text-gray-700 dark:text-gray-100 uppercase tracking-widest shadow-sm focus:outline-none focus:border-green-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-0">
-                                                    Save
+                                                    UPLOAD
                                                 </button>
                                             </div>
                                         </div>

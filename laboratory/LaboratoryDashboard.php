@@ -16,13 +16,7 @@ if ($_SESSION["laboratory"] == false) {
     <link rel="stylesheet" href="../dist/output.css">
     <link rel="stylesheet" href="../src/Js/styles.css">
     <script src="../src/Js/code.js"></script>
-    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-        }
-    </script>
 </head>
 
 <body onload="labMenuLoader('dashboard','<?php echo $_SESSION['laboratory'] ?>')">

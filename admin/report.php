@@ -2,7 +2,7 @@
 <section class="w-full h-full mx-auto my-8 px-8 rounded-md">
     <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Report</h1>
     <!-- information Section -->
-    <div class="h-48 w-full bg-gray-200 rounded-lg dark:bg-slate-600 flex items-center">
+    <div class="h-48 w-full dark:text-gray-300 bg-gray-200 rounded-lg dark:bg-slate-600 flex items-center">
         <div class="w-fit h-full flex justify-start px-8">
             <img class="h-full w-full" src="../img/reqest-data.png" alt="">
         </div>
@@ -21,9 +21,9 @@
                     </a>
                     <div class="p-5">
                         <a href="#">
-                            <h5 class="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">Number of reports are published on krishicare and help to the farmers</h5>
+                            <h5 class="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-gray-300">Number of reports are published on krishicare and help to the farmers</h5>
                         </a>
-                        <p class="font-normal text-gray-700 mb-3 dark:text-gray-200">Here are the report for the krish yadav. who have request for the test of soil </p>
+                        <p class="font-normal text-gray-700 mb-3 dark:text-gray-300">Here are the report for the krish yadav. who have request for the test of soil </p>
                         <a href="#" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center  dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Read more</a>
                     </div>
                 </div>

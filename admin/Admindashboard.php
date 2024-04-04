@@ -24,12 +24,13 @@ include("../Backend/config.php");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- chart admin dashboard -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 </head>
 
-<body onload="adminMenuLoader('dashboard');drawChart();" class="overflow-hidden dark:text-white ">
+<body onload="adminMenuLoader('dashboard')" class="overflow-hidden dark:text-white ">
     <div class="h-screen w-screen sm:min-w-96 sm:min-h-screen">
         <header class="sticky w-full h-[10%]">
             <div class="dark:bg-gray-800 bg-gray-200 w-full h-full text-gray-500 dark:text-gray-300 flex justify-around items-center">
@@ -178,6 +179,7 @@ include("../Backend/config.php");
             </div>
         </main>
     </div>
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 </body>
 
 </html>

@@ -1074,6 +1074,14 @@ video {
   margin-left: -7rem;
 }
 
+.-ml-8 {
+  margin-left: -2rem;
+}
+
+.-ml-16 {
+  margin-left: -4rem;
+}
+
 .block {
   display: block;
 }
@@ -1447,6 +1455,10 @@ video {
 
 .w-\[40\%\] {
   width: 40%;
+}
+
+.w-\[\%\] {
+  width: %;
 }
 
 .min-w-96 {
@@ -2816,6 +2828,11 @@ video {
 .text-yellow-500 {
   --tw-text-opacity: 1;
   color: rgb(234 179 8 / var(--tw-text-opacity));
+}
+
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 
 .underline {

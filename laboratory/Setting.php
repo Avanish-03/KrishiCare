@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!-- Settings Section -->
 <section class="w-full h-full mx-auto my-8 p-8 rounded-md">
     <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Settings</h1>
@@ -18,20 +21,28 @@
             <div class="">
                 <img src="../img/Security-setting.png" class="h-[60vh]" alt="">
             </div>
-            <div class="dark:text-gray-100 text-gray-600">
+            <div class="dark:text-gray-300 text-gray-600 py-4">
                 <h1 class="text-4xl font-serif"><b>Change Password</b></h1>
                 <p class=" text-xl">Update password !</p>
-                <form class="flex flex-col justify-center items-center my-10">
-                    <div class="">
-                        <label for="" class="font-mono text-xl pr-2 font-bold">Old password</label>
-                        <input type="" name="" class="rounded-lg bg-transparent border-gray-500 border-2 p-2"><br><br>
-                        <label for="" class="font-mono text-xl pr-2 font-bold">New password</label>
-                        <input type="" name="" class="rounded-lg bg-transparent border-gray-500 border-2 p-2">
+                <form id="updateLabPasswordform" class="flex flex-col justify-center items-center mt-3">
+                    <div class="w-full">
+                        <label for="oldpass" class="font-mono text-xl pr-2 font-bold">Old password</label>
+                        <input type="password" id="oldpass" name="oldpass" class="w-3/4 rounded-lg bg-transparent border-gray-500 border-2 p-2"><br>
+                        <span id="spanoldpass" class="text-red-500 text-sm"></span>
+                        <br>
+                        <label for="pwd" class="font-mono text-xl pr-2 font-bold">New password</label>
+                        <input type="password" id="pwd" name="pwd" class="w-3/4 rounded-lg bg-transparent border-gray-500 border-2 p-2"><br>
+                        <span id="spanpass" class="text-red-500 text-sm"></span>
+                        <br>
+                        <label for="cpwd" class="font-mono text-xl pr-2 font-bold">Confirm password</label>
+                        <input type="password" id="cpwd" name="cpwd" class="w-3/4 rounded-lg bg-transparent border-gray-500 border-2 p-2"><br>
+                        <span id="spancpass" class="text-red-500 text-sm"></span>
                     </div>
                     <br>
-                    <button class="border-green-500 border-2 w-1/2 rounded-full text-green-500 hover:text-white hover:bg-green-500 p-2 mt-2 font-bold font-mono">Change</button>
+                    <button onclick="return updateLabPassword('<?php echo $_SESSION['laboratory'] ?>')" class="border-green-500 -ml-20 border-2 w-1/2 rounded-full text-green-500 hover:text-white hover:bg-green-500 p-2 mt-2 font-bold font-mono">Change</button>
                 </form>
             </div>
+            <input type="hidden" name="updateLabPassword" id="updateLabPassword">
         </div>
     </div>
     <div class="h-7"></div>

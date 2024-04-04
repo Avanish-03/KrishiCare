@@ -102,6 +102,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             echo "Invalid User !";
         }
+    } elseif ($process == "updateLabPassword") {
+
+        $labid = $_POST["labid"];
+        $oldpass = $_POST['oldpass'];
+        $newpass = $_POST['password'];
+
+        $result = mysqli_query($con, "SELECT * FROM `laboratory_detail` WHERE `lab_id`= '$labid' and `password` = '$oldpass'; ");
+        if (mysqli_num_rows($result) > 0) {
+            $sql = "UPDATE `laboratory_detail` SET `password`='$newpass' WHERE `lab_id`='$labid';";
+            $result = mysqli_query($con, $sql);
+            echo $result;
+        } else {
+            echo "Invalid User !";
+        }
+    } elseif ($process == "updateAdminPassword") {
+
+        $email = $_POST["email"];
+        $oldpass = $_POST['oldpass'];
+        $newpass = $_POST['password'];
+        // echo $email . " " . $oldpass . " " . $newpass;
+
+        $result = mysqli_query($con, "SELECT * FROM `admin` WHERE `name`= '$email' and `password` = '$oldpass'; ");
+        if (mysqli_num_rows($result) > 0) {
+            $sql = "UPDATE `admin` SET `password`='$newpass' WHERE `name`='$email';";
+            $result = mysqli_query($con, $sql);
+            echo $result;
+        } else {
+            echo "Invalid User !";
+        }
     } elseif ($process == "adminPassword") {
 
         $email = $_POST["email"];

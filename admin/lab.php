@@ -1,7 +1,7 @@
 <section class="w-full h-full mx-auto p-8 rounded-md">
     <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Laboratory</h1>
     <!-- information Section -->
-    <div class="h-48 w-full bg-gray-200 rounded-lg dark:bg-slate-600 flex items-center">
+    <div class="h-48 w-full dark:text-gray-300 bg-gray-200 rounded-lg dark:bg-slate-600 flex items-center">
         <div class="w-fit h-full flex justify-start px-8">
             <img class="h-full w-full" src="../img/chemistry lab-bro.svg" alt="">
         </div>
@@ -11,9 +11,9 @@
     </div>
 
     <!-- approve -->
-    <div class="h-32 w-full bg-gray-200 rounded-lg my-8 dark:bg-slate-700 flex items-center">
+    <div class="h-32 w-full bg-gray-200 rounded-lg my-8 dark:bg-slate-600 flex items-center">
         <div class="w-[50%] h-full flex items-center">
-            <h1 class="text-5xl font-bold text-slate-700  dark:text-gray-200 pl-8">Approve Laboratory</h1>
+            <h1 class="text-5xl font-bold text-slate-700 dark:text-gray-300 pl-8">Approve Laboratory</h1>
         </div>
     </div>
     
@@ -36,7 +36,7 @@
                 </div>
                 <!-- Table content -->
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-100">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-300">
                         <tr>
                             <th scope="col" class="px-6 py-3">Lab Id</th>
                             <th scope="col" class="px-6 py-3">Lab Name</th>
@@ -127,7 +127,7 @@
                 </div>
                 <!-- Table content -->
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 duration-300">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-100">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-300">
                         <tr>
                             <th scope="col" class="px-6 py-3">Lab Id</th>
                             <th scope="col" class="px-6 py-3">Lab Name</th>

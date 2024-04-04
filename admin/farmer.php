@@ -1,7 +1,7 @@
 <!-- farmer slide -->
 <section class="w-full h-full mx-auto my-8 px-8 rounded-md">
     <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Farmer</h1>
-    <div class="h-48 w-full bg-gray-200 rounded-lg dark:bg-slate-600 flex items-center">
+    <div class="h-48 w-full dark:text-gray-300 bg-gray-200 rounded-lg dark:bg-slate-600 flex items-center">
         <div class="w- h-full flex justify-start px-8">
             <img class="h-full w-full" src="../img/New notifications-bro.png" alt="">
         </div>
@@ -24,7 +24,7 @@
                 </div>
                 <!-- Table content -->
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-100">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-300">
                         <tr>
                             <th scope="col" class="px-6 py-3">Farmer Id</th>
                             <th scope="col" class="px-6 py-3">Farmer Name</th>
