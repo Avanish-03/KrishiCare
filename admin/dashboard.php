@@ -12,7 +12,7 @@
                 Admin</h1>
         </div>
     </div>
-    <div class="lg:h-96 h-fit w-full my-3 rounded-md bg-gray-200 dark:bg-slate-700 grid grid-cols-1 md:grid-cols-2">
+    <div class="lg:h-96 h-fit w-full my-3 rounded-md bg-gray-200 dark:bg-slate-600 grid grid-cols-1 md:grid-cols-2">
         <div class="w-full h-full rounded-md flex items-center justify-center relative">
             <div class="h-80 w-80 blur-xl rounded-full shadow-2xl shadow-fuchsia-900 absolute  "></div>
             <img class="h-96 w-96 z-10" src="../img/Admin-bro.svg" alt="">
@@ -28,7 +28,7 @@
         </div>
     </div>
 
-    <div class="lg:h-96 h-fit w-full my-5 rounded-md bg-gray-200 dark:bg-slate-700 grid grid-cols-1 md:grid-cols-2">
+    <div class="lg:h-96 h-fit w-full my-5 rounded-md bg-gray-200 dark:bg-slate-600 grid grid-cols-1 md:grid-cols-2">
         <div class="w-full h-full rounded-md flex items-center justify-center relative">
             <div class="h-80 w-80">
                 <div id="chart_div" class="bg-slate-300"></div>
