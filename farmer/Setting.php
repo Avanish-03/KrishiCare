@@ -38,11 +38,11 @@ session_start();
             <img class="h-full w-full" src="../img/setting-pana.png" alt="">
         </div>
         <div class="w-[50%] h-full flex items-center">
-            <h1 class="dark:text-white text-4xl font-bold">Notification Details</h1>
+            <h1 class="dark:text-white text-slate-700 text-4xl font-bold">Notification Details</h1>
         </div>
     </div>
 
-        <div class="h-fit w-full text-gray-100 bg-gray-200 dark:bg-slate-600 my-8 px-8 py-8 rounded-md">
+        <div class="h-fit w-full dark:text-gray-100 bg-gray-200 dark:bg-slate-600 my-8 px-8 py-8 rounded-md">
             <div class="px-12 py-12 bg-gray-300 dark:bg-gray-700 rounded-md">
                 <h1 class="text-3xl font-bold">Notification Settings</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, cumque.</p>
@@ -106,7 +106,7 @@ session_start();
             </div>
         </div>
 
-        <div class="h-auto w-full my-8 px-8 rounded-md text-gray-100 bg-gray-200 dark:bg-slate-600 duration-700 py-8">
+        <div class="h-auto w-full my-8 px-8 rounded-md dark:text-gray-100 bg-gray-200 dark:bg-slate-600 duration-700 py-8">
             <!-- Update Form -->
             <h1 class="text-2xl font-bold">Setting > <span
                     class="text-gray-700 dark:text-gray-200 text-lg">Security</span></h1>
