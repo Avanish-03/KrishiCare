@@ -32,11 +32,11 @@ session_start();
         <h1 class="text-4xl text-gray-600 dark:text-gray-300 my-2 rounded-md bg-gray-200 dark:bg-slate-600 duration-700 font-serif"><b>Change Password</b></h1>
         <h1 class="text-2xl font-bold">Setting > <span class="text-lg">Security</span></h1>
         <p>Protect Your Data</p>
-        <div class="bg-gray-300 dark:bg-slate-700 h-fit rounded-lg px-16 mt-4 flex justify-around items-center">
+        <div class="bg-gray-300 dark:bg-slate-700 h-fit rounded-lg px-16 flex justify-around items-center">
             <div class="">
                 <img src="../img/Security-setting.png" class="h-[60vh]" alt="">
             </div>
-            <div class="">
+            <div>
                 <p class="py-2 text-xl">Update password !</p>
                 <form id="updateFarmerPassword" class="flex flex-col justify-center items-center ">
                     <div class="w-full">
@@ -53,7 +53,7 @@ session_start();
                         <span id="spancpass" class="text-red-500 text-sm"></span>
                     </div>
                     <br>
-                    <input class="p-2 rounded-lg w-[25%] cursor-pointer bg-green-400 hover:bg-green-500 dark:bg-green-500 dark:hover:bg-green-600" onclick="return updateFarmerPassword('<?php echo $_SESSION['farmer'] ?>')" type="button" value="Update">
+                    <input class="p-2 rounded-lg w-[30%] -ml-20 cursor-pointer bg-green-400 hover:bg-green-500 dark:bg-green-500 dark:hover:bg-green-600" onclick="return updateFarmerPassword('<?php echo $_SESSION['farmer'] ?>')" type="button" value="Update">
                 </form>
             </div>
             <input type="hidden" name="updateFarmerPassword" id="updateFarmerPassword">
