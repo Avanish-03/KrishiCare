@@ -25,6 +25,28 @@ if (isset($_POST['addfarmer'])) {
 }
 
 
+//------------------UPDATE ditail lab by himself from his Dashboard---------------
+if (isset($_POST['updateLabDetail'])) {
+    $labid = $_POST['labid'];
+    $fullname = $_POST['fullname'];
+    $email = $_POST['email'];
+    $contact = $_POST['contact'];
+    $address = $_POST['address'];
+    $city = $_POST['city'];
+    $state = $_POST['state'];
+
+    $query = "UPDATE `laboratory_detail` SET 'lab_name' = $fullname , 'email' = $email , 'contact' = $contact , 'lab_add' = $address , 'city' = $city , 'state' = $state WHERE lab_id = $labid";
+
+    $result = mysqli_query($con, $query);
+
+    if (!$result) {
+        echo "<script>alert('error')</script>";
+    } else {
+        echo "<script>window.location.href='../admin/Admindashboard.php'</script>";
+    }
+}
+
+
 // -------------DELETE the farmer from the table--------------------------------
 if (isset($_POST['deleteFarmer'])) {
 ?>

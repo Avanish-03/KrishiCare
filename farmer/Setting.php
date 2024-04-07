@@ -73,7 +73,6 @@ session_start();
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, cumque.</p>
             <hr class="border-1 my-8 border-gray-500">
 
-<<<<<<< HEAD
         <div class="h-fit w-full dark:text-gray-100 bg-gray-200 dark:bg-slate-600 my-8 px-8 py-8 rounded-md">
             <div class="px-12 py-12 bg-gray-300 dark:bg-gray-700 rounded-md">
                 <h1 class="text-3xl font-bold">Notification Settings</h1>
@@ -157,7 +156,7 @@ session_start();
                                 class="rounded-lg bg-transparent border-gray-500 border-2 p-2"><br><br>
                             <label for="" class="font-mono text-xl pr-2 font-bold">New password</label>
                             <input type="" name="" class="rounded-lg bg-transparent border-gray-500 border-2 p-2">
-=======
+
             <h1 class="text-xl font-bold">Comments</h1>
             <div class="flex justify-between mr-8">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, cumque.</p>
@@ -165,7 +164,7 @@ session_start();
                     <button class="flex justify-center items-center my-1">
                         <div class="bg-gray-400 h-5 w-9 rounded-xl mr-2 ">
                             <p class="h-5 w-5 rounded-full bg-white"></p>
->>>>>>> f89a1201c17537d8e294355eae8031cdc71cb8a2
+
                         </div>
                         Push
                     </button>
