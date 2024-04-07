@@ -37,7 +37,7 @@
                         </select>
                     </div>
                     <div>
-                        <h1 class="p-2">Enter Your State For weather Details </h1>
+                        <h1 class="p-2">Enter Your State For weather Details</h1>
                         <select type="text" name="city" id="city" class="city py-2 h-10 border m-1 rounded px-4 w-full bg-gray-50 dark:bg-gray-700">
                         </select>
                     </div>
