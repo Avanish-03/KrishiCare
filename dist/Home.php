@@ -103,7 +103,7 @@
     </section>
 
     <!-- section 2 -->
-    <section class="text-gray-600 body-font" >
+    <section class="text-gray-600 body-font">
         <div class="container px-5 mx-auto bg-white">
             <div class="flex flex-wrap -m-4 text-center">
                 <div class="xl:w-1/4 md:w-1/2">
@@ -111,7 +111,7 @@
                         <img class="h-40 rounded w-full object-cover object-center hover:shadow-lg mb-6 hover:border" src="https://www.nicheagriculture.com/wp-content/uploads/2020/10/ezgif.com-gif-maker-9-1.webp" alt="content">
                         <h2 class="text-lg text-gray-900 font-bold title-font mb-4">New Technology In Farming</h2>
                         <p class="leading-relaxed text-base text-justify px-2">By utilizing KrishiCare, farmers gain instant
-                            access to information about new advancements in agricultural practices, techniques, and technologies. 
+                            access to information about new advancements in agricultural practices, techniques, and technologies.
                         </p>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                         <img class="h-40 rounded w-full object-cover object-center mb-6 hover:shadow-lg hover:border" src="https://cdn.uc.assets.prezly.com/712d7152-a1c1-4e19-82f5-2d505c9f4dea/-/resize/1200x/-/format/auto/" alt="content">
                         <h2 class="text-lg text-gray-900 font-bold title-font mb-4">Farmer Collab with Lab</h2>
                         <p class="leading-relaxed text-base text-justify px-2">Farmers can easily connect with accredited
-                            labs to analyze soil samples and receive comprehensive reports on the health and composition of their land. 
+                            labs to analyze soil samples and receive comprehensive reports on the health and composition of their land.
                         </p>
                     </div>
                 </div>
@@ -180,7 +180,7 @@
                 <span class="text-4xl font-thin text-white">Weather nfluencing crop growth and agricultural practices.</span>
                 <span class="hidden sm:inline-block align-bottom text-xs">( 94041 )</span>
             </div>
-            
+
             <div class="flex justify-center text-gray-100">
                 <div class="text-center p-2">
                     <div class="text-lg text-grey-light">
@@ -287,59 +287,6 @@
             </div>
         </div>
     </section>
-
-    <!-- section 2 -->
-    <!-- <section>
-    <div class="bg-white h-28 flex justify-around">
-        <div class="bg-gray-200 flex justify-center items-center px-4">
-            <img class="h-14 " src="https://cdn-icons-png.freepik.com/256/346/346195.png?uid=R138725432&ga=GA1.1.1583059735.1708077775&" alt="">
-            <p>New technology famring</p>
-        </div>
-        <div class="bg-gray-200 flex justify-center items-center px-4">
-            <img class="h-14" src="https://cdn-icons-png.freepik.com/256/2625/2625688.png?uid=R138725432&ga=GA1.1.1583059735.1708077775&" alt="">
-            <p>New technology famring</p>
-        </div>
-        <div class="bg-gray-200 flex justify-center items-center px-4">
-            <img class="h-14" src="https://cdn-icons-png.freepik.com/256/5313/5313678.png?uid=R138725432&ga=GA1.1.1583059735.1708077775&" alt="">
-            <p>New technology famring</p>
-        </div>
-    </div>
-</section> -->
-
-    <!-- section 4 -->
-    <!-- <section class="text-gray-600 body-font overflow-hidden">
-    <div class="px-5 py-10 mx-auto">
-        <div class="lg:w-full mx-auto flex flex-wrap">
-            <div class="lg:w-1/2 w-full lg:pr-10  mb-6 lg:mb-0">
-                <h2 class="text-sm title-font text-gray-500 ">About Us</h2>
-                <h1 class="text-gray-900 text-3xl title-font font-bold mb-4">Welcome To KrishiCare</h1>
-
-                <p class=" mb-4 text-justify">The project “KrishiCare” is like a smart helper for farmers. It gives
-                    them instant info about weather, crops, and expert tips through a simple website. Using clever tech,
-                    it suggests how to grow crops better and connects farmers with laboratories. It's not just a tool,
-                    it's a friend helping farmers succeed together.
-                    KrishiCare goes a step further by generating easy-to-understand soil health reports. With just a few
-                    clicks, farmers can access comprehensive information about the health of their soil. These reports
-                    provide insights into essential factors like nutrient levels, pH balance, and recommendations for
-                    improvement. It simplifies the process of managing soil health, helping farmers make informed
-                    decisions for better crop growth and yield.
-                    KrishiCare's laboratory tool makes farming simpler. Farmers send soil and water samples, and the
-                    tool gives easy reports. It suggests what crops need for better growth. It's like a helpful friend
-                    making farming easier.
-                </p>
-
-
-            </div>
-            <img alt="ecommerce" class="lg:w-1/2 w-full h-96 object-cover object-center rounded" src="https://images.pexels.com/photos/2519332/pexels-photo-2519332.jpeg?auto=compress&cs=tinysrgb&w=600">
-        </div>
-    </div>
-</section> -->
-
-    <!-- section 5 -->
-
-
-    <!-- section 7 -->
-
     <script>
         (() => {
             const counter = document.querySelectorAll('.counter');

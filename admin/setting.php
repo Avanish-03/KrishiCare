@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php //session_start(); ?>
 <!-- Settings Section -->
 <section class="w-full h-full mx-auto p-8 rounded-md">
     <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Settings</h1>

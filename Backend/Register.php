@@ -118,14 +118,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     } elseif ($process == "updateAdminPassword") {
 
-        $email = $_POST["email"];
+        $adminid = $_POST["adminid"];
         $oldpass = $_POST['oldpass'];
         $newpass = $_POST['password'];
-        // echo $email . " " . $oldpass . " " . $newpass;
+        // echo $adminid . " " . $oldpass . " " . $newpass;
 
-        $result = mysqli_query($con, "SELECT * FROM `admin` WHERE `name`= '$email' and `password` = '$oldpass'; ");
+        $result = mysqli_query($con, "SELECT * FROM `admin` WHERE `admin_id`= '$adminid' and `password` = '$oldpass'; ");
         if (mysqli_num_rows($result) > 0) {
-            $sql = "UPDATE `admin` SET `password`='$newpass' WHERE `name`='$email';";
+            $sql = "UPDATE `admin` SET `password`='$newpass' WHERE `admin_id`='$adminid';";
             $result = mysqli_query($con, $sql);
             echo $result;
         } else {

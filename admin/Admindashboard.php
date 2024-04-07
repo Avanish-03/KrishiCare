@@ -64,7 +64,7 @@ include("../Backend/config.php");
                                 </div>
                                 <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider" class="text-white focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center " type="button">
                                     <?php
-                                    $adminQuery = "SELECT `adminprofile`,`name`, `password` FROM `admin` WHERE `name`= '" . $_SESSION["admin"] . "';";
+                                    $adminQuery = "SELECT `adminprofile`,`name`, `password` FROM `admin` WHERE `admin_id`= '" . $_SESSION["admin"] . "';";
                                     $result = mysqli_query($con, $adminQuery);
                                     if ($result->num_rows > 0) {
                                         while ($row = $result->fetch_assoc()) {
@@ -110,7 +110,7 @@ include("../Backend/config.php");
                 <div class="sm:h-fit h-[60%] pt-4">
                     <div class="flex justify-start px-2 items-center text-white my-2 sm:hidden">
                         <?php
-                        $adminQuery = "SELECT `adminprofile`,`name`, `password` FROM `admin` WHERE `name`= '" . $_SESSION["admin"] . "';";
+                        $adminQuery = "SELECT `adminprofile`,`name`, `password` FROM `admin` WHERE `admin_id`= '" . $_SESSION["admin"] . "';";
                         $result = mysqli_query($con, $adminQuery);
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {

@@ -1,3 +1,7 @@
-::-webkit-scrollbar {
+#adminProcess::-webkit-scrollbar {
+    display: none;
+}
+
+#maincontent::-webkit-scrollbar {
     display: none;
 }

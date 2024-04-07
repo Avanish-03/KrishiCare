@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = mysqli_query($con, "SELECT * FROM `admin` WHERE name= '$email' and password = '$password';");
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
-                $adminName = $row["name"];
+                $adminName = $row["admin_id"];
 
                 $_SESSION[$user] = $adminName;
                 echo "1";

@@ -12,7 +12,7 @@
     <!-- farmer -->
     <div class="bg-gray-200 dark:bg-slate-600 w-full h-fit rounded my-8 flex items-center duration-300">
         <div class="w-full p-2 h-full">
-            <div class="p-4 bg-gray-100 dark:bg-gray-900 rounded-md">
+            <div class="p-4 bg-gray-100 dark:bg-gray-900 rounded-md overflow-x-scroll">
                 <label for="farmer-table-search" class="sr-only">Search</label>
                 <div class="relative mb-2">
                     <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">

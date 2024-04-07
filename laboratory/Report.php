@@ -19,7 +19,7 @@ session_start();
     </div>
     <div class="relative h-fit w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 rounded-md">
         <div class="w-full m-2 p-2 h-full">
-            <div class="p-4 bg-gray-100 dark:bg-gray-900 rounded-md">
+            <div class="p-4 bg-gray-100 dark:bg-gray-900 rounded-md overflow-x-scroll">
                 <label for="table-search" class="sr-only">Search</label>
                 <div class="relative mb-2">
                     <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -102,7 +102,6 @@ session_start();
                         </select>
                         <span id="spanfarmername" class="text-red-500"></span>
                     </div>
-
                     <div class="relative z-0 w-full my-5 group">
                         <label for="email" class=" text-gray-500 dark:text-gray-400 " inputmode="text">Farmer Email : </label>
                         <select name="email" id="email" class="bg-transparent border-b-2 border-gray-300 dark:border-gray-600 pb-1 text-slate-700 dark:text-gray-400 w-full">
@@ -117,7 +116,6 @@ session_start();
                         </select>
                         <span id="spanemail" class="text-red-500"></span>
                     </div>
-
                     <div class="relative z-0 w-full my-5 group">
                         <label for="sampleid" class=" text-gray-500 dark:text-gray-400 " inputmode="numeric">Sample Id : </label>
                         <select name="sampleid" id="sampleid" class="bg-transparent border-b-2 border-gray-300 dark:border-gray-600 pb-1 text-slate-700 dark:text-gray-400 w-full">
@@ -132,13 +130,13 @@ session_start();
                         </select>
                         <span id="spansampleid" class="text-red-500"></span>
                     </div>
-
                     <button type="button" name="uploadReportbtn" onclick="return uploadReport('<?php echo $_SESSION['laboratory'] ?>')" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Upload Report</button>
                 </form>
             </div>
         </div>
         <input type="hidden" name="uploadReport" id="uploadReport">
     </div>
+    <img src="https://www.researchgate.net/publication/226624983/figure/fig2/AS:267538726649926@1440797611896/Example-of-Cornell-Soil-Health-Test-report.png" alt="">
     <!-- <div class="my-8 h-full w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="w-full h-full bg-gray-200 rounded-lg dark:bg-slate-700"></div>
         <div class="w-full h-full bg-gray-200 rounded-lg dark:bg-slate-700"></div>

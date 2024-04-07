@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("config.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -31,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;
         case "profile":
             //code block
-            $adminQuery = "SELECT `adminprofile`,`name`, `password` FROM `admin` WHERE `name`= 'admin@gmail.com';";
+            $adminQuery = "SELECT `adminprofile`,`name`, `password` FROM `admin` WHERE `admin_id`= " . $_SESSION['admin'] . ";";
             $result = mysqli_query($con, $adminQuery);
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
@@ -51,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $profilePicPath = $uploadPath . $file_name;
 
             if (move_uploaded_file($file_tmp, $uploadPath . $file_name)) {
-                $sql = "UPDATE `admin` SET adminprofile='$profilePicPath' WHERE name='admin@gmail.com' AND password='admin'";
+                $sql = "UPDATE `admin` SET adminprofile='$profilePicPath' WHERE `admin_id`=" . $_SESSION['admin'] . ";";
                 if (mysqli_query($con, $sql)) {
                     echo "Successfully Uploaded";
                 } else {
@@ -65,8 +66,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //code block
             include("../admin/setting.php");
             break;
+        case "addTask":
+            //code block
+            $task = $_POST['task'];
+            $userid = $_POST['userid'];
+            $sql = "INSERT INTO task_detail (task,user_id) VALUES ('$task','$userid')";
+            $result = mysqli_query($con, $sql);
+            if ($result == 1) {
+                echo "Task Added Successfully!";
+            } else {
+                echo "Error while adding Task!";
+            }
+            break;
+        case "deleteTask":
+            //code block
+            $taskid = $_POST['taskid'];
+            $userid = $_POST['userid'];
+            // echo $taskid . " " . $userid;
+            $sql = "DELETE FROM task_detail WHERE `task_detail`.`task_id` = '$taskid' AND `task_detail`.`user_id` = '$userid';";
+            $result = mysqli_query($con, $sql);
+            if ($result == 1) {
+                echo "Task Deleted Successfully!";
+            } else {
+                echo "Error while deleting Task!";
+            }
+            break;
         default:
             //code block
+            $process;
             echo "Invalid Request";
             break;
     }

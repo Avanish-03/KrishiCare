@@ -218,7 +218,7 @@ function updateLabPassword(labId) {
     return false;
 }
 
-function updateAdminPassword(email) {
+function updateAdminPassword(adminid) {
     var result =
         validateEmpty('oldpass', 'Old Password', 'spanoldpass') &&
         validatePassword('pwd', 'cpwd', 'spancpass');
@@ -228,7 +228,7 @@ function updateAdminPassword(email) {
         var password = getvalue('pwd');
 
         var dataForm =
-            'email=' + email +
+            'adminid=' + adminid +
             '&oldpass=' + oldpass +
             '&password=' + password +
             '&process=updateAdminPassword';
@@ -869,4 +869,25 @@ function initializeCarousel() {
         clearInterval(slideInterval); // Stop automatic sliding when manually navigating
         moveToNext();
     });
+}
+
+function addTask(userid) {
+    let result = validateEmpty("task", "Task", "spantask");
+    if (result) {
+        let task = getvalue("task");
+        dataForm = "task=" + task + "&userid=" + userid + "&process=addTask";
+        ajaxCall("../Backend/AdminProcess.php", "post", dataForm, "taskstatus", true);
+        adminMenuLoader('dashboard');
+        return false;
+    }
+}
+
+function deleteTask(taskid, userid) {
+    if (confirm("Are you sure you want to delete this task?")) {
+        // window.location.href = 'delete.php?id=' + id;
+        dataForm = "taskid=" + taskid + "&userid=" + userid + "&process=deleteTask";
+        ajaxCall("../Backend/AdminProcess.php", "post", dataForm, "taskstatus", true);
+        adminMenuLoader('dashboard');
+        return false;
+    }
 }
