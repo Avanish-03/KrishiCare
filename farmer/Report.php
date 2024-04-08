@@ -30,10 +30,10 @@ session_start();
                 </form>
             </div>
         </div>
-        <!-- <div class="p-8 bg-gray-200 dark:bg-slate-700 rounded-lg">
-            <h1 class="text-2xl dark:text-gray-100 font-bold">Download Your Report</h1>
-            <p class="dark:text-gray-200 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam delectus quam sint consequuntur iure incidunt obcaecati quidem aperiam expedita perspiciatis, magnam voluptates harum possimus doloribus minima, sapiente numquam voluptas praesentium rerum tempora, eius ipsam distinctio architecto? Facilis reprehenderit iste labore pariatur unde. Nam incidunt ab soluta nemo, harum dolor, velit pariatur porro voluptates earum, similique rerum. Cum suscipit tenetur laboriosam nam voluptatum ducimus debitis vitae iste odit optio. Aspernatur aliquam ad voluptatum dolores, temporibus vitae maxime nostrum eligendi nemo asperiores soluta quos vel illum alias nam nisi pariatur officiis. Natus officiis ex reiciendis. Eum in reiciendis nesciunt odio magni nobis.</p>
-        </div> -->
+        <div class="p-8 bg-gray-200 dark:bg-slate-700 rounded-lg">
+            <h1 class="text-3xl dark:text-gray-100 font-bold mb-2">Download Your Report</h1>
+            <p class="dark:text-gray-200 text-justify text-lg">Soil testing is like a health checkup for your farm's soil. It tells you what nutrients your soil has and what it needs to grow crops well. By knowing this, farmers can use the right amount of fertilizers and other treatments, saving money and preventing pollution. It also helps keep the soil healthy, which is essential for good crops. Soil testing is like a roadmap for farmers, guiding them to make the best decisions for their fields, leading to better harvests and a healthier environment.</p>
+        </div>
     </div>
 
     <div class="h-fit w-full my-8 bg-gray-200 rounded-lg dark:bg-slate-700 flex items-center">
