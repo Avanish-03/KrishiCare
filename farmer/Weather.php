@@ -7,14 +7,12 @@
             <img class="h-full w-full" src="../img/Weather-amico.png" alt="">
         </div>
         <div class="w-[70%] h-full flex items-center">
-        <div class="relative h-32 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
-            <div
-                class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  ">
+            <div class="relative h-32 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
+                <div class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  ">
+                </div>
+                <h1 class="z-10 h-full flex justify-center items-center text-6xl font-bold px-8 transition-all duration-300 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">
+                    Weather Details</h1>
             </div>
-            <h1
-                class="z-10 h-full flex justify-center items-center text-6xl font-bold px-8 transition-all duration-300 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">
-                Weather Details</h1>
-        </div>
         </div>
     </div>
     <!-- Weather Data -->
@@ -40,15 +38,11 @@
                 <div class="flex justify-end space-x-4">
                     <div>
                         <h1 class="p-2">Enter Your City For Weather Detail</h1>
-                        <select type="text" name="state" id="state" onchange="loadCities()"
-                            class="state py-2 h-10 border m-1 rounded px-4 w-full bg-gray-50 dark:bg-gray-700">
-                        </select>
+                        <select type="text" name="state" id="state" onchange="loadCities()" class="state py-2 h-10 border m-1 rounded px-4 w-full bg-gray-50 dark:bg-slate-700"></select>
                     </div>
                     <div>
                         <h1 class="p-2">Enter Your State For weather Details</h1>
-                        <select type="text" name="city" id="city"
-                            class="city py-2 h-10 border m-1 rounded px-4 w-full bg-gray-50 dark:bg-gray-700">
-                        </select>
+                        <select type="text" name="city" id="city" class="city py-2 h-10 border m-1 rounded px-4 w-full bg-gray-50 dark:bg-slate-700"></select>
                     </div>
                 </div>
             </form>
@@ -61,8 +55,7 @@
                 </div>
             </div>
             <div class="flex flex-wrap -m-4">
-                <div class="h-full w-fit p-8">
-                </div>
+                <div class="h-full w-fit p-8"></div>
             </div>
             <?php
             // if ($_SERVER['REQUEST_METHOD'] === 'POST') {

@@ -186,12 +186,12 @@ function getWeatherForecastData($api_key, $location, $city, $state)
         $data_time = date('d-m-y', $weather_data['dt']);
         // $latitude = $weather_data['coord']['lat'];
         // $longitude = $weather_data['coord']['lon'];
-?>
-        <div class="h-fit py-4 bg-gray-100 shadow-lg mb-4 px-8 rounded-lg">
+    ?>
+        <div class="h-fit py-4 bg-gray-100 dark:bg-slate-800 shadow-lg mb-4 px-8 rounded-lg">
             <?php echo "Weather in  : " . $city ?>
         </div>
         <div class="h-full min-w-fit grid gap-4 grid-cols-1 md:grid-cols-4">
-            <div class="bg-gray-100 hover:shadow-lg p-8 h-40 md:h-full rounded-lg">
+            <div class="bg-gray-100 dark:bg-slate-800 hover:shadow-lg p-8 h-40 md:h-full rounded-lg">
                 <div class="grid grid-cols-2 gap-4">
                     <div class="w-full flex flex-col justify-center">
                         <h1>Humidity</h1>
@@ -205,14 +205,14 @@ function getWeatherForecastData($api_key, $location, $city, $state)
                     </div>
                 </div>
             </div>
-            <div class="bg-gray-100 hover:shadow-lg h-40 md:h-full rounded-lg flex justify-center items-center">
+            <div class="bg-gray-100 dark:bg-slate-800 hover:shadow-lg h-40 md:h-full rounded-lg flex justify-center items-center">
                 <div class="w-fit">
                     <h1>Wind Status</h1>
                     <h1 class="text-4xl py-3 w-full flex justify-center items-end"><?php echo $wind_speed; ?><span class="text-sm px-1 text-end">m/s</span></h1>
                     <p><?php echo $wind_direction; ?> °</p>
                 </div>
             </div>
-            <div class="bg-gray-100 hover:shadow-lg p-8 h-40 md:h-full rounded-lg grid grid-cols-2 gap-4">
+            <div class="bg-gray-100 dark:bg-slate-800 hover:shadow-lg p-8 h-40 md:h-full rounded-lg grid grid-cols-2 gap-4">
                 <div class="w-full flex flex-col justify-center">
                     <h1>Temperature</h1>
                     <h1 class="text-4xl h-full w-full flex justify-center items-center"><?php echo $temperature; ?></h1>
@@ -224,7 +224,7 @@ function getWeatherForecastData($api_key, $location, $city, $state)
                     </div>
                 </div>
             </div>
-            <div class="bg-gray-100 hover:shadow-lg h-40 md:h-full rounded-lg flex justify-center items-center">
+            <div class="bg-gray-100 dark:bg-slate-800 hover:shadow-lg h-40 md:h-full rounded-lg flex justify-center items-center">
                 <div class="w-fit">
                     <h1>Sunrise & Sunset</h1>
                     <h1 class="text-2xl py-1 w-full flex ml-8"><span><img src="../img/sun-rise.png" class="h-7 pr-2" alt=""></span><?php echo $sunrise_time; ?> </h1>
@@ -233,7 +233,7 @@ function getWeatherForecastData($api_key, $location, $city, $state)
                 </div>
             </div>
         </div>
-<?php
+    <?php
     } else {
         echo "<script>
                 Swal.fire({
