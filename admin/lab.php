@@ -115,7 +115,7 @@
                                                         <input @click="open = false" type="reset" value="Cancel" name="cancel" class="py-2 w-52 inline-flex justify-center items-center gap-2 rounded-md font-medium bg-gray-300 dark:text-black dark:hover:border cursor-pointer shadow-lg align-middle hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-red-700 focus:ring-red-600 transition-all text-lg">
                                                     </div>
                                                 </form>
-                                                <input type="" name="" id="status" class="bg-black text-white">
+                                                <input type="hidden" name="" id="status">
                                             </div>
                                         </div>
                                     </div>
