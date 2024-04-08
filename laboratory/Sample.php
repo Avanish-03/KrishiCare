@@ -8,13 +8,13 @@
             <img class="h-full w-full" src="../img/sample-collection.png" alt="">
         </div>
         <div class="w-[50%] h-full flex items-center">
-            <h1 class=" text-4xl font-bold">Sample Data</h1>
+            <h1 class=" text-4xl font-bold dark:text-gray-300">Sample Data</h1>
         </div>
     </div>
     <!-- Sample Data -->
-    <div class="relative md:h-32 h-fit py-2 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
-        <h1 class="z-10 text-xl sm:text-3xl md:text-5xl font-bold px-8 text-slate-700 dark:text-gray-300">Sample
-            Collected Data</h1>
+    <div class="relative h-32 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
+        <div class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  "></div>
+        <h1 class="z-10 h-full flex justify-center items-center text-7xl font-bold px-8 transition-all duration-300 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">Sample Collected Data</h1>
     </div>
     <div class="relative h-fit w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 rounded-md">
         <div class="w-full m-2 p-2 h-full">
@@ -75,8 +75,14 @@
     </div>
     <!-- Sample Form -->
     <div class="relative md:h-32 h-fit py-2 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
-        <h1 class="z-10 text-xl sm:text-3xl md:text-5xl font-bold px-8 text-slate-700 dark:text-gray-300">Sample
-            Collection Form</h1>
+    <div class="relative h-32 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
+            <div
+                class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  ">
+            </div>
+            <h1
+                class="z-10 h-full flex justify-center items-center text-6xl font-bold px-8 transition-all duration-300 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">
+                Sample Collection Form</h1>
+        </div>
     </div>
     <div class="bg-slate-200 dark:bg-slate-700 w-full h-fit rounded my-8 py-8 relative grid grid-cols-1 md:grid-cols-2">
         <div class="h-full w-full flex justify-center items-center">

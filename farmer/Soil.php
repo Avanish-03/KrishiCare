@@ -9,8 +9,15 @@ session_start();
         <div class="px-8 w-fit h-full flex justify-start">
             <img class="h-full w-full" src="../img/soil.png" alt="">
         </div>
-        <div class="w-[50%] h-full flex items-center">
-            <h1 class="text-4xl dark:text-gray-100 font-bold">Steps To Request For Soil Testing</h1>
+        <div class="w-[100%] h-full flex items-center">
+            <div class="relative h-32 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
+                <div
+                    class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  ">
+                </div>
+                <h1
+                    class="z-10 h-full flex justify-center items-center text-6xl font-bold px-8 transition-all duration-300 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">
+                    Steps To Request For Soil Testing</h1>
+            </div>
         </div>
     </div>
     <!-- information Section -->
@@ -150,7 +157,8 @@ session_start();
         </div>
         <div class="h-full w-full flex justify-centeritems-center">
             <div class="w-full h-full px-4 grid grid-cols-1">
-                <table class="w-full h-full rounded-b-lg text-sm text-left rtl:text-right text-gray-500 dark:text-gray-200 overflow-x-scroll">
+                <table
+                    class="w-full h-full rounded-b-lg text-sm text-left rtl:text-right text-gray-500 dark:text-gray-200 overflow-x-scroll">
                     <thead class="text-xs text-gray-100 uppercase bg-gray-400 dark:bg-slate-600 dark:text-gray-100">
                         <tr>
                             <th scope="col" class="px-6 py-3">lab Name</th>

@@ -67,7 +67,7 @@ session_start();
 
                     <div class="text-center  mt-5 text-gray-800 dark:text-white">
 
-                        <h3 class="text-4xl font-semibold leading-normal  mb-2">
+                        <h3 class="text-4xl font-semibold leading-normal capitalize mb-2">
                             <?php echo $nested_array["lab_name"] ?>
                         </h3>
                         <div class="text-sm leading-normal mt-0 mb-2  font-bold uppercase">

@@ -7,7 +7,7 @@
             <img class="h-full w-full" src="../img/New notifications-amico.png" alt="">
         </div>
         <div class="w-[50%] h-full flex items-center">
-            <h1 class=" text-4xl font-bold">Notification received</h1>
+            <h1 class=" text-4xl font-bold dark:text-gray-300">Notification received</h1>
         </div>
     </div>
     <div class="my-8 h-full w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

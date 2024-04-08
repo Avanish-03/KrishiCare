@@ -10,7 +10,14 @@ session_start();
             <img class="h-full w-full" src="../img/Attached files-rafiki.svg" alt="">
         </div>
         <div class="w-[50%] h-full flex items-center">
-            <h1 class="dark:text-gray-100 text-4xl font-bold">Reports</h1>
+        <div class="relative h-32 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
+            <div
+                class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  ">
+            </div>
+            <h1
+                class="z-10 h-full flex justify-center items-center text-6xl font-bold px-8 transition-all duration-300 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">
+                Reports</h1>
+        </div>
         </div>
     </div>
     <div class="my-8 h-fit w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
