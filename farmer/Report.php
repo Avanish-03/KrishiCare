@@ -10,7 +10,14 @@ session_start();
             <img class="h-full w-full" src="../img/Attached files-rafiki.svg" alt="">
         </div>
         <div class="w-[50%] h-full flex items-center">
-            <h1 class="dark:text-gray-100 text-4xl font-bold">Reports</h1>
+        <div class="relative h-32 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
+            <div
+                class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  ">
+            </div>
+            <h1
+                class="z-10 h-full flex justify-center items-center text-6xl font-bold px-8 transition-all duration-300 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">
+                Reports</h1>
+        </div>
         </div>
     </div>
     <div class="my-8 h-fit w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
@@ -30,10 +37,10 @@ session_start();
                 </form>
             </div>
         </div>
-        <!-- <div class="p-8 bg-gray-200 dark:bg-slate-700 rounded-lg">
-            <h1 class="text-2xl dark:text-gray-100 font-bold">Download Your Report</h1>
-            <p class="dark:text-gray-200 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam delectus quam sint consequuntur iure incidunt obcaecati quidem aperiam expedita perspiciatis, magnam voluptates harum possimus doloribus minima, sapiente numquam voluptas praesentium rerum tempora, eius ipsam distinctio architecto? Facilis reprehenderit iste labore pariatur unde. Nam incidunt ab soluta nemo, harum dolor, velit pariatur porro voluptates earum, similique rerum. Cum suscipit tenetur laboriosam nam voluptatum ducimus debitis vitae iste odit optio. Aspernatur aliquam ad voluptatum dolores, temporibus vitae maxime nostrum eligendi nemo asperiores soluta quos vel illum alias nam nisi pariatur officiis. Natus officiis ex reiciendis. Eum in reiciendis nesciunt odio magni nobis.</p>
-        </div> -->
+        <div class="p-8 bg-gray-200 dark:bg-slate-700 rounded-lg">
+            <h1 class="text-3xl dark:text-gray-100 font-bold mb-2">Download Your Report</h1>
+            <p class="dark:text-gray-200 text-justify text-lg">Soil testing is like a health checkup for your farm's soil. It tells you what nutrients your soil has and what it needs to grow crops well. By knowing this, farmers can use the right amount of fertilizers and other treatments, saving money and preventing pollution. It also helps keep the soil healthy, which is essential for good crops. Soil testing is like a roadmap for farmers, guiding them to make the best decisions for their fields, leading to better harvests and a healthier environment.</p>
+        </div>
     </div>
 
     <div class="h-fit w-full my-8 bg-gray-200 rounded-lg dark:bg-slate-700 flex items-center">

@@ -10,7 +10,7 @@ session_start();
             <img class="h-full w-full" src="../img/reqest-data.png" alt="">
         </div>
         <div class="w-[50%] h-full flex items-center">
-            <h1 class=" text-4xl font-bold">Request Data</h1>
+            <h1 class=" text-4xl font-bold dark:text-gray-300">Request Data</h1>
         </div>
     </div>
     <div class="relative h-32 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">

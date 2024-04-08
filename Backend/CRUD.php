@@ -13,7 +13,7 @@ if (isset($_POST['addfarmer'])) {
     $state = $_POST['state'];
     $password = $_POST['pwd'];
 
-    $query = "INSERT INTO `farmer_detail` (`first_name`, `middle_name`, `last_name`, `email`, `contact_number`, `address`, `city`, `state`, `password`) VALUES ('$first_name', '$middle_name', '$last_name', '$email', '$contact_number', '$address', '$city', '$state', '$password')";
+    $query = "INSERT INTO `farmer_detail` (`first_name`, `middle_name`, `last_name`, `email`, `contact_number`, `address`, `city`, `state`, `password`)$irst_name', '$middle_name', '$last_name', '$email', '$contact_number', '$address', '$city', '$state', '$password')";
 
     $result = mysqli_query($con, $query);
 
@@ -35,21 +35,21 @@ if (isset($_POST['updateLabDetail'])) {
     $city = $_POST['city'];
     $state = $_POST['state'];
 
-    $query = "UPDATE `laboratory_detail` SET 'lab_name' = $fullname , 'email' = $email , 'contact' = $contact , 'lab_add' = $address , 'city' = $city , 'state' = $state WHERE lab_id = $labid";
-
-    $result = mysqli_query($con, $query);
+    $updatelabdetail = "UPDATE `laboratory_detail` SET `lab_name`='$fullname',`email`='$email',`contact`='$contact',`lab_add`='$address',`city`='$city',`state`='$state' WHERE `lab_id`='$labid'";
+    $result = mysqli_query($con, $updatelabdetail);
 
     if (!$result) {
-        echo "<script>alert('error')</script>";
+        echo "<script>alert('error !')</script>";
     } else {
-        echo "<script>window.location.href='../admin/Admindashboard.php'</script>";
+        echo "<script>alert('Update Succsessfully ')</script>";
+        echo "<script>window.location.href='../laboratory/LaboratoryDashboard.php'</script>";
     }
 }
 
 
 // -------------DELETE the farmer from the table--------------------------------
 if (isset($_POST['deleteFarmer'])) {
-?>
+    ?>
     <script>
         var display = 0;
 
@@ -63,7 +63,7 @@ if (isset($_POST['deleteFarmer'])) {
             }
         }
     </script>
-<?php
+    <?php
     echo "<script>window.location.href='../admin/Admindashboard.php'</script>";
 }
 ?>
