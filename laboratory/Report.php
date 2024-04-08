@@ -63,11 +63,11 @@ session_start();
                                 echo "<td class='px-6 py-4'>" . $nested_array["city"] . "</td>";
                                 echo "<td class='px-6 py-4'>" . $nested_array["state"] . "</td>";
                                 echo "<td class='px-6 py-4'>" . $nested_array["lab_id"] . "</td>";
-                                echo "<td class='px-6 py-4 text-green-400'>" . ( $nested_array["status"] == 'Generated' ?  $nested_array["status"] : 'Processing') . "</td>";
-                            //     echo "<td class='px-6 py-2'>
-                            // <button onclick='acceptRequest(" . $nested_array["farmer_id"] . "," . $_SESSION['laboratory'] . ")' class='px-6 py-2 rounded-lg bg-green-300 hover:bg-green-400 text-gray-50 dark:text-gray-700'>
-                            // " . ($nested_array["status"] ? "Accepted" : "Accept") . "</button>
-                            // </td>";
+                                echo "<td class='px-6 py-4 text-green-400'>" . ($nested_array["status"] == 'Generated' ?  $nested_array["status"] : 'Processing') . "</td>";
+                                //     echo "<td class='px-6 py-2'>
+                                // <button onclick='acceptRequest(" . $nested_array["farmer_id"] . "," . $_SESSION['laboratory'] . ")' class='px-6 py-2 rounded-lg bg-green-300 hover:bg-green-400 text-gray-50 dark:text-gray-700'>
+                                // " . ($nested_array["status"] ? "Accepted" : "Accept") . "</button>
+                                // </td>";
                                 echo "</tr>";
                             }
                         }
@@ -137,8 +137,8 @@ session_start();
         </div>
         <input type="hidden" name="uploadReport" id="uploadReport">
     </div>
-    <img src="https://www.researchgate.net/publication/226624983/figure/fig2/AS:267538726649926@1440797611896/Example-of-Cornell-Soil-Health-Test-report.png" alt="">
-    <!-- <div class="my-8 h-full w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- <img src="https://www.researchgate.net/publication/226624983/figure/fig2/AS:267538726649926@1440797611896/Example-of-Cornell-Soil-Health-Test-report.png" alt="">
+    <div class="my-8 h-full w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="w-full h-full bg-gray-200 rounded-lg dark:bg-slate-700"></div>
         <div class="w-full h-full bg-gray-200 rounded-lg dark:bg-slate-700"></div>
         <div class="w-full h-full bg-gray-200 rounded-lg dark:bg-slate-700"></div>
