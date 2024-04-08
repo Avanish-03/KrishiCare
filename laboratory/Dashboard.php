@@ -5,21 +5,16 @@ session_start();
     <h1 class="text-3xl font-bold mb-4 text-black dark:text-gray-300">Dashboard</h1>
     <div class="bg-gray-200 dark:bg-gray-600 w-full h-36 rounded my-2 px-8 flex items-center relative">
         <div class="w-fit h-full flex justify-start">
-            <img class="h-full w-full min-w-fit"
-                src="https://cdn.pixabay.com/photo/2019/03/18/17/23/hello-4063591_640.png" alt="">
+            <img class="h-full w-full min-w-fit" src="https://cdn.pixabay.com/photo/2019/03/18/17/23/hello-4063591_640.png" alt="">
         </div>
         <div class="h-full">
             <div class="top-24 h-5 w-[30%] blur-2xl shadow-2xl bg-fuchsia-500 absolute"></div>
-            <h1
-                class="text-xl sm:text-5xl md:text-7xl h-full w-full select-none z-10 font-extrabold flex justify-center items-center bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500 duration-1000">
-                LABORATORY</h1>
+            <h1 class="text-xl sm:text-5xl md:text-7xl h-full w-full select-none z-10 font-extrabold flex justify-center items-center bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500 duration-1000">LABORATORY</h1>
         </div>
     </div>
     <div class="lg:h-96 h-fit w-full mt-6 rounded-md bg-gray-200 dark:bg-slate-700 grid grid-cols-1 md:grid-cols-2">
-        <div
-            class="bg-gray-200 dark:bg-slate-700 w-full h-full px-8 flex flex-col justify-center items-center relative rounded-md">
-            <div
-                class="z-10 text-xl sm:text-5xl md:text-5xl font-bold text-center transition-all duration-500 text-green-700 dark:text-gray-300 peer">
+        <div class="bg-gray-200 dark:bg-slate-700 w-full h-full px-8 flex flex-col justify-center items-center relative rounded-md">
+            <div class="z-10 text-xl sm:text-5xl md:text-5xl font-bold text-center transition-all duration-500 text-green-700 dark:text-gray-300 peer">
                 "Helping farmers grow better! Boost your crops with our simple and effective solutions for a successful
                 harvest!"</div>
             <div class="h-8 w-[90%] blur-3xl shadow-2xl dark:bg-blue-400 dark:peer-hover:shadow-fuchsia-900 absolute">
@@ -30,14 +25,10 @@ session_start();
             <img class="h-96 w-96 z-10" src="../img/lab-illustrater.png" alt="">
         </div>
     </div>
-    <div
-        class="relative md:h-32 h-fit py-2 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
-        <div
-            class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  ">
+    <div class="relative md:h-32 h-fit py-2 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
+        <div class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  ">
         </div>
-        <h1
-            class="z-10 font-bold px-8 transition-all duration-300 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500 text-xl sm:text-5xl md:text-7xl">
-            Laboratory Nutrient</h1>
+        <h1 class="z-10 font-bold px-8 transition-all duration-300 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500 text-xl sm:text-5xl md:text-7xl">Laboratory Nutrient</h1>
     </div>
 
     <div class="h-fit w-full grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -174,85 +165,61 @@ session_start();
         </div>
 
         <!-- 2nd Chart -->
-        <div class="w-full h-full bg-gray-200 rounded-lg dark:bg-slate-700">
-
+        <div class="w-full h-full flex justify-center items-center bg-gray-200 rounded-lg dark:bg-slate-700">
             <div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
                 <div class="flex justify-between">
                     <div>
                         <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">32 ↑</h5>
                         <p class="text-base font-normal text-gray-500 dark:text-gray-400">Farmer Requests This Week</p>
                     </div>
-                    <div
-                        class="flex items-center px-2.5 py-0.5 text-base font-semibold text-green-500 dark:text-green-500 text-center">
+                    <div class="flex items-center px-2.5 py-0.5 text-base font-semibold text-green-500 dark:text-green-500 text-center">
                         12%
-                        <svg class="w-3 h-3 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 10 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M5 13V1m0 0L1 5m4-4 4 4" />
+                        <svg class="w-3 h-3 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4" />
                         </svg>
                     </div>
                 </div>
                 <div id="area-chart"></div>
-                <div
-                    class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between">
+                <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between">
                     <div class="flex justify-between items-center pt-5">
                         <!-- Button -->
-                        <button id="dropdownDefaultButton" data-dropdown-toggle="lastDaysdropdown"
-                            data-dropdown-placement="bottom"
-                            class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 text-center inline-flex items-center dark:hover:text-white"
-                            type="button">
+                        <button id="dropdownDefaultButton" data-dropdown-toggle="lastDaysdropdown" data-dropdown-placement="bottom" class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 text-center inline-flex items-center dark:hover:text-white" type="button">
                             Last 7 days
-                            <svg class="w-2.5 m-2.5 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            <svg class="w-2.5 m-2.5 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
                             </svg>
                         </button>
                         <!-- Dropdown menu -->
-                        <div id="lastDaysdropdown"
-                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                                aria-labelledby="dropdownDefaultButton">
+                        <div id="lastDaysdropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                                 <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Yesterday</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Yesterday</a>
                                 </li>
                                 <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Today</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Today</a>
                                 </li>
                                 <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last
-                                        7 days</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last7 days</a>
                                 </li>
                                 <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last
-                                        30 days</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last30 days</a>
                                 </li>
                                 <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last
-                                        90 days</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last90 days</a>
                                 </li>
                             </ul>
                         </div>
-                        <a href="#"
-                            class="uppercase text-sm font-semibold inline-flex items-center rounded-lg text-blue-600 hover:text-blue-700 dark:hover:text-blue-500  hover:bg-gray-100 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 px-3 py-2">
-                            Users Report
-                            <svg class="w-2.5 h-2.5 ms-1.5 rtl:rotate-180" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 9 4-4-4-4" />
+                        <a href="#" class="uppercase text-sm font-semibold inline-flex items-center rounded-lg text-blue-600 hover:text-blue-700 dark:hover:text-blue-500  hover:bg-gray-100 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 px-3 py-2">Users Report
+                            <svg class="w-2.5 h-2.5 ms-1.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
                             </svg>
                         </a>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
+    <div class="h-7"></div>
 </section>
 
 

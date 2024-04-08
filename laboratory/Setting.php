@@ -28,23 +28,19 @@ session_start();
                 <form id="updateLabPasswordform" class="flex flex-col justify-center items-center mt-3">
                     <div class="w-full">
                         <label for="oldpass" class="text-xl pr-2 font-bold">Old password</label>
-                        <input type="password" id="oldpass" name="oldpass"
-                            class="w-full md:w-3/4 rounded-lg bg-transparent border-gray-500 border-2 p-2"><br>
+                        <input type="password" id="oldpass" name="oldpass" class="w-full md:w-3/4 rounded-lg bg-transparent border-gray-500 border-2 p-2"><br>
                         <span id="spanoldpass" class="text-red-500 text-sm"></span>
                         <br>
                         <label for="pwd" class="text-xl pr-2 font-bold">New password</label>
-                        <input type="password" id="pwd" name="pwd"
-                            class="w-full md:w-3/4 rounded-lg bg-transparent border-gray-500 border-2 p-2"><br>
+                        <input type="password" id="pwd" name="pwd" class="w-full md:w-3/4 rounded-lg bg-transparent border-gray-500 border-2 p-2"><br>
                         <span id="spanpass" class="text-red-500 text-sm"></span>
                         <br>
                         <label for="cpwd" class="text-xl pr-2 font-bold">Confirm password</label>
-                        <input type="password" id="cpwd" name="cpwd"
-                            class="w-full md:w-3/4 rounded-lg bg-transparent border-gray-500 border-2 p-2"><br>
+                        <input type="password" id="cpwd" name="cpwd" class="w-full md:w-3/4 rounded-lg bg-transparent border-gray-500 border-2 p-2"><br>
                         <span id="spancpass" class="text-red-500 text-sm"></span>
                     </div>
                     <br>
-                    <button onclick="return updateLabPassword('<?php echo $_SESSION['laboratory'] ?>')"
-                        class="border-green-500 -ml-20 border-2 w-1/2 rounded-full text-green-500 hover:text-white hover:bg-green-500 p-2 mt-2 font-bold font-mono">Change</button>
+                    <button onclick="return updateLabPassword('<?php echo $_SESSION['laboratory'] ?>')" class="border-green-500 -ml-20 border-2 w-1/2 rounded-full text-green-500 hover:text-white hover:bg-green-500 p-2 mt-2 font-bold font-mono">Change</button>
                 </form>
             </div>
             <input type="hidden" name="updateLabPassword" id="updateLabPassword">
@@ -52,20 +48,16 @@ session_start();
     </div>
 
     <!-- notification setting -->
-    <div
-        class="h-48 w-full text-gray-600 dark:text-gray-300 bg-gray-200 rounded-lg dark:bg-slate-700 transition-all duration-300 flex items-center">
+    <div class="h-48 w-full text-gray-600 dark:text-gray-300 bg-gray-200 rounded-lg dark:bg-slate-700 transition-all duration-300 flex items-center">
         <div class="px-8 w-fit h-full flex justify-start">
             <img class="h-full w-full" src="../img/setting-pana.png" alt="">
         </div>
         <div class="w-[100%] h-full flex items-center">
-        <div class="relative h-32 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
-            <div
-                class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  ">
+            <div class="relative h-32 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
+                <div class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  ">
+                </div>
+                <h1 class="z-10 h-full flex justify-center items-center text-6xl font-bold px-8 transition-all duration-300 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">Notification Details</h1>
             </div>
-            <h1
-                class="z-10 h-full flex justify-center items-center text-6xl font-bold px-8 transition-all duration-300 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">
-                Notification Details</h1>
-        </div>
         </div>
     </div>
     <div class="h-fit w-full text-gray-600 dark:text-gray-300 bg-gray-200 dark:bg-slate-600 my-8 px-8 py-8 rounded-md">
@@ -130,7 +122,8 @@ session_start();
                 soil health.
                 <br>
                 The lab reserves the right to adjust testing methods and procedures as necessary to ensure accuracy and
-                quality.</p>
+                quality.
+            </p>
         </div>
     </div>
 
