@@ -41,9 +41,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
 
             $sampleQuery = "SELECT s.sample_id, s.request_id, s.lab_id, s.farmer_id, s.collected_date, s.status, f.first_name, f.middle_name, f.last_name, f.email, f.address, f.city, f.state
-        FROM sample_detail As s
-        JOIN farmer_detail As f ON s.farmer_id = f.farmer_id
-        WHERE s.lab_id = '$labId';";
+            FROM sample_detail As s
+            JOIN farmer_detail As f ON s.farmer_id = f.farmer_id
+            WHERE s.lab_id = '$labId';";
             $result = mysqli_query($con, $sampleQuery);
             if ($result) {
                 $samplerequestdata = []; // Initialize array

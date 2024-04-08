@@ -20,6 +20,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;
         case "report":
             //code block
+            $requestQuery = "SELECT r.report_id, r.farmer_id, r.sample_id, s.collected_date, r.lab_id, r.status, r.report_image, f.first_name, f.middle_name, f.last_name, f.email, f.address, f.city, f.state
+            FROM report_detail As r
+            JOIN farmer_detail As f 
+            Join sample_detail As s
+            ON r.farmer_id = f.farmer_id AND r.sample_id = s.sample_id
+            WHERE r.lab_id = s.lab_id;";
+
+            $result = mysqli_query($con, $requestQuery);
+            if ($result) {
+                $reportrequestdata = []; // Initialize array
+                while ($row = mysqli_fetch_assoc($result)) {
+                    // print_r($row);
+                    $reportrequestdata[] = $row; // Populate array
+                }
+                mysqli_free_result($result); // Free result set
+            } else {
+                // Handle query execution error
+                echo "Error executing query: " . mysqli_error($con);
+            }
             include("../admin/report.php");
             break;
         case "notification":

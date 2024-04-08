@@ -46,6 +46,55 @@ function registerFarmer() {
     return false;
 }
 
+function addFarmer() {
+    var result =
+        validateEmpty('firstname', 'First name', 'spanfirstname') &&
+        validateEmpty('middlename', 'Middle name', 'spanmiddlename') &&
+        validateEmpty('lastname', 'last name', 'spanlastname') &&
+        ValidateEmail('email', 'Email', 'spanemail') &&
+        validateContact('contact', 'Contact number', 'spancontact') &&
+        validateEmpty('address', 'Address', 'spanaddress') &&
+        validateEmpty('state', 'State', 'spanstate') &&
+        validateEmpty('city', 'City', 'spancity') &&
+        validatePassword('pwd', 'cpwd', 'spancpass');
+
+    if (result) {
+        var firstname = getvalue('firstname');
+        var middlename = getvalue('middlename');
+        var lastname = getvalue('lastname');
+        var email = getvalue('email');
+        var contact = getvalue('contact');
+        var address = getvalue('address');
+        var state = getvalue('state');
+        var city = getvalue('city');
+        var password = getvalue('pwd');
+
+        var dataForm =
+            'firstname=' + firstname +
+            '&lastname=' + lastname +
+            '&middlename=' + middlename +
+            '&email=' + email +
+            '&contact=' + contact +
+            '&address=' + address +
+            '&state=' + state +
+            '&city=' + city +
+            '&password=' + password +
+            '&process=registerFarmer';
+
+        ajaxCall('../Backend/Register.php', 'post', dataForm, 'status', true);
+
+        var status = getvalue('status');
+        if (status == 1) {
+            alert("Registered Successfully!");
+            resetFormdata('farmForm');
+            adminMenuLoader('farmer');
+        } else {
+            alert(status);
+        }
+    }
+    return false;
+}
+
 function registerLaboratory() {
     var result =
         validateEmpty('fullname', 'Laboratory name', 'spanfullname') &&
@@ -85,6 +134,53 @@ function registerLaboratory() {
         if (status == 1) {
             alert("Registered Successfully!");
             resetFormdata('labForm');
+        } else {
+            alert(status);
+        }
+    }
+    return false;
+}
+
+function addLaboratory() {
+    var result =
+        validateEmpty('fullname', 'Laboratory name', 'spanfullname') &&
+        ValidateEmail('email', 'Email', 'spanemail') &&
+        validateContact('contact', 'Contact number', 'spancontact') &&
+        validateEmpty('address', 'Address', 'spanaddress') &&
+        validateEmpty('state', 'State', 'spanstate') &&
+        validateEmpty('city', 'City', 'spancity') &&
+        validateDropdown('ownership', 'Ownership', 'spanownership') &&
+        validatePassword('pwd', 'cpwd', 'spancpass');
+
+    if (result) {
+
+        var fullname = getvalue('fullname');
+        var email = getvalue('email');
+        var contact = getvalue('contact');
+        var address = getvalue('address');
+        var state = getvalue('state');
+        var city = getvalue('city');
+        var ownership = getvalue('ownership');
+        var password = getvalue('pwd');
+
+        var dataForm =
+            'fullname=' + fullname +
+            '&email=' + email +
+            '&contact=' + contact +
+            '&address=' + address +
+            '&state=' + state +
+            '&city=' + city +
+            '&ownership=' + ownership +
+            '&password=' + password +
+            '&process=registerlab';
+
+        ajaxCall('../Backend/Register.php', 'post', dataForm, 'status', true);
+
+        var status = getvalue('status');
+        if (status == 1) {
+            alert("Registered Successfully!");
+            resetFormdata('labForm');
+            adminMenuLoader('laboratory');
         } else {
             alert(status);
         }
@@ -470,7 +566,7 @@ function ApproveLab(labid, email) {
     let status = getvalue("approveLab");
     if (status == 1) {
         alert("Lab Approved Successfully!")
-        adminMenuLoader('dashboard');
+        adminMenuLoader('laboratory');
     } else {
         alert("Invalid request!")
 
@@ -895,73 +991,72 @@ function deleteTask(taskid, userid) {
 // 2nd graph 
 const options = {
     chart: {
-      height: "100%",
-      maxWidth: "100%",
-      type: "area",
-      fontFamily: "Inter, sans-serif",
-      dropShadow: {
-        enabled: false,
-      },
-      toolbar: {
-        show: false,
-      },
+        height: "100%",
+        maxWidth: "100%",
+        type: "area",
+        fontFamily: "Inter, sans-serif",
+        dropShadow: {
+            enabled: false,
+        },
+        toolbar: {
+            show: false,
+        },
     },
     tooltip: {
-      enabled: true,
-      x: {
-        show: false,
-      },
+        enabled: true,
+        x: {
+            show: false,
+        },
     },
     fill: {
-      type: "gradient",
-      gradient: {
-        opacityFrom: 0.55,
-        opacityTo: 0,
-        shade: "#1C64F2",
-        gradientToColors: ["#1C64F2"],
-      },
+        type: "gradient",
+        gradient: {
+            opacityFrom: 0.55,
+            opacityTo: 0,
+            shade: "#1C64F2",
+            gradientToColors: ["#1C64F2"],
+        },
     },
     dataLabels: {
-      enabled: false,
+        enabled: false,
     },
     stroke: {
-      width: 6,
+        width: 6,
     },
     grid: {
-      show: false,
-      strokeDashArray: 4,
-      padding: {
-        left: 2,
-        right: 2,
-        top: 0
-      },
+        show: false,
+        strokeDashArray: 4,
+        padding: {
+            left: 2,
+            right: 2,
+            top: 0
+        },
     },
     series: [
-      {
-        name: "New users",
-        data: [6500, 6418, 6456, 6526, 6356, 6456],
-        color: "#1A56DB",
-      },
+        {
+            name: "New users",
+            data: [6500, 6418, 6456, 6526, 6356, 6456],
+            color: "#1A56DB",
+        },
     ],
     xaxis: {
-      categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
-      labels: {
-        show: false,
-      },
-      axisBorder: {
-        show: false,
-      },
-      axisTicks: {
-        show: false,
-      },
+        categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
+        labels: {
+            show: false,
+        },
+        axisBorder: {
+            show: false,
+        },
+        axisTicks: {
+            show: false,
+        },
     },
     yaxis: {
-      show: false,
+        show: false,
     },
-  }
-  
-  if (document.getElementById("area-chart") && typeof ApexCharts !== 'undefined') {
+}
+
+if (document.getElementById("area-chart") && typeof ApexCharts !== 'undefined') {
     const chart = new ApexCharts(document.getElementById("area-chart"), options);
     chart.render();
-  }
-  
+}

@@ -40,7 +40,7 @@ include("../Backend/config.php");
                 </div>
                 <div class="flex justify-around items-center sm:w-[80%]">
                     <div class="flex sm:mx-4 w-[60%]">
-                        <label name="search" class="sm:text-2xl cursor-pointer hover:bg-gray-900 rounded-md p-1 mr-1">🔎</label>
+                        <label name="search" class="sm:text-2xl cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-900 rounded-md p-1 mr-1">🔎</label>
                         <input name="search" type="text" placeholder="Search..." class="outline-none bg-gray-300 dark:bg-slate-900 rounded-md font-light sm:text-lg text-xs px-2 w-[80%]">
                     </div>
                     <div class="flex justify-center items-center sm:mx-4 space-x-2">
@@ -50,11 +50,11 @@ include("../Backend/config.php");
                                 <i class="fa-solid fa-circle-half-stroke text-slate-600 dark:text-slate-200 dark:rotate-180 duration-150 text-xl"></i>
                             </label>
                         </div>
-                        <div class="hidden sm:block">
-                            <button><i class="hover:bg-gray-300 dark:hover:bg-gray-900 rounded-md text-2xl fa-regular fa-bell px-2"></i></button>
+                        <div class="hidden sm:block" onclick="adminMenuLoader('notification')">
+                            <button><i class="hover:bg-gray-300 dark:hover:bg-gray-900 rounded-md text-2xl fa-regular fa-bell p-2"></i></button>
                         </div>
                         <div class="hidden sm:block">
-                            <button><i class="hover:bg-gray-300 dark:hover:bg-gray-900 rounded-md text-2xl fa-solid fa-comment-dots px-2"></i></button>
+                            <button><i class="hover:bg-gray-300 dark:hover:bg-gray-900 rounded-md text-2xl fa-solid fa-comment-dots p-2"></i></button>
                         </div>
                         <div class="hidden sm:block w-full">
                             <div class="flex justify-end items-center ml-16 text-right ">
@@ -68,7 +68,7 @@ include("../Backend/config.php");
                                     $result = mysqli_query($con, $adminQuery);
                                     if ($result->num_rows > 0) {
                                         while ($row = $result->fetch_assoc()) {
-                                            if (!$row["adminprofile"] == null) {
+                                            if (file_exists($row["adminprofile"]) == true) {
                                                 echo " <img src='../img/" . $row["adminprofile"] . "' class='h-12 w-12 rounded-full object-cover' alt=''>";
                                             } else {
                                                 echo " <img src='../img/profile.png' class='h-12 w-12 rounded-full' alt=''>";

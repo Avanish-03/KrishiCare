@@ -59,21 +59,18 @@
 
                                     <div class="md:col-span-2">
                                         <label for="state">State</label>
-                                        <!-- <input type="text" name="state" id="state" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" /> -->
                                         <select type="text" name="state" id="state" class="state py-2 h-10 border mt-1 rounded px-4 w-full bg-gray-50" onchange="loadCities()"></select>
                                         <span id="spanstate" class="text-red-500"></span>
                                     </div>
 
                                     <div class="md:col-span-2">
                                         <label for="city">City</label>
-                                        <!-- <input type="text" name="city" id="city" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" /> -->
                                         <select type="text" name="city" id="city" class="city py-2 h-10 border mt-1 rounded px-4 w-full bg-gray-50"></select>
                                         <span id="spancity" class="text-red-500"></span>
                                     </div>
 
                                     <div class="md:col-span-4">
                                         <label for="ownership">Ownership</label>
-                                        <!-- <input type="text" name="ownership" id="ownership" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" /> -->
                                         <select type="text" name="ownership" id="ownership" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50">
                                             <option value="default">Select Ownership</option>
                                             <option value="private">Private</option>

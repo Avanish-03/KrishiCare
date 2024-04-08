@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $result = mysqli_query($con, $sql);
             echo $result;
 
-            $subject = "Reset Password!";
+            $subject = "Account Creation!";
             $body = "Dear " . $fullname . " , You Are Successfully Registered With Us. \nStay Connected Through Your dashboard!";
 
             if ($result) {
