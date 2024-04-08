@@ -40,11 +40,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "Error executing query: " . mysqli_error($con);
             }
 
-            $requestQuery = "SELECT s.sample_id, s.request_id, s.lab_id, s.farmer_id, s.collected_date, s.status, f.first_name, f.middle_name, f.last_name, f.email, f.address, f.city, f.state
+            $sampleQuery = "SELECT s.sample_id, s.request_id, s.lab_id, s.farmer_id, s.collected_date, s.status, f.first_name, f.middle_name, f.last_name, f.email, f.address, f.city, f.state
         FROM sample_detail As s
         JOIN farmer_detail As f ON s.farmer_id = f.farmer_id
         WHERE s.lab_id = '$labId';";
-            $result = mysqli_query($con, $requestQuery);
+            $result = mysqli_query($con, $sampleQuery);
             if ($result) {
                 $samplerequestdata = []; // Initialize array
                 while ($row = mysqli_fetch_assoc($result)) {
@@ -78,12 +78,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "Error executing query: " . mysqli_error($con);
             }
 
-            $requestQuery = "SELECT s.sample_id, s.request_id, s.lab_id, s.farmer_id, s.collected_date, s.status, f.first_name, f.middle_name, f.last_name, f.email, f.address, f.city, f.state
+            $sampleQuery = "SELECT s.sample_id, s.request_id, s.lab_id, s.farmer_id, s.collected_date, s.status, f.first_name, f.middle_name, f.last_name, f.email, f.address, f.city, f.state
             FROM sample_detail As s
             JOIN farmer_detail As f ON s.farmer_id = f.farmer_id
             WHERE s.lab_id = '$labId';";
 
-            $result = mysqli_query($con, $requestQuery);
+            $result = mysqli_query($con, $sampleQuery);
             if ($result) {
                 $samplerequestdata = []; // Initialize array
                 while ($row = mysqli_fetch_assoc($result)) {
@@ -150,13 +150,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (mysqli_num_rows($sampleresult) > 0) {
                 echo "Soil Health Report Generated Already!";
             } else {
-                $report_image = generateReport($farmername, $email);
+                $report_image = generateReport($farmername, $email, $sampleid, "987654321");
 
                 $sql = "INSERT INTO `report_detail` (`farmer_id`, `sample_id`, `lab_id`, `status`, `report_image`) VALUES ('$farmerid', '$sampleid', '$labId', 'Generated','$report_image');";
                 $result = mysqli_query($con, $sql);
                 if ($result) {
                     $subject = "Soil Health Report Generated!";
-                    $body = "Hello, $farmername\n Your Report is Generated.\nCollect the same from your dashboard.\nThank you for your continued trust and support.!";
+                    $msg1 = "\n\nThe Report of your soil is as below.We have also provided Fertilizer Recommendation for the soil.";
+                    $msg2 = "\n\nWe extend our heartfelt gratitude to you for selecting Our Laboratory for conducting the soil test. It has been our honor to serve you in analyzing the soil samples you provided.";
+                    $msg3 = "\n\nAt Laboratory, we understand the critical role soil health plays in agricultural productivity and sustainability. By choosing us, you've placed your trust in our expertise and commitment to delivering accurate and insightful results.";
+                    $msg4 = "\n\nYour decision to collaborate with us reinforces our dedication to providing exceptional services to farmers like you who are at the forefront of driving positive change in agriculture. We are deeply thankful for the opportunity to contribute to your project's success and support your efforts in making informed decisions for your farm.";
+                    $msg5 = "\n\nPlease do not hesitate to reach out to us if you have any further questions or require additional assistance. We look forward to continuing our partnership and serving you in the future.";
+
+                    $body = "Hello, $farmername\n\nYour Report is Generated.\n\nCollect the same from your dashboard." . $msg1 . " " . $msg2 . " " . $msg3 . " " . $msg4 . " " . $msg5 . "\n\nThank you for your continued trust and support.!\n\nWith warm regards";
 
                     $send = sendMail($email, $subject, $body);
                     if ($send) {

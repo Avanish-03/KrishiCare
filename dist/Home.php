@@ -12,7 +12,7 @@
     <script src="../flowbite.js"></script>
 </head>
 
-<body onload="initializeCarousel()">
+<body id="home" onload="initializeCarousel()">
     <?php include("Header.php"); ?>
     <!-- section 1 -->
     <section class="h-screen w-full">

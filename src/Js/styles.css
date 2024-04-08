@@ -5,3 +5,7 @@
 #maincontent::-webkit-scrollbar {
     display: none;
 }
+
+#home::-webkit-scrollbar {
+    display: none;
+}
