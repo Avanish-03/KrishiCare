@@ -7,12 +7,9 @@
                 <img class="h-full w-full min-w-fit" src="../img/Site Stats-amico.svg" alt="">
             </div>
             <div class="relative h-32 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
-                <div
-                    class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  ">
+                <div class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  ">
                 </div>
-                <h1
-                    class="z-10 h-full flex justify-center items-center text-5xl font-bold px-8 transition-all duration-300 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">
-                    Current Trends in Agriculture (2024)</h1>
+                <h1 class="z-10 h-full flex justify-center items-center text-5xl font-bold px-8 transition-all duration-300 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">Current Trends in Agriculture (2024)</h1>
             </div>
         </div>
         <p class="text-lg m-5 "><span class="text-2xl ml-10">N</span>ew technologies in agriculture meet the growing
@@ -48,8 +45,7 @@
         </div>
 
         <div>
-            <div
-                class="lg:flex space-y-4 lg:space-y-2 lg:justify-between lg:items-center w-full lg:h-96 sm:h-full mb-2 ">
+            <div class="lg:flex space-y-4 lg:space-y-2 lg:justify-between lg:items-center w-full lg:h-96 sm:h-full mb-2 ">
                 <div class="lg:w-[50%] lg:px-5">
                     <h2 class="text-3xl font-bold text-left text-black dark:text-gray-300">1. Internet of Things</h2>
                     <p class="pt-4 text-lg text-md ">
@@ -73,8 +69,7 @@
             </div>
             <div class="lg:px-5 pt-8">
                 <h1 class="font-bold text-2xl">Agrila develops an IoT-based Sensor Station</h1>
-                <span class="ml-10">Drones can be used for a wide range of tasks in the agriculture sector, such
-                    as:</span>
+                <span class="ml-10">Drones can be used for a wide range of tasks in the agriculture sector, such as:</span>
                 <p class=" text-lg">
                     Bulgarian startup Agrila creates a modular IoT-based sensor station to facilitate sensing of vital
                     parameters like soil moisture and temperature, wind speed and direction, rain, humidity, solar
@@ -99,8 +94,7 @@
         </div>
 
         <div>
-            <div
-                class="lg:flex lg:space-y-2 lg:justify-between lg:items-center w-full lg:h-auto sm:h-full my-4 mt-10 mb-2">
+            <div class="lg:flex lg:space-y-2 lg:justify-between lg:items-center w-full lg:h-auto sm:h-full my-4 mt-10 mb-2">
                 <div class="lg:w-[50%] lg:px-5">
                     <h2 class="text-3xl font-bold text-left text-black dark:text-gray-300">2. Agricultural Robotics</h2>
                     <p class="px- pt-4 mb-4 text-md  text-lg">
@@ -143,13 +137,11 @@
                     It also collects data on the growing conditions of the crops and enables farmers to leverage the
                     data to make informed decisions.
                 </p>
-
             </div>
         </div>
 
         <div>
-            <div
-                class="lg:flex lg:space-y-2 lg:justify-between lg:items-center w-full lg:h-auto sm:h-full my-4 mt-10 mb-2">
+            <div class="lg:flex lg:space-y-2 lg:justify-between lg:items-center w-full lg:h-auto sm:h-full my-4 mt-10 mb-2">
                 <div class="lg:w-[50%] lg:px-5">
                     <h2 class="text-3xl font-bold text-left text-black dark:text-gray-300">3. Artificial Intelligence
                     </h2>
@@ -186,8 +178,7 @@
                     field inputs on crops.
                 </p>
                 <p class=" text-lg">
-                    <span class="font-bold text-md">Re-Basket develops AI-based Software Solutions for
-                        Agriculture</span> Re-Basket is a Zimbabwe-based agritech company that builds AI-based software
+                    <span class="font-bold text-md">Re-Basket develops AI-based Software Solutions for Agriculture</span> Re-Basket is a Zimbabwe-based agritech company that builds AI-based software
                     products for agricultural use cases. For example, its AI-driven crop recommendation tool ensures
                     optimal crop selection while AI-based disease diagnostics provides crop health analysis using
                     computer vision.
@@ -196,13 +187,11 @@
                     more. These solutions allow farmers and agribusinesses to mitigate in-house software development and
                     reduce costs.
                 </p>
-
             </div>
         </div>
 
         <div>
-            <div
-                class="lg:flex lg:space-y-2 lg:justify-between lg:items-center w-full lg:h-auto sm:h-full my-4 mt-10 mb-2">
+            <div class="lg:flex lg:space-y-2 lg:justify-between lg:items-center w-full lg:h-auto sm:h-full my-4 mt-10 mb-2">
                 <div class="lg:w-[50%] lg:px-5">
                     <h2 class="text-3xl font-bold text-left text-black dark:text-gray-300">4. Agri Drones</h2>
                     <p class="px- pt-4 mb-4 text-md  text-lg">
@@ -250,8 +239,7 @@
         </div>
 
         <div>
-            <div
-                class="lg:flex lg:space-y-2 lg:justify-between lg:items-center w-full lg:h-auto sm:h-full my-4 mt-10 mb-2">
+            <div class="lg:flex lg:space-y-2 lg:justify-between lg:items-center w-full lg:h-auto sm:h-full my-4 mt-10 mb-2">
                 <div class="lg:w-[50%] lg:px-5">
                     <h2 class="text-3xl font-bold text-left text-black dark:text-gray-300">5. Precision Agriculture</h2>
                     <p class="px- pt-4 mb-4 text-md  text-lg">
@@ -293,8 +281,7 @@
         </div>
 
         <div>
-            <div
-                class="lg:flex lg:space-y-2 lg:justify-between lg:items-center w-full lg:h-auto sm:h-full my-4 mt-10 mb-2">
+            <div class="lg:flex lg:space-y-2 lg:justify-between lg:items-center w-full lg:h-auto sm:h-full my-4 mt-10 mb-2">
                 <div class="lg:w-[50%] lg:px-5">
                     <h2 class="text-3xl font-bold text-left text-black dark:text-gray-300">6. Agricultural Biotechnology
                     </h2>
@@ -340,8 +327,7 @@
         </div>
 
         <div>
-            <div
-                class="lg:flex lg:space-y-2 lg:justify-between lg:items-center w-full lg:h-auto sm:h-full my-4 mt-10 mb-2">
+            <div class="lg:flex lg:space-y-2 lg:justify-between lg:items-center w-full lg:h-auto sm:h-full my-4 mt-10 mb-2">
                 <div class="lg:w-[50%] lg:px-5">
                     <h2 class="text-3xl font-bold text-left text-black dark:text-gray-300">7. Big Data & Analytics</h2>
                     <p class="px- pt-4 mb-4 text-md  text-lg">
@@ -385,8 +371,7 @@
         </div>
 
         <div>
-            <div
-                class="lg:flex lg:space-y-2 lg:justify-between lg:items-center w-full lg:h-auto sm:h-full my-4 mt-10 mb-2">
+            <div class="lg:flex lg:space-y-2 lg:justify-between lg:items-center w-full lg:h-auto sm:h-full my-4 mt-10 mb-2">
                 <div class="lg:w-[50%] lg:px-5">
                     <h2 class="text-3xl font-bold text-left text-black dark:text-gray-300">8. Controlled Environment
                         Agriculture (CEA)</h2>
@@ -431,8 +416,7 @@
         </div>
 
         <div>
-            <div
-                class="lg:flex lg:space-y-2 lg:justify-between lg:items-center w-full lg:h-auto sm:h-full my-4 mt-10 mb-2">
+            <div class="lg:flex lg:space-y-2 lg:justify-between lg:items-center w-full lg:h-auto sm:h-full my-4 mt-10 mb-2">
                 <div class="lg:w-[50%] lg:px-5">
                     <h2 class="text-3xl font-bold text-left text-black dark:text-gray-300">9. Regenerative Agriculture
                     </h2>
@@ -481,8 +465,7 @@
         </div>
 
         <div>
-            <div
-                class="lg:flex lg:space-y-2 lg:justify-between lg:items-center w-full lg:h-auto sm:h-full my-4 mt-10 mb-2">
+            <div class="lg:flex lg:space-y-2 lg:justify-between lg:items-center w-full lg:h-auto sm:h-full my-4 mt-10 mb-2">
                 <div class="lg:w-[50%] lg:px-5">
                     <h2 class="text-3xl font-bold text-left text-black dark:text-gray-300">10. Connectivity Technologies
                     </h2>

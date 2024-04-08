@@ -10,14 +10,10 @@ session_start();
             <img class="h-full w-full" src="../img/Profile Interface-bro admin.png" alt="">
         </div>
         <div class="w-[50%] h-full flex items-center">
-        <div class="relative h-32 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
-            <div
-                class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  ">
+            <div class="relative h-32 w-full my-5 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
+                <div class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  "></div>
+                <h1 class="z-10 h-full flex justify-center items-center text-6xl font-bold px-8 transition-all duration-300 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">Profile Details</h1>
             </div>
-            <h1
-                class="z-10 h-full flex justify-center items-center text-6xl font-bold px-8 transition-all duration-300 bg-cover bg-no-repeat bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-500">
-                Profile Details</h1>
-        </div>
         </div>
     </div>
     <div class="h-fit w-full my-8 rounded-md bg-gray-200 dark:bg-slate-700">
@@ -29,7 +25,7 @@ session_start();
                 // Accessing values of the nested array at index $i
                 $nested_array = $farmerdata[$i];
         ?>
-                <div class="h-fiy w-full my-6 pb-8 rounded-md bg-gray-200 dark:bg-slate-600 duration-700">
+                <div class="h-fiy w-full my-6 pb-8 rounded-md bg-gray-200 dark:bg-slate-700 duration-700">
                     <div class="px-6">
                         <div class="flex flex-wrap justify-center">
                             <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
@@ -55,9 +51,7 @@ session_start();
                                             </div>
                                             <div class="flex justify-center items-center">
                                                 <!-- <span class="block w-40 h-40 rounded-full m-auto bg-red-500 shadow" x-bind:style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + photoPreview + '\');'" style="background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url('null');"></span> -->
-                                                <button type="button" onclick="return farmerProfilePic('farmerProfile','<?php echo $_SESSION['farmer']; ?>')" name="farmerProfile" class="inline-flex items-center px-4 py-2 bg-gray-300 dark:bg-slate-600 border border-gray-300 rounded-md font-semibold text-xs text-gray-700 dark:text-gray-100 uppercase tracking-widest shadow-sm focus:outline-none focus:border-green-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-0">
-                                                    Save
-                                                </button>
+                                                <button type="button" onclick="return farmerProfilePic('farmerProfile','<?php echo $_SESSION['farmer']; ?>')" name="farmerProfile" class="inline-flex items-center px-4 py-2 bg-gray-300 dark:bg-slate-600 border border-gray-300 rounded-md font-semibold text-xs text-gray-700 dark:text-gray-100 uppercase tracking-widest shadow-sm focus:outline-none focus:border-green-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-0">Save</button>
                                             </div>
                                         </div>
                                     </div>
