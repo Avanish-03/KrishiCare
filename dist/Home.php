@@ -251,11 +251,11 @@
                 <div class="w-full max-lg:max-w-2xl mx-auto lg:mx-0 lg:w-1/3 bg-white p-6 rounded-2xl shadow-md shadow-gray-100">
                     <div class="flex gap-5">
                         <div class="font-manrope text-2xl flex justify-center items-center font-bold text-green-600">
-                            <div class="counter" data-speed="1000">400</div>%
+                            <div class="counter" data-speed="1000">90</div>%
                         </div>
                         <div class="flex-1">
-                            <h4 class="text-xl text-gray-900 font-semibold mb-2">Company growth</h4>
-                            <p class="text-xs text-gray-500 leading-5">Company's remarkable growth journey as we
+                            <h4 class="text-xl text-gray-900 font-semibold mb-2">Growth of farming</h4>
+                            <p class="text-xs text-gray-500 leading-5">Farming remarkable growth journey as we
                                 continually innovate and drive towards new heights of success.</p>
                         </div>
                     </div>
@@ -263,10 +263,10 @@
                 <div class="w-full max-lg:max-w-2xl mx-auto lg:mx-0 lg:w-1/3 bg-white p-6 rounded-2xl shadow-md shadow-gray-100">
                     <div class="flex gap-5">
                         <div class="font-manrope text-2xl flex justify-center items-center font-bold text-green-600">
-                            <div class="counter" data-speed="1000">400</div>+
+                            <div class="counter" data-speed="1000">100</div>+
                         </div>
                         <div class="flex-1">
-                            <h4 class="text-xl text-gray-900 font-semibold mb-2">Company growth</h4>
+                            <h4 class="text-xl text-gray-900 font-semibold mb-2">Help Farmers</h4>
                             <p class="text-xs text-gray-500 leading-5">Our very talented team members are the powerhouse
                                 of pagedone and pillars of our success. </p>
                         </div>
@@ -275,12 +275,11 @@
                 <div class="w-full max-lg:max-w-2xl mx-auto lg:mx-0 lg:w-1/3 bg-white p-6 rounded-2xl shadow-md shadow-gray-100">
                     <div class="flex gap-5">
                         <div class="font-manrope text-2xl flex justify-center items-center font-bold text-green-600">
-                            <div class="counter" data-speed="1000">400</div>+
+                            <div class="counter" data-speed="1000">253</div>+
                         </div>
                         <div class="flex-1">
-                            <h4 class="text-xl text-gray-900 font-semibold mb-2">Projects Completed</h4>
-                            <p class="text-xs text-gray-500 leading-5">We have accomplished more than 625 projects
-                                worldwide and we are still counting many more.</p>
+                            <h4 class="text-xl text-gray-900 font-semibold mb-2">Reports Completed</h4>
+                            <p class="text-xs text-gray-500 leading-5">We have accomplished more than 250 reports and we are still counting many more.</p>
                         </div>
                     </div>
                 </div>
