@@ -152,8 +152,8 @@
                 <div class="bg-gray-100 hover:shadow-lg h-40 md:h-full rounded-lg flex justify-center items-center">
                     <div class="w-fit">
                         <h1>Sunrise & Sunset</h1>
-                        <h1 class="text-2xl py-1 w-full flex ml-8"><span><img src="../img/sun-rise.png" class="h-7 pr-2" alt=""></span><?php echo $sunrise_time; ?> </h1>
-                        <h1 class="text-2xl py-1 w-full flex ml-8"><span><img src="../img/sun-set.png" class="h-7 pr-2" alt=""></span><?php echo $sunset_time; ?> </h1>
+                        <h1 class="text-2xl py-1 w-full flex ml-8"><span><img src="../img/sun-rise.png" class="h-7 pr-2" alt=""></span><?php echo "05:43"; ?> </h1>
+                        <h1 class="text-2xl py-1 w-full flex ml-8"><span><img src="../img/sun-set.png" class="h-7 pr-2" alt=""></span><?php echo "06:54"; ?> </h1>
                         <p><?php echo $data_time; ?></p>
                     </div>
                 </div>
