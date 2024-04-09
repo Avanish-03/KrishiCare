@@ -77,7 +77,7 @@ session_start();
     <div class="h-fit w-full text-gray-600 dark:text-gray-300 bg-gray-200 dark:bg-slate-600 my-8 px-8 py-8 rounded-md">
         <div class="px-12 py-12 bg-gray-300 dark:bg-slate-700 rounded-md">
             <h1 class="text-3xl font-bold">Notification Settings</h1>
-            <p>All notifacation handale by you as you want to notify you then all buttons are active if you want not to notify then push it to silent </p>
+            <p>All Notification handale by you as you want to notify you then all buttons are active if you want not to notify then push it to silent </p>
             <hr class="border-1 my-8 border-gray-500">
             <h1 class="text-xl font-bold">Reports</h1>
             <div class="flex justify-between mr-8">
@@ -87,19 +87,19 @@ session_start();
                         <div class="bg-green-500 h-5 w-9 rounded-xl mr-2">
                             <p class="h-5 w-5 rounded-full bg-white ml-4"></p>
                         </div>
-                        notification
+                        Notification
                     </button>
                     <button class="flex justify-center items-center my-1 ">
                         <div class="bg-green-500 h-5 w-9 rounded-xl mr-2">
                             <p class="h-5 w-5 rounded-full bg-white ml-4"></p>
                         </div>
-                        notifacation
+                        Notification
                     </button>
                     <button class="flex justify-center items-center my-1 ">
                         <div class="bg-green-500 h-5 w-9 rounded-xl mr-2">
                             <p class="h-5 w-5 rounded-full bg-white ml-4"></p>
                         </div>
-                        notifacation
+                        Notification
                     </button>
                 </div>
             </div>
@@ -112,19 +112,19 @@ session_start();
                         <div class="bg-green-500 h-5 w-9 rounded-xl mr-2">
                             <p class="h-5 w-5 rounded-full bg-white ml-4"></p>
                         </div>
-                        notification
+                        Notification
                     </button>
                     <button class="flex justify-center items-center my-1 ">
                         <div class="bg-green-500 h-5 w-9 rounded-xl mr-2">
                             <p class="h-5 w-5 rounded-full bg-white ml-4"></p>
                         </div>
-                        notifacation
+                        Notification
                     </button>
                     <button class="flex justify-center items-center my-1 ">
                         <div class="bg-green-500 h-5 w-9 rounded-xl mr-2">
                             <p class="h-5 w-5 rounded-full bg-white ml-4"></p>
                         </div>
-                        notifacation
+                        Notification
                     </button>
                 </div>
             </div>
@@ -137,19 +137,19 @@ session_start();
                         <div class="bg-green-500 h-5 w-9 rounded-xl mr-2">
                             <p class="h-5 w-5 rounded-full bg-white ml-4"></p>
                         </div>
-                        notification
+                        Notification
                     </button>
                     <button class="flex justify-center items-center my-1 ">
                         <div class="bg-green-500 h-5 w-9 rounded-xl mr-2">
                             <p class="h-5 w-5 rounded-full bg-white ml-4"></p>
                         </div>
-                        notifacation
+                        Notification
                     </button>
                     <button class="flex justify-center items-center my-1 ">
                         <div class="bg-green-500 h-5 w-9 rounded-xl mr-2">
                             <p class="h-5 w-5 rounded-full bg-white ml-4"></p>
                         </div>
-                        notifacation
+                        Notification
                     </button>
                 </div>
             </div>
@@ -161,7 +161,8 @@ session_start();
                 The lab's testing process may have limitations, and farmers acknowledge that results may vary based on
                 factors beyond the lab's control.<br>
                 Farmers agree to provide accurate information and samples for testing and understand that additional
-                fees may apply for certain services.</p>
+                fees may apply for certain services.
+            </p>
         </div>
     </div>
     <div class="h-7"></div>

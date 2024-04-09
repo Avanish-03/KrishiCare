@@ -115,7 +115,7 @@ if ($reportresult) { // Check if the query was successful
         </div>
     </div>
 
-    <div class="relative h-32 w-full my-8 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
+    <div class="h-32 w-full my-8 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
         <div
             class="h-8 w-[60%] blur-3xl shadow-2xl bg-green-400 dark:bg-blue-400 shadow-blue-500 dark:shadow-fuchsia-900 absolute  ">
         </div>
