@@ -37,9 +37,9 @@ function generateReport($farmername, $farmeremail, $sampleid, $contact)
     $pdf->Cell("0", "15", "", "", "1", "1");
     $pdf->Write("10", "With warm regards,");
     $pdf->Cell("0", "15", "", "", "1", "1");
-    $pdf->Write("10", "[Laboratory Name]");
+    $pdf->Write("10", "Jay Ambe Laboratory");
     $pdf->Cell("0", "15", "", "", "1", "1");
-    $pdf->Write("10", "[Contact Information]");
+    $pdf->Write("10", "$contact");
     $pdf->Cell("0", "15", "", "", "1", "1");
 
     $pdf->SetFont("Arial", "b", "12");

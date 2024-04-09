@@ -21,7 +21,7 @@ function sendMail($send_to, $subject, $body)
         $mail->Username = "collageucc@gmail.com";
         $mail->Password = "dtglgypehnapiiqr";
 
-        $mail->setFrom("collageucc@gmail.com", "Dwivedi Jyoti");
+        $mail->setFrom("collageucc@gmail.com", "KRISHICARE");
 
         $mail->addAddress($send_to);
         $mail->Subject = $subject;

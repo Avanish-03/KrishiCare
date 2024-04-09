@@ -102,12 +102,17 @@ if ($reportresult) { // Check if the query was successful
             <h1 class="text-xs pt-4 text-gray-500 dark:text-gray-300"></h1>
         </div>
     </div>
-    <div class="lg:h-96 h-fit w-[50%] my-8 rounded-md bg-gray-200 dark:bg-slate-600 ">
-        <div class="w-full h-full flex justify-center items-center rounded-md relative">
+    <div class="lg:h-96 h-fit w-[100%] my-8 rounded-md flex gap-8">
+        <div class="w-full h-full px-8 py-2 flex justify-center items-center rounded-md bg-gray-200 dark:bg-slate-600">
             <?php include ("To-do.php"); ?>
         </div>
-        <!-- <div class="w-full h-full px-8 py-2 flex flex-col justify-center items-center relative rounded-md">
-        </div> -->
+        <div class="w-full h-full px-8 py-2 flex justify-center items-center bg-gray-200 rounded-lg dark:bg-slate-700">
+            <div class="w-full h-fit flex flex-col py-4 ">
+                <div class="h-full w-full flex justify-center items-center">
+                    <img class="h-80 w-80" src="../img/Task-bro.png" alt="">
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="relative h-32 w-full my-8 flex items-center bg-gray-200 dark:bg-slate-700 bg-cover rounded-md ">
