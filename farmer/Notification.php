@@ -69,5 +69,6 @@
         <div class="w-full h-full bg-gray-200 rounded-lg dark:bg-slate-700"></div>
         <div class="w-full h-full bg-gray-200 rounded-lg dark:bg-slate-700"></div>
     </div>
+    
     <div class="h-7"></div>
 </section>
