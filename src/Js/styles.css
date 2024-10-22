@@ -1,11 +1,5 @@
-#adminProcess::-webkit-scrollbar {
-    display: none;
-}
-
-#maincontent::-webkit-scrollbar {
-    display: none;
-}
-
+#adminProcess::-webkit-scrollbar,
+#maincontent::-webkit-scrollbar,
 #home::-webkit-scrollbar {
     display: none;
 }
